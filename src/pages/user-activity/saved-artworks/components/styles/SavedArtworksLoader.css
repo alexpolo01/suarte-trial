@@ -1,0 +1,16 @@
+.saved-artworks-loader {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .saved-artworks-loader {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        column-gap: 10px;
+    } 
+}

@@ -1,0 +1,112 @@
+.community-rating-card__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 15px;
+    padding-bottom: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.comunity-rating-card__user-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.community-rating-card__user-image {
+    width: 45px;
+    background-color: var(--app-liked_artlists_background);
+    margin-right: 10px;
+}
+
+.community-rating-card__small-text {
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+    padding-right: 10px;
+}
+
+.community-rating-card__small-text .username {
+    color: var(--app-normal_text);
+    font-weight: 600;
+}
+
+.community-rating-card__small-text .title {
+    font-style: italic;
+}
+
+.community-rating-card__small-text.elapsed {
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+    font-weight: 600;
+}
+
+.community-rating-card__rating-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.community-rating-card__artwork-image {
+    width: 19%;
+    min-width: 144px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    object-fit: contain;
+    object-position: center;
+}
+
+.community-rating-card__ratings {
+    width: 100%;
+    margin-right: 24px;
+}
+
+.community-rating-card__rating {
+    margin-bottom: 45px;
+}
+
+.community-rating-card__rating:last-child {
+    margin-bottom: 0px;
+}
+
+
+@media (max-width: 1004px) {
+    .community-rating-card__container {
+        padding: 12px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .community-rating-card__user-image {
+        width: 40px;
+    }
+
+    .community-rating-card__rating {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 550px) {
+    .community-rating-card__container {
+        padding: 10px;
+        padding-bottom: 8px;
+        border-radius: 9px;
+    }
+
+    .community-rating-card__user-image {
+        width: 35px;
+    }
+
+    .community-rating-card__ratings {
+        margin-right: 20px;
+    }
+
+    .community-rating-card__rating {
+        margin-bottom: 27px;
+    }
+}

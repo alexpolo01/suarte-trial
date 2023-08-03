@@ -1,0 +1,121 @@
+.artwork-options__container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.artwork-options__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.23);
+    backdrop-filter: blur(10px);
+    animation: options-fade-in 0.4s ease;
+}
+
+.artwork-options__wrapper {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.artwork-options__options-container {
+    position: absolute;
+    top: 31px;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.artwork-options__fake-dots {
+    flex-shrink: 0;
+    height: 20px;
+    padding: 0px 20px;
+    fill: var(--app-theme-color);
+    cursor: pointer; 
+    outline: none;
+}
+
+.artwork-options__options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 13px;
+    margin-right: 11px;
+    animation: options-fade-in 0.5s ease;
+}
+
+.artwork-options__edit-dialog {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    padding-bottom: 25px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+    border-radius: 5px;
+}
+
+.artwork-options__edit-dialog-text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+    text-align: justify;
+    margin: 0px;
+}
+
+.artwork-options__edit-dialog-text a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--app-theme-color);
+}
+
+@keyframes options-fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1004px) {
+    .artwork-options__fake-dots {
+        height: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .artwork-options__fake-dots {
+        height: 17px;
+        padding: 0px 11px;
+    }
+
+    .artwork-options__wrapper {
+        max-width: 800px;
+    }
+
+    .artwork-options__options-container {
+        top: 19px;
+        right: 11px;
+    }
+
+    .artwork-options__background {
+        backdrop-filter: blur(5px);
+    }
+
+    .artwork-options__options {
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-options__fake-dots {
+        height: 16px;
+    }
+}
+
+

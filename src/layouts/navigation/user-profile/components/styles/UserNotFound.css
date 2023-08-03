@@ -1,0 +1,140 @@
+.user-not-found__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+}
+
+.user-not-found__main-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.user-not-found__image {
+    width: 100px;
+    background-color: var(--app-card_background_more_visible);
+    margin: 0 auto;
+    margin-bottom: 14px;
+    box-shadow: var(--app-card_box_shadow);
+}
+
+.user-not-found__image .user-profile-no-image-generic__icon {
+    fill: var(--app-generic-gray);
+}
+
+.user-not-found__text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.user-not-found__back {
+    width: 12px;
+    box-sizing: content-box;
+    padding: 10px;
+    fill: var(--app-theme-color);
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    left: 23px;
+}
+
+.user-not-found__share {
+    width: 26px;
+    fill: var(--app-generic-gray);
+    position: absolute;
+    top: 10px;
+    right: 23px;
+}
+
+.user-not-found__empty-button {
+    display: block;
+    margin: 0 auto;
+    width: 117px;
+    height: 33px;
+    flex-shrink: 0;
+    border: 1px solid var(--app-generic-gray);
+    background-color: var(--app-generic-gray-background);
+    border-radius: 4px;
+    margin-bottom: 35px;
+}
+
+.user-not-found__buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid var(--app-generic-gray);
+    padding-bottom: 15px;
+}
+
+.user-not-found__icon {
+    width: 32px;
+    fill: var(--app-generic-gray);
+    flex-shrink: 0;
+}
+
+.user-not-found__icon.--community {
+    width: 28px;
+}
+
+@media (max-width: 1400px) {
+    .user-not-found__image {
+        width: 93px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .user-not-found__image {
+        width: 87px;
+    }
+
+    .user-not-found__back {
+        width: 11px;
+        top: 2px;
+    }
+
+    .user-not-found__share {
+        width: 24px;
+    }
+
+    .user-not-found__buttons {
+        padding-bottom: 13px;
+    }
+
+    .user-not-found__icon {
+        width: 28px;
+    }
+    
+    .user-not-found__icon.--community {
+        width: 24px;
+    }
+}
+
+@media (max-width: 550px) {
+    .user-not-found__image {
+        width: 82px;
+    }
+
+    .user-not-found__share {
+        width: 21px;
+    }
+
+    .user-not-found__buttons {
+        padding-bottom: 12px;
+    }
+
+    .user-not-found__icon {
+        width: 26px;
+    }
+    
+    .user-not-found__icon.--community {
+        width: 22px;
+    }
+}

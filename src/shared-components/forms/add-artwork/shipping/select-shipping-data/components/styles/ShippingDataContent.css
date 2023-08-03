@@ -1,0 +1,48 @@
+.shipping-data-content__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    padding: 0px 15px;
+    padding-bottom: 40px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.shipping-data-content__header {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin-bottom: 15px;
+}
+
+.shipping-data-content__header-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.shipping-data-content__close {
+    width: 13px;
+    cursor: pointer;
+    box-sizing: content-box;
+    padding: 7px;
+    position: absolute;
+    right: -7px;
+    stroke: var(--app-normal_text);
+}
+
+.shipping-data-content__text {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    margin-bottom: 15px !important;
+}
+
+@media (max-width: 550px) {
+    .shipping-data-content__close {
+        width: 12px;
+    }
+}

@@ -1,0 +1,39 @@
+.generic-bottom-sheet__background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    animation: generic-bottom-sheet-background-animation 0.3s ease forwards;
+}
+
+.generic-bottom-sheet__card {
+    max-height: 100vh;
+    border-radius: 12px 12px 0px 0px;
+    overflow: hidden;
+    animation: generic-bottom-sheet-card-animation 0.3s ease forwards;
+}
+
+@keyframes generic-bottom-sheet-background-animation {
+    from {
+        background-color: rgba(0,0,0,0);
+    }
+
+    to {
+        background-color: rgba(0,0,0,0.6);
+    }
+}
+
+@keyframes generic-bottom-sheet-card-animation {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}

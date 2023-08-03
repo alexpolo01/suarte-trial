@@ -1,0 +1,55 @@
+.artwork-view-rate-artwork-form__container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 13px;
+    padding-bottom: 25px;
+}
+
+.artwork-view-rate-artwork-form__container.read-only {
+    pointer-events: none;
+}
+
+.artwork-view-rate-artwork-form__container::-webkit-scrollbar {
+    display: none;
+}
+
+.artwork-view-rate-artwork-form__see-results {
+    color: var(--app-generic-gray);
+    font-weight: 600;
+    margin-bottom: 10px !important;
+}
+
+.rate-artwork__submit-button {
+    margin-top: 20px;
+}
+
+.artwork-view-rate-artwork-form__artwork-image {
+    width: 100%;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    object-fit: contain;
+    height: 0px;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .artwork-view-rate-artwork-form__container {
+        padding-top: 11px;
+    }
+
+    .artwork-view-rate-artwork-form__artwork-image {
+        display: block;
+    }  
+}
+
+@media (max-width: 550px) {
+    .artwork-view-rate-artwork-form__see-results {
+        margin-bottom: 5px !important;
+    }
+}

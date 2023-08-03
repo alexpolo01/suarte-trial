@@ -1,0 +1,116 @@
+.artworks-drafts__go-back {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 12px 10px;
+    border-radius: 3px;
+}
+
+.artworks-drafts__go-back-icon {
+    width: 12px;
+    fill: var(--app-theme-color);
+    margin-right: 10px;
+}
+
+.artworks-drafts__go-back-text {
+    font-weight: 500;
+    color: var(--app-normal_text);
+}
+
+.artwork-drafts__loading {
+    width: 24px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.artwork-drafts__no-drafts {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px !important;
+}
+
+.artwork-drafts__container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.artwork-drafts__draft {
+    width: 100%;
+    height: 46px;
+    padding: 0px 15px;
+    border-radius: 8px;
+    background-color: var(--app-card_background_less_visible);
+    box-shadow: var(--app-card_box_shadow);
+    display: flex;
+    align-items: center; 
+    position: relative;
+    cursor: pointer;
+}
+
+.artwork-drafts__remove-draft {
+    width: 18px;
+    box-sizing: content-box;
+    padding: 7px;
+    margin-left: -7px;
+    fill: var(--app-theme-color);
+    margin-right: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.artwork-drafts__draft-title {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.artwork-drafts__enter-draft {
+    width: 12px;
+    fill: var(--app-theme-color);
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+@media (max-width: 1004px) {
+    .artworks-drafts__go-back {
+        padding: 10px 10px;
+    }
+
+    .artworks-drafts__go-back-icon {
+        width: 10px;
+        margin-right: 9px;
+    }
+
+    .artwork-drafts__draft {
+        padding: 0px 12px;
+    }
+
+    .artwork-drafts__enter-draft {
+        width: 11px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artworks-drafts__go-back {
+        padding: 7px 10px;
+    }
+
+    .artworks-drafts__go-back-icon {
+        width: 8px;
+        margin-right: 8px;
+    }
+
+    .artwork-drafts__remove-draft {
+        width: 16px;
+    }
+
+    .artwork-drafts__enter-draft {
+        width: 10px;
+    }
+}

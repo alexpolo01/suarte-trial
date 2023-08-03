@@ -1,0 +1,38 @@
+.choose-input__container {
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.choose-input__container.read-only {
+    pointer-events: none;
+}
+
+.choose-input__option {
+    width: 50%;
+    padding: 3px 0px;
+    background-color: transparent;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.choose-input__text {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.choose-input__option.active {
+    background-color: var(--app-page_background);
+}
+
+.choose-input__option.active .choose-input__text {
+    color: var(--app-normal_text);
+}
+

@@ -1,0 +1,75 @@
+.onboarding-layout__container {
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px;
+}
+
+.onboarding-layout__card {
+    width: 100%;
+    max-width: 655px;
+    background-color: var(--app-card_background_less_visible); 
+    border-radius: 17px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    padding-top: 19px;
+    position: relative;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+.onboarding-layout__suarte-name {
+    display: block;
+    margin: 0 auto;
+    width: 129px;
+    margin-bottom: 23px;
+}
+
+.onboarding-pagination__container {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 19px;
+}
+
+.onboarding-pagination__indicators {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.onboarding-pagination__indicator {
+    width: 15px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color:  var(--app-generic-gray);
+    margin-right: 12px;
+    transition: background-color 0.4s ease;
+}
+
+.onboarding-pagination__indicator:last-child {
+    margin-right: 0px;
+}
+
+.onboarding-pagination__indicator.active {
+    background-color: var(--app-theme-color);
+}
+
+@media (max-width: 550px) {
+    .onboarding-layout__suarte-name {
+        width: 90px;
+    }
+
+    .onboarding-pagination__indicator {
+        width: 10px;
+        margin-right: 9px;
+    }
+
+}

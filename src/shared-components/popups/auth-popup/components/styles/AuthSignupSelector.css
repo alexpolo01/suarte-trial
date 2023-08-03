@@ -1,0 +1,43 @@
+.auth-signup-selector__container {
+    width: 100%;
+    background-color: var(--app-page_background);
+    box-shadow: var(--app-card_box_shadow);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.auth-signup-selector__icon-box {
+    width: 70px;
+    aspect-ratio: 1/1;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11%;
+    margin-right: 11px;
+}
+
+.auth-sign-up-selector__icon {
+    width: 45%;
+    fill: var(--app-theme-color);
+}
+
+.auth-sign-up-selector__icon.artist {
+    width: 50%;
+}
+
+.auth-signup-selector__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+@media (max-width: 550px) {
+    .auth-signup-selector__icon-box {
+        width: 65px;
+    }
+}

@@ -1,0 +1,90 @@
+.add-shipping-address__form {
+    width: 100%;
+    max-height: 95vh;
+    overflow-y: auto;
+    background-color: var(--app-special_popup_background);
+    padding: 30px 15px;
+    padding-top: 0px;
+    border-radius: 7px;
+}
+
+.add-shipping-address__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--app-special_popup_background);
+}
+
+.add-shipping-address__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.add-shipping-address__close {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 5px;
+    stroke: var(--app-normal_text);
+    cursor: pointer;
+    position: absolute;
+    right: -5px;
+}
+
+.add-shipping-address__group, .add-shipping-address__group.phone {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.add-shipping-address__group-item {
+    width: 50%;
+}
+
+.add-shipping-address__group-item.item-margin {
+    margin-right: 11px;
+}
+
+.add-shipping-address__phone-prefix{
+    min-width: 122px;
+    width: 43%;
+    margin-right: 11px;
+}
+
+.add-shipping-address__button {
+    margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+    .add-shipping-address__button {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 550px) {
+    .add-shipping-address__close {
+        width: 12px;
+    }
+
+    .add-shipping-address__group {
+        display: block;
+    }
+
+    .add-shipping-address__group-item {
+        width: 100%;
+    }
+
+    .add-shipping-address__group-item.item-margin {
+        margin-right: 0px;
+    }
+
+    .add-shipping-address__button {
+        margin-top: 25px;
+    }
+}

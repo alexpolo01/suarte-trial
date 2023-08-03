@@ -1,0 +1,33 @@
+.profile-community-thoughts__thoughts-infinite-scroll {
+    margin-top: 15px;
+}
+
+#community-thought-card-measurer {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: calc(100% - 310px); /** Result of body.width - width of text container gives the width that we have to substract to this 100% (which is the body width) */
+    max-width: 901.47px;
+    font-family: var(--app-font);
+    font-weight: var(--app-font-regular);
+    margin: 0px;
+    font-size: 14px;
+}
+
+#community-thought-card-measurer span {
+    font-weight: 600;
+}
+
+@media (max-width: 1004px) {
+    #community-thought-card-measurer {
+        width: calc(100% - 261px);
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 550px) {
+    #community-thought-card-measurer {
+        width: calc(100% - 216px);
+        font-size: 12px;
+    }
+}

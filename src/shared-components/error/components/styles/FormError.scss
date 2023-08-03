@@ -1,0 +1,41 @@
+.form-error__message-container {
+    width: 100%;
+    display: none;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.form-error__message-container.active {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-error__message-icon {
+    width: 16px;
+    height: auto;
+    fill: #d31024;
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+.form-error__message-text {
+    margin: 0px;
+    color: #d31024;
+    font-size: 14px;
+    font-family: var(--app-font);
+    font-weight: 500;
+}
+
+
+@media (max-width: 1216px) {
+    .form-error__message-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-error__message-text {
+        font-size: 12px;
+    }
+}
+

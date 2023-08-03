@@ -1,0 +1,111 @@
+.add-artwork-shipping__shipping-card-outter {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.add-artwork-shipping__shipping-card {
+    width: 100%;
+    background-color:  var(--app-card_background_less_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    padding: 15px 12px;
+    padding-top: 9px;
+    position: relative;
+}
+
+.add-artwork-shipping__shipping-card-location {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    line-height: 14px;
+    margin-bottom: 12px;
+}
+
+.add-artwork-shipping__shipping-card-text {
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+    margin-bottom: 12px !important;
+}
+
+.add-artwork-shipping__shipping-card-choose {
+    margin-bottom: 20px;
+}
+
+.add-artwork-shipping__shipping-card-choose .choose-input__container {
+    border-radius: 16px;
+    background-color: var(--app-page_background);
+} 
+
+.add-artwork-shipping__shipping-card-choose .choose-input__container .choose-input__option.active {
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 16px;
+}
+
+.add-artwork-shipping__shipping-card-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.add-artwork-shipping__shipping-card-group-bigger {
+    width: 60%;
+}
+
+.add-artwork-shipping__shipping-card-group-smaller {
+    width: 40%;
+    margin-right: 10px;
+}
+
+.add-artwork-shipping__shipping-card-group .public-form-input__container, .add-artwork-shipping__shipping-card-group .public-select__container, .add-artwork-shipping__shipping-card-group .public-select__options-container {
+    background-color: var(--app-page_background);
+}
+
+.add-artwork-shipping__shipping-card-group .public-select__options-container {
+    border: 1px solid var(--app-options_border);
+}
+
+.add-artwork-shipping__shipping-card-group.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.add-artwork-shipping__shipping-card-group.disabled .public-select__open-options {
+    fill: var(--app-generic-gray);
+}
+
+.add-artwork-shipping__shipping_card-delete {
+    width: 27px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid var(--app-theme-color);
+    background-color: var(--app-theme-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute; 
+    top: 10px;
+    right: 12px;
+}
+
+.add-artwork-shipping__shipping_card-delete div {
+    width: 60%;
+    height: 2px;
+    background-color: var(--app-theme-color);
+}
+
+.add-artwork-shipping-error {
+    border: 1px solid var(--app-theme-color);
+}
+
+@media (max-width: 1004px) {
+    .add-artwork-shipping__shipping_card-delete {
+        width: 25px;
+    }
+}
+
+@media (max-width: 550px) {
+    .add-artwork-shipping__shipping_card-delete {
+        width: 21px;
+    }
+}

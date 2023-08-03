@@ -1,0 +1,38 @@
+.purchase-select-size__container {
+    width: 100%;
+    padding-right: 15px;
+}
+
+.purchase-select-size__heading {
+    display: block;
+    font-weight: 600;
+    color: var(--app-normal_text);
+    margin: 15px 0px;
+}
+
+.purchase-select-size__small-text {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.purchase-select-size__small-text span {
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    .purchase-select-size__small-text span:hover {
+        text-decoration: underline;
+    }
+}
+
+.purchase-select-size__button {
+    margin-top: 20px;
+}
+
+@media (max-width: 650px) {
+    .purchase-select-size__container {
+        padding: 0px 15px;
+    }
+}

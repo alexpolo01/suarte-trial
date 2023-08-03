@@ -1,0 +1,21 @@
+.add-artwork-media-form__add-main-picture-button {
+    width: 100%;
+    height: 150px;
+    background-color: var(--app-theme-background);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.add-artwork-media-form__add-main-picture-button.dragging {
+    border: 1px solid var(--app-theme-color);
+}
+
+.add-artwork-media-form__add-main-picture-button-text {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}

@@ -1,0 +1,59 @@
+.thought-mention-search__container {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.23);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    animation: thoughts-mention-search-fade-in 0.2s ease forwards;
+    transition: background-color 0.2s ease;
+}
+
+.thought-mention-search__spinner-container {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thought-mention-search__spinner {
+    width: 20px;
+}
+
+.thought-mention-search__no-results {
+    padding: 20px;
+    text-align: center;
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.thought-mention-search__no-results span{
+    font-style: italic;
+}
+
+.thought-mention-search__virtual-list-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 7px;
+}
+
+.thought-mention-search__virtual-spinner {
+    margin-top: 5px;
+}
+
+.thought-mention-search__virtual-spinner .infinite-scroll-loader__default-loader-spinner {
+    width: 20px;
+}
+
+@keyframes thoughts-mention-search-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

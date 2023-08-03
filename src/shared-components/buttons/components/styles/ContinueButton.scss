@@ -1,0 +1,64 @@
+.continue-button__button {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 6px 16px;
+    border-radius: 3px;
+    font-family: var(--app-font);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--app-theme-color);
+    border: 1px solid var(--app-theme-color);
+    background-color: var(--app-theme-background);
+    transition: opacity 0.2s ease;
+}
+
+.continue-button__button.rounded-corners {
+    padding: 6px 35px;
+    border-radius: 37px;
+}
+
+.continue-button__button.success {
+    background-color: var(--app-theme-color);
+    color: black;
+    font-weight: 600;
+}
+
+.continue-button__button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.continue-button__button.turn-off {
+    color: var(--app-generic-gray);
+    border: 1px solid var(--app-generic-gray);
+    background-color: rgba(155, 157, 175, 0.2);
+    pointer-events: none;
+}
+
+.continue-button__loader {
+    margin-right: 5px;
+    transform: scale(0.9);
+}
+
+.continue-button__loader .bar-loader {
+    background-color: var(--app-theme-color);
+}
+
+@media (max-width: 1004px) {
+    .continue-button__button {
+        font-size: 15px;
+        padding: 5px 16px;
+    }
+    
+    .continue-button__button.rounded-corners {
+        padding: 5px 34px;
+    }
+}
+
+@media (max-width: 500px) {
+    .continue-button__button {
+        font-size: 14px;
+    }
+}

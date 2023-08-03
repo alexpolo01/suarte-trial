@@ -1,0 +1,58 @@
+.home-artworks__page {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0px 40px;
+}
+
+.home-artworks__header-icon {
+    fill: var(--app-normal_text);
+    width: 26px;
+    margin: 0px 8px;
+    position: relative;
+    top: 1px;
+}
+
+.home-artworks__empty-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px !important;
+    font-style: italic;
+}
+
+@media (max-width: 1400px) {
+    .home-artworks__page {
+        padding: 0px 30px;
+    }    
+}
+
+@media (max-width: 1004px) {
+    .home-artworks__page {
+        padding: 0px 20px;
+    } 
+
+    .home-artworks__header-icon {
+        width: 23px;
+    }
+}
+
+@media (max-width: 650px) {
+    .home-artworks__page {
+        padding: 0px 11px;
+    } 
+
+    .home-artworks__infinite-container {
+        padding-top: 0px;
+    }
+
+    .home-artworks__empty-text {
+        margin-top: 10px !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .home-artworks__header-icon {
+        width: 21px;
+    }
+}

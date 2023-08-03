@@ -1,0 +1,234 @@
+.home-links__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+.home-link__container {
+    width: 100%;
+    height: 100%;
+    padding: 0px 14px;
+    margin: 0px 10px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.home-link__container:first-child {
+    margin-left: 0px;
+}
+
+.home-link__container:last-child {
+    margin-right: 0px;
+}
+
+.home-link__text {
+    font-size: 16px;
+    color: var(--app-generic-gray);
+    font-weight: 600;
+    font-family: var(--app-font);
+}
+
+.home-links__icon {
+    fill: var(--app-generic-gray);
+    flex-shrink: 0;
+    margin-right: 14px;
+}
+
+.home-links__icon.gallery {
+    width: 45px;
+    position: relative;
+    top: 3px;
+    margin-right: 9px;
+    margin-left: -6px;
+}
+
+.home-links__icon.artist {
+    width: 40px;
+    margin-right: 12px;
+}
+
+.home-links__icon.artwork{
+    width: 35px;
+    position: relative;
+    top: 2px;
+    margin-left: -3px;
+}
+
+.home-links__icon.artlist{
+    width: 33px;
+    margin-right: 15px;
+}
+
+@media (max-width: 1600px) {
+    .home-links__container {
+        height: 65px;
+    }
+
+    .home-link__container {
+        margin: 0px 5px;
+    }
+
+    .home-links__icon.gallery {
+        width: 43px;
+    }
+    
+    .home-links__icon.artist {
+        width: 38px;
+    }
+    
+    .home-links__icon.artwork{
+        width: 33px;
+    }
+    
+    .home-links__icon.artlist{
+        width: 31px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-links__container {
+        height: 60px;
+    }
+
+    .home-links__icon.gallery {
+        width: 40px;
+        margin-right: 6px;
+    }
+    
+    .home-links__icon.artist {
+        width: 35px;
+        margin-right: 9px;
+    }
+    
+    .home-links__icon.artwork{
+        width: 30px;
+        margin-right: 11px;
+    }
+    
+    .home-links__icon.artlist{
+        width: 28px;
+        margin-right: 12px;
+    }
+
+    .home-link__text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .home-links__icon.gallery {
+        width: 38px;
+        margin-right: 5px;
+    }
+    
+    .home-links__icon.artist {
+        width: 33px;
+        margin-right: 8px;
+    }
+    
+    .home-links__icon.artwork{
+        width: 28px;
+        margin-right: 10px;
+    }
+    
+    .home-links__icon.artlist{
+        width: 26px;
+        margin-right: 11px;
+    }
+
+    .home-link__text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .home-links__container {
+        height: 55px;
+    }
+}
+
+@media (max-width: 650px) {
+    .home-links__container {
+        margin-top: 19px;
+        height: 50px;
+    }
+
+    .home-link__text {
+        font-size: 13px;
+    }
+
+    .home-links__icon.gallery {
+        width: 36px;
+    }
+    
+    .home-links__icon.artist {
+        width: 31px;
+    }
+    
+    .home-links__icon.artwork{
+        width: 26px;
+    }
+    
+    .home-links__icon.artlist{
+        width: 24px;
+    }
+}
+
+@media (max-width: 550px) {
+    .home-links__container {
+        height: 65px;
+    }
+
+    .home-link__container {
+        padding: 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-link__text {
+        font-size: 12px;
+    }
+
+    .home-links__icon {
+        margin: 0px !important;
+    }
+
+    .home-links__icon.gallery {
+        width: 32px;
+    }
+    
+    .home-links__icon.artist {
+        width: 28px;
+    }
+
+    .home-links__icon.artist + .home-link__text {
+        position: relative;
+        top: 4px;
+    }
+    
+    .home-links__icon.artwork{
+        width: 25px;
+    }
+
+    .home-links__icon.artwork + .home-link__text {
+        position: relative;
+        top: 1px;
+    }
+    
+    .home-links__icon.artlist{
+        width: 22px;
+    }
+
+    .home-links__icon.artlist + .home-link__text {
+        position: relative;
+        top: 6px;
+    }
+}
+

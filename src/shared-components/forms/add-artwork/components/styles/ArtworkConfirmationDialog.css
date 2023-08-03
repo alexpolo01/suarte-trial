@@ -1,0 +1,75 @@
+.artwork-confirmation-dialog {
+    width: 90%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+    padding: 20px 15px;
+    padding-top: 12px;
+    border-radius: 7px;
+}
+
+.artwork-confirmation-dialog__action-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.artwork-confirmation-dialog__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.artwork-confirmation-dialog__button.cancel {
+    border: 2px solid var(--app-generic-gray);
+    background-color: var(--app-generic-gray-background);
+    color: var(--app-generic-gray);
+    font-weight: 600;
+}
+
+.artwork-confirmation-dialog__button.confirm {
+    border: 2px solid var(--app-theme-color);
+    background-color: var(--app-theme-background);
+    color: var(--app-theme-color);
+    font-weight: 600;
+}
+
+.artwork-confirmation-dialog__button.confirm.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.artwork-confirmatin-dialog__spinner {
+    width: 15px;
+    margin-left: 7px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1004px) {
+    .artwork-confirmation-dialog__button {
+        width: 140px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-confirmation-dialog {
+        max-width: 380px;
+    }
+
+    .artwork-confirmation-dialog__button {
+        width: 130px;
+        height: 32px;
+    }
+
+    .artwork-confirmatin-dialog__spinner {
+        width: 13px;
+    }
+}

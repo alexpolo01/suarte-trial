@@ -1,0 +1,39 @@
+.activity-heading__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 21px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--app-page_background);
+    padding-bottom: 10px;
+}
+
+.activity-heading__back {
+    fill: var(--app-theme-color);
+    cursor: pointer;
+    width: 11px;
+    box-sizing: content-box;
+    padding: 7px;
+    position: absolute;
+    left: -7px;
+    display: none;
+}
+
+.activity-heading__text {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+@media (max-width: 700px) {
+    .activity-heading__back { 
+        display: block;
+    }
+
+    .activity-heading__text {
+        color: var(--app-normal_text);
+    }
+}

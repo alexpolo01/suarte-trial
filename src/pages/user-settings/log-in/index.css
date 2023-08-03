@@ -1,0 +1,41 @@
+.settings-login__container {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.settings-login__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.settings-login__read-only .public-form-input__container {
+    background: transparent;
+    box-shadow: none;
+}
+
+.settings-login__password-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.settings-login__change-password-text {
+    position: absolute;
+    right: 10px;
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+}
+
+@media (max-width: 1004px) {
+    .settings-login__container {
+        margin-top: 28px;
+    }
+}
+
+@media (max-width: 700px) {
+    .settings-login__container {
+        margin-top: 10px;
+    }
+}

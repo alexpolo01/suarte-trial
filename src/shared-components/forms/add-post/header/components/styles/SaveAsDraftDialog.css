@@ -1,0 +1,11 @@
+.save-as-draft-popup {
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+}
+
+@media (max-width: 550px) {
+    .save-as-draft-popup {
+        max-width: 320px;
+    }
+}

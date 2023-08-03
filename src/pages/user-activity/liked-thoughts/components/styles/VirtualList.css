@@ -1,0 +1,39 @@
+#activity-thought-card-measurer {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: calc(100% - 588px); /** Result of body.width - width of text container gives the width that we have to substract to this 100% (which is the body width) */
+    max-width: 692px;
+    font-family: var(--app-font);
+    font-weight: var(--app-font-regular);
+    margin: 0px;
+    font-size: 14px;
+}
+
+#activity-thought-card-measurer span {
+    font-weight: 600;
+}
+
+@media (max-width: 1004px) {
+    #activity-thought-card-measurer {
+        width: calc(100% - 517px);
+        min-width: 212.81px;
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    #activity-thought-card-measurer {
+        width: calc(100% - 279px);
+        min-width: unset;
+        max-width: 311px;
+    }
+}
+
+@media (max-width: 550px) {
+    #activity-thought-card-measurer {
+        width: calc(100% - 234px);
+        font-size: 12px;
+    }
+}

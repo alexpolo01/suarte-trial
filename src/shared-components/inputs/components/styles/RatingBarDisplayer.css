@@ -1,0 +1,150 @@
+.artwork-rating-displayer__range-container {
+    width: 100%;
+    position: relative;
+    background-color: var(--app-generic-gray);
+}
+
+.artwork-rating-displayer__bar {
+    position: absolute;
+}
+
+.artwork-rating-displayer__bar.my-rating {
+    z-index: 2;
+    background-color: var(--app-theme-color);
+}
+
+.artwork-rating-displayer__indicator {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    transform: translateX(-2px);
+}
+
+.artwork-rating-displayer__indicator.my-rating {
+    top: 0;
+    bottom: unset;
+}
+
+.artwork-rating-displayer__indicator-bar {
+    background-color: var(--app-generic-gray) 
+}
+
+.artwork-rating-displayer__indicator-bar.my-rating {
+    background-color: var(--app-theme-color) 
+}
+
+.artwork-rating-displayer__indicator-text {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+    position: absolute;
+    top: -19px;
+}
+
+.artwork-rating-displayer__indicator-text.my-rating {
+    color: var(--app-theme-color);
+    top: 19px;
+}
+
+.artwork-rating-displayer__guide-container {
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.artwork-rating-displayer__guide-indicator {
+    width: 1px;
+    height: 6px;
+    background-color: var(--app-generic-gray);
+    opacity: 0.5;
+    position: absolute;
+}
+
+.artwork-rating-displayer__guide-indicator.main {
+    height: 12px;
+}
+
+/** BAR SIZES STYLES */
+.artwork-rating-displayer__bar, .artwork-rating-displayer__range-container {
+    height: 5px;
+    border-radius: 5px;
+}
+
+.artwork-rating-displayer__indicator-bar {
+    width: 5px;
+    border-radius: 5px;
+    height: 20px;
+}
+
+@media (max-width: 1004px) {
+    .artwork-rating-displayer__bar, .artwork-rating-displayer__range-container {
+        height: 4px;
+        border-radius: 4px;
+    }
+
+    .artwork-rating-displayer__indicator-bar {
+        width: 4px;
+        height: 13px;
+        border-radius: 4px;
+    }
+
+    .artwork-rating-displayer__guide-container {
+        top: 4px;
+    }
+
+    .artwork-rating-displayer__indicator-text.my-rating {
+        top: 12px;
+    }
+
+    .artwork-rating-displayer__indicator-text {
+        top: -17px;
+    }
+
+    .artwork-rating-displayer__guide-indicator {
+        height: 5px;
+    }
+
+    .artwork-rating-displayer__guide-indicator.main {
+        height: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-rating-displayer__bar, .artwork-rating-displayer__range-container {
+        height: 2px;
+        border-radius: 2px;
+    }
+
+    .artwork-rating-displayer__indicator {
+        transform: translateX(-1px);
+    }
+
+    .artwork-rating-displayer__indicator-bar {
+        width: 2px;
+        height: 9px;
+        border-radius: 2px;
+    }
+
+    .artwork-rating-displayer__guide-container {
+        top: 2px;
+    }
+
+    .artwork-rating-displayer__indicator-text.my-rating {
+        top: 6px;
+    }
+
+    .artwork-rating-displayer__indicator-text {
+        top: -14px;
+    }
+
+    .artwork-rating-displayer__guide-indicator {
+        height: 4px;
+    }
+
+    .artwork-rating-displayer__guide-indicator.main {
+        height: 8px;
+    }
+}
+

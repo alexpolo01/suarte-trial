@@ -1,0 +1,79 @@
+.artwork-options__artwork-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.artwork-options__artwork-option-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.artwork-options__artwork-icon-container {
+    width: 30px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    margin-left: 10px;
+    background-color: var(--app-card_background_more_visible);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.artwork-options__artwork-icon-container .card-icon {
+    width: 56%;
+    fill: var(--app-theme-color);
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+    right: -1px;
+}
+
+.artwork-options__artwork-icon-container .insights-icon {
+    width: 52%;
+    stroke: var(--app-theme-color);
+    flex-shrink: 0;
+    position: relative;
+    top: -2px;
+}
+
+.artwork-options__artwork-icon-container .add-icon {
+    width: 66%;
+    fill: var(--app-theme-color);
+    flex-shrink: 0;
+}
+
+.artwork-options__artwork-icon-container .save-icon {
+    width: 41%;
+    stroke: var(--app-theme-color);
+    fill: transparent;
+    flex-shrink: 0;
+}
+
+.artwork-options__artwork-icon-container .save-icon.fill {
+    stroke: var(--app-theme-color);
+    fill: var(--app-theme-color);
+}
+
+.artwork-options__artwork-icon-container .share-icon {
+    width: 58%;
+    fill: var(--app-theme-color);
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+    right: -1px;
+}
+
+@media (max-width: 1004px) {
+    .artwork-options__artwork-icon-container {
+        width: 26px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-options__artwork-icon-container {
+        width: 23px;
+    }
+}

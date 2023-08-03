@@ -1,0 +1,22 @@
+.settings-my-collection__container {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.settings-my-collection__text {
+    display: block;
+    text-align: center;
+    color: var(--app-normal_text);
+}
+
+@media (max-width: 1004px) {
+    .settings-my-collection__container {
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+    .settings-my-collection__container {
+        margin-top: 10px;
+    }
+}

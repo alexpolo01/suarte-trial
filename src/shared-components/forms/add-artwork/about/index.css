@@ -1,0 +1,104 @@
+.add-artwork-about-form {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.add-artwork-about-form.read-only {
+    pointer-events: none;
+}
+
+.add-artwork-about-form__type-of-artwork {
+    max-width: 370px;
+    margin: 0 auto;
+    margin-bottom: 11px;
+}
+
+.add-artwork-about-form__description {
+    pointer-events: all;
+}
+
+.add-artwork-about-form__group-outter {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.add-artwork-about-form__group-outter > div:first-child {
+    width: 40%;
+    margin-right: 11px;
+}
+
+.add-artwork-about-form__group {
+    width: 100%;
+    display: flex;
+}
+
+.add-artwork-about-form__group.center {
+    align-items: center;
+}
+
+.add-artwork-about-form__group-bigger.variant {
+    width: 70%;
+}
+
+.add-artwork-about-form__group-smaller.variant {
+    width: 30%;
+    margin-right: 11px;
+}
+
+.add-artwork-about-form__group.select > div:first-child{
+    margin-right: 11px;
+}
+
+.add-artwork-about-form__choose-input {
+    margin-right: 15px;
+    min-width: 121px;
+}
+
+.add-artwork-about-form__size-separator {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    margin: 0px 10px;
+}
+
+.add-artwork-about-form__taxes {
+    text-align: end;
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+    margin-top: -5px !important;
+}
+
+.add-artwork-about-form__continue-button {
+    margin-top: 27px;
+    cursor: pointer;
+}
+
+.add-artwork-about-form__checkbox-margin {
+    margin: 15px 0px;
+}
+
+@media (max-width: 650px) {
+    .add-artwork-about-form__group.select, .add-artwork-about-form__group-outter {
+        display: block;
+    }
+
+    .add-artwork-about-form__group-outter > div:first-child {
+        margin-right: 0px;
+        margin-bottom: 11px;
+        width: 100%;
+    }
+
+    .add-artwork-about-form__group.select > div:first-child {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .add-artwork-about-form__choose-input {
+        margin-right: 10px;
+    }
+
+    .add-artwork-about-form__size-separator {
+        margin: 0px 5px;
+    }
+}

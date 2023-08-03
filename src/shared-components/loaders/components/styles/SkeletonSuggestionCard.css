@@ -1,0 +1,48 @@
+.skeleton-suggestion-card {
+    width: 100%;
+    padding: 7.5px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.skeleton-suggestion-card__user-image {
+    width: 48px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-image_template_color);
+    margin-right: 10px;
+}
+
+.skeleton-suggestion-card__text-container {
+    width: 100%;
+}
+
+.skeleton-suggestion-card__name {
+    width: 207px;
+    height: 13px;
+    background-color: var(--app-image_template_color);
+    margin-bottom: 8px;
+}
+
+.skeleton-suggestion-card__user-name {
+    width: 180px;
+    height: 13px;
+    background-color: var(--app-image_template_color);
+}
+
+@media (max-width: 1004px) {
+    .skeleton-suggestion-card__name, .skeleton-suggestion-card__user-name {
+        height: 11px;
+    }
+}
+
+@media (max-width: 550px) {
+    .skeleton-suggestion-card__user-image {
+        width: 43px;
+    }
+
+    .skeleton-suggestion-card__name, .skeleton-suggestion-card__user-name {
+        height: 9px;
+    }
+}
+

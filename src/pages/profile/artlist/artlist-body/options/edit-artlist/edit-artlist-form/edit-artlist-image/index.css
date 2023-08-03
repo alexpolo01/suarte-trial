@@ -1,0 +1,100 @@
+.edit-artlist-image__wrap {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.edit-artlist-image__wrap.read-only {
+    pointer-events: none;
+}
+
+.edit-artlist-image__image {
+    width: 143px;
+    margin: 0 auto;
+    margin-bottom: 2px;
+}
+
+.edit-artlist__change-image-button {
+    display: block;
+    width: fit-content;
+    padding: 6px;
+    margin: 0 auto;
+    color: var(--app-theme-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.edit-artlist__change-image-bottom-sheet {
+    width: 100%;
+    height: calc(100% - 202px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 20px 20px 0px 0px;
+    animation: artlist-bottom-sheet-enter 0.3s forwards;
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-artlist__change-image-bottom-sheet-header {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-artlist__change-image-bottom-sheet-header-text {
+    font-weight: 500;
+    color: var(--app-normal_text);
+}
+
+.edit-artlist__change-image-bottom-sheet-close {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 5px;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    stroke: var(--app-normal_text);
+}
+
+.edit-artlist__change-image-bottom-sheet-content-container {
+    width: 100%;
+    flex-grow: 1;
+    height: 0px;
+    overflow: hidden;
+}
+
+@keyframes artlist-bottom-sheet-enter {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 800px) {
+    .edit-artlist__change-image-bottom-sheet {
+        padding: 11px;
+    }
+}
+
+@media (max-width: 550px) {
+    .edit-artlist-image__image {
+        width: 130px;
+    }
+
+    .edit-artlist__change-image-bottom-sheet {
+        height: calc(100% - 185px);
+    }
+
+    .edit-artlist__change-image-bottom-sheet-close {
+        width: 12px;
+    }
+}

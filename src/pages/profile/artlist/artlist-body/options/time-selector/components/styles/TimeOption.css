@@ -1,0 +1,43 @@
+.time-option__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 15px
+}
+
+.time-option__indicator {
+    width: 18px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid var(--app-theme-color);
+    background-color: var(--app-theme-background);
+    margin-right: 12px;
+}
+
+.time-option__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.time-option__container.selected .time-option__indicator {
+    background-color: var(--app-theme-color);
+}
+
+.time-option__container.selected .time-option__text {
+    font-weight: 500;
+}
+
+@media (max-width: 1004px) {
+    .time-option__indicator {
+        width: 17px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .time-option__indicator {
+        width: 16px;
+    }
+}

@@ -1,0 +1,49 @@
+.artlist-page {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.artlist-page__container-wrap {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 70px;
+    position: relative;
+}
+
+.artlist-page__main-custom-spinner {
+    width: 30px;
+    margin: 0 auto;
+    margin-top: 140px;
+}
+
+@media (max-width: 1400px) {
+    .artlist-page__main-custom-spinner {
+        margin-top: 110px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .artlist-page__main-custom-spinner {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 1000px) { 
+    .artlist-page__main-custom-spinner {
+        width: 27px;
+    }
+}
+
+@media (max-width: 650px) {
+    .artlist-page__container-wrap {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .artlist-page__main-custom-spinner {
+        margin-top: 40px;
+    }
+}

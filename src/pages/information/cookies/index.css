@@ -1,0 +1,69 @@
+.cookie-policy-page__container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 19px;
+    padding-bottom: 50px;
+}
+
+.cookie-policy-page__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.cookie-policy-page__back-button {
+    width: 11px;
+    fill: var(--app-theme-color);
+    box-sizing: content-box;
+    padding: 7px;
+    cursor: pointer;
+    position: absolute;
+    left: -7px;
+}
+
+.cookie-policy-page__suarte-name {
+    display: block;
+    width: 124px;
+}
+
+.cookie-policy-page__text-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px 22px; 
+}
+
+.cookie-policy-page__heading {
+    width: 100%;
+    text-align: center;
+    font-family: var(--app-font);
+    font-size: 18px;
+    color: var(--app-normal_text);
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1004px) {
+    .cookie-policy-page__heading {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cookie-policy-page__suarte-name {
+        width: 101px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .cookie-policy-page__heading {
+        font-size: 16px;
+    }
+}
+

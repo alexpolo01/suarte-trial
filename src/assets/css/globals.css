@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+body, html {
+  overscroll-behavior: none /** Removes overscroll bounce on iOS and prevents browser pull to refresh */;
+  background-color: var(--app-page_background) !important;
+  -webkit-text-size-adjust: none;
+}
+
+body::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none;
+  -webkit-appearance: none;
+}
+
+body.search-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  display: block;
+}
+
+body.search-scrollbar::-webkit-scrollbar-thumb { 
+  background-color: var(--app-generic-gray);
+  border-radius: 10px;
+}
+
+body.search-scrollbar::-webkit-scrollbar-track { 
+  background-color: var(--app-bottom_sheet_fix);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  display: inline;
+}
+
+img {
+  max-width: unset;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+.element-non-selectable {
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.dots-on-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remove-scrollbar {
+  scrollbar-width: none;
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.generic-popup-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.generic-popup-header-text {
+  color: var(--app-normal_text);
+  font-weight: 600;
+}
+
+.generic-popup-close {
+  width: 13px;
+  box-sizing: content-box;
+  padding: 7px;
+  position: absolute;
+  right: -7px;
+  cursor: pointer;
+  stroke: var(--app-normal_text);
+}
+
+
+/** THIS LAST 2 STYLES FIX FLICKERING IN VIRTUALIZED COLLECTION COMPONENT */
+.ReactVirtualized__Collection {
+  overflow: visible !important;
+}
+
+body.search-scrollbar div#root {
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  body.search-scrollbar::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
+      display: none;
+      -webkit-appearance: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .generic-popup-close {
+      width: 12px;
+  }
+}
+
+:root {
+  --suarte-gradient: linear-gradient(90deg, #FFBA00 0%, #D000C5 34.37%);
+  --app-font: 'Montserrat';
+  --app-generic-gray: #9B9DAF;
+  --app-generic-gray-background: rgba(155, 157, 175, 0.23);
+
+  /** Theme colors for displaying in UI*/
+  --app-starry_moon_theme: #FFB500;
+  --app-starry_moon-background: rgb(255 181 0 / 23%);
+  --app-starry_moon-background-no-opacity: #4f3e16;
+
+  --app-dancing_on_the_grass_theme: #ff7900;
+  --app-dancing_on_the_grass-background: rgb(255 121 0 / 23%);
+  --app-dancing_on_the_grass-background-no-opacity: #4f3016;
+
+  --app-fountain_of_delights_theme: #ff3b58;
+  --app-fountain_of_delights-background: rgb(255 59 88 / 23%);
+  --app-fountain_of_delights-background-no-opacity: #4f222a;
+
+  --app-water_lily_pond_theme: #ff0097;
+  --app-water_lily_pond-background: rgb(255 0 151 / 23%);
+  --app-water_lily_pond-background-no-opacity: #4f1439;
+
+  --app-violet_theme_theme: #d000c5;
+  --app-violet_theme-background: rgb(208 0 197 / 23%);
+  --app-violet_theme-background-no-opacity: #3a0a3a;
+}

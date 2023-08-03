@@ -1,0 +1,170 @@
+.onboarding-theme__text {
+    font-weight: var(--app-font-regular);
+    color: white;
+    font-size: 15px;
+    font-family: var(--app-font);
+    margin: 0px;
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 16px;
+}
+
+.onboarding-theme__theme-name {
+    font-weight: var(--app-font-regular);
+    font-size: 15px;
+    font-family: var(--app-font);
+    margin: 0px;
+}
+
+.onboarding-theme__theme-container {
+    width: fit-content;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.onboarding-theme__theme-container.less-margin {
+    margin-bottom: 15px;
+}
+
+.onboarding-theme__theme-container.less-margin-gallery {
+    margin-bottom: 12px;
+}
+
+.onboarding-theme__theme-button {
+    width: 40px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/** THEME BUTTON COLORS */
+.onboarding-theme__theme-container.starry .onboarding-theme__theme-button {
+    border: 1px solid var(--app-starry_moon_theme);
+    background-color:  var(--app-starry_moon-background)
+}
+
+.onboarding-theme__theme-container.dancing .onboarding-theme__theme-button {
+    border: 1px solid var(--app-dancing_on_the_grass_theme);
+    background-color:  var(--app-dancing_on_the_grass-background)
+}
+
+.onboarding-theme__theme-container.fountain .onboarding-theme__theme-button {
+    border: 1px solid var(--app-fountain_of_delights_theme);
+    background-color:  var(--app-fountain_of_delights-background)
+}
+
+.onboarding-theme__theme-container.water .onboarding-theme__theme-button {
+    border: 1px solid var(--app-water_lily_pond_theme);
+    background-color:  var(--app-water_lily_pond-background)
+}
+
+.onboarding-theme__theme-container.violet .onboarding-theme__theme-button {
+    border: 1px solid var(--app-violet_theme_theme);
+    background-color:  var(--app-violet_theme-background)
+}
+
+@media (hover: hover) {
+    .onboarding-theme__theme-container.starry:hover .onboarding-theme__theme-button {
+        background-color: var(--app-starry_moon_theme);
+    }
+
+    .onboarding-theme__theme-container.dancing:hover .onboarding-theme__theme-button {
+        background-color: var(--app-dancing_on_the_grass_theme);
+    }
+
+    .onboarding-theme__theme-container.fountain:hover .onboarding-theme__theme-button {
+        background-color: var(--app-fountain_of_delights_theme);
+    }
+
+    .onboarding-theme__theme-container.water:hover .onboarding-theme__theme-button {
+        background-color: var(--app-water_lily_pond_theme);
+    }
+
+    .onboarding-theme__theme-container.violet:hover .onboarding-theme__theme-button {
+        background-color: var(--app-violet_theme_theme);
+    }
+}
+
+.onboarding-theme__theme-container.starry.active .onboarding-theme__theme-button {
+    background-color: var(--app-starry_moon_theme);
+}
+
+.onboarding-theme__theme-container.dancing.active .onboarding-theme__theme-button {
+    background-color: var(--app-dancing_on_the_grass_theme);
+}
+
+.onboarding-theme__theme-container.fountain.active .onboarding-theme__theme-button {
+    background-color: var(--app-fountain_of_delights_theme);
+}
+
+.onboarding-theme__theme-container.water.active .onboarding-theme__theme-button {
+    background-color: var(--app-water_lily_pond_theme);
+}
+
+.onboarding-theme__theme-container.violet.active .onboarding-theme__theme-button {
+    background-color: var(--app-violet_theme_theme);
+}
+
+
+/** THEME NAME COLORS */
+.onboarding-theme__theme-container.starry .onboarding-theme__theme-name {
+    color: var(--app-starry_moon_theme);
+}
+
+.onboarding-theme__theme-container.dancing .onboarding-theme__theme-name {
+    color: var(--app-dancing_on_the_grass_theme);
+}
+
+.onboarding-theme__theme-container.fountain .onboarding-theme__theme-name {
+    color: var(--app-fountain_of_delights_theme);
+}
+
+.onboarding-theme__theme-container.water .onboarding-theme__theme-name {
+    color: var(--app-water_lily_pond_theme);
+}
+
+.onboarding-theme__theme-container.violet .onboarding-theme__theme-name {
+    color: var(--app-violet_theme_theme);
+}
+
+.onboarding-theme__theme-container.active .onboarding-theme__theme-name {
+    font-weight: 600;
+}
+
+.onboarding-theme__next-button {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.onboarding-theme__next-button.less-margin {
+    margin-top: 18px;
+}
+
+
+/** Media queries */
+@media (max-width: 1004px) {
+    .onboarding-theme__text, .onboarding-theme__theme-name {
+        font-size: 14px;
+    }
+
+    .onboarding-theme__theme-button {
+        width: 36px;
+    }
+}
+
+@media (max-width: 550px) {
+    .onboarding-theme__text, .onboarding-theme__theme-name{
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .onboarding-theme__theme-button {
+        width: 32px;
+    }
+}

@@ -1,0 +1,47 @@
+.artwork-view-add-to-artlist__spinner {
+    width: 25px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.artwork-view-add-to-artlist__content {
+    width: 100%;
+    flex-grow: 1;
+    height: 0px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.artwork-view-add-to-artlit__create-artlist {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: var(--app-theme-background);
+    border: 1px solid var(--app-theme-color);
+    padding: 3px 10px;
+    padding-top: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--app-theme-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.artwork-view-add-to-artlist__no-artlist {
+    font-weight: 500;
+    color: var(--app-normal_text);
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .artwork-view-add-to-artlist__spinner {
+        width: 23px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-view-add-to-artlit__create-artlist {
+        padding-top: 3px;
+    }
+}

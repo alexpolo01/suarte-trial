@@ -1,0 +1,68 @@
+.artwork-view-artwork-description__text {
+    width: 100%;
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    margin-top: 12px !important;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.artwork-view-artwork-description__more-button {
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+}
+
+.artwork-view-artwork-description-bottom-sheet {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.artwork-view-artwork-description-bottom-sheet__content {
+    width: 100%;
+    max-height: 80vh;
+    padding: 30px 15px;
+    padding-top: 0px;
+    background-color: var(--app-card_background_more_visible);
+    overflow-y: auto;
+}
+
+.artwork-view-artwork-description-bottom-sheet__content-header {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--app-card_background_more_visible);
+    padding-bottom: 15px;
+}
+
+.artwork-view-artwork-description-bottom-sheet__content-header-text {
+    color: var(--app-normal_text);
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.artwork-view-artwork-description-bottom-sheet__close {
+    width: 12px;
+    stroke: var(--app-normal_text);
+    cursor: pointer;
+    box-sizing: content-box;
+    padding: 5px;
+    position: absolute;
+    right: -5px;
+}
+
+.artwork-view-artwork-description-bottom-sheet__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    white-space: pre-line;
+    padding: 0px 10px;
+}
+

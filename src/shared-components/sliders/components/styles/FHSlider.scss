@@ -1,0 +1,57 @@
+.fhslider__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fhslider__viewport {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.fhslider__viewport::-webkit-scrollbar {
+    display: none
+}
+
+.fhslider__viewport > * {
+    flex-shrink: 0;
+}
+
+.fhslider__viewport > *:first-child { /** We will always use margin to separate items. This prevents the first item to apply margin to the border. And same with the last child */
+    margin-left: 0;
+}
+
+.fhslider__viewport > *:last-child {
+    margin-right: 0;
+}
+
+.fhslider__controls {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.fhslider__controls.prev-button {
+    left: 10px;
+}
+
+.fhslider__controls.next-button {
+    right: 10px;
+}
+
+@media (hover: hover) {
+    .fhslider__container:hover .fhslider__controls.prev-button.active, .fhslider__container:hover .fhslider__controls.next-button.active {
+        opacity: 1;
+        visibility: visible; /** This does not trigger a reflow, only a repaint, which is faster */
+    }
+
+    .fhslider__container:hover .fhslider__controls.prev-button.disabled, .fhslider__container:hover .fhslider__controls.next-button.disabled {
+        // opacity: 0.3;
+        pointer-events: none;
+        // visibility: visible; /** This does not trigger a reflow, only a repaint, which is faster */
+    }
+}

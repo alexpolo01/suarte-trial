@@ -1,0 +1,161 @@
+.public-select__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.public-select__container.read-only {
+    pointer-events: none;
+}
+
+.public-select__label {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    font-family: var(--app-font);
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: var(--app-generic-gray);
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    cursor: pointer;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.public-select__selected-option-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.public-select__selected-option {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-family: var(--app-font);
+    font-size: 16px;
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-right: 10px;
+    cursor: pointer;
+    margin: 0px;
+    pointer-events: none;
+}
+
+.public-select__open-options-container {
+    padding-right: 10px;
+    padding-left: 5px;
+    flex-shrink: 0;
+}
+
+.public-select__open-options {
+    width: 14px;
+    fill: var(--app-theme-color);
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.public-select__options-container {
+    min-width: 100%;
+    width: fit-content;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 5px;
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    border: 1px solid var(--app-options_border);
+    max-height: 150px;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    pointer-events: none;
+}
+
+.public-select__container.active .public-select__open-options {
+    transform: rotate(180deg);
+}
+
+.public-select__container.active .public-select__options-container {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.public-select__option {
+    width: 100%;
+    padding: 5px;
+    padding: 5px 14px;
+    font-family: var(--app-font);
+    font-size: 15px;
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+    cursor: pointer;
+    text-align: center;
+    margin: 0px;
+}
+
+.public-select__option:hover {
+    background-color: var(--app-option_hover);
+}
+
+@media (max-width: 1004px) {
+    .public-select__selected-option {
+        font-size: 15px;
+    }
+
+    .public-select__label {
+        font-size: 14px;
+    }
+
+    .public-select__option {
+        font-size: 14px;
+    }
+
+    .public-select__label {
+        padding-top: 6px;
+    }
+
+    .public-select__selected-option {
+        padding-bottom: 6px;
+        padding-top: 2px;
+    }
+}
+
+@media (max-width: 500px) {
+    .public-select__selected-option {
+        font-size: 14px;
+    }
+
+    .public-select__label {
+        font-size: 13px;
+    }
+
+    .public-select__option {
+        font-size: 13px;
+    }
+}

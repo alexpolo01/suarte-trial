@@ -1,0 +1,85 @@
+.sort-artlist-artworks__artwork {
+    width: 100%;
+    padding: 8px 15px;
+    background-color: var(--app-card_background_more_visible);
+    display: flex;
+    align-items: center;
+    padding-right: 18px;
+}
+
+.sort-artlist-artworks__artwork.drag-overlay {
+    background-color: var(--app-theme-background-no-opacity);
+}
+
+.sort-artlist-artworks__delete-artwork-button {
+    width: 24px;
+    margin-right: 20px;
+}
+
+.sort-artlist-artworks__artwork-image {
+    width: 60px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.sort-artlist-artworks__artwork-info {
+    width: 100%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.sort-artlist-artworks__artwork-title {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--app-normal_text);
+    line-height: 18px;
+}
+
+.sort-artlist-artworks__artwork-artist {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.sort-artlist-artworks__artwork-drag-handle {
+    stroke: var(--app-generic-gray);
+    width: 20px;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+@media (max-width: 1004px) {
+    .sort-artlist-artworks__delete-artwork-button {
+        width: 22px;
+    }
+
+    .sort-artlist-artworks__artwork-drag-handle {
+        width: 17px;
+    }
+}
+
+@media (max-width: 550px) {
+    .sort-artlist-artworks__artwork {
+        padding: 8px 11px;
+    }
+
+    .sort-artlist-artworks__delete-artwork-button {
+        width: 19px;
+        margin-right: 12px;
+    }
+
+    .sort-artlist-artworks__artwork-drag-handle {
+        width: 14px;
+    }
+}
+

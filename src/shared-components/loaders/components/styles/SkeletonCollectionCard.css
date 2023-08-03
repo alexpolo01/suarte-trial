@@ -1,0 +1,92 @@
+.skeleton-collection-card__container {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+}
+
+.skeleton-collection-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 11px;
+}
+
+.skeleton-collection-card__bigger-text {
+    height: 11px;
+    background-color: var(--app-image_template_color);
+    border-radius: 6px;
+}
+
+.skeleton-collection-card__text {
+    height: 9px;
+    background-color: var(--app-image_template_color);
+    border-radius: 5px;
+}
+
+.skeleton-collection-card__content {
+    width: 100%;
+    display: flex;
+}
+
+.skeleton-collection-card__image {
+    width: 145px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    background-color: var(--app-image_template_color);
+    margin-right: 12px;
+}
+
+.skeleton-collection-card__details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skeleton-collection-card__details .skeleton-collection-card__text {
+    margin-bottom: 15px;
+}
+
+.skeleton-collection-card__details .skeleton-collection-card__text:last-child {
+    margin-bottom: 0px;
+}
+
+@media (max-width: 1004px) {
+    .skeleton-collection-card__container {
+        padding: 12px;
+    }
+
+    .skeleton-collection-card__bigger-text {
+        height: 10px;
+        border-radius: 5px;
+    }
+
+    .skeleton-collection-card__text {
+        height: 8px;
+        border-radius: 4px;
+    }
+
+    .skeleton-collection-card__image {
+        width: 120px;
+    }
+
+    .skeleton-collection-card__details .skeleton-collection-card__text {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .skeleton-collection-card__container {
+        padding: 10px;
+    }
+
+    .skeleton-collection-card__image {
+        width: 110px;
+    }
+
+    .skeleton-collection-card__details .skeleton-collection-card__text {
+        margin-bottom: 10px;
+    }
+}

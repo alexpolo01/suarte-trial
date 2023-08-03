@@ -1,0 +1,40 @@
+.verify-gallery__info-container {
+    width: 100%;
+    padding: 0px 29px;
+}
+
+.verify-gallery__info-text {
+    color: white;
+    margin-bottom: 17px !important;
+}
+
+.verify-gallery__info-text.margin {
+    margin-bottom: 30px !important;
+}
+
+.verify-gallery__info-gallery-name {
+    font-weight: 600;
+}
+
+.verify-gallery__info-link {
+    font-weight: 600;
+    color: var(--app-theme-color);
+    text-decoration: none;
+}
+
+.verify-gallery__info-link.margin {
+    display: block;
+    margin-bottom: 11px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.verify-gallery__info-link:hover {
+    color: var(--app-theme-color);
+}
+
+@media (hover: hover) {
+    .verify-gallery__info-link.underline:hover {
+        text-decoration: underline;
+    }
+}

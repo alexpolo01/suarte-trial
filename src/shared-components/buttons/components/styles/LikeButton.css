@@ -1,0 +1,10 @@
+.like-button__button {
+    stroke: var(--app-theme-color);
+    fill: none;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.like-button__button.active {
+    fill: var(--app-theme-color);
+}

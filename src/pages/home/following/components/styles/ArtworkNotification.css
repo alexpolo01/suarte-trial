@@ -1,0 +1,52 @@
+.home-artwork-notification__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.home-artwork-notification__image {
+    width: 100%;
+    max-width: 500px;
+    margin: 15px auto;
+    display: block;
+}
+
+.home-artwork-notification__container .artwork-label__container {
+    background-color: var(--app-page_background);
+}
+
+.home-artwork-notification__container .artwork-label__artist-image {
+    background-color: var(--app-card_background_more_visible);
+}
+
+.home-artwork-notification__container .artwork-label-socials__item-icon-rating, .home-artwork-notification__container .artwork-label-socials__item-icon-thought {
+    fill: var(--app-page_background);
+}
+
+.home-artwork-notification__buy-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.home-artwork-notification__container .buy-original-button__container, .home-artwork-notification__container .buy-limited-edition-button__container,
+.home-artwork-notification__container .original-sold-button__container, .home-artwork-notification__container .limited-editions-sold-button__container {
+    background-color: var(--app-page_background);
+}
+
+.home-artwork-notification__container .buy-limited-edition-button__container, .home-artwork-notification__container .limited-editions-sold-button__container {
+    margin-left: 10px;
+}
+
+@media (max-width: 550px) {
+    .home-artwork-notification__container {
+        padding: 12px;
+    }
+
+    .home-artwork-notification__image {
+        margin: 12px auto;
+    }
+}

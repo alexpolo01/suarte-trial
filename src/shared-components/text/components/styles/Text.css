@@ -1,0 +1,77 @@
+.text-custom__component {
+    font-family: var(--app-font);
+}
+
+.text-custom__component.extra-small-plus {
+    font-size: 12px;
+}
+
+.text-custom__component.extra-small {
+    font-size: 13px;
+}
+
+.text-custom__component.small {
+    font-size: 14px;
+}
+
+.text-custom__component.medium {
+    font-size: 15px;
+}
+
+.text-custom__component.large{
+    font-size: 16px;
+}
+
+.text-custom__component.justify {
+    text-align: justify;
+    hyphens: auto;
+}
+
+.text-custom__component.paragraph {
+    margin: 0px;
+}
+
+
+@media (max-width: 1004px) {
+    .text-custom__component.extra-small-plus {
+        font-size: 11px;
+    }
+
+    .text-custom__component.extra-small {
+        font-size: 12px;
+    }
+
+    .text-custom__component.small {
+        font-size: 13px;
+    }
+    
+    .text-custom__component.medium {
+        font-size: 14px;
+    }
+    
+    .text-custom__component.large{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .text-custom__component.extra-small-plus {
+        font-size: 10px;
+    }
+
+    .text-custom__component.extra-small {
+        font-size: 11px;
+    }
+
+    .text-custom__component.small {
+        font-size: 12px;
+    }
+    
+    .text-custom__component.medium {
+        font-size: 13px;
+    }
+    
+    .text-custom__component.large{
+        font-size: 14px;
+    } 
+}

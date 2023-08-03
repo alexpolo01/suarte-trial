@@ -1,0 +1,55 @@
+.artwork-request-changes__wrap {
+    padding-top: 30px;
+    width: 100%;
+    padding-bottom: 200px;
+}
+
+.artwork-request-changes__options {
+    width: 100%;
+    height: 200px;
+    background-color: var(--app-card_background_more_visible);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artwork-request-changes__button {
+    display: block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.artwork-request-changes__button.read-only {
+    pointer-events: none;
+}
+
+.artwork-request-changes__button.accept {
+    color: green;
+    border: 2px solid green;
+    background: rgba(0, 128, 0, 0.233);
+    margin-right: 20px;
+}
+
+.artwork-request-changes__button.deny {
+    color: red;
+    border: 2px solid red;
+    background: rgba(255, 0, 0, 0.233);
+}
+
+.artwork-request-changes__critical-changes-container {
+    width: 100%;
+    border: 2px solid red;
+    padding: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 0, 0, 0.24);
+    font-weight: 500;
+    color: white;
+}
+

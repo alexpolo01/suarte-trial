@@ -1,0 +1,80 @@
+.artwork-user-rating-card__container {
+    width: 100%;
+    padding: 25px 15px;
+    padding-right: 20px;
+    border-radius: 13px;
+    background-color: var(--app-card_background_when_more_visible_is_on);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.artwork-user-rating-card__user-image {
+    width: 32px;
+    margin-right: 8px;
+    background-color: var(--app-card_background_more_visible);
+}
+
+.artwork-user-rating-card__username {
+    width: 100%;
+    font-weight: 600;
+    color: var(--app-generic-gray);
+    margin-right: 15px !important;
+}
+
+.artwork-user-rating-card__rating-categories {
+    width: 250%;
+}
+
+.artwork-user-rating-card__rating-displayer {
+    margin-bottom: 38px;
+}
+
+.artwork-user-rating-card__rating-displayer:last-child {
+    margin-bottom: 0px;
+}
+
+.artwork-user-rating-card__rating-displayer .artwork-rating-displayer__category {
+    margin-right: 14px !important;
+}
+
+.artwork-user-rating-card__rating-displayer .artwork-rating-displayer__bar, .artwork-user-rating-card__rating-displayer .artwork-rating-displayer__range-container {
+    height: 2px;
+    border-radius: 2px;
+}
+
+.artwork-user-rating-card__rating-displayer .artwork-rating-displayer__indicator {
+    transform: translateX(-1px)
+}
+
+.artwork-user-rating-card__rating-displayer .artwork-rating-displayer__indicator-bar {
+    width: 2px;
+    border-radius: 2px;
+    height: 10px;
+}
+
+.artwork-user-rating-card__rating-displayer .artwork-rating-displayer__indicator-text.my-rating {
+    top: 7px;
+}
+
+.artwork-user-rating-card__rating-displayer .artwork-rating-displayer__indicator-text {
+    top: -17px;
+}
+
+@media (max-width: 550px) {
+    .artwork-user-rating-card__rating-displayer {
+        margin-bottom: 29px;
+    }
+
+    .artwork-user-rating-card__rating-displayer .artwork-rating-displayer__indicator-bar {
+        height: 8px;
+    }
+
+    .artwork-user-rating-card__rating-displayer .artwork-rating-displayer__indicator-text.my-rating {
+        top: 6px;
+    }
+
+    .artwork-user-rating-card__rating-displayer .artwork-rating-displayer__indicator-text {
+        top: -15px;
+    }
+}

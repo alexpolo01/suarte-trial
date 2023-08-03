@@ -1,0 +1,29 @@
+.artwork-rating-displayer__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.artwork-rating-displayer__category {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    flex-shrink: 0;
+    width: 79px;
+    text-align: end;
+    margin-right: 20px !important;
+}
+
+@media (max-width: 1004px) {
+    .artwork-rating-displayer__category {
+        width: 73px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-rating-displayer__category {
+        width: 68px;
+        margin-right: 12px !important;
+    }
+}
+

@@ -1,0 +1,39 @@
+.artlist-image__artlist-image-template {
+    aspect-ratio: 1/1;
+    border-radius: 5%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artlist-image__artlist-icon {
+    width: 44%;
+    fill: var(--app-theme-color);
+}
+
+.artlist-image__artlist-image-container {
+    aspect-ratio: 1/1;
+    background-color: var(--app-image_template_color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.artlist-image__artlist-overlay {
+    width: 102%;
+    aspect-ratio: 1/1;
+    background-color: rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artlist-image__artlist-image {
+    width: 80%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}

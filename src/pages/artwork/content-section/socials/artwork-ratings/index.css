@@ -1,0 +1,26 @@
+.artwork-view-ratings-loading__spinner {
+    width: 25px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.artwork-view-ratings__outter-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.artwork-view-ratings__content-container {
+    width: 100%;
+    flex-grow: 1;
+    height: 0px;
+    overflow: hidden;
+    padding: 0px 20px;
+}
+
+@media (max-width: 1450px) {
+    .artwork-view-ratings__content-container {
+        padding: 0px 15px;
+    }
+}

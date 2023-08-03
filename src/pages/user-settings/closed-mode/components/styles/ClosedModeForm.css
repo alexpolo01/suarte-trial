@@ -1,0 +1,47 @@
+.settings-closed-mode__form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.settings-closed-mode__form .generic-input-structure__container {
+    margin-bottom: 15px;
+}
+
+.settings-closed-mode__textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    height: 120px;
+    overflow-y: auto;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.settings-closed-mode__form-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.settings-closed-mode__form-text span {
+    color: var(--app-generic-gray);
+}
+
+.settings-closed-mode__buttons {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-closed-mode__buttons .continue-button__button {
+    margin: unset;
+}
+
+.settings-closed-mode__buttons .margin {
+    margin-left: 15px;
+}

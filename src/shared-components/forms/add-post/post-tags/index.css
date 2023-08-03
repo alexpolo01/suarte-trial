@@ -1,0 +1,23 @@
+.post-tags__add-tags {
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin-top: 13px;
+}
+
+.post-tags__post-tags {
+    margin-top: 15px;
+}
+
+.post-tags__post-tags .post-removable-tag__user-image {
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+}
+
+@media (max-width: 1004px) {
+    .post-tags__add-tags {
+        margin-top: 8px;
+    }
+}

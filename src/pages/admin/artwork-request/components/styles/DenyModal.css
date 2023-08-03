@@ -1,0 +1,57 @@
+.admin-deny-artwork-modal {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--app-card_background_more_visible);
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.admin-deny-artwork-modal__text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.admin-deny-artwork-modal__textarea {
+    margin-top: 20px;
+}
+
+.admin-deny-artwork-modal__textarea .public-form-input__container {
+    background-color: var(--app-page_background);
+}
+
+.admin-deny-artwork-modal__textarea .public-form-input__input.textarea {
+    height: 200px;
+}
+
+.admin-deny-artwork-modal__options {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.admin-deny-artwork-modal__option {
+    display: block;
+    font-weight: 600;
+    padding: 5px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.admin-deny-artwork-modal__option.cancel {
+    color: var(--app-generic-gray);
+    border: 1px solid var(--app-generic-gray);
+    background-color: var(--app-generic-gray-background);
+    margin-right: 20px;
+}
+
+.admin-deny-artwork-modal__option.deny {
+    color: red;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.233);
+}
+
+.admin-deny-artwork-modal__option.read-only {
+    pointer-events: none;
+}

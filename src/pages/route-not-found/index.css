@@ -1,0 +1,87 @@
+.route-not-found__page {
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.route-not-found__frame {
+    width: 90%;
+    max-width: 500px;
+}
+
+.route-not-found__content {
+    position: absolute;
+    z-index: 2;
+}
+
+.route-not-found__numbers {
+    display: block;
+    font-weight: 800;
+    color: var(--app-starry_moon_theme);
+    font-family: var(--app-font);
+    font-size: 90px;
+    text-align: center;
+}
+
+.route-not-found__text {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-family: var(--app-font);
+    color: var(--app-starry_moon_theme);
+    font-size: 50px;
+    margin-top: -20px;
+}
+
+.route-not-found__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    background-color: var(--app-starry_moon_theme);
+    border-radius: 5px;
+    font-weight: 600;
+    color: black;
+    margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 1004px) {
+    .route-not-found__numbers {
+        font-size: 80px;
+    }
+
+    .route-not-found__text {
+        font-size: 40px;
+    }
+
+    .route-not-found__button {
+        width: 135px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 550px) {
+    .route-not-found__numbers {
+        font-size: 70px;
+    }
+
+    .route-not-found__text {
+        font-size: 30px;
+    }
+
+    .route-not-found__button {
+        width: 125px;
+        height: 40px;
+        margin-top: 15px;
+    }
+}

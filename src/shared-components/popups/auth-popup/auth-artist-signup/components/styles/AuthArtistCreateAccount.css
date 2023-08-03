@@ -1,0 +1,47 @@
+.auth-artist-create-account__form {
+    width: 100%;
+    margin-top: 19px;
+}
+
+.auth-artist-create-account__form .public-form-input__container, .auth-artist-create-account__form .form-checkbox__custom-checkbox {
+    background-color: var(--app-page_background);
+}
+
+.auth-artist-create-account__input-margin {
+    margin-bottom: 22px;
+}
+
+.auth-artist-create-account__terms {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.auth-artist-create-account__submit-button.continue-button__button.rounded-corners {
+    margin-top: 22px;
+    padding: 4px 34px;
+    font-size: 15px;
+}
+
+
+@media (hover: hover) {
+    .auth-artist-create-account__terms:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 1004px) {
+    .auth-artist-create-account__submit-button.continue-button__button.rounded-corners {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .auth-artist-create-account__input-margin {
+        margin-bottom: 18px;
+    }
+
+    .auth-artist-create-account__submit-button.continue-button__button.rounded-corners {
+        font-size: 13px;
+    }
+}

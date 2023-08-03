@@ -1,0 +1,93 @@
+.home-following__page {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0px 11px;
+    padding-top: 14px;
+    padding-bottom: 30px;
+}
+
+.home-following-spinner {
+    width: 24px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.home-following-virtual-list {
+    width: 100%;
+    margin-top: 25px;
+}
+
+#following-rating-measurer {
+    width: calc(100% - 22px);
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    max-width: 678px;
+    padding: 15px;
+    padding-bottom: 12px;
+}
+
+.following-rating-measurer__user-img {
+    width: 45px;
+    aspect-ratio: 1/1;
+}
+
+.following-rating-measurer__artwork-img {
+    width: 30%;
+    min-width: 144px;
+    aspect-ratio: 1/1;
+}
+
+#following-thought-measurer {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: calc(100% - 310px); /** Result of body.width - width of text container gives the width that we have to substract to this 100% (which is the body width) */
+    max-width: 401.47px;
+    font-family: var(--app-font);
+    font-weight: var(--app-font-regular);
+    margin: 0px;
+    font-size: 14px;
+}
+
+#following-thought-measurer span{
+    font-weight: 600;
+}
+
+
+@media (max-width: 1004px) {
+    #following-rating-measurer {
+        padding: 12px;
+        padding-bottom: 10px;
+    }
+
+    .following-rating-measurer__user-img {
+        width: 40px;
+    }
+
+    .following-rating-measurer__artwork-img {
+        width: 19%;
+    }
+
+    #following-thought-measurer {
+        width: calc(100% - 261px);
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 550px) {
+    #following-rating-measurer {
+        padding: 10px;
+        padding-bottom: 8px;
+    }
+
+    .following-rating-measurer__user-img {
+        width: 35px;
+    }
+
+    #following-thought-measurer {
+        width: calc(100% - 216px);
+        font-size: 12px;
+    }
+}

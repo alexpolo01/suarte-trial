@@ -1,0 +1,55 @@
+
+
+.artwork-view-add-to-artlist__virtual-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.add-to-artlist-artlist-item__container {
+    width: 100%;
+    background-color: var(--app-card_background_when_more_visible_is_on);
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.add-to-artlist-artlist-item__image {
+    width: 75px;
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.add-to-artlist-artlist-item__title {
+    width: 100%;
+    font-weight: 500;
+    color: var(--app-normal_text);
+    margin-right: 15px;
+}
+
+.add-to-artlist-artlist-item__count {
+    font-weight: 500;
+    color: var(--app-normal_text);
+}
+
+.add-to-artlist-artlist-item__count-icon {
+    width: 13px;
+    fill: var(--app-normal_text);
+    flex-shrink: 0;
+    margin-left: 4px;
+}
+
+@media (max-width: 1004px) {
+    .add-to-artlist-artlist-item__count-icon {
+        width: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .add-to-artlist-artlist-item__count-icon {
+        width: 11px;
+        top: 0px;
+    }
+}

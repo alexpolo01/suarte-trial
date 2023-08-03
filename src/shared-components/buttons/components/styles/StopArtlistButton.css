@@ -1,0 +1,17 @@
+.stop-artlist-button__button {
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--app-theme-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stop-artlist-button__button svg{
+    width: 35%;
+    fill: var(--app-page_background);
+    position: relative;
+    left: 1px;
+}

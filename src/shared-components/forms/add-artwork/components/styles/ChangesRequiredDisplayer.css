@@ -1,0 +1,20 @@
+.changes-required-displayer__container {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.226);
+    padding: 15px;
+    margin: 20px 0px;
+}
+
+.changes-required-displayer__text {
+    color: red;
+    font-weight: 500;
+    margin-bottom: 15px !important;
+}
+
+.changes-required-displayer__changes {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    white-space: pre-wrap;
+}

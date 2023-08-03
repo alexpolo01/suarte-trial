@@ -1,0 +1,75 @@
+.post-card__container {
+    width: 100%;
+    aspect-ratio: 3/4;
+    box-shadow: var(--app-card_box_shadow);
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.post-card__cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: var(--app-image_template_color);
+}
+
+.post-card__backdrop {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.post-card__content {
+    width: 100%;
+    padding: 8px 10px;
+}
+
+.post-card__views {
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.post-card__views-icon {
+    width: 24px;
+    stroke: var(--app-theme-color);
+    margin-left: 5px;
+}
+
+.post-card__post-heading {
+    color: white;
+    font-weight: 600;
+    font-family: var(--app-font);
+    margin: 0px;
+    font-size: 23px;
+}
+
+@media (max-width: 1004px) {
+    .post-card__views-icon {
+        width: 22px;
+    }
+
+    .post-card__post-heading {
+        font-size: 19px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .post-card__views-icon {
+        width: 20px;
+    }
+
+    .post-card__post-heading {
+        font-size: 17px;
+    }
+}

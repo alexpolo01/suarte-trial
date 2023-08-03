@@ -1,0 +1,128 @@
+.inventory-layout__page {
+    width: 100%;
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+
+.inventory-layout__wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.inventory-layout__header-outter {
+    width: 100%;
+    padding: 0px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--app-page_background);
+    padding-top: 21px;
+    padding-bottom: 10px;
+}
+
+.inventory-layout__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.inventory-layout__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.inventory-layout__back-button {
+    width: 12px;
+    box-sizing: content-box;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: -15px;
+    fill: var(--app-theme-color);
+}
+
+.inventory-layout__outter-nav {
+    width: 100%;
+    position: sticky;
+    top: 56px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    background-color: var(--app-page_background); 
+    z-index: 2;
+}
+
+.inventory-layout__nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.inventory-layout__active-bar {
+    width: 33.3%;
+    height: 2px;
+    background-color: var(--app-theme-color);
+    position: absolute;
+    bottom: 0px;
+    transition: transform 0.3s ease;
+}
+
+.inventory-layout__nav.pending .inventory-layout__active-bar {
+    transform: translateX(100%);
+}
+
+.inventory-layout__nav.sold .inventory-layout__active-bar {
+    transform: translateX(200%);
+}
+
+.inventory-layout__link {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    text-align: center;
+}
+
+.inventory-layout__nav.pending .inventory-layout__link.pending {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.inventory-layout__nav.available .inventory-layout__link.available {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.inventory-layout__nav.sold .inventory-layout__link.sold {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.inventory-layout__content {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+@media (max-width: 1004px) {
+    .inventory-layout__back-button {
+        width: 11px;
+    }
+
+    .inventory-layout__outter-nav {
+        padding-top: 12px;
+        top: 55px;
+    }
+}
+
+@media (max-width: 550px) {
+    .inventory-layout__outter-nav {
+        top: 53px;
+    }
+}

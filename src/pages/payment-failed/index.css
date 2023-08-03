@@ -1,0 +1,75 @@
+.payment-failed__page {
+    width: 100%;
+    padding: 0px 20px;
+    padding-bottom: 50px;
+    flex-grow: 1;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.payment-failed__info-container {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.payment-failed__heading {
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: var(--app-theme-color);
+}
+
+.payment-failed__text {
+    text-align: justify;
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+}
+
+.payment-failed__text a {
+    font-weight: 600;
+    color: var(--app-theme-color);
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.payment-failed__button {
+    position: relative;
+    z-index: 2;
+}
+
+.payment-failed__sea {
+    width: 800px;
+    position: absolute;
+    background-color: unset !important;
+    top: -5%;
+    right: -61%;
+}
+
+@media (max-width: 1040px) {
+    .payment-failed__sea {
+        width: 250px;
+        top: 86px;
+        right: -5%;
+    }
+}
+
+@media (max-width: 650px) {
+    .payment-failed__info-container {
+        row-gap: 20px;
+        justify-content: center;
+    }
+    
+    .payment-failed__sea {
+        width: 200px;
+        position: static;
+    }
+}

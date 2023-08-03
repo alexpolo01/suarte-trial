@@ -1,0 +1,24 @@
+.search-filters-content {
+    width: 100%;
+}
+
+/** ANIMATION VALUES */
+.search-filter-category__container.default-height-animation.active .search-filter-category__content {
+    height: 325px;
+}
+
+.search-filter-category__container.price-height-animation.active .search-filter-category__content {
+    height: 171px;
+}
+
+.search-filter-category__container.price-height-animation.expanded.active .search-filter-category__content {
+    height: 240px;
+}
+
+.search-filter-category__container.size-height-animation.active .search-filter-category__content {
+    height: 176px;
+}
+
+.search-filter-category__container.size-height-animation.expanded.active .search-filter-category__content {
+    height: 537px;
+}

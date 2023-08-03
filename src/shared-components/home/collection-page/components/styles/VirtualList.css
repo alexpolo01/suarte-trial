@@ -1,0 +1,11 @@
+.collection-page__infinite-container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 650px) {
+    .collection-page__infinite-container {
+        padding-top: 0px;
+    }
+}

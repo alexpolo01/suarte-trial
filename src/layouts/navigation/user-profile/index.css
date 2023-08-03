@@ -1,0 +1,73 @@
+.user-profile__profile-loading-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile__profile-loading-page-spinner {
+    width: 30px;
+}
+
+.user-profile__wrap-outter {
+    width: 100%;
+    background-color: var(--app-page_background);
+}
+
+.user-profile__wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+}
+
+.user-profile__main-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.user-profile__user-image {
+    width: 100px;
+    background-color: var(--app-card_background_more_visible);
+    margin: 0 auto;
+    margin-bottom: 14px;
+    box-shadow: var(--app-card_box_shadow);
+}
+
+.user-profile-pull-to-refresh-background {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+}
+
+.user-profile__outlet-container {
+    width: 100%;
+    padding: 11px;
+}
+
+@media (max-width: 1400px) {
+    .user-profile__user-image {
+        width: 93px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .user-profile__user-image {
+        width: 87px;
+    }
+}
+
+@media (max-width: 1000px) { 
+    .user-profile__profile-loading-page-spinner {
+        width: 27px;
+    }
+}
+
+@media (max-width: 550px) {
+    .user-profile__user-image {
+        width: 82px;
+    }
+}

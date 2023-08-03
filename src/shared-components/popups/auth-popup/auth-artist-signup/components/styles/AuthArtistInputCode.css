@@ -1,0 +1,43 @@
+.auth-artist-input-code__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.auth-artist-input-code__input {
+    width: 55px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    border: none;
+    outline: none;
+    background-color: var(--app-page_background);
+    border-radius: 10%;
+    font-size: 25px;
+    font-family: var(--app-font);
+    text-align: center;
+    font-weight: 500;
+    color: var(--app-theme-color);
+    margin: 0 6px;
+}
+
+.auth-artist-input-code__input:focus {
+    outline: none;
+    border-color: var(--app-theme-color);
+    box-shadow: 0 0 5px var(--app-theme-color) inset;
+}
+
+@media (max-width: 1244px) {
+    .auth-artist-input-code__input {
+        width: 50px;
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 500px) {
+    .auth-artist-input-code__input {
+        width: 46px;
+        font-size: 21px;
+    }
+}

@@ -1,0 +1,11 @@
+.delete-post-popup {
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+}
+
+@media (max-width: 550px) {
+    .delete-post-popup {
+        max-width: 300px;
+    }
+}

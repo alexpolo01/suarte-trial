@@ -1,0 +1,58 @@
+.home-artlists__page {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0px 40px;
+}
+
+.home-artlists__header-icon {
+    fill: var(--app-normal_text);
+    width: 26px;
+    margin: 0px 10px;
+    margin-right: 8px;
+}
+
+.home-artlists__empty-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px !important;
+    font-style: italic;
+}
+
+@media (max-width: 1400px) {
+    .home-artlists__page {
+        padding: 0px 30px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .home-artlists__page {
+        padding: 0px 20px;
+    }
+
+    .home-artlists__header-icon {
+        width: 23px;
+    }
+}
+
+@media (max-width: 650px) {
+    .home-artlists__page {
+        padding: 0px 11px;
+    }
+
+    .home-artlists__page .home-header__search-container {
+        margin-top: 20px;
+    }
+
+    .home-artlists__empty-text {
+        margin-top: 10px !important;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .home-artlists__header-icon {
+        width: 21px;
+    }
+}

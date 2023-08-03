@@ -1,0 +1,45 @@
+.bars-loader {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+}
+
+.bar-loader {
+    width: 3px;
+    aspect-ratio: 1/4;
+    background-color: white;
+    display: inline-block;
+    margin: 2px;
+    animation: sk-wave-stretch-delay 1s infinite ease-in-out;
+}
+
+.bar-loader1 {
+    animation-delay: -1.2s;
+}
+
+.bar-loader2 {
+    animation-delay: -1.1s;
+}
+
+.bar-loader3 {
+    animation-delay: -1s;
+}
+
+.bar-loader4 {
+    animation-delay: -0.9s;
+}
+
+@keyframes sk-wave-stretch-delay {
+    0%, 40%, 100% {
+      transform: scaleY(1.2);
+    }
+    20% {
+      transform: scaleY(2);
+    }
+}
+
+@media (max-width: 500px) {
+    .bar-loader {
+        margin: 1px;
+    }
+}

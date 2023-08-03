@@ -1,0 +1,28 @@
+.home-galleries__infinite-container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.home-galleries__virtual-row {
+    width: 100%;
+    height: 100%;
+}
+
+.home-galleries__inner-virtual-row {
+    width: 100%;
+    display: flex;
+    column-gap: 15px;
+}
+
+@media (max-width: 650px) {
+    .home-galleries__infinite-container {
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-galleries__inner-virtual-row {
+        column-gap: 10px;
+    }
+}

@@ -1,0 +1,17 @@
+.invoices__info-text {
+    display: block;
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.invoices__info-text span {
+    color: var(--app-normal_text);
+}
+
+.invoices__info-text span.negative {
+    color: #FF0000;
+}
+
+.invoices__info-text span.positive {
+    color: #129B28;
+}

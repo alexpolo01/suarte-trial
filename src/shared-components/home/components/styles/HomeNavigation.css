@@ -1,0 +1,29 @@
+.home-navigation__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.home-navigation__suarte-name {
+    width: 102px;
+}
+
+@media (max-width: 650px) {
+    .home-navigation__container {
+        display: flex;
+    }
+
+    .home-navigation__container .navbar-home-navigation__links {
+        display: flex;
+        position: relative;
+        top: 3px;
+    }
+}
+
+@media (max-width: 550px) {
+    .home-navigation__suarte-name {
+        width: 92px;
+    } 
+}

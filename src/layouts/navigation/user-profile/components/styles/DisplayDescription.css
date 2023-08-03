@@ -1,0 +1,90 @@
+.profile-info-display-description__text {
+    width: 100%;
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    text-align: center;
+    max-width: 81%;
+    margin: 0 auto !important;
+}
+
+.profile-info-display-description__more-button {
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+}
+
+.profile-info__user_name.header {
+    font-weight: 600;
+}
+
+.profile-info-display__description-bottom-sheet {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.profile-info-display__description-bottom-sheet-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    max-width: 81%;
+    margin: 0 auto !important;
+    white-space: pre-line;
+}
+
+.profile-info-display__description-content {
+    width: 100%;
+    max-height: 80vh;
+    padding: 30px 15px;
+    padding-top: 0px;
+    background-color: var(--app-card_background_more_visible);
+    overflow-y: auto;
+}
+
+.profile-info-display__description-content-header {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--app-card_background_more_visible);
+    padding-bottom: 15px;
+}
+
+.profile-info-display__description-content-close {
+    width: 13px;
+    stroke: var(--app-normal_text);
+    cursor: pointer;
+    box-sizing: content-box;
+    padding: 5px;
+    position: absolute;
+    right: -5px;
+}
+
+.profile-info__artist-verified-icon {
+    fill: var(--app-theme-color);
+    width: 15px;
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+
+@media (max-width: 1004px) {
+    .profile-info__artist-verified-icon {
+        width: 13px;
+    }
+}
+
+@media (max-width: 550px) {
+    .profile-info-display__description-content-close {
+        width: 12px;
+    }
+
+    .profile-info-display-description__text, .profile-info-display__description-bottom-sheet-text {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,29 @@
+.edit-profile__confirm-username-popup {
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var( --app-card_inner_box_shadow);
+}
+
+.edit-profile__confirm-username-popup .normal-popup__header-section {
+    margin-bottom: 12px;
+}
+
+.edit-profile__confirm-username-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.edit-profile__confirm-username-text span {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.edit-profile__confirm-username-text.margin {
+    margin-top: 6px !important;
+}
+
+.edit-profile__confirm-username-button {
+    margin-top: 15px;
+}

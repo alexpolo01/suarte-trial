@@ -1,0 +1,48 @@
+.user-profile-image-generic, .user-profile-no-image-generic, .user-profile-image-loading-generic {
+    display: block;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.user-profile-image-generic.gallery, .user-profile-no-image-generic.gallery, .user-profile-image-loading-generic.gallery {
+    border-radius: 7%;
+}
+
+.user-profile-image-generic {
+    object-fit: cover;
+    object-position: center;
+    background-color: var(--app-image_template_color) !important;
+}
+
+.user-profile-no-image-generic, .user-profile-image-loading-generic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile-image-loading-generic {
+    background-color: var(--app-image_template_color);
+    box-shadow: var(--app-card_box_shadow);
+}
+
+.user-profile-no-image-generic__icon {
+    width: 54%;
+    fill: var(--app-theme-color);
+}
+
+.user-profile-image-loading-generic__spinner {
+    width: 24%;
+}
+
+.user-profile-no-image-generic__icon.artist {
+    position: relative;
+    right: -3%;
+    bottom: -2%;
+}
+
+.user-profile-no-image-generic__icon.user {
+    position: relative;
+    right: -1%;
+    top: -3%;
+}

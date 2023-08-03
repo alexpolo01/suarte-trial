@@ -1,0 +1,81 @@
+.pull-to-refresh__container {
+  position: relative;
+  width: 100%;
+}
+  
+.pull-to-refresh-loading__container {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background: var(--app-page_background);
+  border-radius: 50%;
+  box-shadow: var(--app-card_box_shadow);
+  display: none;
+}
+
+.pull-to-refresh-loading__icon {
+  display: block;
+  position: relative;
+  fill: var(--app-theme-color);
+}
+  
+.pull-to-refresh--pulling .pull-to-refresh-loading__container,
+.pull-to-refresh--aborting .pull-to-refresh-loading__container,
+.pull-to-refresh--reached .pull-to-refresh-loading__container,
+.pull-to-refresh--refreshing .pull-to-refresh-loading__container,
+.pull-to-refresh--restoring .pull-to-refresh-loading__container {
+  display: flex;
+}
+  
+.pull-to-refresh--pulling .pull-to-refresh-loading__spinner,
+.pull-to-refresh--aborting .pull-to-refresh-loading__spinner,
+.pull-to-refresh--reached .pull-to-refresh-loading__spinner,
+.pull-to-refresh--refreshing .pull-to-refresh-loading__icon,
+.pull-to-refresh--restoring .pull-to-refresh-loading__icon {
+  display: none;
+}
+  
+.pull-to-refresh-loading__spinner {
+  transform-origin: center center;
+  animation: pull-to-refresh__loader-rotate 2s linear infinite;
+}
+  
+.pull-to-refresh-loading__path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: pull-to-refresh__loader-dash 1.5s ease-in-out infinite, pull-to-refresh__loader-color 6s ease-in-out infinite;
+}
+
+@keyframes pull-to-refresh__loader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+@keyframes pull-to-refresh__loader-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+  
+@keyframes pull-to-refresh__loader-color {
+  from {
+    stroke: var(--app-theme-color);
+  }
+}
+  

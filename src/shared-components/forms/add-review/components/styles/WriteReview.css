@@ -1,0 +1,100 @@
+.write-review__container {
+    width: 100%;
+    overflow: hidden;
+    animation: grow-review 0.4s ease forwards;
+    flex-shrink: 0;
+}
+
+.add-review__write-review-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.write-review__textarea {
+    width: 100%;
+    margin: 15px 0px;
+    min-height: 120px;
+    resize: none;
+    border-radius: 5px;
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--app-card_background_when_more_visible_is_on);
+}
+
+.write-review__anonymous {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.write-review__anonymous-switch.switch-input__container {
+    width: 35px;
+    margin-right: 6px;
+}
+
+.write-review__anonymous-switch .switch-input__switch {
+    width: 20px;
+}
+
+.write-review__anonymous-switch.switch-input__container.activated .switch-input__switch {
+    transform: translateX(13px);
+}
+
+.add-review__anonymous-text {
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+}
+
+@keyframes grow-review {
+    0% {height: 0px; opacity: 0;}
+    100% {height: 250px; opacity: 1}
+}
+
+@keyframes grow-review800 {
+    0% {height: 0px; opacity: 0;}
+    100% {height: 260px; opacity: 1}
+}
+
+@keyframes grow-review550 {
+    0% {height: 0px; opacity: 0;}
+    100% {height: 240px; opacity: 1}
+}
+
+@keyframes grow-review420 {
+    0% {height: 0px; opacity: 0;}
+    100% {height: 250px; opacity: 1}
+}
+
+@media (max-width: 800px) {
+    .write-review__container {
+        animation: grow-review800 0.4s ease forwards;
+    }
+}
+
+@media (max-width: 550px) {
+    .write-review__container {
+        animation: grow-review550 0.4s ease forwards;
+    }
+
+    .write-review__anonymous-switch.switch-input__container {
+        width: 29px;
+        margin-right: 6px;
+    }
+    
+    .write-review__anonymous-switch .switch-input__switch {
+        width: 16px;
+    }
+    
+    .write-review__anonymous-switch.switch-input__container.activated .switch-input__switch {
+        transform: translateX(11px);
+    }  
+}
+
+@media (max-width: 420px) {
+    .write-review__container {
+        animation: grow-review420 0.4s ease forwards;
+    }
+}

@@ -1,0 +1,53 @@
+.cookies-popup__container {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    background-color: var(--app-card_secondary_color);
+    box-shadow: var(--app-card_inner_box_shadow);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.cookies-popup__content-wrap {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.cookies-popup__text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    margin: 0px;
+    text-align: justify;
+}
+
+.cookies-popup__text a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--app-theme-color);
+}
+
+.cookies-popup__button {
+    flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
+    .cookies-popup__container {
+        height: auto;
+    }
+
+    .app-navigation__page + .cookies-popup__container {
+        bottom: 52px;
+    }
+
+    .cookies-popup__content-wrap {
+        flex-direction: column;
+        row-gap: 12px;
+    }
+}

@@ -1,0 +1,71 @@
+.artist-artworks-slider__container {
+    width: 100%;
+}
+
+.artist-artworks-slider__header {
+    width: 100%;
+    cursor: pointer;
+}
+
+.artist-artworks-slider__slider {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.artist-artworks-slider__slider-item {
+    margin-right: 12px;
+}
+
+.artist-artworks-slider__slider-item-image {
+    height: 240px;
+}
+
+.artist-artworks-slider__see-all-button {
+    width: 122px;
+    flex-shrink: 0;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    padding: 7px 0px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--app-theme-color);
+}
+
+@media (max-width: 1004px) {
+    .artist-artworks-slider__slider {
+        margin-top: 15px;
+    }
+
+    .artist-artworks-slider__slider-item-image {
+        height: 190px;
+    }
+
+    .artist-artworks-slider__prev-button {
+        width: 36px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artist-artworks-slider__slider {
+        margin-top: 10px;
+    }
+
+    .artist-artworks-slider__slider-item-image {
+        height: 160px;
+    }
+
+    .artist-artworks-slider__prev-button {
+        width: 34px;
+    }
+
+    .artist-artworks-slider__see-all-button {
+        width: 94px;
+    }
+}

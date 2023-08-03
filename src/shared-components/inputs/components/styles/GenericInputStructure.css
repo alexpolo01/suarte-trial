@@ -1,0 +1,37 @@
+.generic-input-structure__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    position: relative;
+    padding: 8px 10px;
+}
+
+.generic-input-structure__label {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    font-family: var(--app-font);
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: var(--app-generic-gray);
+}
+
+
+@media (max-width: 1004px) {
+    .generic-input-structure__container {
+        padding: 6px 10px;
+    }
+
+    .generic-input-structure__label {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .generic-input-structure__label {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,38 @@
+.normal-popup__popup {
+    background-color: var(--app-card_background_more_visible);
+    position: relative;
+    border-radius: 7px;
+    padding: 20px 15px;
+    padding-top: 10px;
+}
+
+.normal-popup__header-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.normal-popup__close-button {
+    position: absolute;
+    right: -6px;
+    stroke: var(--app-normal_text);
+    width: 13px;
+    box-sizing: content-box;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.normal-popup__title {
+    font-weight: 600;
+    color: var(--app-normal_text);
+    text-align: center;
+}
+
+@media (max-width: 550px) {
+    .normal-popup__close-button {
+        width: 12px;
+    }
+}

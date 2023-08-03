@@ -1,0 +1,128 @@
+.artist-artworks-header__artist-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.artist-artworks-header__artist-info {
+    display: flex;
+    align-items: center;
+    min-width: 0px;
+    margin-right: 30px;
+    height: 55px;
+}
+
+.artist-artworks-header__artist-image {
+    width: 55px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    margin-right: 12px;
+}
+
+.artist-artworks-header__artist-image.preview {
+    background-color: var(--app-page_background);
+}
+
+.artist-artworks-header__artist-name-section {
+    margin: 0px 12px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+.artist-artworks-header__artist-name-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist-artworks-header__artist-name-text.username {
+    color: var(--app-generic-gray);
+}
+
+.artist-artworks-header__artist-name-text.name {
+    line-height: 20px;
+}
+
+.artist-artworks-header__artist-verified-icon {
+    fill: var(--app-theme-color);
+    width: 13px;
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+
+.artist-artworks-header__artist-enter-preview {
+    width: 10px;
+    fill: var(--app-theme-color);
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.artist-artworks-header__artist-enter-preview.light-offset {
+    position: relative;
+    top: 1px;
+}
+
+.artist-artworks-header__edit-artist {
+    margin-left: auto;
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1004px) {
+    .artist-artworks-header__artist-info {
+        height: 47px;
+    }
+
+    .artist-artworks-header__artist-image {
+        width: 47px;
+    }
+
+    .artist-artworks-header__artist-name-text.name {
+        line-height: 18px;
+    }
+
+    .artist-artworks-header__artist-verified-icon {
+        width: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artist-artworks-header__artist-info {
+        height: 39px;
+    }
+
+    .artist-artworks-header__artist-image {
+        width: 39px;
+        margin-right: 8px;
+    }
+
+    .artist-artworks-header__artist-name-text.name {
+        line-height: 16px;
+    }
+
+    .artist-artworks-header__artist-name-section {
+        margin: 0px 10px;
+        margin-left: 0px;
+    }
+
+    .artist-artworks-header__artist-enter-preview {
+        width: 8px;
+    }
+
+    .artist-artworks-header__artist-edit-button {
+        width: 80px;
+    }
+
+    .artist-artworks-header__artist-follow-button {
+        width: 93px;
+    }
+
+    .artist-artworks-header__artist-verified-icon {
+        width: 11px;
+    }
+}

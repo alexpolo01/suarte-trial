@@ -1,0 +1,107 @@
+.display-post-tags__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.display-post-tags__popup .normal-popup__header-section {
+    margin-bottom: 8px;
+}
+
+.display-post-tags__container.no-tags {
+    justify-content: flex-end;
+}
+
+.display-post-tags__like {
+    width: 26px;
+}
+
+.display-post-tags__tags {
+    width: fit-content; 
+    margin-right: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.display-post-tags__preview-image {
+    width: 42px;
+    border: 2px solid var(--app-page_background);
+    background-color: var(--app-card_background_more_visible);
+}
+
+.display-post-tags__preview-image.first {
+    position: relative;
+    z-index: 3;
+}
+
+.display-post-tags__preview-image.second {
+    position: relative;
+    z-index: 2;
+    margin-left: -21px
+}
+
+.display-post-tags__preview-image.third {
+    margin-left: -21px
+}
+
+.display-post-tags__tags-text {
+    font-weight: 500;
+    color: var(--app-normal_text);
+    margin-left: 10px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.display-post-tags__tags-text span{
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+@media (max-width: 1004px) {
+    .display-post-tags__container {
+        margin-top: 22px;
+    }
+
+    .display-post-tags__like {
+        width: 23px;
+    }
+
+    .display-post-tags__preview-image {
+        width: 36px;
+    }
+
+    .display-post-tags__preview-image.second, .display-post-tags__preview-image.third {
+        margin-left: -18px;
+    }
+
+    .display-post-tags__tags-text {
+        margin-left: 8px !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .display-post-tags__container {
+        margin-top: 20px;
+    }
+
+    .display-post-tags__like {
+        width: 21px;
+    }
+
+    .display-post-tags__preview-image {
+        width: 30px;
+    }
+
+    .display-post-tags__preview-image.second, .display-post-tags__preview-image.third {
+        margin-left: -15px;
+    }
+
+    .display-post-tags__tags-text {
+        margin-left: 7px !important;
+    }
+}

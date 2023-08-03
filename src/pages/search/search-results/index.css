@@ -1,0 +1,22 @@
+.search-results__results-count {
+    display: block;
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+    margin-bottom: 15px;
+}
+
+.search-results__results-count-query {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.search-results__no-results {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+@media (max-width: 550px) {
+    .search-results__results-count {
+        margin-bottom: 10px;
+    }
+}

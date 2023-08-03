@@ -1,0 +1,13 @@
+.artist-form__container {
+    width: 100%;
+}
+
+.artist-form__container .public-form-input__container, 
+.artist-form__container .public-select__container, 
+.artist-form__container .public-select__options-container {
+    background-color: var(--app-page_background);
+}
+
+.artist-form__submit-button {
+    margin-top: 20px;
+}

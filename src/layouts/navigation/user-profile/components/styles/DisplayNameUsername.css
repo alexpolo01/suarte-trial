@@ -1,0 +1,52 @@
+.profile-info__user_name {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    text-align: center;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.profile-info__user_username-small {
+    color: var(--app-normal_text);
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding: 0px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 14px !important;
+}
+
+.profile-info__user_username {
+    color: var(--app-normal_text);
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding: 0px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 14px !important;
+}
+
+.profile-info__artist-verified-icon {
+    fill: var(--app-theme-color);
+    width: 15px;
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+
+@media (max-width: 1004px) {
+    .profile-info__artist-verified-icon {
+        width: 13px;
+    }
+}
+
+@media (max-width: 550px) {
+    .profile-info__user_username, .profile-info__user_username-small {
+        margin-bottom: 10px !important;
+    }
+}

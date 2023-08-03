@@ -1,0 +1,23 @@
+.settings-loading-page__container {
+    width: 100%;
+    min-height: calc(100vh - 40px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-loading-page__container .settings-heading__container { 
+    align-self: flex-start;
+}
+
+.settings-loading-page__spinner {
+    width: 28px;
+    position: absolute;
+}
+
+@media (max-width: 1004px) {
+    .settings-loading-page__spinner {
+        width: 25px;
+    }
+}

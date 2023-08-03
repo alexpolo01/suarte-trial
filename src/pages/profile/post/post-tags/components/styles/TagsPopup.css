@@ -1,0 +1,101 @@
+.display-post-tags__popup {
+    width: 90%;
+    max-width: 500px;
+    overflow-y: auto;
+    box-shadow: var(--app-card_inner_box_shadow);
+}
+
+.display-post-tags__tags-list {
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.display-post-tags-popup__tag-container {
+    width: 100%;
+    cursor: pointer;
+    padding: 9px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.display-post-tags-popup__tag-user-info {
+    width: 100%;
+    min-width: 0px;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    padding-left: 4px;
+}
+
+.display-post-tags-popup__tag-user-image {
+    width: 50px;
+    margin-right: 12px;
+    background-color: var(--app-page_background);
+    box-shadow: var(--app-card_box_shadow);
+}
+
+.display-post-tags-popup__tag-main-text {
+    font-weight: 500;
+    color: var(--app-normal_text);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.display-post-tags-popup__tag-secondary-text {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+    margin-top: -3px !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.display-post-tags-popup__tag-name-block {
+    width: 100%;
+    min-width: 0px;
+    overflow: hidden;
+}
+
+.display-post-tags-popup__suarteroad-completed-icon {
+    width: 13px;
+    fill: var(--app-theme-color);
+    margin-left: 4px;
+    position: relative;
+    top: -1px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1004px) {
+    .display-post-tags-popup__tag-container {
+        padding: 8px 0px;
+    }
+
+    .display-post-tags-popup__tag-user-image {
+        width: 45px;
+    }
+
+    .display-post-tags-popup__suarteroad-completed-icon {
+        width: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .display-post-tags-popup__tag-user-image {
+        width: 40px;
+    }
+
+    .display-post-tags-popup__tag-container {
+        padding: 7px 0px;
+    }
+
+    .display-post-tags-popup__suarteroad-completed-icon {
+        width: 11px;
+    }
+
+    .display-post-tags__popup .normal-popup__header-section {
+        margin-bottom: 5px;
+    }
+}

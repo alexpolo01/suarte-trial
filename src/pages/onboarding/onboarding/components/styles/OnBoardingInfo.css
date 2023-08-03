@@ -1,0 +1,119 @@
+.onboarding-info__text {
+    font-weight: var(--app-font-regular);
+    color: white;
+    font-size: 15px;
+    font-family: var(--app-font);
+    margin: 0px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.onboarding-info__text.or {
+    text-align: center;
+    color: var(--app-generic-gray);
+    margin: 20px 0px;
+}
+
+.onboarding-info__navbar {
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 15px auto;
+}
+
+.onboarding-info__navbar-icon {
+    width: 25px;
+    fill: var(--app-generic-gray);
+}
+
+.onboarding-info__navbar-icon.search {
+    width: 28px;
+}
+
+.onboarding-info__navbar-icon.active {
+    fill: var(--app-theme-color);
+}
+
+.onboarding-info__profile-icon {
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--app-theme-background);
+    margin: 0px 6px;
+    position: relative;
+    margin-bottom: -11px;
+}
+
+.onboarding-info__profile-icon-icon {
+    fill: var(--app-theme-color);
+    height: 20px;
+    position: absolute;
+}
+
+.onboarding-info__link {
+    text-decoration: none;
+}
+
+.onboarding-info__info-badge {
+    width: 80px;
+    fill: var(--app-theme-color);
+    display: block;
+    margin: 0px auto;
+    margin-top: 12px;
+    margin-bottom: 25px;
+}
+
+.onboarding-info__info-badge.more-margin {
+    margin-bottom: 36px;
+}
+
+@media (max-width: 1004px) {
+    .onboarding-info__text {
+        font-size: 14px;
+    }
+
+    .onboarding-info__navbar-icon {
+        width: 23px;
+    }
+
+    .onboarding-info__navbar-icon.search {
+        width: 26px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .onboarding-info__profile-icon {
+        width: 23px;
+        margin-bottom: -6px;
+    }
+
+    .onboarding-info__profile-icon-icon {
+        height: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .onboarding-info__text{
+        font-size: 13px;
+    }
+
+    .onboarding-info__navbar-icon {
+        width: 20px;
+    }
+
+    .onboarding-info__navbar-icon.search {
+        width: 23px;
+    }
+
+    .onboarding-info__info-badge { 
+        width: 65px;
+    }
+}

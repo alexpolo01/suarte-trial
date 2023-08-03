@@ -1,0 +1,16 @@
+.search-users-virtual-list {
+    width: 100%;
+    flex-grow: 1;
+    height: 0px;
+    overflow-y: auto;
+    padding: 7.5px 0px;
+}
+
+.search-users-virtual-list-loader.infinite-scroll-loader__default-loader-container {
+    padding-top: 15px;
+}
+
+.search-users-virtual-list-loader.infinite-scroll-loader__default-loader-container .custom-spinner.thin {
+    width: 22px;
+}
+

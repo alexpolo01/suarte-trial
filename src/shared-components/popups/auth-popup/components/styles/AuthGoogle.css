@@ -1,0 +1,48 @@
+.auth-google__button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 7px;
+    background-color: var(--app-page_background);
+    box-shadow: var(--app-card_box_shadow);
+    margin: 0 auto;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+.auth-google__button.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.auth-google__icon {
+    width: 23px;
+    height: auto;
+    margin-right: 7px;
+}
+
+.auth-google__text {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+}
+
+.auth-google__spinner {
+    width: 15px;
+    margin-left: 7px;
+}
+
+@media (max-width: 550px) {
+    .auth-google__button {
+        padding: 8px 10px;
+    }
+
+    .auth-google__icon {
+        width: 20px;
+    }
+
+    .auth-google__spinner {
+        margin-left: 7px;
+    }
+}
+
+

@@ -1,0 +1,176 @@
+.artwork-view-thought__container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 20px;
+    padding-right: 0px;
+    padding-bottom: 17px;
+}
+
+.artwork-view-thought__container.read-only {
+    pointer-events: none;
+}
+
+.artwork-view-thought__container.reply {
+    padding-left: 46px;
+}
+
+.artwork-view-thought__container.special {
+    background-color: var(--app-theme-background);
+}
+
+.artwork-view-thought__user-image {
+    width: 39px;
+    cursor: pointer;
+    background-color: var(--app-card_background_when_more_visible_is_on);
+}
+
+.artwork-view-thought__text-section {
+    width: 100%;
+    margin-left: 8px;
+    overflow: hidden;
+    position: relative;
+    padding-right: 58px;
+}
+
+.artwork-view-thought__small-text {
+    color: var(--app-generic-gray);
+    font-weight: 600;
+}
+
+.artwork-view-thought__small-text.elapsed {
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.artwork-view-thought__small-text.reply, .artwork-view-thought__small-text.username {
+    cursor: pointer;
+}
+
+.artwork-view-thought__text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+    line-height: 19px;
+}
+
+.artwork-view-thought__text .mention {
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.artwork-view-thought__small-text.username {
+    margin-bottom: 2px !important;
+}
+
+.artwork-view-thought__artist-verified-icon {
+    width: 12px;
+    fill: var(--app-theme-color);
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+    margin-left: 3px;
+}
+
+.artwork-view-thought__small-text.view-more {
+    display: block;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.artwork-view-thought__small-text.loading {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.artwork-view-thought__spinner {
+    width: 12px;
+    margin-left: 5px;
+    flex-shrink: 0;
+}
+
+.artwork-view-thought__like-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3px;
+    position: absolute;
+    right: 12px;
+    top: 18px;
+}
+
+.artwork-view-thought__like {
+    width: 17px;
+}
+
+.artwork-view-thought__like-count {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+}
+
+@media (max-width: 1004px) {
+    .artwork-view-thought__container {
+        padding: 10px 15px;
+        padding-right: 0px;
+    }
+
+    .artwork-view-thought__container.reply {
+        padding-left: 41px;
+    }
+
+    .artwork-view-thought__user-image {
+        width: 35px;
+    }
+
+    .artwork-view-thought__artist-verified-icon {
+        width: 11px;
+    }
+
+    .artwork-view-thought__text-section {
+        padding-right: 53px;
+    }
+
+    .artwork-view-thought__text {
+        margin-bottom: -4px !important;
+    }
+
+    .artwork-view-thought__like {
+        width: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-view-thought__container {
+        padding: 10px 12px;
+        padding-right: 0px;
+    }
+
+    .artwork-view-thought__container.reply {
+        padding-left: 43px;
+    }
+
+    .artwork-view-thought__container {
+        padding-bottom: 13px;
+    }
+
+    .artwork-view-thought__artist-verified-icon {
+        width: 10px;
+    }
+
+    .artwork-view-thought__spinner {
+        width: 11px;
+        margin-left: 5px;
+    }
+
+    .artwork-view-thought__like {
+        width: 15px;
+    }
+
+    .artwork-view-thought__text-section {
+        padding-right: 50px;
+    }
+}

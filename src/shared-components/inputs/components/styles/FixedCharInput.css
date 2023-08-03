@@ -1,0 +1,81 @@
+.fixed-char-input__container {
+    width: 100%;
+}
+
+.fixed-char-input__container.margin {
+    margin-bottom: 11px;
+}
+
+.fixed-char-input__content {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 10px 12px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.fixed-char-input__error-className {
+    border: 1px solid var(--app-theme-color);
+}
+
+.fixed-char-input__input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    font-family: var(--app-font);
+    font-weight: 500;
+    color: var(--app-normal_text);
+    margin-right: 10px;
+}
+
+.fixed-char-input__chars-left {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.fixed-char-input__container.small .fixed-char-input__input {
+    font-size: 14px;
+}
+
+.fixed-char-input__container.medium .fixed-char-input__input {
+    font-size: 15px;
+}
+
+.fixed-char-input__container.large .fixed-char-input__input {
+    font-size: 16px;
+}
+
+@media (max-width: 1004px) {
+    .fixed-char-input__container.small .fixed-char-input__input {
+        font-size: 13px;
+    }
+    
+    .fixed-char-input__container.medium .fixed-char-input__input {
+        font-size: 14px;
+    }
+    
+    .fixed-char-input__container.large .fixed-char-input__input {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .fixed-char-input__content {
+        padding: 8px 10px;
+    }
+
+    .fixed-char-input__container.small .fixed-char-input__input {
+        font-size: 12px;
+    }
+    
+    .fixed-char-input__container.medium .fixed-char-input__input {
+        font-size: 13px;
+    }
+    
+    .fixed-char-input__container.large .fixed-char-input__input {
+        font-size: 14px;
+    }
+}

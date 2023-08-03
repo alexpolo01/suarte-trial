@@ -1,0 +1,51 @@
+.admin-limited-editions-requests__card {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid green;
+    border-radius: 5px;
+    background-color: var(--app-card_background_more_visible);
+}
+
+.admin-limited-editions-requests__card-text {
+    color: white;
+    font-weight: 600;
+}
+
+.admin-limited-editions-requests__card-text span {
+    color: var(--app-normal_text);
+    font-weight: 400;
+}
+
+.admin-limited-editions-requests__card-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.admin-limited-editions-requests__card-button {
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.admin-limited-editions-requests__card-button.accept {
+    background: green;
+}
+
+.admin-limited-editions-requests__card-button.deny {
+    background: red;
+}
+
+.admin-limited-editions-requests__popup {
+    width: 90%;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--app-card_background_more_visible);
+    padding-bottom: 25px;
+}

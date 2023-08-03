@@ -1,0 +1,43 @@
+.heading-custom__component {
+    font-family: var(--app-font);
+}
+
+.heading-custom__component.small {
+    font-size: 17px;
+}
+
+.heading-custom__component.medium {
+    font-size: 18px;
+}
+
+.heading-custom__component.large{
+    font-size: 19px;
+}
+
+@media (max-width: 1004px) {
+    .heading-custom__component.small {
+        font-size: 16px;
+    }
+    
+    .heading-custom__component.medium {
+        font-size: 17px;
+    }
+    
+    .heading-custom__component.large{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 550px) {
+    .heading-custom__component.small {
+        font-size: 15px;
+    }
+    
+    .heading-custom__component.medium {
+        font-size: 16px;
+    }
+    
+    .heading-custom__component.large{
+        font-size: 17px;
+    } 
+}

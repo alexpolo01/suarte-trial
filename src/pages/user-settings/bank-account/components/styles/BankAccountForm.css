@@ -1,0 +1,14 @@
+.bank-account-form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.bank-account-form__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    margin-top: 20px !important;
+}
+
+.bank-account-form__submit-button {
+    margin-top: 30px;
+}

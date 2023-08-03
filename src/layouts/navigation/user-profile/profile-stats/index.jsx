@@ -1,0 +1,64 @@
+import { useMemo, useState } from 'react';
+
+import Text from '@/shared-components/text/components/Text';
+import Utils from '@/utils';
+
+import Inspiring from './inspiring';
+
+import './index.css';
+
+export default function ProfileStats({ fetchData }) {
+  const [openInspiring, setOpenInspiring] = useState(false);
+  const numberOfArtworks = useMemo(()=>(
+    Utils.numberParserMillionThousand(fetchData.user_profile_info.user_artworks)
+  ), [fetchData.user_profile_info.user_artworks]);
+  const numberOfInspiring = useMemo(()=>(
+    Utils.numberParserMillionThousand(fetchData.user_profile_info.user_inspiring)
+  ), [fetchData.user_profile_info.user_inspiring]);
+  const numberOfLikes = useMemo(()=>(
+    Utils.numberParserMillionThousand(fetchData.user_profile_info.user_likes)
+  ), [fetchData.user_profile_info.user_likes]);
+
+  return (
+    <>
+      <div className="user-profile-profile-stats__container">
+        <div className="user-profile-stats__stat">
+          <Text className="user-profile-stats__stat-number" large paragraph>
+            {numberOfArtworks}
+          </Text>
+
+          <Text className="user-profile-stats__stat-text" paragraph medium>
+                        Artworks
+          </Text>
+        </div>
+
+        <div className="user-profile-stats__stat button" onClick={()=>setOpenInspiring(true)}>
+          <Text className="user-profile-stats__stat-number" large paragraph>
+            {numberOfInspiring}
+          </Text>
+
+          <Text className="user-profile-stats__stat-text" paragraph medium>
+                        Inspiring
+          </Text>
+        </div>
+
+        <div className="user-profile-stats__stat">
+          <Text className="user-profile-stats__stat-number" large paragraph>
+            {numberOfLikes}
+          </Text>
+
+          <Text className="user-profile-stats__stat-text" paragraph medium>
+                        Likes
+          </Text>
+        </div>
+      </div>
+
+      <Inspiring 
+        open={openInspiring} 
+        close={()=>setOpenInspiring(false)} 
+        fetchData={fetchData} 
+        numberOfInspiring={numberOfInspiring} 
+      />
+    </>
+  );
+}

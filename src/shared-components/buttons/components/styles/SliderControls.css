@@ -1,0 +1,38 @@
+.slider-controls__button {
+    width: 40px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--app-card_background_less_visible);
+    border: 1px solid var(--app-theme-color);
+}
+
+.slider-controls__button-icon {
+    width: 30%;
+    fill: var(--app-theme-color);
+    position: relative;
+}
+
+.slider-controls__button-icon.next {
+    left: 2px;
+}
+
+.slider-controls__button-icon.prev {
+    right: 1px;
+    transform: rotate(180deg)
+}
+
+@media (max-width: 1004px) {
+    .slider-controls__button {
+        width: 36px;
+    }
+}
+
+@media (max-width: 550px) {
+    .slider-controls__button {
+        width: 34px;
+    }
+}

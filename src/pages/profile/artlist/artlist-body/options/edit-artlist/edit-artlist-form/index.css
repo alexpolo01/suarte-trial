@@ -1,0 +1,41 @@
+.edit-artlist-content__scrollable-container {
+    width: 100%;
+    flex-grow: 1;
+    height: 0px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-artlist-content__scrollable-container .public-form-input__input.textarea {
+    height: 136px;
+    text-align: unset;
+}
+
+.edit-artlist-popup__submit-form-button {
+    margin-top: 18px;
+    margin-bottom: 7px;
+}
+
+.edit-artlist-content__artlist-artworks-container {
+    width: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    min-height: 200px;
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 5px;
+}
+
+.edit-artlist-content__artlist-empty-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    padding: 20px 11px;
+    text-align: center;
+    font-style: italic;
+}
+
+@media (max-width: 550px) {
+    .edit-artlist-content__scrollable-container .public-form-input__input.textarea {
+        height: 112px;
+    }
+}

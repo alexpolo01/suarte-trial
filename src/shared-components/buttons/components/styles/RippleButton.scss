@@ -1,0 +1,29 @@
+.ripple-button__effect {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+  
+  .ripple-button__effect.disabled {
+    opacity: 0.6;
+    cursor:initial;
+  }
+  
+  span.ripple-effect__class {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple-effect 500ms linear;
+      background-color: var(--app-ripple_effect_color);
+  }
+    
+    @keyframes ripple-effect {
+      to {
+        transform: scale(40);
+        opacity: 0;
+      }
+    }

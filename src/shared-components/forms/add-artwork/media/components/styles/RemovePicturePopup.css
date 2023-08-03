@@ -1,0 +1,101 @@
+.add-artwork-remove-picture-popup {
+    width: 80%;
+    max-width: 400px;
+}
+
+.add-artwork-remove-picture-popup-background {
+    background-color: rgba(0,0,0,0.7) !important;
+}
+
+.add-artwork-remove-picture-popup-text {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px !important;
+}
+
+.add-artwork-remove-picture-popup__picture-details-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.add-artwork-remove-picture-popup__picture-details-picture {
+    width: 100px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.add-artwork-remove-picture-popup__picture-details-picture-name {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.add-artwork-remove-picture-popup__actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.add-artwork-remove-picture-popup__keep-it {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(155, 157, 175, 0.2);
+    border: 1px solid #eaebf3;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.add-artwork-remove-picture-popup__keep-it-text {
+    color: #eaebf3;
+    font-weight: 600;
+}
+
+.add-artwork-remove-picture-popup__delete {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--app-theme-background);
+    border: 1px solid var(--app-theme-color);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.add-artwork-remove-picture-popup__delete-text {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+
+@media (max-width: 1004px) {
+    .add-artwork-remove-picture-popup__picture-details-picture {
+        width: 80px;
+    }
+
+    .add-artwork-remove-picture-popup__keep-it, .add-artwork-remove-picture-popup__delete {
+        width: 106px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 550px) {
+    .add-artwork-remove-picture-popup__picture-details-picture {
+        width: 60px;
+    }
+
+    .add-artwork-remove-picture-popup__picture-details-picture {
+        margin-right: 12px;
+    }
+}

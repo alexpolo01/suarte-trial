@@ -1,0 +1,13 @@
+.home-rating-notification {
+    width: 100%;
+}
+
+.home-rating-notification .community-rating-card__artwork-image {
+    width: 30%;
+}
+
+@media (max-width: 1004px) {
+    .home-rating-notification .community-rating-card__artwork-image {
+        width: 19%;
+    }   
+}

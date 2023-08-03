@@ -1,0 +1,84 @@
+.post-cover__container {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: var(--app-theme-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: var(--app-card_box_shadow);
+}
+
+.post-cover__container.loading, .post-cover__container.template-background{
+    background-color: var(--app-image_template_color);
+}
+
+.post-cover__backdrop {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 9px 17px;
+}
+
+.post-cover__container.loading  .post-cover__backdrop {
+    align-items: center;
+    justify-content: center;
+}
+
+.post-cover__title {
+    width: 100%;
+    margin: 0px;
+    color: white;
+    font-weight: 600;
+    font-family: var(--app-font);
+    font-size: 30px; 
+}
+
+.post-cover__title.click {
+    cursor: pointer;
+}
+
+.post-cover__error-classname {
+    border: 1px solid red;
+}
+.post-cover__progress-container {
+    width: 55%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.post-cover__progress-spinner {
+    width: 100% !important;
+    height: 100% !important;
+    color: var(--app-theme-color) !important;
+}
+
+.post-cover__progress-spinner circle {
+    stroke-width: 1px;
+}
+
+.post-cover__progress-value {
+    font-family: var(--app-font);
+    font-weight: 800;
+    color: var(--app-normal_text);
+    position: absolute;
+    font-size: 20px;
+}
+
+@media (max-width: 1004px) {
+    .post-cover__title {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    .post-cover__container {
+        width: 100%;
+    }
+}

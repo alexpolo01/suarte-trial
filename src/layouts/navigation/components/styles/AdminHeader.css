@@ -1,0 +1,29 @@
+.admin-header__navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--app-generic-gray);
+}
+
+.admin-header__suarte-name {
+    width: 110px;
+    cursor: pointer;
+}
+
+.admin-header__heading {
+    color: var(--app-normal_text);
+}
+
+.admin-header__logout {
+    border: none;
+    border-radius: 5px;
+    background-color: #8b0000;
+    padding: 5px 15px;
+}
+
+.admin-header__logout-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}

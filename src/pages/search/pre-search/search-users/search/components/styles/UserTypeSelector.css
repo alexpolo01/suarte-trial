@@ -1,0 +1,90 @@
+.user-type-selector__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.user-type-selector__option {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-type-selector__option svg {
+    fill: var(--app-generic-gray);
+}
+
+.user-type-selector__user-icon {
+    width: 28px;
+}
+
+.user-type-selector__artist-icon {
+    width: 32px;
+}
+
+.user-type-selector__gallery-icon {
+    width: 36px;
+}
+
+.user-type-selector__option.active svg {
+    fill: var(--app-theme-color);
+}
+
+.user-type-selector-active-bar {
+    width: 33.33%;
+    height: 1.5px;
+    background-color: var(--app-theme-color);
+    transition: transform 0.2s ease;
+}
+
+.user-type-selector-active-bar.collector {
+    transform: translateX(0%);
+}
+
+.user-type-selector-active-bar.artist {
+    transform: translateX(100%);
+}
+
+.user-type-selector-active-bar.gallery {
+    transform: translateX(200%);
+}
+
+@media (max-width: 1004px) {
+    .user-type-selector__option {
+        height: 45px;
+    }
+
+    .user-type-selector__user-icon {
+        width: 25px;
+    }
+    
+    .user-type-selector__artist-icon {
+        width: 29px;
+    }
+    
+    .user-type-selector__gallery-icon {
+        width: 33px;
+    }  
+}
+
+@media (max-width: 550px) {
+    .user-type-selector__option {
+        height: 40px;
+    }
+
+    .user-type-selector__user-icon {
+        width: 23px;
+    }
+    
+    .user-type-selector__artist-icon {
+        width: 27px;
+    }
+    
+    .user-type-selector__gallery-icon {
+        width: 31px;
+    }  
+}

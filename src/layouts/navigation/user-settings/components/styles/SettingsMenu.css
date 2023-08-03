@@ -1,0 +1,230 @@
+.settings-menu__container {
+    width: 100%;
+    position: relative;
+}
+
+.settings-menu__menu-heading {
+    display: inline-block;
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.settings-menu__section {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+
+.settings-menu__text-button {
+    display: block;
+    width: fit-content;
+    margin-bottom: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--app-theme-color);
+}
+
+.settings-menu__text-button:last-child {
+    margin-bottom: 0px;
+}
+
+.settings-menu__menu-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.settings-menu__menu-link:last-child {
+    margin-bottom: 0px;
+}
+
+.settings-menu__menu-link-icon-container {
+    width: 27px; 
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.settings-menu__menu-link-icon {
+    fill: var(--app-normal_text);
+    flex-shrink: 0;
+}
+
+.settings-menu__menu-link-icon.edit {
+    width: 27px;
+}
+
+.settings-menu__menu-link-icon.user {
+    width: 22px;
+}
+
+.settings-menu__menu-link-icon.gallery {
+    width: 28px;
+    position: relative;
+    top: 2px;
+}
+
+.settings-menu__menu-link-icon.credit {
+    width: 23px;
+}
+
+.settings-menu__menu-link-icon.house {
+    width: 25px;
+}
+
+.settings-menu__menu-link-icon.mode-theme{
+    width: 24px;
+}
+
+.settings-menu__menu-link-icon.notifications, .settings-menu__menu-link-icon.privacy {
+    width: 19px;
+}
+
+.settings-menu__menu-link-icon.terms{
+    width: 18px;
+}
+
+.settings-menu__menu-link-icon.cookies, .settings-menu__menu-link-icon.collection {
+    width: 21px;
+}
+
+.settings-menu__menu-link-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.settings-menu__menu-link.active .settings-menu__menu-link-icon {
+    fill: var(--app-theme-color);
+}
+
+.settings-menu__menu-link.active .settings-menu__menu-link-text {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.logout-dialog-popup {
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+}
+
+
+@media (max-width: 1004px) {
+    .settings-menu__section {
+        padding: 13px;
+        margin-top: 5px;
+    }
+
+    .settings-menu__menu-link-icon-container {
+        width: 25px; 
+        margin-right: 10px;
+    }
+
+    .settings-menu__menu-link-icon.edit {
+        width: 25px;
+    }
+    
+    .settings-menu__menu-link-icon.user {
+        width: 20px;
+    }
+    
+    .settings-menu__menu-link-icon.gallery {
+        width: 26px;
+    }
+    
+    .settings-menu__menu-link-icon.credit {
+        width: 21px;
+    }
+    
+    .settings-menu__menu-link-icon.house {
+        width: 23px;
+    }
+    
+    .settings-menu__menu-link-icon.mode-theme{
+        width: 22px;
+    }
+    
+    .settings-menu__menu-link-icon.notifications, .settings-menu__menu-link-icon.privacy {
+        width: 17px;
+    }
+    
+    .settings-menu__menu-link-icon.terms{
+        width: 16px;
+    }
+    
+    .settings-menu__menu-link-icon.cookies, .settings-menu__menu-link-icon.collection{
+        width: 19px;
+    }  
+}
+
+@media (max-width: 700px) {
+    .settings-menu__container {
+        margin-top: 15px;
+    }
+
+    .settings-menu__menu-link-icon {
+        fill: var(--app-theme-color);
+    }
+}
+
+@media (max-width: 550px) {
+    .settings-menu__section {
+        padding: 11px;
+        margin-top: 6px;
+    }
+
+    .settings-menu__text-button {
+        margin-bottom: 12px;
+    }
+
+    .settings-menu__menu-link-icon-container {
+        width: 23px; 
+        margin-right: 8px;
+    }
+
+    .settings-menu__menu-link-icon.edit {
+        width: 23px;
+    }
+    
+    .settings-menu__menu-link-icon.user {
+        width: 18px;
+    }
+    
+    .settings-menu__menu-link-icon.gallery {
+        width: 24px;
+    }
+    
+    .settings-menu__menu-link-icon.credit {
+        width: 19px;
+    }
+    
+    .settings-menu__menu-link-icon.house {
+        width: 21px;
+    }
+    
+    .settings-menu__menu-link-icon.mode-theme{
+        width: 20px;
+    }
+    
+    .settings-menu__menu-link-icon.notifications, .settings-menu__menu-link-icon.privacy {
+        width: 15px;
+    }
+    
+    .settings-menu__menu-link-icon.terms{
+        width: 14px;
+    }
+    
+    .settings-menu__menu-link-icon.cookies, .settings-menu__menu-link-icon.collection{
+        width: 17px;
+    } 
+
+    .logout-dialog-popup {
+        max-width: 300px;
+    }
+}

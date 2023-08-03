@@ -1,0 +1,131 @@
+.community-not-rated-card__outter-container {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.community-not-rated-card__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 15px;
+    padding-bottom: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comunity-not-rated-card__user-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-width: 0px;
+    margin-right: 19px;
+}
+
+.community-not-rated-card__user-image {
+    width: 45px;
+    background-color: var(--app-liked_artlists_background);
+    margin-right: 10px;
+}
+
+.community-not-rated-card__small-text {
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+    padding-right: 10px;
+}
+
+.community-not-rated-card__small-text .username {
+    color: var(--app-normal_text);
+    font-weight: 600;
+}
+
+.community-not-rated-card__small-text .title {
+    font-style: italic;
+}
+
+.community-not-rated-card__small-text.elapsed {
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+    font-weight: 600;
+}
+
+.community-not-rated-card__rate-button {
+    border: 1px solid var(--app-theme-color);
+    background: var(--app-theme-background);
+    border-radius: 3px;
+    padding: 4px 24px;
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+    margin-right: 35px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.community-not-rated-card__artwork-image {
+    width: 100px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+@media (max-width: 1004px) {
+    .community-not-rated-card__outter-container {
+        padding-bottom: 15px;
+    }
+
+    .community-not-rated-card__container {
+        padding: 12px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .community-not-rated-card__user-image {
+        width: 40px;
+    }
+
+    .community-not-rated-card__rate-button {
+        margin-right: 25px;
+    }
+
+    .community-not-rated-card__artwork-image {
+        width: 80px;
+    }
+}
+
+@media (max-width: 550px) {
+    .community-not-rated-card__outter-container {
+        width: 100%;
+        padding-bottom: 12px;
+    }
+
+    .community-not-rated-card__container {
+        padding: 10px;
+        padding-bottom: 8px;
+        border-radius: 9px;
+    }
+
+    .community-not-rated-card__user-image {
+        width: 35px;
+    }
+
+    .community-not-rated-card__rate-button {
+        padding: 3px 17px;
+    }
+
+    .community-not-rated-card__rate-button {
+        margin-right: 15px;
+    }
+
+    .community-not-rated-card__artwork-image {
+        width: 67px;
+    }
+}

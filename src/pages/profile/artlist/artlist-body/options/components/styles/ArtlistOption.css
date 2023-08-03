@@ -1,0 +1,21 @@
+.artlist-options__option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    padding-right: 17px;
+}
+
+.artlist-options__option:first-child {
+    padding-top: 12px;
+}
+
+.artlist-options__option:last-child {
+    padding-bottom: 12px;
+}
+
+.artlist-options__option-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}

@@ -1,0 +1,98 @@
+.artlist-add-artworks__artwork-result {
+    width: 100%;
+    padding: 7.5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.artlist-add-artworks__artwork-result.active {
+    background-color: var(--app-theme-background);
+}
+
+.artlist-add-artworks__artwork-info {
+    width: 100%;
+    margin-right: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.artlist-add-artwork__artwork-image {
+    width: 63px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.artlist-add-artworks__artwork-text-container {
+    width: 100%;
+    overflow: hidden;
+    min-width: 0px;
+}
+
+.artlist-add-artworks__artwork-title {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 18px;
+}
+
+.artlist-add-artworks__artwork-artist{
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artlist-add-artworks__artwork-add {
+    width: 26px;
+    stroke: var(--app-theme-color);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.artlist-add-artworks__artwork-added {
+    width: 20px;
+    fill: var(--app-theme-color);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.artlist-add-artworks__action-spinner {
+    width: 21px;
+}
+
+@media (max-width: 1004px) {
+    .artlist-add-artworks__artwork-add {
+        width: 24px;
+    }
+    
+    .artlist-add-artworks__artwork-added {
+        width: 18px;
+    }
+
+    .artlist-add-artwork__artwork-image {
+        width: 55px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artlist-add-artwork__artwork-image {
+        width: 47px;
+        margin-right: 10px;
+    }
+
+    .artlist-add-artworks__artwork-add {
+        width: 22px;
+    }
+    
+    .artlist-add-artworks__artwork-added {
+        width: 16px;
+    }
+}

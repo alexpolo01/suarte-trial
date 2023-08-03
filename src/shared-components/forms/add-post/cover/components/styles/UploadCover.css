@@ -1,0 +1,9 @@
+.post-cover__add-cover-button {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    cursor: pointer;
+    color: var(--app-theme-color);
+    font-weight: 600;
+    margin-top: 15px !important;
+}

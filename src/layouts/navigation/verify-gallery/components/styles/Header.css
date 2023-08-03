@@ -1,0 +1,74 @@
+.verify-gallery__suarte-name {
+    display: block;
+    margin: 0 auto;
+    width: 124px;
+    margin-bottom: 40px
+}
+
+.verify-gallery__logout-desktop-button {
+    position: absolute;
+    top: 27px;
+    right: 5%;
+    padding: 4px 11px;
+    border-radius: 7px;
+    background-color: var(--app-card_background_more_visible);
+    border: none; 
+}
+
+.verify-gallery__gallery-profile-verified-button {
+    position: absolute;
+    top: 19px;
+    right: 5%;
+}
+
+.verify-gallery__logout-desktop-button-text {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.verify-gallery__logout-mobile-container {
+    display: none;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 11px 11px 0px 0px;
+}
+
+.verify-gallery__logout-mobile-text {
+    text-align: center;
+    color: var(--app-generic-gray);
+    margin-bottom: 10px !important;
+    padding: 0px 20px;
+}
+
+.verify-gallery__override-default-font-size {
+    font-size: 14px !important;
+}
+
+@media (max-width: 1004px) {
+    .verify-gallery__gallery-profile-verified-button {
+        top: 22px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .verify-gallery__logout-desktop-button, .verify-gallery__gallery-profile-verified-button {
+        display: none;
+    }
+
+    .verify-gallery__logout-mobile-container {
+        display: block;
+    }
+}
+
+@media (max-width: 550px) {
+    .verify-gallery__suarte-name {
+        width: 100px;
+        margin-bottom: 22px;
+    }
+}

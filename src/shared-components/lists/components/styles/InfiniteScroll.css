@@ -1,0 +1,12 @@
+.infinite-scroll-loader__default-loader-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+.infinite-scroll-loader__default-loader-spinner {
+    width: 24px;
+    flex-shrink: 0;
+}

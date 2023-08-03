@@ -1,0 +1,30 @@
+.add-artwork-form__save-draft-button {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    font-weight: 600;
+    letter-spacing: -0.408px;
+    color: var(--app-generic-gray);
+    display: flex;
+    align-items: center;
+}
+
+.add-artwork-form__save-draft-button.disabled {
+    opacity: 0.6;
+}
+
+.add-artwork-form__save-draft-button.read-only, .add-artwork-form__save-draft-button.disabled {
+    pointer-events: none;
+}
+
+.add-artwork-form__save-draft-spinner {
+    width: 15px;
+    margin-left: 7px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1004px) {
+    .add-artwork-form__save-draft-spinner {
+        width: 13px;
+    }
+}

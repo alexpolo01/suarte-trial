@@ -1,0 +1,48 @@
+.confirm-closed-mode__popup {
+    width: 90%;
+    max-width: 450px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+    padding: 25px 15px;
+    padding-top: 12px;
+    border-radius: 5px;
+}
+
+.confirm-closed-mode__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.confirm-closed-mode__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.confirm-closed-mode__close {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 7px;
+    position: absolute;
+    right: -7px;
+    cursor: pointer;
+    stroke: var(--app-normal_text);
+}
+
+.confirm-closed-mode__text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+}
+
+.confirm-closed-mode__button {
+    margin-top: 25px;
+}
+
+@media (max-width: 550px) {
+    .confirm-closed-mode__close {
+        width: 12px;
+    }
+}

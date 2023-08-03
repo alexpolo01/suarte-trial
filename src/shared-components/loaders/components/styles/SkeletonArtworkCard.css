@@ -1,0 +1,49 @@
+.skeleton-artwork-card__skeleton-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--app-image_template_color);
+    margin-bottom: 8px;
+}
+
+.skeleton-artwork-card__skeleton-image-icon {
+    fill: var(--app-theme-color);
+    width: 60%;
+}
+
+.skeleton-artwork-card__skeleton-skeleton-text {
+    background-color: var(--app-image_template_color);
+    height: 13px;
+    margin-bottom: 7px;
+}
+
+.skeleton-artwork-card__skeleton-skeleton-text:last-child {
+    margin-bottom: 0px;
+}
+
+.skeleton-artwork-card__skeleton-skeleton-text.large {
+    width: 77%;
+}
+
+.skeleton-artwork-card__skeleton-skeleton-text.medium {
+    width: 60%;
+}
+
+.skeleton-artwork-card__skeleton-skeleton-text.small {
+    width: 35%;
+}
+
+.skeleton-artwork-card__skeleton-skeleton-text.extra-small {
+    width: 25%;
+}
+
+@media (max-width: 1004px) {
+    .skeleton-artwork-card__skeleton-skeleton-text {
+        height: 11px;
+    }
+}
+
+@media (max-width: 550px) {
+    .skeleton-artwork-card__skeleton-skeleton-text {
+        height: 9px;
+    }
+}

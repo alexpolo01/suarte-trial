@@ -1,0 +1,76 @@
+.report-issue-popup {
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 5px;
+    padding: 0px 15px;
+    padding-bottom: 20px;
+}
+
+.report-issue-header {
+    padding-top: 12px;
+    background-color: var(--app-card_background_more_visible);
+    position: sticky !important;
+    top: 0;
+    z-index: 2;
+}
+
+.report-issue-popup .order-card__container, .report-issue-popup .order-shipping-card__container {
+    background-color: var(--app-page_background);
+    margin-bottom: 15px;
+}
+
+.report-issue__text {
+    display: block;
+    color: var(--app-normal_text);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.report-issue__buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-bottom: 15px;
+}
+
+.report-issue__button {
+    display: flex;
+    width: 110px;
+    height: 35px;
+    border: 1px solid var(--app-generic-gray);
+    color: var(--app-generic-gray);
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: var(--app-generic-gray-background);
+}
+
+.report-issue__button.active {
+    border: 1px solid var(--app-theme-color);
+    color: var(--app-theme-color);
+    background-color: var(--app-theme-background);
+}
+
+@media (max-width: 600px) {
+    .report-issue-popup {
+        width: 100%;
+        max-width: unset;
+        max-height: unset;
+        height: 100vh;
+        background-color: var(--app-page_background);
+    }
+
+    .report-issue-header {
+        background-color: var(--app-page_background);
+    }
+
+    .report-issue-popup .order-card__container, .report-issue-popup .order-shipping-card__container {
+        background-color: var(--app-card_background_more_visible);
+    }    
+}

@@ -1,0 +1,33 @@
+.submit-artwork-draft-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: var(--app-theme-color);
+    font-weight: 600;
+    padding: 10px 15px;
+    border: 2px solid var(--app-theme-color);
+    background-color: var(--app-theme-background);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.submit-artwork-draft-button.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.submit-artwork-draft-spinner {
+    width: 16px;
+    margin-left: 8px;
+}
+
+@media (max-width: 550px) {
+    .submit-artwork-draft-spinner {
+        width: 15px;
+    }
+}
+

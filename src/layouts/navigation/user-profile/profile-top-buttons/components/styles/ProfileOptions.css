@@ -1,0 +1,205 @@
+.profile-options__background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    animation: profile-options-blur 0.2s ease forwards;
+}
+
+.profile-options__options-outter {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.profile-options__options {
+    position: absolute;
+    top: 137px;
+    right: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    animation: profile-options-opacity 0.1s ease forwards;
+}
+
+.profile-options__option {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.profile-options__option-text {
+    color: white;
+    font-weight: var(--app-font-regular);
+    margin-right: 20px;
+    opacity: 0;
+    animation: profile-options-opacity 0.1s ease forwards;
+}
+
+.profile-options__option-icon-container {
+    width: 33px;
+    aspect-ratio: 1/1;
+    background-color: var(--app-card_background_more_visible);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: profile-options-scale 0.2s ease forwards;
+}
+
+.profile-options__option-icon-container.delay1 {
+    animation-delay: 0.0s;
+}
+
+.profile-options__option-icon-container.delay2 {
+    animation-delay: 0.05s;
+}
+
+.profile-options__option-icon-container.delay3 {
+    animation-delay: 0.1s;
+}
+
+.profile-options__option-icon-container.delay4 {
+    animation-delay: 0.15s;
+}
+
+.profile-options__option-icon-container.delay5 {
+    animation-delay: 0.2s;
+}
+
+.profile-options__option-icon-container.delay6 {
+    animation-delay: 0.25s;
+}
+
+.profile-options__option-icon-container.delay7 {
+    animation-delay: 0.3s;
+}
+
+.profile-options__option-text.delay1 {
+    animation-delay: 0.0s;
+}
+
+.profile-options__option-text.delay2 {
+    animation-delay: 0.05s;
+}
+
+.profile-options__option-text.delay3 {
+    animation-delay: 0.1s;
+}
+
+.profile-options__option-text.delay4 {
+    animation-delay: 0.15s;
+}
+
+.profile-options__option-text.delay5 {
+    animation-delay: 0.2s;
+}
+
+.profile-options__option-text.delay6 {
+    animation-delay: 0.25s;
+}
+
+.profile-options__option-text.delay7 {
+    animation-delay: 0.3s;
+}
+
+.profile-options__option-icon {
+    fill: var(--app-theme-color);
+    width: 60%;
+}
+
+.profile-options__option-icon.saved{
+    width: 42%;
+    fill: transparent;
+    stroke: var(--app-theme-color);
+}
+
+.profile-options__option-icon.referrals{
+    stroke: var(--app-theme-color);
+    overflow: initial;
+    width: 50%;
+    position: relative;
+    left: -2px;
+}
+
+@media (max-width: 1240px) {
+    .profile-options__option-icon-container {
+        width: 33px;
+    }
+
+    .profile-options__option-text {
+        margin-right: 17px;
+    }
+
+    .profile-options__options {
+        right: 10px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .profile-options__option-icon-container {
+        width: 27px;
+    }
+
+    .profile-options__option-text {
+        margin-right: 14px;
+    }
+
+    .profile-options__options {
+        right: 13px;
+    }
+
+    .profile-options__option-icon.referrals{
+        left: -1px;
+    }
+}
+
+@media (max-width: 650px) {
+    .profile-options__options {
+        top: 77px;
+    }
+}
+
+@media (max-width: 550px) {
+    .profile-options__options {
+        top: 73px;
+    }
+}
+
+@keyframes profile-options-blur {
+    from {
+        background-color: rgba(26, 26, 29, 0);
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        background-color: rgba(26, 26, 29, 0.6);
+        backdrop-filter: blur(6px);
+    }
+}
+
+@keyframes profile-options-opacity {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes profile-options-scale{
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

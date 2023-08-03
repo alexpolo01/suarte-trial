@@ -1,0 +1,17 @@
+.inventory-sold__empty-text {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 45px !important;
+}
+
+.inventory-sold__card-container {
+    width: 100%;
+    cursor: pointer;
+}
+
+@media (max-width: 550px) {
+    .inventory-sold__empty-text {
+        margin-top: 30px !important;
+    }
+}

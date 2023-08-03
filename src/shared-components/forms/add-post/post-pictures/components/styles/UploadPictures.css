@@ -1,0 +1,7 @@
+.post-pictures__add-picture {
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+}

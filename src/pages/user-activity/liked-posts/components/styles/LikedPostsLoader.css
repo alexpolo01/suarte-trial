@@ -1,0 +1,23 @@
+.liked-posts-loader {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    padding-bottom: 20px;
+}
+
+.liked-posts-loader__post {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: var(--app-image_template_color);
+    border-radius: 7px;
+}
+
+@media (max-width: 600px) {
+    .liked-posts-loader {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        column-gap: 10px;
+    } 
+}

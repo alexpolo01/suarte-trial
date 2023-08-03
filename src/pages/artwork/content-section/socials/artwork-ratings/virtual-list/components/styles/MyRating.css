@@ -1,0 +1,85 @@
+.artwork-ratings-my-rating__container {
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.artwork-ratings-my-rating__category {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.artwork-ratings-my-rating__text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+}
+
+.artwork-ratings-my-rating__rating-bar-container {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/** Rating bar displayer adjustments */
+.artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__bar, .artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__range-container {
+    height: 3px;
+    border-radius: 3px;
+}
+
+.artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__indicator-bar {
+    width: 3px;
+    border-radius: 3px;
+    height: 12px;
+}
+
+.artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__indicator-text.my-rating {
+    top: 10px;
+}
+
+.artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__indicator-text {
+    top: -18px;
+}
+
+.artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__guide-container {
+    top: 3px;
+}
+
+.artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__guide-indicator {
+    height: 4px;
+}
+
+.artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__guide-indicator.main {
+    height: 8px;
+}
+
+@media (max-width: 550px) {
+    .artwork-ratings-my-rating__container {
+        margin-bottom: 22px;
+    }
+
+    .artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__bar, .artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__range-container {
+        height: 2px;
+        border-radius: 2px;
+    }
+    
+    .artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__indicator-bar {
+        width: 2px;
+        border-radius: 2px;
+        height: 9px;
+    }
+    
+    .artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__indicator-text.my-rating {
+        top: 7px;
+    }
+    
+    .artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__indicator-text {
+        top: -15px;
+    }
+    
+    .artwork-ratings-my-rating__rating-bar-container .artwork-rating-displayer__guide-container {
+        top: 2px;
+    }
+
+    .artwork-ratings-my-rating__rating-bar-container {
+        margin-top: 25px;
+    }
+}

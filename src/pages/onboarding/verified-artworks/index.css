@@ -1,0 +1,14 @@
+.verified-artworks__custom-spinner {
+    margin: 0 auto;
+    width: 27px;
+    margin-top: 10px;
+}
+
+.verified-artworks__verified-counter {
+    color: white;
+    margin-bottom: 15px !important;
+}
+
+.verified-artworks__verified-counter .letter-spacing {
+    letter-spacing: 0.22em;
+}

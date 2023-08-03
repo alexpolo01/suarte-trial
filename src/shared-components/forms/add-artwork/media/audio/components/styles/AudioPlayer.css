@@ -1,0 +1,87 @@
+.add-artwork-audio-player__container {
+    width: 100%;
+    padding: 10px 10px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.add-artwork-audio-player__play-pause-button {
+    flex-shrink: 0;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-theme-background);
+    border: 1px solid var(--app-theme-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 9px;
+    pointer-events: all !important;
+}
+
+.add-artwork-audio-player__play-pause-icon {
+    width: 43%;
+    fill: var(--app-theme-color);
+}
+
+.add-artwork-audio-player__play-pause-icon.play {
+    position: relative;
+    left: 2px;
+}
+
+.add-artwork-audio-player__play-pause-icon.pause {
+    width: 75%;
+    height: auto;
+}
+
+.add-artwork-audio-player__currentTime {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    display: inline-block;
+    width: 27px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.add-artwork-audio-player__slider {
+    width: 100%;
+    height: 6px;
+    background-color: var(--app-page_background);
+    border-radius: 13px;
+    pointer-events: all !important;
+}
+
+.add-artwork-audio-player__slider .custom-input-range__progress{
+    background-color: var(--app-theme-color);
+    border-radius: 13px 0px 0px 13px;
+}
+
+.add-artwork-audio-player__slider .custom-input-range__thumb {
+    width: 11px;
+    aspect-ratio: 1/1;
+    background-color: var(--app-theme-color);
+    border-radius: 50%;
+}
+
+.add-artwork-audio-player__delete-audio {
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+    margin-left: 99px;
+}
+
+@media (max-width: 700px) {
+    .add-artwork-audio-player__play-pause-button {
+        width: 32px;
+    }
+
+    .add-artwork-audio-player__delete-audio {
+        margin-left: 40px;
+    }
+}

@@ -1,0 +1,76 @@
+.resizable-textarea__outter-container {
+    width: 100%;
+}
+
+.resizable-textarea__outter-container.margin {
+    margin-bottom: 11px;
+}
+
+.resizable-textarea__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    position: relative;
+}
+
+.resizable-textarea__label {
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: var(--app-generic-gray);
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.resizable-textarea__textarea {
+    width: 100%;
+    min-height: 90px;
+    outline: none;
+    border: none;
+    resize: none;
+    background: transparent;
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+    padding: 4px 10px;
+    padding-bottom: 0px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.resizable-textarea__textarea.more-padding {
+    padding-top: 7px;
+}
+
+.resizable-textarea__textarea.span {
+    display: block;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+}
+
+.resizable-textarea__textarea-error {
+    border: 1px solid var(--app-theme-color);
+}
+
+@media (max-width: 1004px) {
+    .resizable-textarea__label {
+        padding-top: 5px;
+    }
+
+    .resizable-textarea__textarea.more-padding {
+        padding-top: 5px;
+    }
+
+    .resizable-textarea__textarea {
+        padding-top: 2px;
+        padding-bottom: 6px;
+    }
+}

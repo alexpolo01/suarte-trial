@@ -1,0 +1,14 @@
+.artlist-add-artworks__virtual-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.artlist-add-artworks__virtual-spinner {
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
+
+.artlist-add-artworks__virtual-spinner .infinite-scroll-loader__default-loader-spinner {
+    width: 22px;
+}

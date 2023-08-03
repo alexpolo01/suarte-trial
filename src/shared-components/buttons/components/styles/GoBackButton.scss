@@ -1,0 +1,18 @@
+.go-back__button {
+    display: block;
+    width: 12px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    fill: var(--app-theme-color);
+    box-sizing:content-box;
+    padding: 15px;
+    z-index: 2;
+}
+
+@media (max-width: 500px) {
+    .go-back__button {
+        width: 11px;
+    }
+}

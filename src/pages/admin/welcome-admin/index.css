@@ -1,0 +1,30 @@
+.welcome-admin__container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.welcome-admin__text {
+    color: var(--app-normal_text);
+    margin-bottom: 20px !important;
+}
+
+.welcome-admin__links {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.welcome-admin__link {
+    text-decoration: none;
+    color: var(--app-normal_text);
+    background-color: var(--app-card_background_more_visible);
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--app-theme-color);
+}
+
+.welcome-admin__link:first-child {
+    margin-right: 20px;
+}

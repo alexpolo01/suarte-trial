@@ -1,0 +1,13 @@
+.add-artwork-media-form__secondary-pictures-container {
+    width: 100%;
+    padding: 7px 0px;
+    background-color:  var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.add-artwork-media-form__secondary-pictures-container .form-error__message-container {
+    margin-bottom: 0px
+}

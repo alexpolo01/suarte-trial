@@ -1,0 +1,94 @@
+.collection-confirm-visibility {
+    width: 90%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+    padding: 20px 15px;
+    padding-top: 15px;
+    border-radius: 7px;
+}
+
+.collection-confirm-visibility__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.collection-confirm-visibility__header-text {
+    color: var(--app-normal_text);
+    font-weight: 600;
+}
+
+.collection-confirm-visibility__close {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 7px;
+    cursor: pointer;
+    stroke: var(--app-normal_text);
+    position: absolute;
+    right: -7px;
+}
+
+.collection-confirm-visibility__text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+}
+
+.collection-confirm-visibility__text.margin {
+    margin-bottom: 10px !important;
+}
+
+.collection-confirm-visibility__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.collection-confirm-visibility__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.collection-confirm-visibility__button.cancel {
+    border: 2px solid var(--app-generic-gray);
+    background-color: var(--app-generic-gray-background);
+    color: var(--app-generic-gray);
+    font-weight: 600;
+}
+
+.collection-confirm-visibility__button.confirm {
+    border: 2px solid var(--app-theme-color);
+    background-color: var(--app-theme-background);
+    color: var(--app-theme-color);
+    font-weight: 600;
+}
+
+
+@media (max-width: 1004px) {
+    .collection-confirm-visibility__button {
+        width: 140px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 550px) {
+    .collection-confirm-visibility {
+        max-width: 380px;
+    }
+
+    .collection-confirm-visibility__button {
+        width: 130px;
+        height: 32px;
+    }
+}

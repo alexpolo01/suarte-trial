@@ -1,0 +1,23 @@
+.artlist-content__artwork-image-template, .artlist-content__artwork-image {
+    width: 100%;
+    max-height: 90vh;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+#artlist-view__row-measurer {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: calc(100% - 40px);
+    max-width: 1800px;
+    max-height: 90vh;
+}
+
+@media (max-width: 650px) {
+    #artlist-view__row-measurer {
+        width: calc(100% - 28px);
+    }
+}

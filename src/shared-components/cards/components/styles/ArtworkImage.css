@@ -1,0 +1,10 @@
+.artwork-image-loading {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.artwork-image-template {
+    background-color: var(--app-image_template_color);
+}

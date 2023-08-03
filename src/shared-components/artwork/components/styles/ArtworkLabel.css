@@ -1,0 +1,199 @@
+.artwork-label__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 3px;
+    border-top: 1.5px solid var(--app-theme-color);
+    padding: 12px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.artwork-label__artist-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.artwork-label__artist-section.no-artist {
+    pointer-events: none;
+}
+
+.artwork-label__artist-image {
+    width: 41px;
+    margin-right: 10px;
+    background-color: var(--app-bottom_sheet_fix);
+}
+
+.artwork-label__artist-name-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.artwork-label__artist-name {
+    color: var(--app-theme-color);
+    font-weight: 500;
+}
+
+.artwork-label__suarteroad-completed {
+    width: 14px;
+    flex-shrink: 0;
+    fill: var(--app-theme-color);
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+
+.artwork-label__artist-personal {
+    font-weight: var(--app-font-regular);
+    color: var(--app-generic-gray);
+    display: block;
+    margin-top: -2px;
+}
+
+.artwork-label__title {
+    width: 100%;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--app-normal_text);
+    margin-top: 8px !important;
+}
+
+.artwork-label__artwork-details {
+    font-weight: var(--app-font-regular);
+    color: var(--app-generic-gray);
+    display: block;
+    max-width: 71%;
+}
+
+.artwork-label-socials__container {
+    width: fit-content;
+    position: absolute;
+    right: 8px;
+    bottom: 0px;
+    display: flex;
+    padding-bottom: 8px;
+}
+
+.artwork-label-socials__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 45px;
+}
+
+.artwork-label-socials__item-icon-rating, .artwork-label-socials__item-icon-thought {
+    width: 25px;
+    cursor: pointer;
+    flex-shrink: 0;
+    stroke: var(--app-theme-color);
+    fill: var(--app-card_background_more_visible);
+    overflow: initial;
+}
+
+.artwork-label-socials__item-icon-rating {
+    width: 23px;
+    transform: translateY(-1px);
+}
+
+.artwork-label-socials__item-icon-like {
+    width: 24px;
+}
+
+.artwork-label-socials__item-icon-thought.active, .artwork-label-socials__item-icon-rating.active {
+    fill: var(--app-theme-color) !important;
+}
+
+.artwork-label-socials__item-count {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+    display: block;
+    margin-top: 8px;
+}
+
+@media (max-width: 1004px) {
+    .artwork-label__container {
+        padding: 10px;
+        padding-bottom: 6px;
+    }
+
+    .artwork-label__artist-image {
+        width: 37px;
+        margin-right: 8px;
+    }
+
+    .artwork-label__title {
+        margin-top: 5px !important;
+    }
+
+    .artwork-label-socials__item {
+        width: 42px;
+    }
+
+    .artwork-label-socials__item-icon-thought {
+        width: 22px;
+    }
+
+    .artwork-label-socials__item-icon-rating {
+        width: 20px;
+    }
+
+    .artwork-label-socials__item-icon-like {
+        width: 21px;
+    }
+
+    .artwork-label-socials__container {
+        padding-bottom: 6px;
+        right: 7px;
+    }
+
+    .artwork-label-socials__item-count {
+        margin-top: 6px;
+    }
+
+    .artwork-label__suarteroad-completed {
+        width: 12px;
+        top: 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-label__container {
+        padding-top: 6px;
+    }
+
+    .artwork-label__artist-image {
+        width: 30px;
+    }
+
+    .artwork-label__title {
+        margin-top: 2px !important;
+    }
+
+    .artwork-label__suarteroad-completed {
+        width: 11px;
+    }
+
+    .artwork-label-socials__item-icon-thought {
+        width: 20px;
+    }
+
+    .artwork-label-socials__item-icon-rating {
+        width: 18px;
+    }
+
+    .artwork-label-socials__item-icon-like {
+        width: 19px;
+    }
+
+    .artwork-label-socials__item-count {
+        margin-top: 3px;
+    }
+
+    .artwork-label-socials__container {
+        right: 6px;
+    }
+}

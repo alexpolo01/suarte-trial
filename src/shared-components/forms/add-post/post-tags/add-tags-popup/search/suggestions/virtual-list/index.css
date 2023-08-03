@@ -1,0 +1,14 @@
+.post-tags-virtual-list__container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 7px;
+}
+
+.post-tags-virtual-list__spinner {
+    margin-top: 5px;
+}
+
+.post-tags-virtual-list__spinner .infinite-scroll-loader__default-loader-spinner {
+    width: 21px;
+}

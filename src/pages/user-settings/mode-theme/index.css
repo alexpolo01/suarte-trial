@@ -1,0 +1,169 @@
+.settings-mode-theme__container {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.settings-mode-theme__heading {
+    color: var(--app-normal_text);
+    margin-bottom: 10px;
+    font-weight: 500;
+    display: block;
+}
+
+.settings-mode-theme__option {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 19px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.settings-mode-theme__option-circle {
+    width: 40px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.settings-mode-theme__option-text {
+    font-weight: 500;
+}
+
+.settings-mode-theme__option.active {
+    background-color: var(--app-theme-background);
+}
+
+
+/** MODE STYLES */
+.settings-mode-theme__option.mode .settings-mode-theme__option-text {
+    color: var(--app-normal_text);
+}
+
+.settings-mode-theme__option.dark-mode .settings-mode-theme__option-circle {
+    border: 1px solid black;
+    background-color: #1A1A1D;
+}
+
+.settings-mode-theme__option.light-mode .settings-mode-theme__option-circle {
+    border: 1px solid #eaebf3;
+    background-color: #ffffff;
+}
+
+.settings-mode-theme__option.light-mode {
+    margin-bottom: 25px;
+}
+
+
+
+/** THEME STYLES */
+/** STARRY MOON */
+.settings-mode-theme__option.starry .settings-mode-theme__option-circle {
+    border: 1px solid var(--app-starry_moon_theme);
+    background-color: var(--app-starry_moon-background);
+}
+
+.settings-mode-theme__option.starry .settings-mode-theme__option-text {
+    color: var(--app-starry_moon_theme);
+}
+
+.settings-mode-theme__option.starry.active .settings-mode-theme__option-circle {
+    background-color: var(--app-starry_moon_theme);
+}
+
+/** DANCING ON THE GRASS */
+.settings-mode-theme__option.dancing .settings-mode-theme__option-circle {
+    border: 1px solid var(--app-dancing_on_the_grass_theme);
+    background-color: var(--app-dancing_on_the_grass-background);
+}
+
+.settings-mode-theme__option.dancing .settings-mode-theme__option-text {
+    color: var(--app-dancing_on_the_grass_theme);
+}
+
+.settings-mode-theme__option.dancing.active .settings-mode-theme__option-circle {
+    background-color: var(--app-dancing_on_the_grass_theme);
+}
+
+/**FOUNTAIN OF DELIGHTS */
+.settings-mode-theme__option.fountain .settings-mode-theme__option-circle {
+    border: 1px solid var(--app-fountain_of_delights_theme);
+    background-color: var(--app-fountain_of_delights-background);
+}
+
+.settings-mode-theme__option.fountain .settings-mode-theme__option-text {
+    color: var(--app-fountain_of_delights_theme);
+}
+
+.settings-mode-theme__option.fountain.active .settings-mode-theme__option-circle {
+    background-color: var(--app-fountain_of_delights_theme);
+}
+
+/** WATER LILY POND */
+.settings-mode-theme__option.water .settings-mode-theme__option-circle {
+    border: 1px solid var(--app-water_lily_pond_theme);
+    background-color: var(--app-water_lily_pond-background);
+}
+
+.settings-mode-theme__option.water .settings-mode-theme__option-text {
+    color: var(--app-water_lily_pond_theme);
+}
+
+.settings-mode-theme__option.water.active .settings-mode-theme__option-circle {
+    background-color: var(--app-water_lily_pond_theme);
+}
+
+/** VIOLET THEME */
+.settings-mode-theme__option.violet .settings-mode-theme__option-circle {
+    border: 1px solid var(--app-violet_theme_theme);
+    background-color: var(--app-violet_theme-background);
+}
+
+.settings-mode-theme__option.violet .settings-mode-theme__option-text {
+    color: var(--app-violet_theme_theme);
+}
+
+.settings-mode-theme__option.violet.active .settings-mode-theme__option-circle {
+    background-color: var(--app-violet_theme_theme);
+}
+
+@media (max-width: 1004px) {
+    .settings-mode-theme__container {
+        margin-top: 28px;
+    }
+
+    .settings-mode-theme__option {
+        padding: 10px 15px;
+    }
+
+    .settings-mode-theme__option-circle {
+        width: 35px;
+        margin-right: 13px;
+    }
+}
+
+@media (max-width: 700px) {
+    .settings-mode-theme__container {
+        margin-top: 10px;
+    }
+
+    .settings-mode-theme__heading {
+        margin-bottom: 7px;
+    }
+
+    .settings-mode-theme__option.light-mode {
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .settings-mode-theme__option-circle {
+        width: 30px;
+        margin-right: 11px;
+    }
+
+    .settings-mode-theme__option {
+        padding: 11px;
+    }
+}

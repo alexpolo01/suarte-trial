@@ -1,0 +1,68 @@
+.artwork-request-card__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 7px;
+    border: 1px solid var(--app-theme-color);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.artwork-request-card__image, .artwork-request-card__image-template {
+    width: 150px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.artwork-request-card__text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.artwork-request-card__text span{
+    color: var(--app-generic-gray);
+}
+
+.artwork-request-card__gallery-header {
+    color: var(--app-normal_text);
+    font-weight: 600;
+    margin: 10px 0px;
+    margin-top: 20px;
+}
+
+.artwork-request-card__gallery {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.artwork-request-card__gallery-image {
+    width: 40px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    background-color: var(--app-page_background);
+}
+
+.artwork-request-card__gallery-info {
+    width: 100%;
+    overflow: hidden;
+}
+
+.artwork-request-card__gallery-text {
+    display: block;
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.artwork-request-card__link {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    margin-top: 20px;
+    padding: 5px 20px;
+    border-radius: 6px;
+    color: var(--app-normal_text);
+    background-color: green;
+}

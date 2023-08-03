@@ -1,0 +1,84 @@
+.drafts-profile-button__container {
+    width: 100%;
+    border-radius: 6px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.drafts-profile-button__container.disabled {
+    pointer-events: none;
+}
+
+.drafts-profile-button__text-section {
+    width: 100%;
+    margin-right: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.drafts-profile-button__draft-icon-box {
+    width: 40px;
+    aspect-ratio: 1/1;
+    background-color: var(--app-liked_artlists_background);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.drafts-profile-button__draft-icon {
+    width: 60%;
+    fill: var(--app-normal_text);
+}
+
+.drafts-profile-button__draft-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.drafts-profile-button__draft-text span{
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+}
+
+.drafts-profile-button__draft-enter {
+    width: 12px;
+    fill: var(--app-theme-color);
+    margin-right: 11px; 
+}
+
+@media (max-width: 1004px) {
+    .drafts-profile-button__container {
+        border-radius: 5px;
+    }
+
+    .drafts-profile-button__draft-icon-box {
+        width: 33px;
+    }
+
+    .drafts-profile-button__draft-enter {
+        width: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+    .drafts-profile-button__container {
+        border-radius: 4px;
+    }
+
+    .drafts-profile-button__draft-icon-box {
+        width: 27px;
+    }
+
+    .drafts-profile-button__draft-enter {
+        width: 8px;
+    }
+}

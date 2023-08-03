@@ -1,0 +1,79 @@
+.purchase-personalized-message__text {
+    color: var(--app-theme-color);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.purchase-personalized-message__remove {
+    width: 11px;
+    padding: 7px;
+    box-sizing: content-box;
+    flex-shrink: 0;
+    cursor: pointer;
+    stroke: var(--app-normal_text);
+}
+
+.purchase-personalized-message__popup {
+    width: 90%;
+    max-width: 450px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+    border-radius: 5px;
+    padding: 12px 15px;
+    padding-bottom: 25px;
+}
+
+.purchase-personalized-message__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.purchase-personalized-message__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.purchase-personalized-message__close {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 7px;
+    position: absolute;
+    right: -7px;
+    cursor: pointer;
+    stroke: var(--app-normal_text);
+}
+
+.purchase-personalized-message__popup-text {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    text-align: center;
+}
+
+.purchase-personalized-message__add-button {
+    margin-top: 20px;
+}
+
+.purchase-personalized-message__textarea {
+    width: 100%;
+    resize: none;
+    background-color: var(--app-bottom_sheet_fix);
+    height: 120px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 12px;
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+@media (max-width: 550px) {
+    .purchase-personalized-message__close {
+        width: 12px;
+    }
+}

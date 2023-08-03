@@ -1,0 +1,78 @@
+.play-artlist__container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.play-artlist__controls {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.play-artlist__container.controls-active .play-artlist__controls {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.play-artlist__controls-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    position: relative;
+}
+
+.play-artlist__controls-exit {
+    width: 19px;
+    stroke: white;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 60%;
+}
+
+.play-artlist-swiper {
+    width: 100%;
+    height: 100%;
+    cursor: none !important;
+}
+
+.play-artlist-swiper__item {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.play-artlist__controls-resume, .play-artlist__controls-stop {
+    width: 49px;
+}
+
+@media (max-width: 1004px) {
+    .play-artlist__controls-exit {
+        width: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .play-artlist__controls-wrap {
+        margin-top: 10%;
+    }
+
+    .play-artlist__controls-resume, .play-artlist__controls-stop {
+        width: 45px;
+    }
+}
+
+@media (max-width: 550px) {
+    .play-artlist__controls-exit {
+        width: 12px;
+    }
+}

@@ -1,0 +1,104 @@
+.search-inspiring__popup {
+    width: 90%;
+    max-width: 600px;
+    height: 60vh;
+    background-color: var(--app-card_background_more_visible);
+    position: relative;
+    border-radius: 10px;
+    overflow-y: auto;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-inspiring__popup-close-icon-x {
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    stroke: var(--app-normal_text);
+    width: 14px;
+    cursor: pointer;
+    box-sizing: content-box;
+    padding: 6px;
+}
+
+.search-inspiring__popup-close-icon-back {
+    position: absolute;
+    top: 14px;
+    left: 4%;
+    fill: var(--app-theme-color);
+    width: 11px;
+    box-sizing: content-box;
+    padding: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+.search-inspiring__user_name {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    text-align: center;
+    width: 100%;
+    padding: 0px 40px;
+}
+
+.search-inspiring__user_username-small {
+    color: var(--app-normal_text);
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding: 0px 40px;
+    margin-bottom: 10px !important;
+}
+
+.search-inspiring__user_username {
+    color: var(--app-normal_text);
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding: 0px 40px;
+    margin-bottom: 10px !important;
+}
+
+.search-inspiring__artist-verified-icon {
+    fill: var(--app-theme-color);
+    width: 13px;
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+
+.search-inspiring__popup-number-of-inspiring {
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+    text-align: center;
+    width: 100%;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1004px) {
+    .search-inspiring__artist-verified-icon {
+        width: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-inspiring__popup {
+        width: 100%;
+        max-height: unset;
+        height: 100vh;
+        border-radius: 0px;
+        background-color: var(--app-page_background);
+    }
+
+    .search-inspiring__popup-close-icon-x {
+        display: none;
+    }
+
+    .search-inspiring__popup-close-icon-back {
+        display: block;
+    }
+}

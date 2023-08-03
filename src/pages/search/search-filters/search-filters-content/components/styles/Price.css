@@ -1,0 +1,107 @@
+.search-filters-content-price__container {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.custom-price__input-container {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    right: 10px;
+}
+
+/** MIN PRICE SELECTOR STYLES */
+.custom-price__min-selector {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--app-generic-gray);
+}
+
+.custom-price__min-selector .custom-input-range__thumb {
+    width: 15px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-theme-color);
+    display: flex;
+    justify-content: center;
+}
+
+.custom-price__min-selector .custom-input-range__progress {
+    background-color: var(--app-generic-gray);
+    z-index: 3;
+}
+
+.custom-price__min-selector .custom-input-range__real-range {
+    z-index: 3;
+}
+
+.custom-price__min-selector .custom-price__custom-thumb {
+    color: var(--app-normal_text);
+    position: absolute;
+    top: 20px;
+    font-weight: 500;
+}
+
+/** MAX PRICE SELECTOR STYLES */
+.custom-price__max-selector {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--app-generic-gray);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.custom-price__max-selector .custom-input-range__thumb {
+    width: 15px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-theme-color);
+    display: flex;
+    justify-content: center;
+}
+
+.custom-price__max-selector .custom-input-range__progress {
+    background-color: var(--app-theme-color);
+}
+
+.custom-price__max-selector .custom-price__custom-thumb {
+    color: var(--app-normal_text);
+    position: absolute;
+    top: -22px;
+    font-weight: 500;
+}
+
+@media (max-width: 1004px) {
+    .custom-price__min-selector .custom-price__custom-thumb { 
+        top: 19px;
+    }
+
+    .custom-price__max-selector .custom-price__custom-thumb {
+        top: -21px;
+    }
+}
+
+@media (max-width: 900px) {
+    .custom-price__input-container {
+        /* margin: 0 auto;
+        margin-top: 20px; */
+        right: 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .custom-price__min-selector .custom-price__custom-thumb { 
+        top: 18px;
+    }
+
+    .custom-price__max-selector .custom-price__custom-thumb {
+        top: -20px;
+    }
+}
+
+
+

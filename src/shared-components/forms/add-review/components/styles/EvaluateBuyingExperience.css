@@ -1,0 +1,58 @@
+.add-review__buying-experience {
+    width: 100%;
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-review__thumb-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-review__thumb-text {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.add-review__thumb {
+    width: 42px; 
+    cursor: pointer;
+    fill: var(--app-generic-gray);
+    margin-top: 14px;
+}
+
+.add-review__thumb.neutral {
+    transform: rotateY(180deg) rotateZ(90deg);
+}
+
+.add-review__thumb.negative {
+    transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.add-review__thumb-container.active .add-review__thumb-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.add-review__thumb-container.active .add-review__thumb.positive {
+    fill: #129B28;
+}
+
+.add-review__thumb-container.active .add-review__thumb.negative {
+    fill: red;
+}
+
+@media (max-width: 550px) {
+    .add-review__buying-experience {
+        grid-template-columns: 90px 90px 90px;
+    }
+
+    .add-review__thumb {
+        width: 38px;
+    }
+}

@@ -1,0 +1,55 @@
+.auth-artist-code-verification__container {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.auth-artist-code-verification__text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+}
+
+.auth-artist-code-verification__form {
+    width: 100%;
+}
+
+.auth-artist-code-verification__resend-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.auth-artist-resend-code {
+    color: var(--app-theme-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-artist-resend-code.disabled {
+    font-weight: var(--app-font-regular);
+    color: var(--app-generic-gray);
+    pointer-events: none;
+}
+
+.auth-artist-resend-code.loading {
+    color: var(--app-generic-gray);
+    pointer-events: none;
+}
+
+.auth-artist-code-verification__form .continue-button__button.rounded-corners {
+    padding: 4px 34px;
+    font-size: 15px;
+}
+
+@media (max-width: 1004px) {
+    .auth-artist-code-verification__form .continue-button__button.rounded-corners {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .auth-artist-code-verification__form .continue-button__button.rounded-corners {
+        font-size: 13px;
+    }
+}

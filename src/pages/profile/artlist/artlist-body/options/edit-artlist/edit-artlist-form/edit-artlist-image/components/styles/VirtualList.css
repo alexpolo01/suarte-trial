@@ -1,0 +1,18 @@
+.edit-artlist__change-image-item {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-sizing: content-box;
+    object-fit: cover;
+}
+
+.edit-artlist__change-image-item.active{
+    border: 3px solid var(--app-theme-color);
+}
+
+@media (max-width: 550px) {
+    .edit-artlist__change-image-item {
+        width: 150px;
+    }
+}

@@ -1,0 +1,26 @@
+.cookies-text__container {
+    width: 100%;
+}
+
+.cookies-text__heading {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    color: var(--app-theme-color);
+    margin-bottom: 12px;
+}
+
+.cookies-text__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    margin-bottom: 11px !important;
+}
+
+.cookies-text__text.margin {
+    margin-bottom: 20px !important;
+}
+
+.cookies-text__list-item {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}

@@ -1,0 +1,15 @@
+.artist-artworks-content__list-container {
+    width: 100%;
+    flex-grow: 1;
+    height: 0px;
+    overflow-y: auto;
+    margin-top: 5px;
+}
+
+.artist-artworks-content__infinite-scroll-spinner {
+    padding-top: 30px;
+}
+
+.artist-artworks-content__infinite-scroll-spinner .infinite-scroll-loader__default-loader-spinner {
+    width: 21px;
+}

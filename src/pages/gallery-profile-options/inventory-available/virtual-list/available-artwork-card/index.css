@@ -1,0 +1,42 @@
+.available-artwork-card__container {
+    width: 100%;
+    cursor: pointer;
+}
+
+.available-artwork-card__icons {
+    width: fit-content;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    margin-right: -10px;
+}
+
+.available-artwork-card__icon {
+    width: 35px;
+    flex-shrink: 0;
+    fill: var(--app-theme-color);
+    box-sizing: content-box;
+    padding: 7px;
+}
+
+.available-artwork-card__icon.not-requested {
+    fill: var(--app-generic-gray);
+}
+
+@media (max-width: 1004px) {
+    .available-artwork-card__icon {
+        width: 30px;
+    }
+}
+
+@media (max-width: 550px) {
+    .available-artwork-card__icons {
+        column-gap: 5px;
+        margin-right: -8px;
+    }
+
+    .available-artwork-card__icon {
+        width: 26px;
+        padding: 5px;
+    }
+}

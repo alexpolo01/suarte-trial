@@ -1,0 +1,26 @@
+.home-artlist-notification__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.home-artlist-notification__image {
+    margin-top: 15px;
+}
+
+.home-artlist-notification__container .artlist-image__artlist-image-container {
+    border-radius: 2%;
+}
+
+
+@media (max-width: 550px) {
+    .home-artlist-notification__container {
+        padding: 12px;
+    }
+
+    .home-artlist-notification__image {
+        margin-top: 12px;
+    }
+}

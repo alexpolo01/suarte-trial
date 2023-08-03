@@ -1,0 +1,54 @@
+.artwork-view__desktop-controls {
+    width: fit-content;
+    flex-shrink: 0;
+    margin-right: 5px;
+    transform: translateX(-11px);
+}
+
+.artwork-view__desktop-controls .slider-controls__button {
+    width: 33px;
+    border: none;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    transform: rotate(90deg);
+    transition: opacity 0.3s ease;
+}
+
+.artwork-view__desktop-controls .slider-controls__button:first-child {
+    margin-bottom: 15px;
+}
+
+.artwork-view__desktop-controls .slider-controls__button svg {
+    width: 24%;
+}
+
+.artwork-view__desktop-controls .slider-controls__button.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+@media (max-width: 1450px) {
+    .artwork-view__desktop-controls {
+        transform: translateX(-9px);
+    }
+
+    .artwork-view__desktop-controls .slider-controls__button {
+        width: 31px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .artwork-view__desktop-controls {
+        transform: translateX(-7px);
+    }
+
+    .artwork-view__desktop-controls .slider-controls__button {
+        width: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .artwork-view__desktop-controls {
+        display: none;
+    }
+}

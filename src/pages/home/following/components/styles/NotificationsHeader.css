@@ -1,0 +1,62 @@
+.home-notifications-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.home-notifications-header__user-image {
+    width: 50px;
+    background-color: var(--app-special_popup_background);
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.home-notifications-header__text-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.home-notifications-header__user-name {
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    color: var(--app-normal_text);
+}
+
+.home-notifications-header__artist-icon {
+    width: 13px;
+    margin-left: 4px;
+    fill: var(--app-theme-color);
+    position: relative;
+    top: -1px;
+}
+
+.home-notifications-header__text {
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.home-notifications-header__secondary-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+    font-style: italic;
+}
+
+@media (max-width: 1004px) {
+    .home-notifications-header__user-image {
+        width: 45px;
+    }
+}
+
+@media (max-width: 550px) {
+    .home-notifications-header__user-image {
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .home-notifications-header__artist-icon {
+        width: 12px;
+    }
+}

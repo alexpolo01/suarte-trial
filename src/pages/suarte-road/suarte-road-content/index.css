@@ -1,0 +1,25 @@
+.suarte-road-content__container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 30px;
+}
+
+.suarte-road-content__svg {
+    width: 40%;
+}
+
+.suarte-road-content__step-info {
+    width: 60%;
+}
+
+@media (max-width: 550px) {
+    .suarte-road-content__container {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .suarte-road-content__svg, .suarte-road-content__step-info {
+        width: 100%;
+    }
+}

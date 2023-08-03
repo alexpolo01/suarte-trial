@@ -1,0 +1,54 @@
+.artwork-template-card__image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--app-image_template_color);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artwork-template-card__image-icon {
+    fill: var(--app-theme-color);
+    width: 60%;
+}
+
+.artwork-template-card__text {
+    background-color: var(--app-image_template_color);
+    height: 13px;
+    margin-bottom: 7px;
+}
+
+.artwork-template-card__text:last-child {
+    margin-bottom: 0px;
+}
+
+.artwork-template-card__text.large {
+    width: 77%;
+}
+
+.artwork-template-card__text.medium {
+    width: 60%;
+}
+
+.artwork-template-card__text.small {
+    width: 35%;
+}
+
+.artwork-template-card__text.extra-small {
+    width: 25%;
+}
+
+@media (max-width: 1004px) {
+    .artwork-template-card__text {
+        height: 11px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-template-card__text {
+        height: 9px;
+    }
+}
+
+

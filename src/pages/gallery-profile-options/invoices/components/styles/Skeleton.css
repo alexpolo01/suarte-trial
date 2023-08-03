@@ -1,0 +1,50 @@
+.invoices-skeleton__container {
+    width: 100%;
+}
+
+.invoices-skeleton__text {
+    height: 13px;
+    background-color: var(--app-image_template_color);
+    border-radius: 3px;
+}
+
+.invoices-skeleton__card {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    border-radius: 8px;
+    padding: 0px 15px;
+}
+
+.invoices-skeleton_download {
+    width: 25px;
+    aspect-ratio: 1/1;
+    background-color: var(--app-image_template_color);
+    border-radius: 3px;
+}
+
+@media (max-width: 1004px) {
+    .invoices-skeleton__text {
+        height: 11px;
+    }
+    
+    .invoices-skeleton__card {
+        padding: 0px 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .invoices-skeleton__text {
+        height: 10px;
+    }
+    
+    .invoices-skeleton__card {
+        padding: 0px 10px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,56 @@
+.claim-artwork__button {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.claim-artwork-popup {
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+    border-radius: 5px;
+    padding: 30px 15px;
+    padding-top: 12px;
+}
+
+.claim-artwork-popup__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.claim-artwork-popup__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.claim-artwork-popup__close {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 7px;
+    position: absolute;
+    right: -7px;
+    stroke: var(--app-normal_text);
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    .claim-artwork__button:hover {
+        text-decoration: underline;
+    } 
+}
+
+
+@media (max-width: 550px) {
+    .claim-artwork-popup__close {
+        width: 12px;
+    }    
+}

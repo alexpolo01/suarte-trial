@@ -1,0 +1,204 @@
+.public-form-input__higher-container {
+    width: 100%;
+}
+
+.public-form-input__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    position: relative;
+}
+
+.public-form-input__default-margin {
+    margin-bottom: 11px;
+}
+
+.public-form-input__default-margin.checkbox {
+    margin-bottom: 7px;
+}
+
+.public-form-input__label {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    font-family: var(--app-font);
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: var(--app-generic-gray);
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.public-form-input__label.textarea {
+    white-space: normal;
+}
+
+.public-form-input__input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-family: var(--app-font);
+    font-size: 16px;
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-right: 10px;
+}
+
+.public-form-input__input.textarea {
+    resize: none;
+    height: 90px;
+    padding-top: 4px;
+    text-align: justify;
+    hyphens: auto;
+    scrollbar-width: thin;
+    padding-bottom: 0px;
+}
+
+.public-form-input__input.textarea::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.public-form-input__input.textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(95, 95, 95);
+}
+
+.public-form-input__input-error {
+    border: 1px solid var(--app-theme-color);
+}
+
+.public-form-input__input.date {
+    -webkit-appearance: none;
+}
+
+.public-form-input__input.date::-webkit-inner-spin-button,
+.public-form-input__input.date::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.public-form-input__calendar-icon {
+    width: 30px;
+    fill: var(--app-theme-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+.public-form-input__checkbox-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.public-form-input__checkbox {
+    margin-right: 8px;
+    box-shadow: var(--app-card_box_shadow);
+}
+
+.public-form-input__checkbox-text {
+    margin: 0px;
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    font-family: var(--app-font);
+    font-size: 14px;
+}
+
+.public-form-input__checkbox-error {
+    border: 1px solid var(--app-theme-color);
+}
+
+.public-form-input__checkbox-link {
+    text-decoration: none;
+    color: var(--app-theme-color);
+    font-weight: 600;
+}
+
+.public-form-input__checkbox-link:hover {
+    color: var(--app-theme-color);
+}
+
+.public-form-input__calendar-icon.read-only {
+    pointer-events: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--app-normal_text);
+  border-radius: 8px;
+  transition: background-color 0s ease;
+  transition-delay: 99999999s;
+  caret-color: var(--app-normal_text);
+}
+
+
+@media (hover: hover) {
+    .public-form-input__checkbox-link:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 1004px) {
+    .public-form-input__input {
+        font-size: 15px;
+    }
+
+    .public-form-input__label {
+        font-size: 14px;
+    }
+
+    .public-form-input__label {
+        padding-top: 6px;
+    }
+
+    .public-form-input__input {
+        padding-bottom: 6px;
+    }
+
+    .public-form-input__checkbox-text {
+        font-size: 13px;
+    }
+
+    .public-form-input__input.textarea {
+        padding-top: 2px;
+    }
+}
+
+@media (max-width: 500px) {
+    .public-form-input__input {
+        font-size: 14px;
+    }
+
+    .public-form-input__label {
+        font-size: 13px;
+    }
+
+    .public-form-input__checkbox-text {
+        font-size: 12px;
+    }
+}
+

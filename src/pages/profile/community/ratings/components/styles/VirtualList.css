@@ -1,0 +1,43 @@
+.profile-community-ratings__ratings-infinite-scroll {
+    margin-top: 15px;
+}
+
+.community-rating-measurer__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px;
+    padding-bottom: 12px;
+}
+
+.community-rating-measurer__user-img {
+    width: 45px;
+    aspect-ratio: 1/1;
+}
+
+.community-rating-measurer__artwork-img {
+    width: 19%;
+    min-width: 144px;
+    aspect-ratio: 1/1;
+}
+
+@media (max-width: 1004px) {
+    .community-rating-measurer__container {
+        padding: 12px;
+        padding-bottom: 10px;
+    }
+
+    .community-rating-measurer__user-img {
+        width: 40px;
+    }
+}
+
+@media (max-width: 550px) {
+    .community-rating-measurer__container {
+        padding: 10px;
+        padding-bottom: 8px;
+    }
+
+    .community-rating-measurer__user-img {
+        width: 35px;
+    }
+}

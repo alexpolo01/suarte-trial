@@ -1,0 +1,11 @@
+.chat-timestamp__container {
+    display: block;
+    width: fit-content;
+    margin: 0px auto;
+    color: var(--app-normal_text);
+    font-weight: 500;
+    background-color: var(--app-card_secondary_color);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 2px;
+    padding: 3px 8px;
+}

@@ -1,0 +1,92 @@
+.home-post-notification__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.home-post-notification__content-container {
+    width: 100%;
+    margin: 15px auto;
+}
+
+.home-post-notification__content-container .post-card__container {
+    aspect-ratio: 1.03;
+}
+
+.home-post-notification__stats-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.home-post-notification__stats {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    overflow: hidden;
+    font-weight: 500;
+    color: var(--app-generic-gray)
+}
+
+.home-post-notification__stat-separator {
+    width: 5px;
+    display: inline-block;
+    aspect-ratio: 1/1;
+    background-color: var(--app-normal_text);
+    border-radius: 50%;
+    margin: 0px 6px;
+}
+
+.home-post-notification__views {
+    color: var(--app-normal_text);
+}
+
+.home-post-notification__views-icon {
+    width: 20px;
+    stroke: var(--app-theme-color);
+    margin-left: 5px;
+}
+
+.home-post-notification__like-button {
+    width: 24px;
+}
+
+.home-post-notification__main-text {
+    overflow: hidden;
+    font-weight: 500;
+    color: var(--app-normal_text);
+    display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2; 
+   -webkit-box-orient: vertical;
+}
+
+@media (max-width: 1004px) {
+    .home-post-notification__like-button {
+        width: 22px;
+    }
+}
+
+@media (max-width: 550px) {
+    .home-post-notification__container {
+        padding: 12px;
+    }
+
+    .home-post-notification__content-container {
+        margin: 10px auto;
+    }
+
+    .home-post-notification__stats-container {
+        margin-bottom: 5px;
+    }
+
+    .home-post-notification__like-button {
+        width: 19px;
+    }
+}
+

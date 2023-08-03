@@ -1,0 +1,9 @@
+.settings-bank-account__container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.settings-bank-account__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}

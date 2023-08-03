@@ -1,0 +1,23 @@
+.reviews__container {
+    width: 100%;
+}
+
+.reviews__header {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 14px;
+}
+
+.reviews__back-button {
+    width: 10px;
+    fill: var(--app-theme-color);
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.reviews__header-text {
+    color: var(--app-normal_text);
+    font-weight: 600;
+}

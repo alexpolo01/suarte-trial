@@ -1,0 +1,54 @@
+.artlist-add-artworks-popup-bottom-sheet__container {
+    max-width: 800px !important;
+}
+
+.artlist-add-artworks__content-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--app-special_popup_background);
+    border-radius: 6px;
+    padding: 12px 15px;
+}
+
+.artlist-add-artworks__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.artlist-add-artworks__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.artlist-add-artworks__close-button {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 7px;
+    position: absolute;
+    right: -7px;
+    stroke: var(--app-normal_text);
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .artlist-add-artworks__content-container {
+        padding: 11px;
+        padding-top: 12px;
+    }
+
+    .artlist-add-artworks__header {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artlist-add-artworks__close-button {
+        width: 12px;
+    }
+}

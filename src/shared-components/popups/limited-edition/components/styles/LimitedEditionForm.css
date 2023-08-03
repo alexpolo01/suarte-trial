@@ -1,0 +1,107 @@
+.limited-edition-artwork-form__policies-container{
+    width: 100%;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.limited-edition-artwork-form__policies-checkbox.read-only {
+    pointer-events: none;
+}
+
+.limited-edition-artwork-form__policies-checkbox {
+    align-items: center;
+    aspect-ratio: 1/1;
+    background-color: var(--app-bottom_sheet_fix);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 20px;
+    margin-right: 8px;
+}
+
+.limited-edition-artwork-form__policies-checkbox-check {
+    width: 80%;
+    fill: var(--app-theme-color);
+}
+
+.limited-edition-artwork-form__policies-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.limited-edition-artwork-form__policies-text a {
+    color: var(--app-theme-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.limited-edition-artwork-form__policies-text a:hover {
+    color: var(--app-theme-color);
+}
+
+.limited-edition-artwork-form__request-button {
+    cursor: pointer;
+    margin-top: 24px;
+    margin-bottom: 28px;
+}
+
+.limited-edition-artwork-form__question {
+    background-color: var(--app-bottom_sheet_fix);
+}
+
+
+.limited-edition-artwork-question-height-first {
+    max-height: 175px;
+}
+
+.limited-edition-artwork-question-height {
+    max-height: 90px;
+}
+
+.limited-edition-artwork-form__requested {
+    display: block;
+    width: fit-content;
+    padding: 6px 10px;
+    background-color: var(--app-theme-color);
+    border-radius: 6px;
+    color: var(--app-page_background);
+    font-weight: 600;
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 28px;
+}
+
+@media (hover: hover) {
+    .limited-edition-artwork-form__policies-text a:hover {
+        text-decoration: underline;
+    }    
+}
+
+@media (max-width: 1004px) {
+    .limited-edition-artwork-form__policies-checkbox {
+        width: 17px;
+    }
+}
+
+@media (max-width: 560px) {
+    .limited-edition-artwork-question-height {
+        max-height: 114px;
+    }
+
+    .limited-edition-artwork-question-height-first {
+        max-height: 210px;
+    } 
+}
+
+@media (max-width: 448px) {
+    .limited-edition-artwork-question-height-first {
+        max-height: 240px;
+    } 
+}
+
+
+

@@ -1,0 +1,31 @@
+.form-checkbox__custom-checkbox {
+    display: inline-flex;
+    width: 20px;
+    aspect-ratio: 1/1;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--app-card_background_more_visible);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.form-checkbox__custom-checkbox.read-only {
+    pointer-events: none;
+}
+
+.form-checkbox__hidden-checkbox {
+    display: none;
+}
+
+.form-checkbox__check {
+    width: 80%;
+    fill: var(--app-theme-color);
+}
+
+@media (max-width: 1004px) {
+    .form-checkbox__custom-checkbox {
+        width: 17px;
+    }
+}

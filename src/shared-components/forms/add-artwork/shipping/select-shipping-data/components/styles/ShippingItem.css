@@ -1,0 +1,58 @@
+.shipping-item__container {
+    width: 100%;
+    height: 50px;
+    background-color: var(--app-bottom_sheet_fix);
+    margin-bottom: 15px;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.shipping-item__remove {
+    width: 20px;
+    margin-right: 15px;
+}
+
+.shipping-item__name {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.shipping-item__edit {
+    width: 20px;
+    flex-shrink: 0;
+    fill: var(--app-theme-color);
+    margin-left: 15px;
+}
+
+.shipping-item__confirm-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    text-align: center;
+}
+
+.shipping-item__confirm-text span {
+    color: var(--app-theme-color);
+    font-weight: 600;
+}
+
+.shipping-item-update-popup {
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 10px 15px;
+    padding-bottom: 25px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+    border-radius: 5px;
+}
+
+@media (max-width: 550px) {
+    .shipping-item__edit {
+        width: 19px;
+    }
+}

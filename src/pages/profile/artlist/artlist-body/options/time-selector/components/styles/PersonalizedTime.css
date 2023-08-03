@@ -1,0 +1,28 @@
+.personalized-time__container {
+    width: 100%;
+    transition: opacity 0.4s ease, height 0.4s ease;
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+}
+
+.personalized-time__container.expanded {
+    opacity: 1;
+    height: 80px;
+    overflow: visible;
+}
+
+.personalized-time__container .public-form-input__container, .personalized-time__container .public-select__container {
+    background-color: var(--app-bottom_sheet_fix);
+}
+
+@media (max-width: 550px) {
+    .personalized-time__container.expanded {
+        height: 70px;
+    }
+    
+}
+

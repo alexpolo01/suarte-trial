@@ -1,0 +1,11 @@
+.home-banner__banner {
+    width: 100%;
+    aspect-ratio: 3.9259;
+    cursor: pointer;
+}
+
+@media (max-width: 550px) {
+    .home-banner__banner {
+        aspect-ratio: 2.7179;
+    }
+}

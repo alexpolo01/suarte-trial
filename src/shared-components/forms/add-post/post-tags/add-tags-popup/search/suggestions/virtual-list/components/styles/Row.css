@@ -1,0 +1,72 @@
+.post-tag__search-suggestion {
+    width: 100%;
+    padding: 8px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.post-tag__search-suggestion:hover {
+    background-color: var(--app-option_hover);
+}
+
+.post-tag__search-suggestion.added {
+    background-color: var(--app-theme-background);
+}
+
+.post-tag__search-suggestion-user-image {
+    width: 45px;
+    margin-right: 11px;
+    background-color: var(--app-page_background);
+}
+
+.post-tag__search-suggestion-user-info {
+    width: 100%;
+    overflow: hidden;
+}
+
+.post-tag__search-suggestion-main-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 16px;
+}
+
+.post-tag__search-suggestion-small-text {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-tag__search-suggestion-artist-check {
+    width: 13px;
+    fill: var(--app-theme-color);
+    margin-left: 1px;
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+
+@media (max-width: 550px) {
+    .post-tag__search-suggestion {
+        padding: 7px 10px;
+    }
+
+    .post-tag__search-suggestion-user-image {
+        width: 40px;
+        margin-right: 8px;
+    }
+
+    .post-tag__search-suggestion-main-text {
+        line-height: 14px;
+    }
+
+    .post-tag__search-suggestion-artist-check {
+        width: 11px;
+    }
+}

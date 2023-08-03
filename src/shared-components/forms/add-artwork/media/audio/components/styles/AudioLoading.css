@@ -1,0 +1,29 @@
+.add-artwork-media-form__audio-loading-container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    position: relative;
+}
+
+.add-artwork-media-form__audio-loading-spinner {
+    width: 23px;
+    margin-right: 10px;
+}
+
+.add-artwork-media-form__audio-loading-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.add-artwork-media-form__audio-loading-delete {
+    position: absolute;
+    right: 20px;
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+}

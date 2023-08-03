@@ -1,0 +1,43 @@
+.artwork-view-socials-header__container {
+    width: 100%;
+    padding: 8px 20px;
+    background-color: var(--app-card_background_more_visible);
+    border-bottom: 1px solid var(--app-fixed_elements_border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.artwork-view-socials-header__text {
+    color: var(--app-normal_text);
+    font-weight: 600;
+}
+
+.artwork-view-socials-header__container svg {
+    width: 12px;
+    box-sizing: content-box;
+    padding: 5px;
+    stroke: var(--app-normal_text);
+    position: absolute;
+    right: 3px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 1004px) {
+    .artwork-view-socials-header__container {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .artwork-view-socials-header__container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .artwork-view-socials-header__container svg {
+        right: 10px;
+    }
+}

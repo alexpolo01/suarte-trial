@@ -1,0 +1,95 @@
+.artwork-card__card {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.artwork-card__card.pointer {
+    cursor: pointer;
+}
+
+.artwork-card__artwork-image {
+    width: 100%;
+}
+
+.artwork-card__image-template {
+    width: 100%;
+}
+
+.artwork-card__title-section {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
+
+.artwork-card__title-section.limited-edition {
+    margin-bottom: -2px;
+}
+
+.artwork-card__title {
+    width: 100%;
+    font-weight: 500;
+    color: var(--app-normal_text);
+    font-style: italic;
+}
+
+.artwork-card__limited-edition-icon {
+    width: 25px;
+    flex-shrink: 0;
+    fill: var(--app-theme-color);
+    margin-left: 10px;
+}
+
+.artwork-card__text {
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0px;
+}
+
+.artwork-card__text.artist, .artwork-card__text.medium-year {
+    color: var(--app-generic-gray);
+}
+
+.artwork-card__text.price{
+    color: var(--app-normal_text);
+    margin-top: 3px !important;
+}
+
+.artwork-card__title, .artwork-card__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@media (max-width: 1004px) {
+    .artwork-card__text {
+        line-height: 16px;
+    }
+
+    .artwork-card__limited-edition-icon {
+        width: 22px;
+    }
+
+    .artwork-card__title-section.limited-edition {
+        margin-bottom: 0px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .artwork-card__text {
+        line-height: 15px;
+    }
+
+    .artwork-card__limited-edition-icon {
+        width: 19px;
+    }
+
+    .artwork-card__title-section.limited-edition {
+        margin-bottom: 2px;
+    } 
+}
+
+

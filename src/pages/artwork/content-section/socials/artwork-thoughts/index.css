@@ -1,0 +1,76 @@
+.artwork-view-thoughts__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.artwork-view-thoughts__main {
+    width: 100%;
+    flex-grow: 1;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.artwork-view-thoughts__body {
+    width: 100%;
+    flex-grow: 1;
+    height: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.artwork-view-thoughts__empty-thoughts {
+    text-align: center;
+    color: var(--app-normal_text);
+    padding: 0px 20px;
+    font-weight: 500;
+    margin-top: 25px !important;
+}
+
+.artwork-view-thoughts__reply-status {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--app-card_background_when_more_visible_is_on);
+    padding: 7px 20px;
+    padding-right: 15px;
+    border-top: 1px solid var(--app-fixed_elements_border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.artwork-view-thoughts__reply-text {
+    font-weight: 500;
+    color: var(--app-normal_text);
+}
+
+.artwork-view-thoughts__reply-text span {
+    font-weight: 600;
+    font-style: italic;
+    color: var(--app-theme-color);
+}
+
+.artwork-view-thoughts__reply-close {
+    width: 11px;
+    stroke: var(--app-normal_text);
+    cursor: pointer;
+    box-sizing: content-box;
+    padding: 5px;
+}
+
+@media (max-width: 1004px) {
+    .artwork-view-thoughts__reply-status {
+        padding: 5px 15px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-view-thoughts__reply-status {
+        padding: 5px 12px;
+        padding-right: 7px;
+    }
+}

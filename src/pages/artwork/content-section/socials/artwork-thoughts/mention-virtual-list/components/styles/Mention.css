@@ -1,0 +1,57 @@
+.thought-mention-result__container {
+    width: 100%;
+    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.thought-mention-result__image {
+    width: 38px;
+    margin-right: 8px;
+    background-color: var(--app-card_background_more_visible);
+}
+
+.thought-mention-result__text-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.thought-mention-result__text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+}
+
+.thought-mention-result__text.name {
+    margin-bottom: -3px !important;
+}
+
+.thought-mention-result__verified-icon {
+    fill: var(--app-theme-color);
+    width: 12px;
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+
+@media (hover: hover) {
+    .thought-mention-result__container:hover {
+        background-color: var(--app-card_background_when_blur_is_on);
+    }
+}
+
+@media (max-width: 1004px) {
+    .thought-mention-result__verified-icon {
+        width: 11px;
+    }
+}
+
+@media (max-width: 550px) {
+    .thought-mention-result__image {
+        width: 34px;
+    }
+
+    .thought-mention-result__verified-icon {
+        width: 10px;
+    }
+}

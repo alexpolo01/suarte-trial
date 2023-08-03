@@ -1,0 +1,131 @@
+.activity-menu__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.activity-menu__menu-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.activity-menu__menu-link:last-child {
+    margin-bottom: 0px;
+}
+
+.activity-menu__menu-link-icon-container {
+    width: 25px; 
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.activity-menu__menu-link-icon {
+    fill: var(--app-normal_text);
+    flex-shrink: 0;
+}
+
+.activity-menu__menu-link-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.activity-menu__menu-link.active .activity-menu__menu-link-icon {
+    fill: var(--app-theme-color);
+}
+
+.activity-menu__menu-link.active .activity-menu__menu-link-text {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+/** ICONS STYLES */
+.activity-menu__menu-link-icon.liked-artworks {
+    width: 24px;
+}
+
+.activity-menu__menu-link-icon.liked-thoughts, .activity-menu__menu-link-icon.liked-artlists, .activity-menu__menu-link-icon.liked-posts {
+    width: 23px;
+}
+
+.activity-menu__menu-link-icon.saved-artworks {
+    width: 17px;
+    fill: transparent;
+    stroke: var(--app-normal_text);
+}
+
+.activity-menu__menu-link.active .activity-menu__menu-link-icon.saved-artworks {
+    fill: transparent;
+    stroke: var(--app-theme-color);
+}
+
+.activity-menu__menu-link-icon.search-history {
+    width: 21px;
+}
+
+
+@media (max-width: 1004px) {
+    .activity-menu__menu-link-icon-container {
+        width: 23px; 
+        margin-right: 10px;
+    }
+
+    .activity-menu__menu-link-icon.liked-artworks {
+        width: 22px;
+    }
+    
+    .activity-menu__menu-link-icon.liked-thoughts, .activity-menu__menu-link-icon.liked-artlists, .activity-menu__menu-link-icon.liked-posts {
+        width: 21px;
+    }
+    
+    .activity-menu__menu-link-icon.saved-artworks {
+        width: 15px;
+    }
+    
+    .activity-menu__menu-link-icon.search-history {
+        width: 19px;
+    }
+}
+
+@media (max-width: 700px) {
+    .activity-menu__menu-link-icon {
+        fill: var(--app-theme-color);
+    }
+
+    .activity-menu__menu-link-icon.saved-artworks {
+        fill: transparent;
+        stroke: var(--app-theme-color);
+    }
+
+    .activity-menu__container {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .activity-menu__menu-link-icon-container {
+        width: 21px; 
+        margin-right: 8px;
+    }
+
+    .activity-menu__menu-link-icon.liked-artworks {
+        width: 20px;
+    }
+    
+    .activity-menu__menu-link-icon.liked-thoughts, .activity-menu__menu-link-icon.liked-artlists, .activity-menu__menu-link-icon.liked-posts {
+        width: 19px;
+    }
+    
+    .activity-menu__menu-link-icon.saved-artworks {
+        width: 13px;
+    }
+    
+    .activity-menu__menu-link-icon.search-history {
+        width: 17px;
+    }
+}

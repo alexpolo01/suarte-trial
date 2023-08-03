@@ -1,0 +1,49 @@
+.add-artwork-media-form__audio-add-container-outter {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.add-artwork-media-form__audio-add-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.add-artwork-media-form__add-audio-button {
+    width: 100%;
+    height: 50px;
+    background-color: var(--app-theme-background);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-artwork-media-form__add-audio-button.dragging {
+    border: 1px solid var(--app-theme-color);
+}
+
+.add-artwork-media-form__add-audio-button-text {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.add-artwork-media-form__record-audio-button {
+    width: 37px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-theme-background);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 14px;
+}
+
+.add-artwork-media-form__record-audio-icon {
+    width: 16px;
+    fill: var(--app-theme-color);
+}

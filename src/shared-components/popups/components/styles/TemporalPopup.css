@@ -1,0 +1,33 @@
+.temporal-popup__container {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 4px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    position: fixed;
+    bottom: 11px;
+    left: 11px;
+    padding: 10px 10px;
+    z-index: 9999999;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease, box-shadow 0.4s ease;
+    transform: translateY(15px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.temporal-popup__text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.temporal-popup__container.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+@media (max-width: 650px) {
+    .temporal-popup__container.app-navigation {
+        bottom: 60px;
+    }
+}

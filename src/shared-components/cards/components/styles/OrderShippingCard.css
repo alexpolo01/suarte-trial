@@ -1,0 +1,45 @@
+.order-shipping-card__container {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 8px;
+}
+
+.order-shipping-card__icon {
+    width: 24px;
+    flex-shrink: 0;
+    fill: var(--app-theme-color);
+}
+
+.order-shipping-card__info {
+    width: 100%;
+}
+
+.order-shipping-card__main-text {
+    display: block;
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.order-shipping-card__text {
+    display: block;
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+}
+
+@media (max-width: 1004px) {
+    .order-shipping-card__container {
+        padding: 12px;
+    } 
+}
+
+@media (max-width: 550px) {
+    .order-shipping-card__container {
+        padding: 10px;
+    } 
+}
+

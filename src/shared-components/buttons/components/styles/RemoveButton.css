@@ -1,0 +1,19 @@
+.generic-remove-button {
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border: 2px solid var(--app-theme-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.generic-remove-button.click {
+    cursor: pointer;
+}
+
+.generic-remove-button div {
+    width: 50%;
+    height: 2px;
+    background-color: var(--app-theme-color);
+}

@@ -1,0 +1,88 @@
+.close-review-confirmation {
+    width: 90%;
+    max-width: 420px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+    padding: 20px 15px;
+    padding-top: 15px;
+    border-radius: 7px;
+}
+
+.close-review-confirmation__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.close-review-confirmation__header-text {
+    color: var(--app-normal_text);
+    font-weight: 600;
+}
+
+.close-review-confirmation__close {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 7px;
+    cursor: pointer;
+    stroke: var(--app-normal_text);
+    position: absolute;
+    right: -7px;
+}
+
+.close-review-confirmation__text {
+    font-weight: var(--app-normal_text);
+    color: var(--app-normal_text);
+}
+
+.close-review-confirmation__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.close-review-confirmation__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-review-confirmation__button.cancel {
+    border: 2px solid var(--app-generic-gray);
+    background-color: var(--app-generic-gray-background);
+    color: var(--app-generic-gray);
+    font-weight: 600;
+}
+
+.close-review-confirmation__button.confirm {
+    border: 2px solid var(--app-theme-color);
+    background-color: var(--app-theme-background);
+    color: var(--app-theme-color);
+    font-weight: 600;
+}
+
+@media (max-width: 1004px) {
+    .close-review-confirmation__button {
+        width: 140px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 550px) {
+    .close-review-confirmation {
+        max-width: 380px;
+    }
+
+    .close-review-confirmation__button {
+        width: 130px;
+        height: 32px;
+    }
+}
+

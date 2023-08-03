@@ -1,0 +1,50 @@
+.add-post__container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.add-post__main {
+    width: 100%;
+}
+
+.add-post__main-form {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.add-post__cover-section {
+    width: 40%;
+    flex-shrink: 0;
+}
+
+.add-post__post-main-section {
+    width: 60%;
+    margin-left: 25px;
+}
+
+.add-post__main-textarea-height .resizable-textarea__textarea {
+    min-height: 178px;
+}
+
+@media (max-width: 650px) {
+    .add-post__main-form {
+        display: block;
+        padding: 15px;
+    }
+
+    .add-post__cover-section {
+        width: 100%;
+    }
+
+    .add-post__post-main-section {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+}

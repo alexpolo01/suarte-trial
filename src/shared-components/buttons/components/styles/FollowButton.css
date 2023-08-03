@@ -1,0 +1,25 @@
+.follow-button__button {
+    width: 104px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--app-theme-color);
+    background-color: var(--app-theme-background);
+    font-weight: 500;
+    color: var(--app-theme-color);
+    padding: 3px 0px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+
+.follow-button__button.fill {
+    background-color: var(--app-theme-color);
+    color: black;
+    font-weight: 600;
+}
+

@@ -1,0 +1,110 @@
+.artlist-card__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 7px;
+    padding: 11px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.artlist-card__container .artlist-image__artlist-image-template {
+    background-color: var(--app-bottom_sheet_fix);
+}
+
+.artist-card__artlist-image-wrapper {
+    width: 100%;
+}
+
+.artlist-card__artlist-image {
+    width: 100%;
+}
+
+.artlist-card__info-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.artlist-card__info-text {
+    width: 100%;
+    overflow: hidden;
+}
+
+.artlist-card__artlist-name, .artlist-card__artlist-by {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 18px;
+}
+
+.artlist-card__artlist-name {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.artlist-card__artlist-by { 
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+}
+
+.artlist-card__artlist-by span {
+    font-weight: 600;
+}
+
+.artlist-card__stats-container {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.artlist-card__stats-artworks-count {
+    color: var(--app-normal_text);
+    font-weight: 600;
+}
+
+.artlist-card__stats-artwork-icon {
+    flex-shrink: 0;
+    fill: var(--app-normal_text);
+    width: 15px;
+    margin-left: 4px;
+}
+
+@media (max-width: 1004px) {
+    .artlist-card__artlist-cover-overlay {
+        backdrop-filter: blur(13px);
+    }
+
+    .artlist-card__container {
+        padding-bottom: 7px;
+    }
+
+    .artlist-card__artlist-name, .artlist-card__artlist-by {
+        line-height: 17px;
+    }
+
+    .artlist-card__stats-artwork-icon {
+        width: 13px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artlist-card__artlist-cover-overlay {
+        backdrop-filter: blur(12px);
+    }
+
+    .artlist-card__container {
+        padding-bottom: 5px;
+    }
+
+    .artlist-card__artlist-name, .artlist-card__artlist-by {
+        line-height: 15px;
+    }
+
+    .artlist-card__stats-artwork-icon {
+        width: 12px;
+    }
+}

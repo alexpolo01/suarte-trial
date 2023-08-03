@@ -1,0 +1,84 @@
+.confirmation-dialog-popup {
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 7px;
+    padding: 0px 15px;
+    overflow-y: auto;
+}
+
+.confirmation-dialog-popup__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--app-card_background_more_visible);
+}
+
+.confirmation-dialog-popup__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.confirmation-dialog-popup__close {
+    position: absolute;
+    right: -6px;
+    stroke: var(--app-normal_text);
+    width: 13px;
+    box-sizing: content-box;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.confirmation-dialog-popup__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.confirmation-dialog-popup__option {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--app-normal_text);
+    padding: 15px;
+}
+
+.confirmation-dialog-popup__option.delete {
+    color: var(--app-theme-color);
+    transition: opacity 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-dialog-popup__option.delete.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.confirmation-dialog-popup__spinner {
+    width: 14px;
+    margin-left: 7px;
+    position: relative;
+    top: 1px;
+}
+
+@media (max-width: 550px) {
+    .confirmation-dialog-popup__header {
+        padding-top: 7px;
+    }
+
+    .confirmation-dialog-popup__close {
+        width: 12px;
+    }
+
+    .confirmation-dialog-popup__spinner {
+        width: 12px;
+        margin-left: 5px;
+    }
+}

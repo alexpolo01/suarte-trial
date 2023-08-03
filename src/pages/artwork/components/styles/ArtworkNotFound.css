@@ -1,0 +1,352 @@
+.artwork-not-found__container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+}
+
+.artwork-not-found__image-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-right: 30px;
+}
+
+.artwork-not-found__image {
+    width: 100%;
+    height: 100%;
+    background-color: var(--app-image_template_color);
+}
+
+.artwork-not-found__content {
+    width: 560px;
+    flex-shrink: 0;
+    height: 100%;
+    padding: 20px 0px;
+    padding-right: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+.artwork-not-found__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.artwork-not-found__header.--main {
+    display: none;
+}
+
+.artwork-not-found__back {
+    width: 12px;
+    box-sizing: content-box;
+    padding: 7px;
+    cursor: pointer;
+    fill: var(--app-theme-color);
+    margin-left: -7px;
+    margin-right: 18px;
+}
+
+.artwork-not-found__gallery-image {
+    width: 42px;
+    aspect-ratio: 1/1;
+    border-radius: 7%;
+    background-color: var(--app-image_template_color);
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.artwork-not-found__gallery-name {
+    width: 176px;
+    height: 12px;
+    border-radius: 2px;
+    background-color: var(--app-image_template_color);
+}
+
+.artwork-not-found__label {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 3px;
+    border-top: 1.5px solid var(--app-theme-color);
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.artwork-not-found__artist {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.artwork-not-found__artist-image {
+    width: 41px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-image_template_color);
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.artwork-not-found__artist-text-container {
+    width: 100%;
+}
+
+.artwork-not-found__small-text {
+    height: 10px;
+    border-radius: 2px;
+    background-color: var(--app-image_template_color);
+    margin-bottom: 7px;
+}
+
+.artwork-not-found__small-text:last-child {
+    margin-bottom: 0px;
+}
+
+.artwork-not-found__artwork-title {
+    margin: 10px 0px;
+    display: block;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.artwork-not-found__buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.artwork-not-found-button {
+    width: 100%;
+    height: 65px;
+    border-radius: 4px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.artwork-not-found-button.margin {
+    margin-left: 28px;
+}
+
+.artwork-not-found-button .price-tag__container {
+    height: 43px;
+}
+
+.artwork-not-found-button .price-tag__container .text-custom__component {
+    visibility: hidden;
+}
+
+.artwork-not-found-button .price-tag__tag-head {
+    fill: var(--app-generic-gray);
+}
+
+.artwork-not-found-button .price-tag__tag-head path:first-child {
+    fill: var(--app-generic-gray-background);
+}
+
+.artwork-not-found-button .price-tag__price {
+    border: 1px solid var(--app-generic-gray);
+    background-color: var(--app-generic-gray-background);
+    border-left: none;
+}
+
+.artwork-not-found__limited-edition-icon {
+    width: 43px;
+    fill: var(--app-generic-gray);
+    flex-shrink: 0;
+}
+
+.artwork-not-found__social-icons {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+}
+
+.artwork-not-found__social-icon {
+    width: 32px;
+    fill: var(--app-generic-gray);
+}
+
+@media (max-width: 1450px) {
+    .artwork-not-found__content {
+        width: 490px;
+    }
+
+    .artwork-not-found__back {
+        width: 11px;
+    }
+
+    .artwork-not-found__gallery-image {
+        width: 39px;
+    }
+
+    .artwork-not-found-button {
+        height: 60px;
+    }
+
+    .artwork-not-found-button.margin {
+        margin-left: 15px;
+    }
+
+    .artwork-not-found__limited-edition-icon {
+        width: 35px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .artwork-not-found__image-container {
+        padding-right: 20px;
+    }
+
+    .artwork-not-found__content {
+        width: 430px;
+    }
+
+    .artwork-not-found__header {
+        margin-bottom: 14px;
+    }
+
+    .artwork-not-found__gallery-image {
+        width: 36px;
+        margin-right: 12px;
+    }
+
+    .artwork-not-found__label {
+        padding: 10px;
+    }
+
+    .artwork-not-found__artist-image {
+        width: 37px;
+        margin-right: 8px;
+    }
+
+    .artwork-not-found__small-text {
+        height: 9px;
+    }
+
+    .artwork-not-found-button {
+        height: 54px;
+    }
+
+    .artwork-not-found-button.margin {
+        margin-left: 11px;
+    }
+
+    .artwork-not-found-button .price-tag__container {
+        height: 37px;
+    }
+
+    .artwork-not-found__limited-edition-icon {
+        width: 30px;
+    }
+
+    .artwork-not-found__social-icon {
+        width: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .artwork-not-found__container {
+        max-width: 800px;
+        flex-direction: column;
+    }
+
+    .artwork-not-found__image-container {
+        height: unset;
+        flex-grow: 1;
+        padding: 0px;
+    }
+
+    .artwork-not-found__content {
+        width: 100%;
+        height: unset;
+        display: block;
+        padding: 11px;
+        padding-top: 9px;
+    }
+
+    .artwork-not-found__header {
+        display: none;
+        padding: 11px;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
+
+    .artwork-not-found__header.--main {
+        display: flex;
+    }
+
+    .artwork-not-found__back {
+        margin-right: 13px;
+    }
+
+    .artwork-not-found__gallery-image {
+        width: 33px;
+        margin-right: 11px;
+    }
+
+    .artwork-not-found__buttons {
+        margin-top: 12px;
+    }
+
+    .artwork-not-found__limited-edition-icon {
+        width: 35px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-not-found__gallery-image {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .artwork-not-found__back {
+        width: 10px;
+        margin-right: 8px;
+    }
+
+    .artwork-not-found__artist-image {
+        width: 30px;
+    }
+
+    .artwork-not-found__small-text {
+        height: 8px;
+    }
+
+    .artwork-not-found-button {
+        height: 47px;
+    }
+
+    .artwork-not-found-button.margin {
+        margin-left: 10px;
+    }
+
+    .artwork-not-found-button .price-tag__container {
+        height: 34px;
+    }
+
+    .artwork-not-found__limited-edition-icon {
+        width: 30px;
+    }
+
+    .artwork-not-found__social-icons {
+        right: 12px;
+    }
+
+    .artwork-not-found__social-icon {
+        width: 25px;
+    }
+}

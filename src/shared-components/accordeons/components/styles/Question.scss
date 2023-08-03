@@ -1,0 +1,92 @@
+.contact-artist-gallery__question-container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.contact-artist-gallery__question-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 12px;
+}
+
+.contact-artist-gallery__question-icon {
+    fill: var(--app-theme-color);
+    width: 12px;
+    transition: transform 0.4s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+}
+
+.contact-artist-gallery__question-question {
+    margin: 0px;
+    color: var(--app-normal_text);
+    font-weight: 500;
+    font-size: 15px;
+    font-family: var(--app-font);
+}
+
+.contact-artist-gallery__question-answer {
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+    font-size: 15px;
+    font-family: var(--app-font);
+    text-align: justify;
+    hyphens: auto;
+    white-space: pre-line;
+}
+
+.contact-artist-gallery__question-container.active .contact-artist-gallery__question-icon {
+    transform: rotate(180deg);
+}
+
+.contact-artist-gallery__question-answer-container {
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    max-height: 0px;
+    padding: 0px 25px;
+    overscroll-behavior-y: contain;
+}
+
+.contact-artist-gallery__question-container.active .contact-artist-gallery__question-answer-container {
+    animation: contact-artist-gallery-delay-overflow 1.3s ease forwards;
+}
+
+.question-default-active-height {
+    max-height: 300px;
+}
+
+.contact-artist-gallery__question-answer-container::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes contact-artist-gallery-delay-overflow {
+    from {
+        overflow-y: hidden;
+    }
+
+    to {
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 1216px) {
+    .contact-artist-gallery__question-question, .contact-artist-gallery__question-answer {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-artist-gallery__question-question, .contact-artist-gallery__question-answer {
+        font-size: 13px;
+    }
+
+    .contact-artist-gallery__question-container {
+        margin-bottom: 10px;
+    }
+}
+

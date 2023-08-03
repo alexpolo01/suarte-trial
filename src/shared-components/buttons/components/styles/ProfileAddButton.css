@@ -1,0 +1,51 @@
+.profile-add-button__container {
+    width: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--app-theme-color);
+    transition: transform 0.4s ease;
+    margin-left: auto;
+    position: fixed;
+    bottom: 20px;
+    right: calc(((100vw - 1200px) / 2) + 11px);
+    z-index: 2;
+}
+
+.profile-add-button__container .add-button-bar {
+    width: 40%;
+    height: 4px;
+    border-radius: 1px;
+    background-color: var(--app-page_background);
+    position: absolute;
+}
+
+.profile-add-button__container .vertical {
+    transform: rotate(90deg);
+}
+
+@media (hover: hover) {
+    .profile-add-button__container:hover {
+        transform: scale(1.2) rotate(180deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .profile-add-button__container {
+        right: 11px;
+    }
+}
+
+@media (max-width: 650px) {
+    .profile-add-button__container {
+        width: 55px;
+        bottom: 65px;
+    }
+
+    .profile-add-button__container .add-button-bar {
+        height: 3px;
+    }
+}

@@ -1,0 +1,23 @@
+.activity-liked-posts__container {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.activity-liked-posts__text {
+    display: block;
+    text-align: center;
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+@media (max-width: 1004px) {
+    .activity-liked-posts__container {
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+    .activity-liked-posts__container {
+        margin-top: 10px;
+    }
+}

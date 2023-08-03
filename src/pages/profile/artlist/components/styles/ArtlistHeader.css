@@ -1,0 +1,149 @@
+.artlist-header__container {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.artlist-header__artlist-image {
+    flex-shrink: 0;
+    width: 235px;
+    margin-right: 20px;
+}
+
+.artlist-header__info-section {
+    width: 100%;
+    min-width: 0px;
+}
+
+.artlist-header__artlist-title {
+    width: 100%;
+    font-weight: 600;
+    font-family: var(--app-font);
+    color: var(--app-normal_text);
+    font-size: 35px;
+    margin-bottom: 7px;
+}
+
+.artlist-header__creator-info {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.artlist-header__creator-image {
+    width: 28px;
+    margin-right: 7px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+}
+
+.artlist-header__creator-image.gallery {
+    border-radius: 3px;
+}
+
+.artlist-header__creator-username {
+    color: var(--app-normal_text);
+    font-weight: 500;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artlist-header__artlist-stats {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+}
+
+.artlist-header__artwork-icon {
+    width: 18px;
+    fill: var(--app-generic-gray);
+    margin-right: 7px;
+}
+
+.artlist-header__artlist-stats-text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-generic-gray);
+}
+
+.artlist-header__artlist-stats-separator {
+    width: 5px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-normal_text);
+    margin: 0px 9px;
+}
+
+.artlist-header__artlist-description {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    margin-top: 10px !important;
+    margin-bottom: -2px !important;
+}
+
+
+@media (max-width: 1400px) {
+    .artlist-header__artlist-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .artlist-header__artlist-title {
+        font-size: 27px;
+    }
+
+    .artlist-header__artlist-image {
+        width: 215px;
+    }
+
+    .artlist-header__creator-image {
+        width: 25px;
+    }
+
+    .artlist-header__container {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .artlist-page .go-back__button {
+        left: 0;
+        top: 14px;
+    }
+
+    .artlist-page__container-wrap {
+        padding-top: 25px !important;
+    }
+
+    .artlist-header__container {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .artlist-header__artlist-image {
+        width: 270px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .artlist-header__artlist-title {
+        font-size: 18px;
+    }
+
+    .artlist-header__creator-image.gallery {
+        border-radius: 2px;
+    }
+
+    .artlist-header__creator-image {
+        width: 22px;
+    }
+
+    .artlist-header__artwork-icon {
+        width: 16px;
+    }
+}

@@ -1,0 +1,61 @@
+.create-new-artlist-popup {
+    width: 95%;
+    max-width: 500px;
+    max-height: 95vh;
+    overflow-y: auto;
+    background-color: var(--app-card_background_more_visible);
+    padding: 25px 15px;
+    padding-top: 0px;
+    border-radius: 6px;
+}
+
+.create-new-artlist__header {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    z-index: 2;
+}
+
+.create-new-artlist-popup .resizable-textarea__textarea-error {
+    border: none;
+}
+.create-new-artlist__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.create-new-artlist__close-button {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 6px;
+    stroke: var(--app-normal_text);
+    position: absolute;
+    right: -6px;
+    cursor: pointer;
+}
+
+.create-new-artlist__form {
+    width: 100%;
+}
+
+.create-new-artlist__form .public-form-input__container, .create-new-artlist__form .resizable-textarea__container {
+    background-color: var(--app-card_background_when_more_visible_is_on);
+    box-shadow: none;
+}
+
+.create-new-artlist__create-button {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 550px) {
+    .create-new-artlist__close-button {
+        width: 12px;
+    }  
+}

@@ -1,0 +1,12 @@
+.settings-my-collection__loader {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .settings-my-collection__loader {
+        row-gap: 10px;
+    } 
+}

@@ -1,0 +1,11 @@
+.submit-button-artwork-terms-opener {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+@media (hover: hover) {
+    .submit-button-artwork-terms-opener:hover {
+        text-decoration: underline;
+    }    
+}

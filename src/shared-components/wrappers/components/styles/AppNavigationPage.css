@@ -1,0 +1,20 @@
+.app-navigation-page__fix-inside-navigation {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+    .app-navigation-page__fix-inside-navigation {
+        padding-top: 56px;
+    }
+}
+
+@media (max-width: 650px) {
+    .app-navigation-page__fix-inside-navigation {
+        padding-top: 0px;
+        padding-bottom: 56px;
+    }
+}

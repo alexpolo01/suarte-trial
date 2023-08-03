@@ -1,0 +1,46 @@
+.public-full-width__button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: none;
+    padding: 8px 0px;
+    border-radius: 5px;
+    color: black;
+    font-family: var(--app-font);
+    font-weight: 600;
+    font-size: 16px;
+    background-color: var(--app-theme-color);
+    align-items: center;
+    transition: opacity 0.2s ease;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.public-full-width__button.disabled {
+    opacity: 0.5;
+}
+
+.public-full-width__loader {
+    margin-right: 5px;
+    transform: scale(0.9);
+}
+
+.public-full-width__loader .bar-loader {
+    background-color: black;
+}
+
+@media (max-width: 1004px) {
+    .public-full-width__button {
+        font-size: 15px;
+        border-radius: 3px;
+    }
+}
+
+@media (max-width: 500px) {
+    .public-full-width__button {
+        font-size: 14px;
+    }
+}
+

@@ -1,0 +1,156 @@
+.home-artwork-of-the-day__container {
+    width: 100%;
+}
+
+.home-artwork-of-the-day__container .fhslider__viewport {
+    align-items: center;
+}
+
+.artwork-of-the-day-card__container {
+    display: flex;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.artwork-of-the-day-card__image {
+    height: 290px;
+}
+
+.artwork-of-the-day-card__info {
+    width: 270px;
+    overflow: hidden;
+}
+
+.artwork-of-the-day-card__info-inner {
+    width: 100%;
+    height: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 12px;
+    overflow: hidden;
+    border-top: 1px solid var(--app-theme-color);
+}
+
+.artwork-of-the-day-card__date {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.artwork-of-the-day-card__artist-name {
+    width: 100%;
+    display: block;
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.artwork-of-the-dar-card__detail {
+    width: 100%;
+    display: block;
+    font-weight: var(--app-font-regular);
+    color: var(--app-generic-gray);
+}
+
+.artwork-of-the-dar-card__title {
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    color: var(--app-normal_text);
+    margin: 5px 0px;
+}
+
+.artwork-of-the-day-card__container .buy-original-button__container, .artwork-of-the-day-card__container .original-sold-button__container {
+    background-color: var(--app-page_background);
+    margin-top: 20px;
+}
+
+.artwork-of-the-day-mobile__container {
+    width: 100%;
+}
+
+.artwork-of-the-day-card__artist-verified {
+    width: 13px;
+    fill: var(--app-theme-color);
+    margin-left: 4px;
+    position: relative;
+    top: -1px;
+}
+
+.artwork-of-the-day-card__alternative-buy-button {
+    display: none;
+}
+
+@media (max-width: 1004px) {
+    .artwork-of-the-day-card__info {
+        width: 250px;
+    }
+
+    .artwork-of-the-day-card__info-inner {
+        padding-top: 8px;
+    }
+
+    .artwork-of-the-day-card__image {
+        height: 230px;
+    }  
+    
+    .artwork-of-the-day-card__date {
+        margin-bottom: 4px;
+    }
+
+    .artwork-of-the-dar-card__title {
+        margin: 2px 0px;
+    }
+
+    .artwork-of-the-day-card__container .buy-original-button__container, .artwork-of-the-day-card__container .original-sold-button__container {
+        margin-top: 10px;
+        height: 50px;
+    }
+
+    .artwork-of-the-day-card__container .buy-original-button__price-tag {
+        height: 34px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-of-the-day-card__container {
+        width: 100%;
+        align-items: center;
+    }
+
+    .artwork-of-the-day-card__image {
+        width: 50%;
+        aspect-ratio: 1/1;
+        height: unset;
+        object-fit: contain;
+        object-position: center;
+        margin-right: 8px;
+    } 
+
+    .artwork-of-the-day-card__info {
+        width: 100%;
+    }
+
+    .artwork-of-the-day-card__date {
+        display: none;
+    }
+    
+    .artwork-of-the-day-card__artist-verified {
+        width: 12px;
+    }
+
+    .artwork-of-the-day-card__info-inner .buy-original-button__container, .artwork-of-the-day-card__info-inner .original-sold-button__container {
+        display: none;
+    }
+
+    .artwork-of-the-day-card__container .buy-original-button__container, .artwork-of-the-day-card__container .original-sold-button__container {
+        background-color: var(--app-card_background_more_visible);
+    }
+
+    .artwork-of-the-day-card__alternative-buy-button {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 2px; 
+    }
+}

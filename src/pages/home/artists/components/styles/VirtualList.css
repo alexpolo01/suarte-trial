@@ -1,0 +1,28 @@
+.home-artists__infinite-container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.home-artists__virtual-row {
+    width: 100%;
+    height: 100%;
+}
+
+.home-artists__inner-virtual-row {
+    width: 100%;
+    display: flex;
+    column-gap: 15px;
+}
+
+@media (max-width: 650px) {
+    .home-artists__infinite-container {
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-artists__inner-virtual-row{
+        column-gap: 10px;
+    }
+}

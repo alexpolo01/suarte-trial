@@ -1,0 +1,14 @@
+.time-selector-popup {
+    width: 90%;
+    max-width: 400px;
+    overflow: visible;
+}
+
+.time-selector-popup.normal-popup__popup {
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+}
+
+.time-selector__button {
+    margin-top: 25px;
+}

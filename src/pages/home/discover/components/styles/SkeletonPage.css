@@ -1,0 +1,46 @@
+.home-discover-skeleton-page {
+    width: 100%;
+}
+
+.home-discover-skeleton-slider {
+    width: 100%;
+    margin-top: 42px;
+    margin-bottom: 50px;
+}
+
+.home-discover-skeleton-slider-card {
+    width: 240px;
+    margin-right: 12px;
+}
+
+.home-discover-skeleton-banner {
+    width: 100%;
+    aspect-ratio: 3.8967;
+    background-color: var(--app-image_template_color);
+}
+
+@media (max-width: 1004px) {
+    .home-discover-skeleton-slider {
+        margin-top: 35px;
+        margin-bottom: 43px;
+    }
+
+    .home-discover-skeleton-slider-card {
+        width: 190px;
+    } 
+}
+
+@media (max-width: 1004px) {
+    .home-discover-skeleton-slider {
+        margin-top: 25px;
+        margin-bottom: 33px;
+    }
+
+    .home-discover-skeleton-slider-card {
+        width: 160px;
+    } 
+
+    .home-discover-skeleton-banner {
+        aspect-ratio: 2.5;
+    }
+}

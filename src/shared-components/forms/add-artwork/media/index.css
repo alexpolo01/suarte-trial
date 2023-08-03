@@ -1,0 +1,32 @@
+.add-artwork-media-form {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.add-artwork-media-form.read-only {
+    pointer-events: none;
+}
+
+.add-artwork-media-form__heading {
+    font-weight: 500;
+    color: var(--app-normal_text);
+    margin: 0px;
+    margin-top: 3px;
+    line-height: 18px;
+}
+
+.add-artwork-media-form__optional-text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-generic-gray);
+}
+
+.add-artwork-media-form__text {
+    color: var(--app-generic-gray);
+    font-weight: var(--app-font-regular);
+    margin-bottom: 18px !important;
+}
+
+.add-artwork-media-form__continue-button {
+    margin-top: 30px;
+    cursor: pointer;
+}

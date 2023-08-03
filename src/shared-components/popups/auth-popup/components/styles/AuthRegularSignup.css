@@ -1,0 +1,53 @@
+.auth-regular-signup__form {
+    width: 100%;
+}
+
+.auth-regular-signup__form .public-form-input__container, .auth-regular-signup__form .form-checkbox__custom-checkbox {
+    background-color: var(--app-page_background);
+}
+
+.auth-regular-signup__input-margin {
+    margin-bottom: 22px;
+}
+
+.auth-regular-signup__terms {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.auth-regular-signup__submit-button.continue-button__button.rounded-corners {
+    margin-top: 22px;
+    padding: 4px 34px;
+    font-size: 15px;
+}
+
+.auth-regular-signup__or {
+    display: block;
+    text-align: center;
+    margin: 15px 0px;
+    color: var(--app-generic-gray);
+    font-weight: 500;
+}
+
+@media (hover: hover) {
+    .auth-regular-signup__terms:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 1004px) {
+    .auth-regular-signup__submit-button.continue-button__button.rounded-corners {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .auth-regular-signup__input-margin {
+        margin-bottom: 18px;
+    }
+
+    .auth-regular-signup__submit-button.continue-button__button.rounded-corners {
+        font-size: 13px;
+    }
+}

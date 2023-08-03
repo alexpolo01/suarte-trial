@@ -1,0 +1,88 @@
+.add-artwork-artist-card__container {
+    width: 100%;
+    height: 62px;
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-artwork-artist-card__container:hover {
+    background-color: var(--app-option_hover);
+}
+
+.add-artwork-artist-card__container.selected {
+    background-color: var(--app-theme-background);
+}
+
+.add-artwork-artist-card__artist-image {
+    width: 52px;
+    margin-right: 10px;
+    background-color: var(--app-page_background);
+    box-shadow: var(--app-card_box_shadow);
+}
+
+.add-artwork-artist-card__text-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.add-artwork-artist-card__text {
+    display: block;
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+.add-artwork-artist-card__text.name {
+    color: var(--app-normal_text);
+}
+
+.add-artwork-artist-card__text-verified-icon {
+    fill: var(--app-theme-color);
+    width: 13px;
+    flex-shrink: 0;
+    margin-left: 2px;
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+
+.add-artwork-artist-card__location-icon {
+    width: 10px;
+    fill: var(--app-normal_text);
+    position: relative;
+    top: -2px;
+}
+
+
+@media (max-width: 1004px) {
+    .add-artwork-artist-card__container {
+        height: 58px;
+    }
+
+    .add-artwork-artist-card__artist-image {
+        width: 48px;
+    }
+
+    .add-artwork-artist-card__location-icon {
+        width: 9px;
+    }
+}
+
+@media (max-width: 550px) {
+    .add-artwork-artist-card__container {
+        height: 54px;
+    }
+
+    .add-artwork-artist-card__artist-image {
+        width: 44px;
+    }
+
+    .add-artwork-artist-card__text-verified-icon {
+        width: 12px;
+    }
+
+    .add-artwork-artist-card__location-icon {
+        width: 8px;
+    }
+}

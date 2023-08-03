@@ -1,0 +1,53 @@
+.claim-artwork-form {
+    width: 100%;
+}
+
+.claim-artwork-form__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.claim-artwork-form__text a {
+    color: var(--app-theme-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.claim-artwork-form__input-code {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin: 17px 0px;
+}
+
+.claim-artwork-form__input-code .input-code__input {
+    width: 64px;
+    aspect-ratio: 1/1;
+    min-width: 0px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--app-page_background);
+    font-weight: 600;
+    color: var(--app-theme-color);
+    font-family: var(--app-font);
+    font-size: 25px;
+}
+
+.claim-artwork-form__input-code .input-code__input:focus {
+    border-color: var(--app-theme-color);
+    box-shadow: 0 0 5px var(--app-theme-color) inset;
+}
+
+.claim-artwork-form__button {
+    margin-top: 20px;
+}
+
+@media (max-width: 550px) {
+    .claim-artwork-form__input-code .input-code__input {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,21 @@
+.post-header__option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    padding-right: 17px;
+}
+
+.post-header__option:first-child {
+    padding-top: 12px;
+}
+
+.post-header__option:last-child {
+    padding-bottom: 12px;
+}
+
+.post-header__option-text {
+    color: var(--app-normal_text);
+    font-weight: 500;
+}

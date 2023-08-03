@@ -1,0 +1,14 @@
+.orders-skeleton__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.orders-skeleton__container.hide-header .skeleton-collection-card__text.first-text {
+    visibility: hidden;
+}
+
+.orders-skeleton__container.hide-header .skeleton-collection-card__content {
+    margin-top: -20px;
+}

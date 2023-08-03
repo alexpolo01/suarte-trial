@@ -1,0 +1,119 @@
+.add-artwork-media-form__main-picture-container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 15px 12px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.add-artwork-media-form__main-picture-delete-button {
+    flex-shrink: 0;
+    width: 27px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid var(--app-theme-color);
+    background-color: var(--app-theme-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.add-artwork-media-form__main-picture-delete-button div {
+    width: 60%;
+    height: 2px;
+    background-color: var(--app-theme-color);
+}
+
+.add-artwork-media-form__main-picture-loading-container {
+    width: 170px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--app-image_template_color);
+    margin-right: 20px;
+}
+
+.add-artwork-main-picture__progress-container {
+    width: 55%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.add-artwork-main-picture__progress-spinner {
+    width: 100% !important;
+    height: 100% !important;
+    color: var(--app-theme-color) !important;
+}
+
+.add-artwork-main-picture__progress-spinner circle {
+    stroke-width: 2px;
+}
+
+.add-artwork-main-picture__progress-value {
+    font-family: var(--app-font);
+    font-weight: 800;
+    color: var(--app-normal_text);
+    position: absolute;
+    font-size: 20px;
+}
+
+.add-artwork-media-form__main-picture-image {
+    width: 170px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    background-color: var(--app-image_template_color);
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+
+.add-artwork-media-form__main-picture-details {
+    width: 100%;
+    overflow: hidden;
+}
+
+.add-artowrk-media-form__main-picture-file-name {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+}
+
+@media (max-width: 1004px) {
+    .add-artwork-media-form__main-picture-delete-button {
+        width: 25px;
+    }
+
+    .add-artwork-media-form__main-picture-loading-container, .add-artwork-media-form__main-picture-image {
+        width: 140px;
+    }
+
+    .add-artwork-main-picture__progress-value {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 550px) {
+    .add-artwork-media-form__main-picture-delete-button {
+        width: 21px;
+        margin-right: 15px;
+    }
+
+    .add-artwork-media-form__main-picture-loading-container, .add-artwork-media-form__main-picture-image {
+        width: 120px;
+        margin-right: 12px;
+    }
+
+    .add-artwork-main-picture__progress-value {
+        font-size: 15px;
+    }
+}

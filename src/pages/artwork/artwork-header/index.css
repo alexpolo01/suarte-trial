@@ -1,0 +1,118 @@
+.artwork-view-header__container {
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.artwork-view-header__inner-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.artwork-view-header__go-back-button {
+    width: 12px;
+    flex-shrink: 0;
+    box-sizing: content-box;
+    padding: 7px;
+    margin-left: -7px;
+    margin-right: 18px;
+    cursor: pointer;
+    fill: var(--app-theme-color);
+}
+
+.artwork-view-header__gallery-container {
+    min-width: 0px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.artwork-view-header__gallery-image-wrapper {
+    width: 42px;
+    margin-right: 15px;
+}
+
+.artwork-view-header__gallery-image {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+}
+
+.artwork-view-header__gallery-name {
+    color: var(--app-theme-color);
+    font-weight: 600;
+}
+
+.artwork-view-header__options-button {
+    box-sizing: content-box;
+    flex-shrink: 0;
+    height: 20px;
+    padding: 9px 20px;
+    fill: var(--app-theme-color);
+    cursor: pointer; 
+    outline: none;
+}
+
+
+@media (max-width: 1450px) {
+    .artwork-view-header__gallery-image-wrapper {
+        width: 39px;
+    }
+
+    .artwork-view-header__go-back-button {
+        width: 11px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .artwork-view-header__container {
+        padding-bottom: 14px;
+    }
+
+    .artwork-view-header__gallery-image-wrapper {
+        width: 36px;
+        margin-right: 12px;
+    }
+
+    .artwork-view-header__options-button {
+        height: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .artwork-view-header__container {
+        padding-bottom: 11px;
+    }
+
+    .artwork-view-header__go-back-button {
+        margin-right: 13px;
+    }
+
+    .artwork-view-header__gallery-image-wrapper {
+        width: 33px;
+        margin-right: 11px;
+    }
+
+    .artwork-view-header__options-button {
+        height: 17px;
+        padding: 8px 11px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-view-header__gallery-image-wrapper {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .artwork-view-header__options-button {
+        height: 16px;
+    }
+
+    .artwork-view-header__go-back-button {
+        margin-right: 8px;
+        width: 10px;
+    }
+}

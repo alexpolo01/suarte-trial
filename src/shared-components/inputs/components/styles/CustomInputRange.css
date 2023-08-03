@@ -1,0 +1,29 @@
+.custom-input-range__track {
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-input-range__progress {
+    max-width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.custom-input-range__real-range {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.custom-input-range__thumb {
+    position: absolute; 
+    right: 0px;
+    cursor: pointer;
+}

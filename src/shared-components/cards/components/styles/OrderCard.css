@@ -1,0 +1,130 @@
+.order-card__container {
+    width: 100%;
+    padding: 15px;
+    padding-right: 20px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    border-radius: 5px;
+}
+
+.order-card__clickable {
+    width: 100%;
+}
+
+.order-card__clickable.pointer {
+    cursor: pointer;
+}
+
+.order-card__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 11px;
+}
+
+.order-card__icon {
+    width: 24px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    fill: var(--app-theme-color);
+}
+
+.order-card__header-text {
+    width: 100%;
+    min-width: 0px;
+    color: var(--app-normal_text);
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.order-card__header-text.theme {
+    color: var(--app-theme-color);
+}
+
+.order-card__header-text.canceled {
+    color: red;
+}
+
+.order-card__date {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.order-card__content {
+    width: 100%;
+    display: flex;
+}
+
+.order-card__image {
+    width: 145px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    margin-right: 12px;
+    object-fit: contain;
+}
+
+.order-card__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0px;
+}
+
+.order-card__title-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-card__big-text {
+    width: 100%;
+    min-width: 0px;
+    color: var(--app-normal_text);
+    font-weight: 500;
+}
+
+.order-card__big-text.--title {
+    font-style: italic;
+}
+
+.order-card__big-text span {
+    color: var(--app-generic-gray);
+    font-style: normal;
+}
+
+.order-card__date.hidden {
+    display: none;
+    margin-left: 15px;
+}
+
+.order-card__small-text {
+    display: block;
+    color: var(--app-generic-gray);
+    font-weight: 500;
+}
+
+@media (max-width: 1004px) {
+    .order-card__container {
+        padding: 12px;
+        padding-right: 17px;
+    }
+
+    .order-card__image {
+        width: 120px;
+    }
+}
+
+@media (max-width: 550px) {
+    .order-card__container {
+        padding: 10px;
+        padding-right: 20px;
+    }
+
+    .order-card__image {
+        width: 110px;
+    }
+}

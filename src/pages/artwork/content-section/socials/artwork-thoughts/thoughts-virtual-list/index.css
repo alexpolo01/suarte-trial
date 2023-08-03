@@ -1,0 +1,13 @@
+.artwork-view-thoughts__thoughts-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.artwork-view-thoughts__thoughts-container-spinner {
+    padding-bottom: 15px;
+}
+
+.artwork-view-thoughts__thoughts-container-spinner .infinite-scroll-loader__default-loader-spinner {
+    width: 21px;
+}

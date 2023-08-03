@@ -1,0 +1,38 @@
+/************* App theme configuration with data-theme attributes **********************/
+
+
+/** DEFAULT -> STARRY_MOON*/
+:root {
+    --app-theme-color: var(--app-starry_moon_theme);
+    --app-theme-background: var(--app-starry_moon-background);
+    --app-theme-background-no-opacity: var(--app-starry_moon-background-no-opacity);
+}
+
+[data-theme="dancing_on_the_grass"] {
+    --app-theme-color: var(--app-dancing_on_the_grass_theme);
+    --app-theme-background: var(--app-dancing_on_the_grass-background);
+    --app-theme-background-no-opacity: var(--app-dancing_on_the_grass-background-no-opacity);
+}
+
+[data-theme="fountain_of_delights"] {
+    --app-theme-color: var(--app-fountain_of_delights_theme);
+    --app-theme-background: var(--app-fountain_of_delights-background);
+    --app-theme-background-no-opacity: var(--app-fountain_of_delights-background-no-opacity);
+}
+
+[data-theme="water_lily_pond"] {
+    --app-theme-color: var(--app-water_lily_pond_theme);
+    --app-theme-background: var(--app-water_lily_pond-background);
+    --app-theme-background-no-opacity: var(--app-water_lily_pond-background-no-opacity);
+}
+
+[data-theme="violet_theme"] {
+    --app-theme-color: var(--app-violet_theme_theme);
+    --app-theme-background: var(--app-violet_theme-background);
+    --app-theme-background-no-opacity: var(--app-violet_theme-background-no-opacity);
+}
+
+
+
+
+

@@ -1,0 +1,65 @@
+.profile-username__container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-username__username-locked-icon {
+    width: 25px;
+    fill: var(--app-theme-color);
+    stroke: var(--app-theme-color);
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.profile-username__container.locked .public-form-input__container {
+    background: transparent;
+}
+
+.profile-username__container.locked .profile-username__username-locked-icon {
+    display: block;
+}
+
+.profile-username__locked-popup {
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.profile-username__locked-popup .normal-popup__header-section {
+    margin-bottom: 12px;
+}
+
+.profile-username__locked-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.profile-username__suarteroad-button {
+    margin-top: 15px;
+}
+
+@media (max-width: 1004px) {
+    .profile-username__username-locked-icon {
+        width: 23px;
+    }
+}
+
+@media (max-width: 700px) {
+    .profile-username__username-locked-icon {
+        width: 22px;
+    }
+}
+
+@media (max-width: 550px) {
+    .profile-username__username-locked-icon {
+        width: 20px;
+    }
+}
+
+

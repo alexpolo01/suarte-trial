@@ -1,0 +1,33 @@
+.auth-artist-signup__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.auth-artist-signup__text span {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--app-theme-color);
+}
+
+.auth-artist-signup__text.margin {
+    margin-top: 15px !important;
+}
+
+.auth-artist-signup__form {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.auth-artist-signup__form .public-form-input__container {
+    background-color: var(--app-page_background);
+}
+
+.auth-artist-signup__form .public-full-width__button {
+    margin-top: 26px;
+}
+
+@media (hover: hover) {
+    .auth-artist-signup__text span:hover {
+        text-decoration: underline;
+    }
+}

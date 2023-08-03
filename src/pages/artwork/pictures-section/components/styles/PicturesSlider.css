@@ -1,0 +1,77 @@
+.artwork-view-pictures-slider__container {
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /** This is needed in order for the slider to fit properly (dunno why xd) */
+}
+
+.artwork-view-pictures-slider__swiper, .artwork-view-pictures-slider__swiper .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.artwork-view-pictures-slider__artwork-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: -webkit-zoom-in;
+}
+
+.artwork-view-pictures-slider__artwork-picture.template {
+    pointer-events: none;
+}
+
+.artwork-view-pictures-slider__control-outter {
+    position: absolute;
+    z-index: 2;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.artwork-view-pictures-slider__control-outter.prev {
+    left: 20px;
+}
+
+.artwork-view-pictures-slider__control-outter.next {
+    right: 20px;
+}
+
+.artwork-view-pictures-slider__control {
+    width: 39px;
+    transition: opacity 0.3s ease;
+}
+
+.artwork-view-pictures-slider__control.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+@media (hover: hover) {
+    .artwork-view-pictures-slider__container:hover .artwork-view-pictures-slider__control-outter {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 1300px) {
+    .artwork-view-pictures-slider__control {
+        width: 35px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .artwork-view-pictures-slider__control {
+        width: 33px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-view-pictures-slider__control {
+        width: 30px;
+    }
+}

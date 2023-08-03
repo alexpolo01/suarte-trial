@@ -1,0 +1,57 @@
+.report-issue-form__container {
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+    opacity: 0;
+    transition: height 0.4s ease, opacity 0.4s ease;
+}
+
+.report-issue-form__container.received {
+    height: 530px;
+    opacity: 1;
+}
+
+.report-issue-form__container.no-receive {
+    height: 310px;
+    opacity: 1;
+}
+
+.report-issue-form__main-text {
+    display: block;
+    color: var(--app-normal_text);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.report-issue-form__text {
+    display: block;
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.report-issue-form__form {
+    width: 100%;
+}
+
+.report-issue-form__submit-button {
+    margin-top: 25px;
+}
+
+.report-issue-form__textarea-container {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.report-issue-form__textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 12px;
+    height: 150px;
+    border: 1px solid var(--app-generic-gray);
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    background-color: var(--app-generic-gray-background);
+    border-radius: 3px;
+}

@@ -1,0 +1,47 @@
+.artwork__swiper {
+    width: 100%;
+    height: 100dvh;
+}
+
+.artwork__swiper .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.artwork__container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.artwork__wrap {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+}
+
+.artwork-view-header__container.main-header {
+    display: none;
+}
+
+.artwork__spinner {
+    width: 25px;
+    margin: 0 auto;
+    margin-top: 6px;
+    margin-bottom: 13px;
+}
+
+@media (max-width: 900px) {
+    .artwork__wrap {
+        max-width: 800px;
+        flex-direction: column;
+    }
+
+    .artwork-view-header__container.main-header {
+        display: flex;
+        padding: 11px;
+        padding-bottom: 10px;
+    }
+}

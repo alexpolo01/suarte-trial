@@ -1,0 +1,25 @@
+.terms-text__container {
+    width: 100%;
+}
+
+.terms-text__heading {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    color: var(--app-theme-color);
+    margin-bottom: 12px;
+}
+
+.terms-text__subheading {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    color: var(--app-generic-gray);
+    margin-bottom: 8px;
+}
+
+.terms-text__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+    margin-bottom: 20px !important;
+}

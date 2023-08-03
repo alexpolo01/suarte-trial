@@ -1,0 +1,85 @@
+.profile-top-buttons__share-button {
+    width: 26px;
+    fill: var(--app-theme-color);
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 23px;
+}
+
+.profile-top-buttons__group {
+    display: flex;
+    align-items: center;
+    position: absolute; 
+    top: 10px;
+    right: 11px;
+}
+
+.profile-top-buttons__notifications-icon {
+    width: 23px;
+    flex-shrink: 0;
+    fill: var(--app-theme-color);
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.profile-top-buttons__profile-options-icon {
+    height: 23px;
+    flex-shrink: 0;
+    fill: var(--app-theme-color);
+    cursor: pointer;
+    padding: 0px 12px;
+}
+
+.profile-top-buttons__profile-options-icon.active {
+    position: relative;
+    z-index: 100;
+}
+
+.profile-top-buttons__go-back {
+    width: 12px;
+    box-sizing: content-box;
+    padding: 10px;
+    fill: var(--app-theme-color);
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    left: 23px;
+}
+
+@media (max-width: 1004px) {
+    .profile-top-buttons__share-button {
+        width: 24px;
+    }
+
+    .profile-top-buttons__notifications-icon {
+        width: 20px;
+    }
+
+    .profile-top-buttons__profile-options-icon {
+        height: 20px;
+    }
+
+    .profile-top-buttons__notifications-icon {
+        margin-right: 5px;
+    }
+
+    .profile-top-buttons__go-back {
+        width: 11px;
+        top: 2px;
+    }
+}
+
+@media (max-width: 550px) {
+    .profile-top-buttons__share-button {
+        width: 21px;
+    }
+
+    .profile-top-buttons__notifications-icon {
+        width: 17px;
+    }
+
+    .profile-top-buttons__profile-options-icon {
+        height: 17px;
+    }
+}

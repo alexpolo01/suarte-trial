@@ -1,0 +1,40 @@
+.settings-closed-mode__container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.settings-closed-mode__text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}
+
+.settings-closed-mode__text.margin {
+    margin-bottom: 15px !important;
+}
+
+.settings-closed-mode__door {
+    display: block;
+    fill: var(--app-normal_text);
+    width: 130px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.settings-closed-mode__limit-text {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    margin-top: 15px !important;
+    font-style: italic;
+}
+
+@media (max-width: 1004px) {
+    .settings-closed-mode__door {
+        width: 120px;
+    }
+}
+
+@media (max-width: 550px) {
+    .settings-closed-mode__door {
+        width: 110px;
+    }
+}

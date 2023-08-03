@@ -1,0 +1,33 @@
+.onboarding-loading__container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    overflow-x: hidden;
+}
+
+.onboarding-loading__loading-image {
+    width: 230px;
+    transition: transform 1.2s ease;
+}
+
+.onboarding__container.loading-completed .onboarding-loading__container {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.onboarding__container.loading-completed .onboarding-loading__loading-image {
+    transform: translateX(100%);
+}
+
+@media (max-width: 600px) {
+    .onboarding-loading__loading-image {
+        width: 190px;
+    }
+}

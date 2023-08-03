@@ -1,0 +1,20 @@
+.add-review__artwork-picture {
+    width: 100%;
+    flex-grow: 1;
+    min-height: 150px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 20px;
+}
+
+.add-review__artwork-picture.template {
+    width: auto;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.add-review__info-text {
+    color: var(--app-normal_text);
+    font-weight: var(--app-font-regular);
+}

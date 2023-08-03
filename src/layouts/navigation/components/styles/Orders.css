@@ -1,0 +1,130 @@
+.orders-layout__page {
+    width: 100%;
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+
+.orders-layout__wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.orders-layout__header-outter {
+    width: 100%;
+    padding: 0px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--app-page_background);
+    padding-top: 21px;
+    padding-bottom: 10px;
+}
+
+.orders-layout__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.orders-layout__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.orders-layout__back-button {
+    width: 12px;
+    box-sizing: content-box;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: -15px;
+    fill: var(--app-theme-color);
+}
+
+.orders-layout__outter-nav {
+    width: 100%;
+    position: sticky;
+    top: 56px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    background-color: var(--app-page_background); 
+    z-index: 2;
+}
+
+.orders-layout__nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.orders-layout__active-bar {
+    width: 33.3%;
+    height: 2px;
+    background-color: var(--app-theme-color);
+    position: absolute;
+    bottom: 0px;
+    transition: transform 0.3s ease;
+}
+
+.orders-layout__nav.sent .orders-layout__active-bar {
+    transform: translateX(100%);
+}
+
+.orders-layout__nav.completed .orders-layout__active-bar {
+    transform: translateX(200%);
+}
+
+.orders-layout__link {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    text-align: center;
+}
+
+.orders-layout__nav.pending .orders-layout__link.pending {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.orders-layout__nav.sent .orders-layout__link.sent {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.orders-layout__nav.completed .orders-layout__link.completed {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.orders-layout__content {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+@media (max-width: 1004px) {
+    .orders-layout__back-button {
+        width: 11px;
+    }
+
+    .orders-layout__outter-nav {
+        padding-top: 12px;
+        top: 55px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .orders-layout__outter-nav {
+        padding-top: 12px;
+        top: 53px;
+    }
+}

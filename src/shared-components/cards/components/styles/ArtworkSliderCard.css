@@ -1,0 +1,58 @@
+.artwork-slider-card__card {
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+
+.artwork-slider-card__card.pointer {
+    cursor: pointer;
+}
+
+.artwork-slider-card__artwork-image-template {
+    aspect-ratio: 1/1;
+}
+
+.artworks-slider-card__card-content-no-layout {
+    width: 100%;
+    position: absolute;
+}
+
+.artworks-slider-card__card-content-title {
+    font-weight: 500;
+    color: var(--app-normal_text);
+    font-style: italic;
+    margin-top: 4px !important;
+    margin-bottom: 2px !important;
+}
+
+.artworks-slider-card__card-content-text {
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0px;
+}
+
+.artworks-slider-card__card-content-text.artist, .artworks-slider-card__card-content-text.medium-year {
+    color: var(--app-generic-gray);
+}
+
+.artworks-slider-card__card-content-text.price{
+    color: var(--app-normal_text);
+    margin-top: 3px !important;
+}
+
+.artworks-slider-card__card-content-layout {
+    visibility: hidden;
+}
+
+@media (max-width: 1004px) {
+    .artworks-slider-card__card-content-text {
+        line-height: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artworks-slider-card__card-content-text {
+        line-height: 15px;
+    }
+}
+

@@ -1,0 +1,44 @@
+.gallery-buy-denied-popup {
+    width: 90%;
+    max-width: 450px;
+    padding: 12px 15px;
+    padding-bottom: 25px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+    border-radius: 5px;
+}
+
+.gallery-buy-denied-popup__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.gallery-buy-denied-popup__header-text {
+    font-weight: 600;
+    color: var(--app-normal_text);
+}
+
+.gallery-buy-denied-popup__close {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 7px;
+    position: absolute;
+    right: -7px;
+    stroke: var(--app-normal_text);
+    cursor: pointer;
+}
+
+.gallery-buy-denied-popup__text {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+}
+
+@media (max-width: 550px) { 
+    .gallery-buy-denied-popup__close {
+        width: 12px;
+    }
+}

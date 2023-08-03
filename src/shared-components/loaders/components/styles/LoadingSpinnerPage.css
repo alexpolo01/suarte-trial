@@ -1,0 +1,18 @@
+.loading-spinner-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--app-page_background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner__spinner {
+    width: 30px;
+}
+
+@media (max-width: 1000px) { 
+    .loading-spinner__spinner {
+        width: 27px;
+    }
+}

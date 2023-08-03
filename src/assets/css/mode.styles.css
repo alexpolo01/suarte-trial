@@ -1,0 +1,58 @@
+/************* DARK-LIGHT MODE CONFIGURATIONS with data-mode attribute **********************/
+
+/** DEFAULT -> DARK */
+:root {
+    --app-page_background: #000000;
+    --app-card_background_more_visible: #1A1A1D;
+    --app-card_background_less_visible: #101013;
+    --app-card_box_shadow: none;
+    --app-normal_text: white;
+    --app-font-regular: 400;
+    --app-option_hover: #2A2A2E;
+    --app-options_border: #424242;
+    --app-bottom_sheet_fix: #101013;
+    --app-image_template_color: #343434;
+    --app-search_inspiring_background: #0d0d0d; 
+    --app-liked_artlists_background: rgba(217, 217, 217, 0.11);
+    --app-ripple_effect_color: rgba(255, 255, 255, 0.3);
+    --app-special_popup_background: #0d0d0f;
+    --app-fixed_elements_border: #282828;
+    --app-card_background_when_more_visible_is_on: #0d0d0f;
+    --app-card_background_when_blur_is_on: #343434;
+    --app-card_inner_box_shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.25);
+    --app-suarte_road_border: none;
+    --app-options_background_blur: rgba(26, 26, 26, 0.5);
+
+    /**NEW COLORS*/
+    --app-card_primary_color: #121217;
+    --app-card_secondary_color: #23242E;
+}
+
+[data-mode="light"] {
+    --app-page_background: #f5f6ff;
+    --app-card_background_more_visible: #ffffff;
+    --app-card_background_less_visible: #ffffff;
+    --app-card_box_shadow: 1.4px 1.4px 3.2px rgba(0, 0, 0, 0.15);
+    --app-normal_text: black;
+    --app-font-regular: 500; /** Montserrat looks quite thin on light mode. */
+    --app-option_hover: #e6e6e7;
+    --app-options_border: #d2d2d2;
+    --app-bottom_sheet_fix: #eaebf3;
+    --app-image_template_color: #e3e3e3;
+    --app-search_inspiring_background: #d9dae5; 
+    --app-liked_artlists_background: #eaebf3;
+    --app-ripple_effect_color: rgba(110, 110, 110, 0.3);
+    --app-special_popup_background: #eaebf3;
+    --app-fixed_elements_border: #e3e3e3;
+    --app-card_background_when_more_visible_is_on: #eaebf3;
+    --app-card_background_when_blur_is_on: #e3e3e3;
+    --app-card_inner_box_shadow: 1.4px 1.4px 3.2px rgba(0, 0, 0, 0.15);
+    --app-suarte_road_border: #ccc;
+    --app-options_background_blur: rgb(208 208 208 / 50%);
+
+    /**NEW COLORS*/
+    --app-card_primary_color: #FFF;
+    --app-card_secondary_color: #FFF;
+}
+
+

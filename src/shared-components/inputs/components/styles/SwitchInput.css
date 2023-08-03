@@ -1,0 +1,26 @@
+.switch-input__container {
+    width: 50px;
+    padding: 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--app-generic-gray);
+    transition: background-color 0.3s ease;
+}
+
+.switch-input__switch {
+    width: 28px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: var(--app-card_background_more_visible);
+}
+
+.switch-input__container.activated {
+    background-color: var(--app-theme-background);
+}
+
+.switch-input__container.activated .switch-input__switch {
+    background-color: var(--app-theme-color);
+    transform: translateX(20px);
+}
+

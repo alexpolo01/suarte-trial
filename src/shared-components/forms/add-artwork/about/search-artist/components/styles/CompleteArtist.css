@@ -1,0 +1,57 @@
+.complete-artist-popup {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 15px;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_inner_box_shadow);
+}
+
+.complete-artist-popup__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.complete-artist-popup__text {
+    color: var(--app-normal_text);
+    font-weight: 600;
+}
+
+.complete-artist-popup__close {
+    width: 13px;
+    box-sizing: content-box;
+    padding: 7px;
+    position: absolute;
+    right: -7px;
+    cursor: pointer;
+    stroke: var(--app-normal_text);
+}
+
+.complete-artist-form {
+    width: 100%;
+}
+
+.complete-artist-form .public-form-input__container {
+    background-color: var(--app-page_background);
+    box-shadow: none;
+}
+
+.complete-artist-form__text {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+}
+
+.complete-artist-form__button {
+    margin-top: 20px;
+}
+
+@media (max-width: 550px) {
+    .complete-artist-popup__close {
+        width: 12px;
+    }
+}

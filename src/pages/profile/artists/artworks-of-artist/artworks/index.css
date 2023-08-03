@@ -1,0 +1,19 @@
+.artist-artworks-content__header {
+    width: 100%;
+}
+
+.artist-artworks-content__header.click {
+    cursor: pointer;
+}
+
+.artist-artworks-content__artwork-count {
+    font-weight: var(--app-font-regular);
+    color: var(--app-generic-gray);
+    margin-top: 10px !important;
+}
+
+.artist-artworks-content__content-spinner {
+    width: 22px;
+    margin: 0 auto;
+    margin-top: 40px;
+}

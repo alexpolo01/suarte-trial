@@ -1,0 +1,31 @@
+.artist-deceased__check-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.artist-deceased__checkbox {
+    width: 21px;
+    background-color: var(--app-page_background);
+    box-shadow: var(--app-card_box_shadow);
+    margin-right: 8px;
+}
+
+.artist-deceased__text {
+    font-weight: 500;
+    color: var(--app-normal_text);
+}
+
+.artist-deceased__input-container {
+    width: 100%;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+}
+
+.artist-deceased__input-container.expanded {
+    opacity: 1;
+    height: 73px;
+}

@@ -1,0 +1,120 @@
+.skeleton-user-card__container {
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.skeleton-user-card__image {
+    width: 53%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    background-color: var(--app-image_template_color);
+}
+
+.skeleton-user-card__name {
+    width: 53%;
+    height: 15px;
+    margin: 0 auto;
+    background-color: var(--app-image_template_color);
+    margin-bottom: 10px;
+}
+
+.skeleton-user-card__user-name {
+    width: 60%;
+    height: 15px;
+    margin: 0 auto;
+    background-color: var(--app-image_template_color);
+    margin-bottom: 10px;
+}
+
+.skeleton-user-card__stats {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0px;
+}
+
+.skeleton-user-card__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skeleton-user-card__stat-number {
+    width: 45px;
+    height: 15px;
+    background-color: var(--app-image_template_color);
+    margin-bottom: 10px;
+}
+
+.skeleton-user-card__stat-text {
+    width: 65px;
+    height: 15px;
+    background-color: var(--app-image_template_color);
+}
+
+.skeleton-user-card__follow {
+    width: 135px;
+    height: 33px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: var(--app-image_template_color);
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+@media (max-width: 1004px) {
+    .skeleton-user-card__container {
+        padding: 10px;
+    }
+
+    .skeleton-user-card__name, .skeleton-user-card__user-name, .skeleton-user-card__stat-number, .skeleton-user-card__stat-text {
+        height: 14px;
+    }
+
+    .skeleton-user-card__stat-number {
+        width: 37px;
+    }
+
+    .skeleton-user-card__stat-text {
+        width: 57px;
+    }
+
+    .skeleton-user-card__follow {
+        width: 115px;
+        height: 29px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .skeleton-user-card__name, .skeleton-user-card__user-name, .skeleton-user-card__stat-number, .skeleton-user-card__stat-text {
+        height: 13px;
+    }
+
+    .skeleton-user-card__image {
+        margin-bottom: 9px;
+    }
+
+    .skeleton-user-card__stats {
+        margin: 20px 0px;
+    }
+
+    .skeleton-user-card__stat-number {
+        width: 27px;
+    }
+
+    .skeleton-user-card__stat-text {
+        width: 40px;
+    }
+
+    .skeleton-user-card__follow {
+        width: 104px;
+        height: 26px;
+        margin-bottom: 5px;
+    }
+}

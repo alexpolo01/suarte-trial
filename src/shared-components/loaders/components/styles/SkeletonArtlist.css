@@ -1,0 +1,75 @@
+.skeleton-artlist__container {
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 11px;
+    border-radius: 7px;
+}
+
+.skeleton-artlist__image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--app-image_template_color);
+    border-radius: 5%;
+}
+
+.skeleton-artlist__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.skeleton-artlist__texts {
+    width: 100%;
+}
+
+.skeleton-artlist__title {
+    width: 80%;
+    height: 15px;
+    background-color: var(--app-image_template_color);
+    margin-bottom: 10px;
+}
+
+.skeleton-artlist__by {
+    width: 50%;
+    height: 15px;
+    background-color: var(--app-image_template_color);
+}
+
+.skeleton-artlist__artwork-count {
+    width: 45px;
+    height: 19px;
+    background-color: var(--app-image_template_color);
+    flex-shrink: 0;
+}
+
+@media (max-width: 1004px) {
+    .skeleton-artlist__title {
+        height: 14px;
+    }
+    
+    .skeleton-artlist__by {
+        height: 14px;
+    }
+    
+    .skeleton-artlist__artwork-count {
+        width: 40px;
+        height: 17px;
+    }
+} 
+
+@media (max-width: 550px) {
+    .skeleton-artlist__title {
+        height: 13px;
+    }
+    
+    .skeleton-artlist__by {
+        height: 13px;
+    }
+    
+    .skeleton-artlist__artwork-count {
+        width: 37px;
+        height: 16px;
+    }
+} 

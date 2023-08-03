@@ -1,0 +1,21 @@
+.select-shipping-data-opener {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--app-theme-color);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.select-shipping-data-bottom-sheet {
+    width: 100%;
+    max-width: 800px;
+}
+
+
+@media (hover: hover) {
+    .select-shipping-data-opener:hover {
+        text-decoration: underline;
+    }
+}

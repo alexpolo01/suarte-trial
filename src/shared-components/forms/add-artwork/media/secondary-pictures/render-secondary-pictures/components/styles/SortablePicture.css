@@ -1,0 +1,142 @@
+div.add-artwork-media-form__secondary-pictures-picture {
+    width: 100%;
+    padding: 7px 15px;
+    background-color: var(--app-card_background_more_visible);
+    display: flex;
+    align-items: center;
+    padding-right: 18px;
+    cursor: grab;
+}
+
+div.add-artwork-media-form__secondary-pictures-picture:active {
+    cursor: grabbing;
+}
+
+.add-artwork-media-form__secondary-pictures-picture.active {
+    background-color: var(--app-theme-background-no-opacity);
+    cursor: grabbing;
+}
+
+.add-artwork-media-form__secondary-pictures-picture.preview {
+    opacity: 0.2;
+}
+
+.add-artwork-media-form__secondary-pictures-delete-picture {
+    width: 27px;
+    margin-right: 20px;
+}
+
+.add-artwork-media-form__secondary-pictures-picture-loading-container {
+    width: 100px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--app-image_template_color);
+    margin-right: 20px;
+}
+
+.add-artwork-media-form__secondary-pictures-picture-loading-spinner {
+    width: 22px;
+}
+
+.add-artwork-media-form__secondary-pictures-picture-details {
+    width: 100%;
+    overflow: hidden;
+}
+
+.add-artwork-media-form__secondary-pictures-picture-name {
+    color: var(--app-generic-gray);
+    font-weight: 500;
+    width: 100%;
+}
+
+.add-artwork-media-form__secondary-pictures-picture-handle-drag-icon {
+    stroke: var(--app-generic-gray);
+    width: 20px;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.add-artwork-media-form__secondary-pictures-picture-image {
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background-color: var(--app-image_template_color);
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.add-artwork-secondary-pictures__progress-container {
+    width: 85%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.add-artwork-secondary-pictures__progress-spinner {
+    width: 100% !important;
+    height: 100% !important;
+    color: var(--app-theme-color) !important;
+}
+
+.add-artwork-secondary-pictures__progress-spinner circle {
+    stroke-width: 2px;
+}
+
+.add-artwork-secondary-pictures__progress-value {
+    font-family: var(--app-font);
+    font-weight: 800;
+    color: var(--app-normal_text);
+    position: absolute;
+    font-size: 20px;
+}
+
+@media (max-width: 1004px) {
+    .add-artwork-media-form__secondary-pictures-delete-picture {
+        width: 25px;
+    }
+
+    .add-artwork-media-form__secondary-pictures-picture-loading-container, .add-artwork-media-form__secondary-pictures-picture-image {
+        width: 75px;
+    }
+
+    .add-artwork-media-form__secondary-pictures-picture-loading-spinner {
+        width: 19px;
+    }
+
+    .add-artwork-media-form__secondary-pictures-picture-handle-drag-icon {
+        width: 17px;
+    }
+
+    .add-artwork-secondary-pictures__progress-value {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+    .add-artwork-media-form__secondary-pictures-delete-picture {
+        width: 21px;
+        margin-right: 15px;
+    }
+
+    .add-artwork-media-form__secondary-pictures-picture-loading-container, .add-artwork-media-form__secondary-pictures-picture-image { 
+        margin-right: 12px;
+        width: 60px;
+    }
+
+    .add-artwork-media-form__secondary-pictures-picture-loading-spinner {
+        width: 16px;
+    }
+
+    .add-artwork-media-form__secondary-pictures-picture-handle-drag-icon {
+        width: 14px;
+    }
+
+    .add-artwork-secondary-pictures__progress-value {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,11 @@
+.delete-artlist-popup {
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+}
+
+@media (max-width: 550px) {
+    .delete-artlist-popup {
+        max-width: 300px;
+    }
+}

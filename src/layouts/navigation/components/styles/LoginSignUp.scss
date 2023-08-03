@@ -1,0 +1,51 @@
+.login-signup__tabs-container {
+    width: 100%;
+    padding-top: 5px;
+    display: flex;
+}
+
+.login-signup__tab-button {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login-signup__tab {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--app-generic-gray);
+    font-family: var(--app-font);
+    font-size: 16px;
+    border-bottom: 1px solid #6B6D7C;
+    padding: 8px;
+}
+
+.login-signup__tab:hover {
+    color: var(--app-generic-gray);
+}
+
+.login-signup__tab.active {
+    color: var(--app-theme-color);
+    font-weight: 600;
+    border-bottom: 1px solid var(--app-theme-color);
+}
+
+@media(max-width: 1004px) {
+    .login-signup__tab {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 500px) {
+    .login-signup__tab {
+        font-size: 14px;
+    }
+
+    .login-signup__tabs-container {
+        padding-top: 20px;
+    }
+}

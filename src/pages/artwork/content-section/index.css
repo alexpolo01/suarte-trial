@@ -1,0 +1,103 @@
+.artwork-view-content-section__container {
+    width: 560px;
+    flex-shrink: 0;
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.artwork-view-content-section__content {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    height: 0px; /** this is for the container to allow other properties to trigger an overflow */
+}
+
+.artwork-view-content-section__artwork-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 17px;
+    min-width: 0px;
+}
+
+.artwork-view-content-section__buy-section {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.artwork-view-content-section__buy-section .limited-editions-sold-button__container, .artwork-view-content-section__buy-section .buy-limited-edition-button__container {
+    margin-left: 28px;
+}
+
+@media (max-width: 1450px) {
+    .artwork-view-content-section__container {
+        width: 490px;
+    }
+
+    .artwork-view-content-section__buy-section .limited-editions-sold-button__container, .artwork-view-content-section__buy-section .buy-limited-edition-button__container {
+        margin-left: 15px;
+    }
+
+    .artwork-view-content__more-artworks-loading-spinner {
+        width: 28px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .artwork-view-content-section__container {
+        width: 430px;
+    }
+
+    .artwork-view-content-section__buy-section {
+        margin: 10px 0px;
+    }
+
+    .artwork-view-content-section__buy-section .limited-editions-sold-button__container, .artwork-view-content-section__buy-section .buy-limited-edition-button__container {
+        margin-left: 11px;
+    }
+
+    .artwork-view-content__more-artworks-loading-spinner {
+        width: 27px;
+    }
+}
+
+@media (max-width: 900px) {
+    .artwork-view-content-section__container {
+        width: 100%;
+        height: unset;
+        display: block;
+        padding: 11px;
+        padding-top: 9px;
+    }
+
+    .artwork-view-content-section__content {
+        display: block;
+        height: unset;
+    }
+
+    .artwork-view-content-section__artwork-info {
+        display: block;
+        padding: 0px;
+        height: unset;
+    }
+
+    .artwork-view-content-section__container .artwork-view-header__container {
+        display: none;
+    }
+
+    .artwork-view-content-section__buy-section {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-view-content-section__buy-section .limited-editions-sold-button__container, .artwork-view-content-section__buy-section .buy-limited-edition-button__container {
+        margin-left: 10px;
+    }
+}

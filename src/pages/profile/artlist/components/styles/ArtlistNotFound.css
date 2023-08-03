@@ -1,0 +1,182 @@
+.artlist-not-found__page {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 70px;
+    position: relative;
+}
+
+.artlist-not-found__header {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.artlist-not-found__artlist-image {
+    flex-shrink: 0;
+    width: 235px;
+    margin-right: 20px;
+}
+
+.artlist-not-found__info-section {
+    width: 100%;
+    min-width: 0px;
+}
+
+.artlist-not-found__artlist-title {
+    width: 100%;
+    font-weight: 600;
+    font-family: var(--app-font);
+    color: var(--app-normal_text);
+    font-size: 35px;
+    margin-bottom: 7px;
+}
+
+.artlist-not-found__creator-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.artlist-not-found__creator-image {
+    width: 28px;
+    margin-right: 7px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-image_template_color);
+}
+
+.artlist-not-found__text {
+    height: 13px;
+    background-color: var(--app-image_template_color);
+}
+
+.artlist-not-found__artwork-icon {
+    width: 18px;
+    fill: var(--app-generic-gray);
+    margin-right: 7px;
+}
+
+.artlist-not-found__separator {
+    width: 5px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-normal_text);
+    margin: 0px 9px;
+}
+
+.artlist-not-found__options-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.artlist-not-found__play {
+    width: 49px;
+    margin-right: 20px;
+    pointer-events: none;
+    background-color: var(--app-generic-gray);
+}
+
+.artlist-not-found__like {
+    width: 26px;
+    stroke: var(--app-generic-gray);
+    flex-shrink: 0;
+}
+
+.artlist-not-found__share {
+    width: 26px;
+    fill: var(--app-generic-gray);
+    margin-left: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1400px) {
+    .artlist-not-found__artlist-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1004px) {
+    .artlist-not-found__header {
+        margin-bottom: 20px;
+    }  
+
+    .artlist-not-found__artlist-image {
+        width: 215px;
+    }
+
+    .artlist-not-found__artlist-title {
+        font-size: 27px;
+    }
+
+    .artlist-not-found__creator-image {
+        width: 25px;
+    }
+
+    .artlist-not-found__text {
+        height: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+    .artlist-not-found__page {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .artlist-not-found__header {
+        display: block;
+        margin-bottom: 5px;
+    } 
+
+    .artlist-not-found__artlist-image {
+        width: 270px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .artlist-not-found__artlist-title {
+        font-size: 18px;
+    }
+
+    .artlist-not-found__creator-image {
+        width: 22px;
+    }
+
+    .artlist-not-found__artwork-icon {
+        width: 16px;
+    }
+
+    .artlist-not-found__options-container {
+        min-height: 40px;
+    }
+
+    .artlist-not-found__play {
+        width: 45px;
+        margin-left: auto;
+        margin-right: 0px;
+        order: 1;
+    }
+
+    .artlist-not-found__like {
+        width: 22px;
+    }
+
+    .artlist-not-found__share {
+        width: 22px;
+        margin-left: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .artlist-not-found__text {
+        height: 11px;
+    }
+}

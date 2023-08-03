@@ -1,0 +1,23 @@
+.auth-success-text__container {
+    width: 100%;
+}
+
+.auth-success-text__text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+}
+
+.auth-success-text__check {
+    width: 15px;
+    margin-right: 6px;
+    position: relative;
+    top: -2px;
+    fill: var(--app-theme-color);
+}
+
+@media (max-width: 550px) {
+    .auth-success-text__check {
+        width: 14px;
+        top: -1px;
+    }
+}

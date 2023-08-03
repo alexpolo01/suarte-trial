@@ -1,0 +1,58 @@
+.artwork-ratings__container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    padding-top: 13px;
+}
+
+.artwork-view-ratings__outter-container.ratings-animation .artwork-ratings__container {
+    opacity: 0;
+    animation: ratings-fade-in 0.7s ease forwards;
+}
+
+.artwork-ratings__artwork-picture {
+    width: 190px;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    object-fit: contain;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.artwork-ratings__see-other-ratings {
+    font-weight: 600;
+    color: var(--app-generic-gray);
+    margin-top: 40px !important;
+    margin-bottom: 10px !important;
+}
+
+@keyframes ratings-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .artwork-ratings__container {
+        padding-top: 11px;
+    }
+
+    .artwork-ratings__artwork-picture {
+        display: block;
+    }
+}
+
+@media (max-width: 550px) {
+    .artwork-ratings__see-other-ratings {
+        margin-top: 32px !important;
+        margin-bottom: 7px !important;
+    }  
+}

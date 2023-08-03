@@ -1,0 +1,49 @@
+.skeleton-message__container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    column-gap: 15px;
+}
+
+.skeleton-message__sender-image {
+    width: 38px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: var(--app-image_template_color);
+    order: 0;
+}
+
+.skeleton-message__message {
+    width: 100%;
+    max-width: 370px;
+    border-radius: 13px;
+    padding: 14px;
+    height: 60px;
+    background-color: var(--app-image_template_color);
+    order: 1;
+}
+
+/** IS MINE STYLES */
+.skeleton-message__container.is-mine {
+    justify-content: flex-end;
+}
+
+.skeleton-message__container.is-mine .skeleton-message__sender-image {
+    order: 1;
+}
+
+.skeleton-message__container.is-mine .skeleton-message__message {
+    order: 0;
+}
+
+@media (max-width: 550px) {  
+    .skeleton-message__sender-image {
+        width: 35px;
+    }
+
+    .skeleton-message__message {
+        height: 50px;
+    }
+}

@@ -1,0 +1,13 @@
+.view-in-room {
+    max-width: 800px;
+}
+
+.view-in-room__container {
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: var(--app-card_background_more_visible);
+    border-radius: 5px;
+
+    height: 500px;
+}

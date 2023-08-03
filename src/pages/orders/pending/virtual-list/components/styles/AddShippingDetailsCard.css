@@ -1,0 +1,54 @@
+.add-shipping-details-card__text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-normal_text);
+}
+
+.add-shipping-details-card__button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    color: var(--app-theme-color);
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.add-shipping-details-card__button-enter {
+    width: 7px;
+    fill: var(--app-theme-color);
+    margin-left: 5px;
+}
+
+.add-shipping-details-card__form {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.add-shipping-details-card__tracking {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 11px;
+}
+
+.add-shipping-details-card__form .public-form-input__container {
+    background-color: var(--app-card_background_when_more_visible_is_on);
+}
+
+.add-shipping-details-card__time-left {
+    position: absolute;
+    right: 10px;
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
+
+.add-shipping-details-card__submit-section {
+    display: flex;
+    align-items: center;
+}
+
+.add-shipping-details-card__submit-button {
+    margin-left: 15px;
+}

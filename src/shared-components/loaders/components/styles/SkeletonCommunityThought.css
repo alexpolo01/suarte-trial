@@ -1,0 +1,108 @@
+.skeleton-community-thought__container {
+    width: 100%;
+    background-color: var(--app-card_background_more_visible);
+    box-shadow: var(--app-card_box_shadow);
+    padding: 15px;
+    padding-bottom: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.skeleton-community-thought__content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 15px;
+    min-width: 0px;
+}
+
+.skeleton-community-thought__user-image {
+    width: 45px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--app-image_template_color);
+    flex-shrink: 0;
+}
+
+.skeleton-community-thought__text-section {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.skeleton-community-thought__bigger-text {
+    width: 65%;
+    height: 11px;
+    background-color: var(--app-image_template_color);
+    border-radius: 6px;
+    margin-bottom: 11px;
+}
+
+
+.skeleton-community-thought__text {
+    height: 9px;
+    background-color: var(--app-image_template_color);
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.skeleton-community-thought__artwork {
+    width: 140px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    background-color: var(--app-image_template_color);
+}
+
+
+@media (max-width: 1004px) {
+    .skeleton-community-thought__container {
+        padding: 12px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    } 
+
+    .skeleton-community-thought__user-image {
+        width: 40px;
+    }
+
+    .skeleton-community-thought__bigger-text {
+        height: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .skeleton-community-thought__text {
+        height: 8px;
+        border-radius: 4px;
+    }
+
+    .skeleton-community-thought__artwork {
+        width: 105px;
+    }
+}
+
+@media (max-width: 550px) {
+    .skeleton-community-thought__container {
+        padding: 10px;
+        padding-bottom: 8px;
+        border-radius: 9px;
+    } 
+
+    .skeleton-community-thought__user-image {
+        width: 35px;
+    }
+
+    .skeleton-community-thought__bigger-text {
+        height: 9px;
+        border-radius: 5px;
+    }
+    
+    .skeleton-community-thought__text {
+        height: 7px;
+        border-radius: 4px;
+    }
+
+    .skeleton-community-thought__artwork {
+        width: 72px;
+    }
+}

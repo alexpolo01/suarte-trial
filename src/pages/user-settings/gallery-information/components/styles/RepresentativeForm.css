@@ -1,0 +1,21 @@
+.settings-representative-form__form {
+    width: 100%;
+}
+
+.settings-representative-form__form-group {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.settings-representative-form__form-group-margin {
+    width: 43%;
+    min-width: 122px;
+    margin-right: 11px;
+}
+
+.settings-representative-form__success-text {
+    margin-top: 20px;
+}

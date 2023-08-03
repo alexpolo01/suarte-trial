@@ -1,0 +1,48 @@
+.auth-login__form {
+    width: 100%;
+}
+
+.auth-login__form .public-form-input__container {
+    background-color: var(--app-page_background);
+}
+
+.auth-login__forgot-password {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    color: var(--app-theme-color);
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.auth-login__form .continue-button__button.rounded-corners {
+    padding: 4px 34px;
+    font-size: 15px;
+}
+
+.auth-login__or {
+    display: block;
+    text-align: center;
+    margin: 15px 0px;
+    color: var(--app-generic-gray);
+    font-weight: 500;
+}
+
+@media (hover: hover) {
+    .auth-login__forgot-password:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 1004px) {
+    .auth-login__form .continue-button__button.rounded-corners {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .auth-login__form .continue-button__button.rounded-corners {
+        font-size: 13px;
+    }
+}

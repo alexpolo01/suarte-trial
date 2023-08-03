@@ -1,0 +1,33 @@
+.home-artlists-skeleton-page {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1500px) {
+    .home-artlists-skeleton-page {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    } 
+}
+
+@media (max-width: 1100px) {
+    .home-artlists-skeleton-page {
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+}
+
+@media (max-width: 692px) {
+    .home-artlists-skeleton-page {
+        grid-template-columns: 1fr 1fr;
+    } 
+}
+
+@media (max-width: 600px) {
+    .home-artlists-skeleton-page {
+        row-gap: 10px;
+        column-gap: 10px;
+    } 
+}
