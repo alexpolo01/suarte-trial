@@ -1,0 +1,30 @@
+.search-inspiring-navigation__container {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.search-inspiring-navigation__tab {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 2px solid var(--app-generic-gray);
+    cursor: pointer;
+}
+
+.search-inspiring-navigation__tab-text {
+    font-weight: var(--app-font-regular);
+    color: var(--app-generic-gray);
+}
+
+/** ACTIVE STYLES*/
+.search-inspiring-navigation__tab.active {
+    border-bottom: 2px solid var(--app-theme-color);
+}
+
+.search-inspiring-navigation__tab.active .search-inspiring-navigation__tab-text {
+    font-weight: 600;
+    color: var(--app-theme-color);
+}
