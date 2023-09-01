@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import config from '@/config';
 import useQuery from '@/hooks/useQuery';
+import useStateHandler from '@/hooks/useStateHandler';
 import SearchBarIcon from '@/shared-components/icons/components/forms/SearchBarIcon';
 import CustomSpinner from '@/shared-components/loaders/components/CustomSpinner';
 import Text from '@/shared-components/text/components/Text';
@@ -10,12 +11,20 @@ import VirtualList from './virtual-list';
 
 import './index.css';
 
-export default function SearchFollowing({ userId }) {
+export default function SearchFollowing({ userId, currentPage, setFollowingCount }) {
   const [query, setQuery] = useState({ username: "" });
-  const { loading, queryData, loadMoreData } = useQuery(`${userId}_inspiring`, `${config.apis.api.url}/user/followers/${userId}`, query, {
+  const { cacheHandler } = useStateHandler();
+  let cacheVal = cacheHandler.getCacheValue(`${userId}_following`);
+  const { loading, queryData, loadMoreData } = useQuery(`${userId}_following`, `${config.apis.api.url}/user/followees/${userId}`, query, {
     injectToken: true,
     invalidateWhen: [`FOLLOW_ACTION_ON_${userId}`]
   });
+
+  useEffect(() => {
+    !loading && loadMoreData();
+  }, [currentPage]);
+
+  setFollowingCount(cacheVal ? cacheVal["?"].data.data.data.length: 0);
 
   return (
     <>

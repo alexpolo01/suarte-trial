@@ -1,5 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useMemo,useState } from 'react';
 
+import useStateHandler from '@/hooks/useStateHandler';
 import Text from '@/shared-components/text/components/Text';
 import Utils from '@/utils';
 
@@ -8,6 +9,7 @@ import Inspiring from './inspiring';
 import './index.css';
 
 export default function ProfileStats({ fetchData }) {
+  const { cacheHandler } = useStateHandler();
   const [openInspiring, setOpenInspiring] = useState(false);
   const numberOfArtworks = useMemo(()=>(
     Utils.numberParserMillionThousand(fetchData.user_profile_info.user_artworks)
@@ -18,6 +20,12 @@ export default function ProfileStats({ fetchData }) {
   const numberOfLikes = useMemo(()=>(
     Utils.numberParserMillionThousand(fetchData.user_profile_info.user_likes)
   ), [fetchData.user_profile_info.user_likes]);
+
+  const onCloseClick = () => {
+    setOpenInspiring(false);
+    cacheHandler.removeFromCache(`${fetchData._id}_inspiring`);
+    cacheHandler.removeFromCache(`${fetchData._id}_following`);
+  };
 
   return (
     <>
@@ -55,7 +63,7 @@ export default function ProfileStats({ fetchData }) {
 
       <Inspiring 
         open={openInspiring} 
-        close={()=>setOpenInspiring(false)} 
+        close={onCloseClick} 
         fetchData={fetchData} 
         numberOfInspiring={numberOfInspiring} 
       />
