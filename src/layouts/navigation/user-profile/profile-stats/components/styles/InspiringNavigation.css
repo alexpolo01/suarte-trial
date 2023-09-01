@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     padding: 8px;
-    border-bottom: 2px solid var(--app-generic-gray);
+    /* border-bottom: 2px solid var(--app-generic-gray); */
     cursor: pointer;
 }
 
@@ -21,7 +21,8 @@
 
 /** ACTIVE STYLES*/
 .search-inspiring-navigation__tab.active {
-    border-bottom: 2px solid var(--app-theme-color);
+    /* border-bottom: 2px solid var(--app-theme-color); */
+    border-bottom: 3px solid var(--app-theme-color);
 }
 
 .search-inspiring-navigation__tab.active .search-inspiring-navigation__tab-text {

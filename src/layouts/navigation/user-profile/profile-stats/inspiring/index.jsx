@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import useStateHandler from '@/hooks/useStateHandler';
 import BackArrowIcon from '@/shared-components/icons/components/public/BackArrowIcon';
 import XIcon from '@/shared-components/icons/components/public/XIcon';
 import ArtistVerifiedIcon from '@/shared-components/icons/components/user-profile/ArtistVerifiedIcon';
@@ -38,6 +39,9 @@ function DisplayNameUsername({ fetchData }) {
 
 export default function Inspiring({ open, close, fetchData, numberOfInspiring }) {
   const [currentPage, setCurrentPage] = useState('inspiring');
+  const { cacheHandler } = useStateHandler();
+  let cacheVal = cacheHandler.getCacheValue(`${fetchData._id}_following`);
+  const [followingCount, setFollowingCount] = useState(cacheVal ? cacheVal["?"].data.data.data.length: 0);
 
   return (
     <>
@@ -50,10 +54,10 @@ export default function Inspiring({ open, close, fetchData, numberOfInspiring })
           {numberOfInspiring} inspiring
         </Text> */}
         
-        <InspiringNavigation currentPage={currentPage} setCurrentPage={setCurrentPage} inspiringCount={numberOfInspiring} followingCount = {1} />
+        <InspiringNavigation currentPage={currentPage} setCurrentPage={setCurrentPage} inspiringCount={numberOfInspiring} followingCount = {followingCount} fetchData = {fetchData}/>
 
         <div className="auth-popup-content__wrap remove-scrollbar">
-          {currentPage === 'inspiring' ? <SearchInspiring userId={fetchData._id}/> : <SearchFollowing userId={fetchData._id}/>}
+          {currentPage === 'inspiring' ? <SearchInspiring userId={fetchData._id}/> : <SearchFollowing userId={fetchData._id} currentPage={currentPage} setFollowingCount={setFollowingCount}/>}
         </div>
 
       </GenericPopup>
