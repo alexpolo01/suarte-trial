@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid var(--app-generic-gray);
+    /* border-bottom: 1px solid var(--app-generic-gray); */
     cursor: pointer;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .profile-navigation__tab-link.active {
-    border-bottom: 1px solid var(--app-theme-color);
+    border-bottom: 2px solid var(--app-theme-color);
 }
 
 .profile-navigation__tab-link.active .profile-navigation__tab-icon {
@@ -90,15 +90,15 @@
     .profile-navigation__tab-icon.collection {
         width: 21px;
     }
-    
+
     .profile-navigation__tab-icon.artworks {
         width: 25px;
     }
-    
+
     .profile-navigation__tab-icon.community {
         width: 23px;
     }
-    
+
     .profile-navigation__tab-icon.artlists {
         width: 23px;
     }
@@ -106,7 +106,7 @@
     .profile-navigation__tab-icon.artists {
         width: 27px;
     }
-    
+
     .profile-navigation__tab-icon.board {
         width: 22px;
     }
@@ -116,19 +116,19 @@
     .profile-navigation__tab-link {
         height: 50px;
     }
-    
+
     .profile-navigation__tab-icon.collection {
         width: 19px;
     }
-    
+
     .profile-navigation__tab-icon.artworks {
         width: 23px;
     }
-    
+
     .profile-navigation__tab-icon.community {
         width: 21px;
     }
-    
+
     .profile-navigation__tab-icon.artlists {
         width: 21px;
     }
@@ -136,10 +136,8 @@
     .profile-navigation__tab-icon.artists {
         width: 25px;
     }
-    
+
     .profile-navigation__tab-icon.board {
         width: 20px;
     }
 }
-
-
