@@ -4,6 +4,7 @@
     align-items: center;
     cursor: pointer;
     background-color: var(--app-page_background);
+    justify-content: center;
 }
 
 .profile-navigation__tab {
@@ -12,6 +13,17 @@
 
 .profile-navigation__tab-link {
     width: 100%;
+    height: 60px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-bottom: 1px solid var(--app-generic-gray); */
+    cursor: pointer;
+}
+
+.profile-navigation__one-tab-link {
+    width: 33%;
     height: 60px;
     text-decoration: none;
     display: flex;
