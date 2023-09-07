@@ -1,5 +1,6 @@
-import { useMemo,useState } from 'react';
+import { useContext, useMemo,useState } from 'react';
 
+import ProfileDataContext from '@/context/ProfileDataContext';
 import useStateHandler from '@/hooks/useStateHandler';
 import Text from '@/shared-components/text/components/Text';
 import Utils from '@/utils';
@@ -9,6 +10,7 @@ import Inspiring from './inspiring';
 import './index.css';
 
 export default function ProfileStats({ fetchData }) {
+  const { internal } = useContext(ProfileDataContext);
   const { cacheHandler } = useStateHandler();
   const [openInspiring, setOpenInspiring] = useState(false);
   const numberOfArtworks = useMemo(()=>(
@@ -30,35 +32,48 @@ export default function ProfileStats({ fetchData }) {
   return (
     <>
       <div className="user-profile-profile-stats__container">
-        <div className="user-profile-stats__stat">
-          <Text className="user-profile-stats__stat-number" large paragraph>
-            {numberOfArtworks}
-          </Text>
+        {
+          (internal || numberOfArtworks > 0) && (
+            <div className="user-profile-stats__stat">
+              <Text className="user-profile-stats__stat-number" large paragraph>
+                {numberOfArtworks}
+              </Text>
 
-          <Text className="user-profile-stats__stat-text" paragraph medium>
-                        Artworks
-          </Text>
-        </div>
+              <Text className="user-profile-stats__stat-text" paragraph medium>
+                            Artworks
+              </Text>
+            </div>
+          )
+        }
 
-        <div className="user-profile-stats__stat button" onClick={()=>setOpenInspiring(true)}>
-          <Text className="user-profile-stats__stat-number" large paragraph>
-            {numberOfInspiring}
-          </Text>
+        {
+          (internal || numberOfInspiring > 0) && (
+            <div className="user-profile-stats__stat button" onClick={()=>setOpenInspiring(true)}>
+              <Text className="user-profile-stats__stat-number" large paragraph>
+                {numberOfInspiring}
+              </Text>
 
-          <Text className="user-profile-stats__stat-text" paragraph medium>
-                        Inspiring
-          </Text>
-        </div>
+              <Text className="user-profile-stats__stat-text" paragraph medium>
+                            Inspiring
+              </Text>
+            </div>
+          )
+        }
 
-        <div className="user-profile-stats__stat">
-          <Text className="user-profile-stats__stat-number" large paragraph>
-            {numberOfLikes}
-          </Text>
+        {
+          (internal || numberOfLikes > 0) && (
+            <div className="user-profile-stats__stat">
+              <Text className="user-profile-stats__stat-number" large paragraph>
+                {numberOfLikes}
+              </Text>
 
-          <Text className="user-profile-stats__stat-text" paragraph medium>
-                        Likes
-          </Text>
-        </div>
+              <Text className="user-profile-stats__stat-text" paragraph medium>
+                            Likes
+              </Text>
+            </div>
+          )
+        }
+
       </div>
 
       <Inspiring 
