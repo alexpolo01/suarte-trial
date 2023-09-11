@@ -1,8 +1,8 @@
-console.log("HOST_ENV:", process.env.REACT_APP_HOST_ENV);
+console.log("HOST_ENV:", process.env.HOST_ENV);
 const apisConfig = {
   apis: {
     api:
-      process.env.NODE_ENV === "production" && process.env.REACT_APP_HOST_ENV === "production"
+      process.env.NODE_ENV === "production" && process.env.HOST_ENV === "production"
         ? {
           protocol: "https",
           host: "api.suarte.art",
