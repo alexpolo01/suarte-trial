@@ -5,4 +5,7 @@ module.exports = {
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  babel: {
+    plugins: process.env.NODE_ENV === 'development' ? ['react-refresh/babel'] : [],
+  },
 };
