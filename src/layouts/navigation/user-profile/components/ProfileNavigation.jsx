@@ -1,9 +1,10 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 import config from '@/config';
 import ProfileDataContext from '@/context/ProfileDataContext';
 import useCache from '@/hooks/useCache';
+import useGetSearchParams from "@/hooks/useGetSearchParams";
 import useQuery from '@/hooks/useQuery';
 import RippleButton from '@/shared-components/buttons/components/RippleButton';
 import ArtistIcon from '@/shared-components/icons/components/user-profile/ArtistIcon';
@@ -45,6 +46,10 @@ function ProfileNavigationTab({ to, tabName, tabIcon, tabCount }) {
 
 export default function ProfileNavigation({ fetchData }) {
   const { profileData, internal } = useContext(ProfileDataContext);
+
+  const [params] = useGetSearchParams({ validParams: ["sort", "user_type"] });
+  const [query] = useState(params ? params : { sort: "Recent", user_type: profileData.user_type });
+
   const { fetchData: artistsFetchData } = useCache(`${profileData._id}_artists`, `${config.apis.api.url}/gallery/${profileData._id}/artists`, {
     injectToken: true,
     invalidateWhen: internal ? 
@@ -53,7 +58,7 @@ export default function ProfileNavigation({ fetchData }) {
       [`${profileData._id}_REFRESH`]
   });
 
-  const { queryData: artworksQueryData } = useQuery(`${profileData._id}_artworks`, `${config.apis.api.url}/artworks/${profileData._id}`, "", {
+  const { queryData: artworksQueryData } = useQuery(`${profileData._id}_artworks`, `${config.apis.api.url}/artworks/${profileData._id}`, query, {
     invalidateWhen: internal ? 
       ["BUY_ARTWORK", "EDIT_ARTWORK", "DELETE_ARTWORK", `${profileData._id}_REFRESH`] 
       : 
