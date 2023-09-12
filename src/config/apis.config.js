@@ -1,4 +1,4 @@
-console.log("HOST_ENV:", process.env.HOST_ENV);
+console.log("HOST_ENV:", process.env.HOST_ENV, "NODE_ENV", process.env.NODE_ENV, "REACT_APP_HOST_ENV", process.env.REACT_APP_HOST_ENV);
 const apisConfig = {
   apis: {
     api:
