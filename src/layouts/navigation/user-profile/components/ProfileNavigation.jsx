@@ -1,10 +1,8 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 import config from '@/config';
 import ProfileDataContext from '@/context/ProfileDataContext';
-import useCache from '@/hooks/useCache';
-import useGetSearchParams from "@/hooks/useGetSearchParams";
 import useQuery from '@/hooks/useQuery';
 import RippleButton from '@/shared-components/buttons/components/RippleButton';
 import ArtistIcon from '@/shared-components/icons/components/user-profile/ArtistIcon';
@@ -44,172 +42,166 @@ function ProfileNavigationTab({ to, tabName, tabIcon, tabCount }) {
   );
 }
 
+export function GalleryProfileNavigation({ userProfileInfo, internal }) {
+  const tempTabCount = [
+    userProfileInfo.data.artworks,
+    userProfileInfo.data.posts,
+    userProfileInfo.data.artlists,
+    userProfileInfo.data.artists
+  ].reduce((count, value) => count + (value ? 1 : 0), 0);
+
+  return (
+    <div className="profile-navigation__container">
+      {(internal || userProfileInfo.data.artworks) ? <ProfileNavigationTab
+        to="artworks"
+        tabName="Artworks"
+        tabIcon={<ArtworkIcon className="profile-navigation__tab-icon artworks"/>}
+        tabCount={tempTabCount}
+      />: ""}
+
+      {(internal || userProfileInfo.data.artists) ? <ProfileNavigationTab
+        to="artists"
+        tabName="Artists"
+        tabIcon={<ArtistIcon className="profile-navigation__tab-icon artists"/>}
+        tabCount={tempTabCount}
+      />: ""}
+
+      {(internal || userProfileInfo.data.artlists) ? <ProfileNavigationTab
+        to="artlists"
+        tabName="Artlists"
+        tabIcon={<ArtlistIcon className="profile-navigation__tab-icon artlists"/>}
+        tabCount={tempTabCount}
+      />: ""}
+
+      {(internal || userProfileInfo.data.posts) ? <ProfileNavigationTab
+        to="board"
+        tabName="Board"
+        tabIcon={<BoardIcon className="profile-navigation__tab-icon board"/>}
+        tabCount={tempTabCount}
+      />: ""}
+    </div>
+  );
+
+}
+
+export function ArtistProfileNavigation({ userProfileInfo, internal }) {
+  const tempTabCount = [
+    userProfileInfo.data.artworks,
+    userProfileInfo.data.collections,
+    userProfileInfo.data.thoughts || userProfileInfo.data.ratings,
+    userProfileInfo.data.artists
+  ].reduce((count, value) => count + (value ? 1 : 0), 0);
+
+  return (
+    <div className="profile-navigation__container">
+      {(internal || userProfileInfo.data.artworks) ? <ProfileNavigationTab
+        to="artworks"
+        tabName="Artworks"
+        tabIcon={<ArtworkIcon className="profile-navigation__tab-icon artworks"/>}
+        tabCount={tempTabCount}
+      />: ""}
+
+      {(internal || userProfileInfo.data.collections) ? <ProfileNavigationTab
+        to="collection"
+        tabName="Collection"
+        tabIcon={<CollectionIcon className="profile-navigation__tab-icon collection"/>}
+        tabCount={tempTabCount}
+      />: ""}
+
+      {(internal || userProfileInfo.data.thoughts || userProfileInfo.data.ratings) ? <ProfileNavigationTab
+        to="community"
+        tabName="Community"
+        tabIcon={<CommunityIcon className="profile-navigation__tab-icon community"/>}
+        tabCount={tempTabCount}
+      />: ""}
+
+      {(internal || userProfileInfo.data.artists) ? <ProfileNavigationTab
+        to="artlists"
+        tabName="Artlists"
+        tabIcon={<ArtlistIcon className="profile-navigation__tab-icon artlists"/>}
+        tabCount={tempTabCount}
+      />: ""}
+    </div>
+  );
+}
+
+export function CollectorProfileNavigation({ userProfileInfo, internal }) {
+  const tempTabCount = [
+    userProfileInfo.data.collections,
+    userProfileInfo.data.thoughts || userProfileInfo.data.ratings,
+    userProfileInfo.data.artlists
+  ].reduce((count, value) => count + (value ? 1 : 0), 0);
+
+  return (
+    <div className="profile-navigation__container">
+      {(internal || userProfileInfo.data.collections) ? <ProfileNavigationTab
+        to="collection"
+        tabName="Collection"
+        tabIcon={<CollectionIcon className="profile-navigation__tab-icon collection"/>}
+        tabCount={tempTabCount}
+      /> : ""}
+
+      {(internal || userProfileInfo.data.thoughts || userProfileInfo.data.ratings) ? <ProfileNavigationTab
+        to="community"
+        tabName="Community"
+        tabIcon={<CommunityIcon className="profile-navigation__tab-icon community"/>}
+        tabCount={tempTabCount}
+      />: ""}
+
+      {(internal || userProfileInfo.data.artlists) ? <ProfileNavigationTab
+        to="artlists"
+        tabName="Artlists"
+        tabIcon={<ArtlistIcon className="profile-navigation__tab-icon artlists"/>}
+        tabCount={tempTabCount}
+      />: ""}
+    </div>
+  );
+}
+
 export default function ProfileNavigation({ fetchData }) {
   const { profileData, internal } = useContext(ProfileDataContext);
-
-  const [params] = useGetSearchParams({ validParams: ["sort", "user_type"] });
-  const [query] = useState(params ? params : { sort: "Recent", user_type: profileData.user_type });
-
-  const { fetchData: artistsFetchData } = useCache(`${profileData._id}_artists`, `${config.apis.api.url}/gallery/${profileData._id}/artists`, {
-    injectToken: true,
-    invalidateWhen: internal ? 
-      ["BUY_ARTWORK", "EDIT_ARTWORK", "DELETE_ARTWORK", "NEW_ARTIST", `${profileData._id}_REFRESH`] 
-      : 
-      [`${profileData._id}_REFRESH`]
+  const fetchUrl = `${config.apis.api.url}/user/userProfile/${profileData._id}`;
+  const query = { user_type: fetchData.user_type };
+  const { queryData: userProfileInfo } = useQuery(`${profileData._id}_userProfileInfo`, fetchUrl, query, {
+    expiresIn: ["10", "minutes"]
   });
 
-  const { queryData: artworksQueryData } = useQuery(`${profileData._id}_artworks`, `${config.apis.api.url}/artworks/${profileData._id}`, query, {
-    invalidateWhen: internal ? 
-      ["BUY_ARTWORK", "EDIT_ARTWORK", "DELETE_ARTWORK", `${profileData._id}_REFRESH`] 
-      : 
-      [`${profileData._id}_REFRESH`]  
-  });
-
-  const { fetchData: artlistsFetchData } = useCache(`${profileData._id}_artlists`, `${config.apis.api.url}/artlist/user/${profileData._id}`, {
-    injectToken: true,
-    invalidateWhen: internal ? 
-      ["NEW_ARTLIST", "EDIT_ARTLIST", "DELETE_ARTLIST", "ADD_TO_ARTLIST", "ADD_TO_ARTLIST_FROM_ARTWORK", "REMOVE_FROM_ARTLIST", `${profileData._id}_REFRESH`] 
-      : 
-      [`${profileData._id}_REFRESH`]
-  });
-
-  const { fetchData: boardFetchData } = useCache(`${profileData._id}_posts`, `${config.apis.api.url}/posts/gallery/${profileData._id}`, {
-    injectToken: true,
-    invalidateWhen: internal ? 
-      ["SUBMIT_POST", "DELETE_POST", `${profileData._id}_REFRESH`] 
-      : 
-      [`${profileData._id}_REFRESH`]
-  });
-
-  const { fetchData: collectionFetchData } = useCache(`${profileData._id}_collection`, `${config.apis.api.url}/collection/${profileData._id}`, {
-    injectToken: true,
-    includeSearchQueries: { visibility: "private" }, 
-    invalidateWhen: internal ? 
-      ["BUY_ARTWORK", "EDIT_COLLECTION", `${profileData._id}_REFRESH`] 
-      : 
-      [`${profileData._id}_REFRESH`]
-  });
-
-  const { fetchData: thoughtsFetchData } = useCache(`${profileData._id}_thoughts`, `${config.apis.api.url}/thought/user/${profileData._id}`, {
-    injectToken: true,
-    invalidateWhen: internal ? 
-      ["NEW_THOUGHT", "DELETE_THOUGHT", `${profileData._id}_REFRESH`] 
-      : 
-      [`${profileData._id}_REFRESH`]
-  });
-
-  const { fetchData: ratingFetchData } = useCache(`${profileData._id}_ratings`, `${config.apis.api.url}/rating/user/${profileData._id}`, {
-    injectToken: true,
-    invalidateWhen: ["NEW_RATING", `${profileData._id}_REFRESH`]
-  });
-
-  console.log("artists:", artistsFetchData, "artworks:", artworksQueryData, "artlists:", artlistsFetchData, "board:", boardFetchData, "collection:", collectionFetchData, "thoughts:", thoughtsFetchData, "rating:", ratingFetchData);
+  console.log(userProfileInfo);
 
   if(fetchData.user_type === "gallery") {
-    let tempTabCount = 0;
-    if ((internal || (artworksQueryData && artworksQueryData?.data.data.length > 0))) tempTabCount ++;
-    if ((internal || (artistsFetchData && artistsFetchData.data.length > 0))) tempTabCount ++;
-    if ((internal || (artlistsFetchData && artlistsFetchData.data.length > 0))) tempTabCount ++;
-    if ((internal || (boardFetchData && boardFetchData.data.length > 0))) tempTabCount ++;
-
     return (
-      <div className="profile-navigation__container">
-        {(internal || (artworksQueryData && artworksQueryData?.data.data.length > 0)) && <ProfileNavigationTab
-          to="artworks"
-          tabName="Artworks"
-          tabIcon={<ArtworkIcon className="profile-navigation__tab-icon artworks"/>}
-          tabCount={tempTabCount}
-        />}
-
-        {(internal || (artistsFetchData && artistsFetchData.data.length > 0)) && <ProfileNavigationTab
-          to="artists"
-          tabName="Artists"
-          tabIcon={<ArtistIcon className="profile-navigation__tab-icon artists"/>}
-          tabCount={tempTabCount}
-        />}
-
-        {(internal || (artlistsFetchData && artlistsFetchData.data.length > 0)) && <ProfileNavigationTab
-          to="artlists"
-          tabName="Artlists"
-          tabIcon={<ArtlistIcon className="profile-navigation__tab-icon artlists"/>}
-          tabCount={tempTabCount}
-        />}
-
-        {(internal || (boardFetchData && boardFetchData.data.length > 0)) && <ProfileNavigationTab
-          to="board"
-          tabName="Board"
-          tabIcon={<BoardIcon className="profile-navigation__tab-icon board"/>}
-          tabCount={tempTabCount}
-        />}
-      </div>
+      <>
+        {
+          userProfileInfo && (
+            <>
+              <GalleryProfileNavigation userProfileInfo={userProfileInfo.data} internal={internal}/>
+            </>
+          )
+        }
+      </>
     );
   } else if(fetchData.user_type === "artist") {
-    let tempTabCount = 0;
-    if ((internal || (artworksQueryData && artworksQueryData.data.data.length > 0))) tempTabCount ++;
-    if ((internal || (collectionFetchData && collectionFetchData.data.length > 0))) tempTabCount ++;
-    if ((internal || (thoughtsFetchData && ratingFetchData) && (thoughtsFetchData.data.length > 0 || ratingFetchData.data.length > 0))) tempTabCount ++;
-    if ((internal || (artlistsFetchData && artlistsFetchData.data.length > 0))) tempTabCount ++;
-
     return (
-      <div className="profile-navigation__container">
-        {(internal || (artworksQueryData && artworksQueryData.data.data.length > 0)) && <ProfileNavigationTab
-          to="artworks"
-          tabName="Artworks"
-          tabIcon={<ArtworkIcon className="profile-navigation__tab-icon artworks"/>}
-          tabCount={tempTabCount}
-        />}
-
-        {(internal || (collectionFetchData && collectionFetchData.data.length > 0)) && <ProfileNavigationTab
-          to="collection"
-          tabName="Collection"
-          tabIcon={<CollectionIcon className="profile-navigation__tab-icon collection"/>}
-          tabCount={tempTabCount}
-        />}
-
-        {(internal || (thoughtsFetchData && ratingFetchData) && (thoughtsFetchData.data.length > 0 || ratingFetchData.data.length > 0)) && <ProfileNavigationTab
-          to="community"
-          tabName="Community"
-          tabIcon={<CommunityIcon className="profile-navigation__tab-icon community"/>}
-          tabCount={tempTabCount}
-        />}
-
-        {(internal || (artlistsFetchData && artlistsFetchData.data.length > 0)) && <ProfileNavigationTab
-          to="artlists"
-          tabName="Artlists"
-          tabIcon={<ArtlistIcon className="profile-navigation__tab-icon artlists"/>}
-          tabCount={tempTabCount}
-        />}
-      </div>
+      <>
+        { userProfileInfo && (
+          <>
+            <ArtistProfileNavigation userProfileInfo={userProfileInfo.data} internal={internal}/>
+          </>
+        )
+        }
+      </>
     );
   } else {
-    let tempTabCount = 0;
-    if ((internal || (collectionFetchData && collectionFetchData?.data.length > 0))) tempTabCount ++;
-    if ((internal || (thoughtsFetchData && ratingFetchData)&&(thoughtsFetchData?.data.length > 0 || ratingFetchData?.data.length> 0)) || ratingFetchData?.data.length > 0) tempTabCount ++;
-    if ((internal || (artlistsFetchData && artlistsFetchData?.data.length > 0))) tempTabCount ++;
-
     return (
-      <div className="profile-navigation__container">
-        {(internal || (collectionFetchData && collectionFetchData.data.length > 0)) && <ProfileNavigationTab
-          to="collection"
-          tabName="Collection"
-          tabIcon={<CollectionIcon className="profile-navigation__tab-icon collection"/>}
-          tabCount={tempTabCount}
-        />}
-
-        {(internal || (thoughtsFetchData && ratingFetchData)&&(thoughtsFetchData.data.length > 0 || ratingFetchData.data.length> 0)) && <ProfileNavigationTab
-          to="community"
-          tabName="Community"
-          tabIcon={<CommunityIcon className="profile-navigation__tab-icon community"/>}
-          tabCount={tempTabCount}
-        />}
-
-        {(internal || (artlistsFetchData && artlistsFetchData.data.length > 0)) && <ProfileNavigationTab
-          to="artlists"
-          tabName="Artlists"
-          tabIcon={<ArtlistIcon className="profile-navigation__tab-icon artlists"/>}
-          tabCount={tempTabCount}
-        />}
-      </div>
+      <>
+        {
+          userProfileInfo && (
+            <>
+              <CollectorProfileNavigation userProfileInfo={userProfileInfo.data} internal={internal}/>
+            </>
+          )
+        }
+      </>
     );
   }
 }
