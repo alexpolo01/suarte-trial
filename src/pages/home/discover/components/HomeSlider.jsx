@@ -32,7 +32,6 @@ export default function HomeSlider({
   );
   const navigate = useNavigate();
 
-  console.log(artworks);
   return (
     <>
       <div className="home-slider__container element-non-selectable">

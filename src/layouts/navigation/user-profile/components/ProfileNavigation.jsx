@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import config from '@/config';
 import ProfileDataContext from '@/context/ProfileDataContext';
@@ -43,6 +43,20 @@ function ProfileNavigationTab({ to, tabName, tabIcon, tabCount }) {
 }
 
 export function GalleryProfileNavigation({ userProfileInfo, internal }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const navigateToOther = (url) => {
+    let path = location.pathname;
+    path = path.substring(0, path.lastIndexOf('/'));
+    path += url;
+    navigate(path);
+  };
+  if (userProfileInfo.data.artworks) navigateToOther("/artworks");
+  else if (userProfileInfo.data.posts) navigateToOther("/board");
+  else if (userProfileInfo.data.artlists) navigateToOther("/artlists");
+  else if (userProfileInfo.data.artists) navigateToOther("/artists");
+
   const tempTabCount = [
     userProfileInfo.data.artworks,
     userProfileInfo.data.posts,
@@ -85,11 +99,26 @@ export function GalleryProfileNavigation({ userProfileInfo, internal }) {
 }
 
 export function ArtistProfileNavigation({ userProfileInfo, internal }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const navigateToOther = (url) => {
+    let path = location.pathname;
+    path = path.substring(0, path.lastIndexOf('/'));
+    path += url;
+    navigate(path);
+  };
+  
+  if (userProfileInfo.data.artworks) navigateToOther("/artworks");
+  else if (userProfileInfo.data.collections) navigateToOther("/collection");
+  else if (userProfileInfo.data.thoughts || userProfileInfo.data.ratings) navigateToOther("/community");
+  else if (userProfileInfo.data.artlists) navigateToOther("/artlists");
+
   const tempTabCount = [
     userProfileInfo.data.artworks,
     userProfileInfo.data.collections,
     userProfileInfo.data.thoughts || userProfileInfo.data.ratings,
-    userProfileInfo.data.artists
+    userProfileInfo.data.artlists
   ].reduce((count, value) => count + (value ? 1 : 0), 0);
 
   return (
@@ -115,7 +144,7 @@ export function ArtistProfileNavigation({ userProfileInfo, internal }) {
         tabCount={tempTabCount}
       />: ""}
 
-      {(internal || userProfileInfo.data.artists) ? <ProfileNavigationTab
+      {(internal || userProfileInfo.data.artlists) ? <ProfileNavigationTab
         to="artlists"
         tabName="Artlists"
         tabIcon={<ArtlistIcon className="profile-navigation__tab-icon artlists"/>}
@@ -126,6 +155,22 @@ export function ArtistProfileNavigation({ userProfileInfo, internal }) {
 }
 
 export function CollectorProfileNavigation({ userProfileInfo, internal }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const navigateToOther = (url) => {
+    let path = location.pathname;
+    if (path.substr(path.lastIndexOf('/')) !== url) {
+      path = path.substring(0, path.lastIndexOf('/'));
+      path += url;
+      navigate(path);
+    }
+  };
+
+  if (userProfileInfo.data.collections) navigateToOther("/collection");
+  else if (userProfileInfo.data.thoughts || userProfileInfo.data.ratings) navigateToOther("/community");
+  else if (userProfileInfo.data.artlists) navigateToOther("/artlists");
+
   const tempTabCount = [
     userProfileInfo.data.collections,
     userProfileInfo.data.thoughts || userProfileInfo.data.ratings,
@@ -165,8 +210,6 @@ export default function ProfileNavigation({ fetchData }) {
   const { queryData: userProfileInfo } = useQuery(`${profileData._id}_userProfileInfo`, fetchUrl, query, {
     expiresIn: ["10", "minutes"]
   });
-
-  console.log(userProfileInfo);
 
   if(fetchData.user_type === "gallery") {
     return (
