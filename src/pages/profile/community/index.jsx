@@ -1,9 +1,10 @@
 import { useContext,useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import config from '@/config';
 import ProfileDataContext from '@/context/ProfileDataContext';
+import useCache from '@/hooks/useCache';
 import useGetSearchParams from '@/hooks/useGetSearchParams';
-import useStateHandler from '@/hooks/useStateHandler';
 import Text from '@/shared-components/text/components/Text';
 
 import Ratings from './ratings';
@@ -13,12 +14,22 @@ import './index.css';
 
 export default function ProfileCommunity() {
   const { profileData, internal } = useContext(ProfileDataContext);
-  const { cacheHandler } = useStateHandler();
   const [params, setParams] = useGetSearchParams({ validParams: ["v"] });
   const [view, setView] = useState(params ? params : { v: "thoughts" });
   const location = useLocation();
-  const thoughtsCacheValue = cacheHandler.getCacheValue(`${profileData._id}_thoughts`)?.data;
-  const ratingsCacheValue = cacheHandler.getCacheValue(`${profileData._id}_ratings`)?.data;
+
+  const { fetchData: thoughtsCacheValue } = useCache(`${profileData._id}_thoughts`, `${config.apis.api.url}/thought/user/${profileData._id}`, {
+    injectToken: true,
+    invalidateWhen: internal ? 
+      ["NEW_THOUGHT", "DELETE_THOUGHT", `${profileData._id}_REFRESH`] 
+      : 
+      [`${profileData._id}_REFRESH`]
+  });
+
+  const { fetchData: ratingsCacheValue } = useCache(`${profileData._id}_ratings`, `${config.apis.api.url}/rating/user/${profileData._id}`, {
+    injectToken: true,
+    invalidateWhen: ["NEW_RATING", `${profileData._id}_REFRESH`]
+  });
 
   function changeView(view) {
     const newView = { v: view };
@@ -50,8 +61,8 @@ export default function ProfileCommunity() {
         }
       </div>
 
-      {thoughtsCacheValue && thoughtsCacheValue.data.length > 0 && view.v === "thoughts" && <Thoughts profileData={profileData} internal={internal}/>}
-      {ratingsCacheValue && ratingsCacheValue.data.length > 0 && view.v === "ratings" && <Ratings profileData={profileData} internal={internal}/>}
+      {view.v === "thoughts" && <Thoughts profileData={profileData} internal={internal}/>}
+      {view.v === "ratings" && <Ratings profileData={profileData} internal={internal}/>}
     </>
   );
 }
