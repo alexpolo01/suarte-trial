@@ -110,7 +110,7 @@ export function ArtistProfileNavigation({ userProfileInfo, internal }) {
     let redirectUrl = "artworks";
     if (userProfileInfo && userProfileInfo.data.artworks) redirectUrl = "artworks";
     else if (userProfileInfo && userProfileInfo.data.collections) redirectUrl = "collection";
-    else if (userProfileInfo && (userProfileInfo.data.thoughts || userProfileInfo.data.data.ratings)) redirectUrl = "community";
+    else if (userProfileInfo && (userProfileInfo.data.thoughts || userProfileInfo.data.ratings)) redirectUrl = "community";
     else if (userProfileInfo && userProfileInfo.data.artlists) redirectUrl = "artlists";
     navigate(redirectUrl, { replace: true, state: location.state?.from });
   }, []);
@@ -159,7 +159,7 @@ export function CollectorProfileNavigation({ userProfileInfo, internal }) {
   useEffect(() => {
     let redirectUrl = "collection";
     if (userProfileInfo && userProfileInfo.data.collections) redirectUrl = "collection";
-    else if (userProfileInfo && (userProfileInfo.data.thoughts || userProfileInfo.data.data.ratings)) redirectUrl = "community";
+    else if (userProfileInfo && (userProfileInfo.data.thoughts || userProfileInfo.data.ratings)) redirectUrl = "community";
     else if (userProfileInfo && userProfileInfo.data.artlists) redirectUrl = "artlists";
     navigate(redirectUrl, { replace: true, state: location.state?.from });
   }, []);
