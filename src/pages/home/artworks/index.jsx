@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import config from '@/config';
 import useGetSearchParams from "@/hooks/useGetSearchParams";
@@ -30,6 +31,10 @@ export default function HomeArtworks() {
 
   return (
     <>
+      <Helmet> 
+        <title>Artworks - Suarte</title>
+        <meta name="description" content="Discover, interact and collect top and diverse collections of artworks from the best galleries and artists around the world on Suarte." />
+      </Helmet>
       <AppNavigationPage>
         <div className="home-artworks__page">
           <HomeHeader 
