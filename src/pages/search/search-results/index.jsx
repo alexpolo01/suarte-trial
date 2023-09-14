@@ -1,10 +1,11 @@
 import { Helmet } from 'react-helmet';
+
 import config from '@/config';
+import searchConfig from '@/config/search.config';
 import useNavigateToArtwork from '@/hooks/useNavigateToArtwork';
 import useQuery from '@/hooks/useQuery';
 import Text from '@/shared-components/text/components/Text';
 import Utils from '@/utils';
-import searchConfig from './path-to-searchConfig';
 
 import SearchSkeleton from './components/SearchSkeleton';
 import SearchVirtualList from './components/SearchVirtualList';
@@ -31,10 +32,10 @@ export default function SearchResults({ query }) {
   } else {
     return (
       <>
-      <Helmet> 
-        <title>{categoryData?.title || 'Search - Suarte'}</title>
-        <meta name="description" content={categoryData?.metaDescription || 'Explore artworks on Suarte.'} />
-      </Helmet>
+        <Helmet> 
+          <title>{categoryData?.title || 'Search - Suarte'}</title>
+          <meta name="description" content={categoryData?.metaDescription || 'Explore artworks on Suarte.'} />
+        </Helmet>
       
         <Text className="search-results__results-count" medium>
           {Utils.numberWithCommas(queryData.data.totalDocs)} 
