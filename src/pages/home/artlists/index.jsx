@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
-
 import config from "@/config";
 import useGetSearchParams from "@/hooks/useGetSearchParams";
 import useQuery from "@/hooks/useQuery";
