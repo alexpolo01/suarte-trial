@@ -1,8 +1,10 @@
+import { Helmet } from 'react-helmet';
 import config from '@/config';
 import useNavigateToArtwork from '@/hooks/useNavigateToArtwork';
 import useQuery from '@/hooks/useQuery';
 import Text from '@/shared-components/text/components/Text';
 import Utils from '@/utils';
+import searchConfig from './path-to-searchConfig';
 
 import SearchSkeleton from './components/SearchSkeleton';
 import SearchVirtualList from './components/SearchVirtualList';
@@ -20,6 +22,8 @@ export default function SearchResults({ query }) {
   });
   const navigateToArtwork = useNavigateToArtwork(`main_search`, queryData?.data, `/search/artwork${queryData?.queryString}`);
 
+  const categoryData = searchConfig.search.search_categories[query.category]?.find(item => item.category_item_name === query.category);
+  
   if(loading) {
     return (
       <SearchSkeleton/>
@@ -27,6 +31,11 @@ export default function SearchResults({ query }) {
   } else {
     return (
       <>
+      <Helmet> 
+        <title>{categoryData?.title || 'Search - Suarte'}</title>
+        <meta name="description" content={categoryData?.metaDescription || 'Explore artworks on Suarte.'} />
+      </Helmet>
+      
         <Text className="search-results__results-count" medium>
           {Utils.numberWithCommas(queryData.data.totalDocs)} 
 
