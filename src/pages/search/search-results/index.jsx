@@ -23,7 +23,14 @@ export default function SearchResults({ query }) {
   });
   const navigateToArtwork = useNavigateToArtwork(`main_search`, queryData?.data, `/search/artwork${queryData?.queryString}`);
 
-  const categoryData = searchConfig.search.search_categories[query.category]?.find(item => item.category_item_name === query.category);
+  console.log("query:", query, "searchConfig.search:", searchConfig.search.main_search.search_categories);
+
+let categoryData;
+if (query.category && searchConfig.search.main_search.search_categories[query.category]) {
+  categoryData = searchConfig.search.main_search.search_categories[query.category].find(item => item.category_item_name === query.q);
+}
+
+  console.log(categoryData);
   
   if(loading) {
     return (

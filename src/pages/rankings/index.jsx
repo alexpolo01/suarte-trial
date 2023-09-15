@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import config from '@/config';
 import useCache from '@/hooks/useCache';
@@ -28,6 +29,10 @@ export default function Rankings() {
   if(!fetchData) {
     return (
       <>
+        <Helmet> 
+          <title>Rankings - Suarte</title>
+          <meta name="description" content="Discover which galleries, artists, artworks and community features are trending. Rankings are forged by a community of art lovers where evryone can take part." />
+        </Helmet>
         <AppNavigationPage>
           <div className="rankings__loading-page">
             <CustomSpinner className="rankings__loading-spinner" thin/>
@@ -38,6 +43,10 @@ export default function Rankings() {
   } else {
     return (
       <>
+        <Helmet> 
+           <title>Rankings - Suarte</title>
+          <meta name="description" content="Discover which galleries, artists, artworks and community features are trending. Rankings are forged by a community of art lovers where evryone can take part." />
+        </Helmet>
         <AppNavigationPage>
           <div className="rankings__page">
             <div className="rankings__content-wrapper">
