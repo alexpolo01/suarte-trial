@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import useStateHandler from '@/hooks/useStateHandler';
+import config from '@/config';
+// import useStateHandler from '@/hooks/useStateHandler';
+import useQuery from '@/hooks/useQuery';
 import BackArrowIcon from '@/shared-components/icons/components/public/BackArrowIcon';
 import XIcon from '@/shared-components/icons/components/public/XIcon';
 import ArtistVerifiedIcon from '@/shared-components/icons/components/user-profile/ArtistVerifiedIcon';
@@ -39,9 +41,21 @@ function DisplayNameUsername({ fetchData }) {
 
 export default function Inspiring({ open, close, fetchData, numberOfInspiring }) {
   const [currentPage, setCurrentPage] = useState('inspiring');
-  const { cacheHandler } = useStateHandler();
-  let cacheVal = cacheHandler.getCacheValue(`${fetchData._id}_following`);
-  const [followingCount, setFollowingCount] = useState(cacheVal ? cacheVal["?"].data.data.data.length: 0);
+  // const { cacheHandler } = useStateHandler();
+  // let cacheVal = cacheHandler.getCacheValue(`${fetchData._id}_following`);
+  const [followingCount, setFollowingCount] = useState(0);
+  const { queryData } = useQuery(`${fetchData._id}_following`, `${config.apis.api.url}/user/followees/${fetchData._id}`, { username: "" }, {
+    injectToken: true,
+    invalidateWhen: [`FOLLOW_ACTION_ON_${fetchData._id}`]
+  });
+
+  console.log("queryData:", queryData);
+
+  useEffect(() => {
+    if (queryData) {
+      setFollowingCount(queryData.data.totalDocs);
+    }
+  }, [queryData]);
 
   return (
     <>
