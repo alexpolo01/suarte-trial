@@ -49,8 +49,6 @@ export default function Inspiring({ open, close, fetchData, numberOfInspiring })
     invalidateWhen: [`FOLLOW_ACTION_ON_${fetchData._id}`]
   });
 
-  console.log("queryData:", queryData);
-
   useEffect(() => {
     if (queryData) {
       setFollowingCount(queryData.data.totalDocs);
