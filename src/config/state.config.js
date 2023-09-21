@@ -11,7 +11,7 @@ let stateConfig = {
   
   cache: {
     cache_path: 'cache_metas',
-    cache_value_default_duration: ['5', 'minutes']
+    cache_value_default_duration: ['1', 'minutes']
   }
 };
 
