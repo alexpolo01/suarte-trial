@@ -24,7 +24,7 @@ export default function SearchFollowing({ userId, currentPage, setFollowingCount
     !loading && loadMoreData();
   }, [currentPage]);
 
-  setFollowingCount(cacheVal ? cacheVal["?"].data.data.data.length: 0);
+  setFollowingCount(cacheVal ? cacheVal["?"].data.data.totalDocs: 0);
 
   return (
     <>
