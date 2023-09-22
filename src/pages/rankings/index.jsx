@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 
 import config from '@/config';
 import useCache from '@/hooks/useCache';
@@ -44,7 +44,7 @@ export default function Rankings() {
     return (
       <>
         <Helmet> 
-           <title>Rankings - Suarte</title>
+          <title>Rankings - Suarte</title>
           <meta name="description" content="Discover which galleries, artists, artworks and community features are trending. Rankings are forged by a community of art lovers where evryone can take part." />
         </Helmet>
         <AppNavigationPage>
