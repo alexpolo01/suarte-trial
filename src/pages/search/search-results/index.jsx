@@ -19,10 +19,6 @@ export default function SearchResults({ query }) {
     }
   });
   const navigateToArtwork = useNavigateToArtwork(`main_search`, queryData?.data, `/search/artwork${queryData?.queryString}`);
-
-  console.log("query:", query, "searchConfig.search:", searchConfig.search.main_search.search_categories);
-
-  console.log(categoryData);
   
   if(loading) {
     return (
