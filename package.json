@@ -51,10 +51,10 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "craco eject",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0 --fix"
   },
@@ -91,6 +91,7 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "postcss": "^8.4.26",
+    "react-app-rewired": "^2.2.1",
     "sass": "^1.63.6",
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.0"
