@@ -1,10 +1,18 @@
+import { useEffect, useState } from 'react';
+
+import config from '@/config';
+// import useStateHandler from '@/hooks/useStateHandler';
+import useQuery from '@/hooks/useQuery';
 import BackArrowIcon from '@/shared-components/icons/components/public/BackArrowIcon';
 import XIcon from '@/shared-components/icons/components/public/XIcon';
 import ArtistVerifiedIcon from '@/shared-components/icons/components/user-profile/ArtistVerifiedIcon';
 import GenericPopup from '@/shared-components/popups/components/GenericPopup';
 import Text from '@/shared-components/text/components/Text';
 
-import Search from './search';
+import InspiringNavigation from '../components/InspiringNavigation';
+
+import SearchFollowing from './search-following';
+import SearchInspiring from './search-inspiring';
 
 import './index.css';
 
@@ -32,6 +40,21 @@ function DisplayNameUsername({ fetchData }) {
 }
 
 export default function Inspiring({ open, close, fetchData, numberOfInspiring }) {
+  const [currentPage, setCurrentPage] = useState('inspiring');
+  // const { cacheHandler } = useStateHandler();
+  // let cacheVal = cacheHandler.getCacheValue(`${fetchData._id}_following`);
+  const [followingCount, setFollowingCount] = useState(0);
+  const { queryData } = useQuery(`${fetchData._id}_following`, `${config.apis.api.url}/user/followees/${fetchData._id}`, { username: "" }, {
+    injectToken: true,
+    invalidateWhen: [`FOLLOW_ACTION_ON_${fetchData._id}`]
+  });
+
+  useEffect(() => {
+    if (queryData) {
+      setFollowingCount(queryData.data.totalDocs);
+    }
+  }, [queryData]);
+
   return (
     <>
       <GenericPopup open={open} className="search-inspiring__popup remove-scrollbar" opacity>
@@ -39,11 +62,16 @@ export default function Inspiring({ open, close, fetchData, numberOfInspiring })
         <BackArrowIcon className="search-inspiring__popup-close-icon-back" onClick={close}/>
         <DisplayNameUsername fetchData={fetchData}/>
 
-        <Text className="search-inspiring__popup-number-of-inspiring dots-on-overflow" extraSmall paragraph>
+        {/* <Text className="search-inspiring__popup-number-of-inspiring dots-on-overflow" extraSmall paragraph>
           {numberOfInspiring} inspiring
-        </Text>
+        </Text> */}
+        
+        <InspiringNavigation currentPage={currentPage} setCurrentPage={setCurrentPage} inspiringCount={numberOfInspiring} followingCount = {followingCount} fetchData = {fetchData}/>
 
-        <Search userId={fetchData._id}/>
+        <div className="auth-popup-content__wrap remove-scrollbar">
+          {currentPage === 'inspiring' ? <SearchInspiring userId={fetchData._id}/> : <SearchFollowing userId={fetchData._id} currentPage={currentPage} setFollowingCount={setFollowingCount}/>}
+        </div>
+
       </GenericPopup>
     </>
   );
