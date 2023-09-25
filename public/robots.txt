@@ -1,3 +1,8 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /help/limited-editions
+Disallow: /wordpress
+Disallow: /marketing/campaign/business-card/pablo
+Disallow: /emails/single-email
+Disallow: /wordpress/wp-login.php
+
+Sitemap: https://suarte.art/sitemap.xml

@@ -1,4 +1,5 @@
 import { useEffect, useMemo,useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useLocation, useNavigate } from "react-router-dom";
 
 import config from "@/config";
@@ -54,6 +55,10 @@ export default function Search() {
 
   return (
     <>
+      <Helmet> 
+        <title>Search - Suarte</title>
+        <meta name="description" content="Explore the finest artworks from the best galleries and artists around the world in Suarte. Use a wide range of filters and find your ideal artwork for your collection" />
+      </Helmet>
       <AppNavigationPage>
         <div className="search__page">
           <div className="search__filters">

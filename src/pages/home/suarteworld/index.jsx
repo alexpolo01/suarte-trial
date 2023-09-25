@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import { useLocation,useNavigate } from "react-router-dom";
 
 import config from "@/config";
@@ -30,6 +31,10 @@ export default function SuarteWorld() {
 
   return (
     <>
+      <Helmet> 
+        <title>Suarteworld - Suarte</title>
+        <meta name="description" content="An infinite scroll of the best artworks from top galleries and artists aroun the world. Explore and discover amazing artworks with this inmersive experience for art lovers and collectors." />
+      </Helmet>
       <SkeletonArtwork/>
     </>
   );
