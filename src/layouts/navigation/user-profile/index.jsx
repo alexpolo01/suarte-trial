@@ -42,7 +42,7 @@ function UserProfileRenderView({ profileUsername, internal }) {
     return (
       <>
         <Helmet>
-          <title>{fetchData.user_name + `- Suarte`}</title>
+          <title>{(fetchData.user_name || 'Art traveller') + ` - Suarte`}</title>
           <meta name="description" content={`Visit the Profile of ${fetchData.user_name}: ${fetchData.user_profile_info.user_description}`} />
         </Helmet>
         <ProfileDataContext.Provider value={{ profileData: fetchData, setProfileData: setFetchData, internal }}>
