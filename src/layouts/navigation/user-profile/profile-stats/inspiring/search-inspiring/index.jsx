@@ -10,7 +10,7 @@ import VirtualList from './virtual-list';
 
 import './index.css';
 
-export default function Search({ userId }) {
+export default function SearchInspiring({ userId }) {
   const [query, setQuery] = useState({ username: "" });
   const { loading, queryData, loadMoreData } = useQuery(`${userId}_inspiring`, `${config.apis.api.url}/user/followers/${userId}`, query, {
     injectToken: true,

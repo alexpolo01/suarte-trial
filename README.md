@@ -1,6 +1,6 @@
 # Suarte - Frontend
 
-Official Suarte repository for its frontend development. Currently developed by @sergiordg00 and @Joselu21
+Official Suarte repository for its frontend development. 
 
 ## Technology Stack
 
