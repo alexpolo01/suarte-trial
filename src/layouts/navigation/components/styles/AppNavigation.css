@@ -55,6 +55,14 @@
     width: 25px;
 }
 
+.app-navigation__nav-option.notification {
+    width: 25px;
+}
+
+.app-navigation__nav-option.notification {
+    width: 25px;
+}
+
 .app-navigation__nav-option.profile {
     width: 23px;
 }
@@ -100,6 +108,10 @@
         width: 22px;
     }
     
+    .app-navigation__nav-option.notification {
+        width: 22px;
+    }
+    
     .app-navigation__nav-option.profile {
         width: 20px;
     }
@@ -142,6 +154,10 @@
         width: 25px;
     }
     
+    .app-navigation__nav-option.notification {
+        width: 25px;
+    }
+    
     .app-navigation__nav-option.profile {
         width: 23px;
     }
@@ -166,6 +182,10 @@
     }
     
     .app-navigation__nav-option.trending {
+        width: 23px;
+    }
+    
+    .app-navigation__nav-option.notification {
         width: 23px;
     }
     
