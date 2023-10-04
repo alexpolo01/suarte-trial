@@ -22,9 +22,9 @@ export default function SubmitButton({ formState, editMode, formError, setFormEr
         value={termsAccepted} 
         onChange={(value)=>setTermsAccepted(value)}
       >
-                I have read and agree to the{" "}
+                I have read and understand the{" "}
         <span className="submit-button-artwork-terms-opener" onClick={()=>setOpenArtworkTerms(true)}>
-                    Artwork Terms of Suarte
+                    Artwork agreement
         </span>. 
       </PublicFormInput>
 

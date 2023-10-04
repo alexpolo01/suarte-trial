@@ -26,8 +26,7 @@ export default function LikedArtworks() {
             <LikedArtworksLoader/>
             : fetchData.data.length === 0 ? 
               <Text className="activity-liked-artworks__text" medium>
-                            Looks like you haven't given any likes to artworks yet. Take a moment to show your support 
-                            and appreciation by liking an artwork that captures your interest.
+                            Liked artwoks will be displayed here.
               </Text>
               :
               <VirtualList 

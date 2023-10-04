@@ -26,9 +26,7 @@ export default function SavedArtworks() {
             <SavedArtworksLoader/>
             : fetchData.data.length === 0 ? 
               <Text className="activity-saved-artworks__text" medium>
-                            You haven't saved any artworks yet. Create your personal gallery by saving 
-                            the pieces that inspire you. It's a great way to curate your own collection 
-                            and easily find them later.
+                           Saved artworks will be displayed here.
               </Text>
               :
               <VirtualList 
