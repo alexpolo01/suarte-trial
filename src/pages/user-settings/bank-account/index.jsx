@@ -24,9 +24,7 @@ export default function BankAccount() {
     
         <div className="settings-bank-account__container">
           <Text className="settings-bank-account__text" paragraph justify medium>
-                        Please note all bank account details need to be completed to successfully 
-                        receive payments from Suarte. Ensure every field is filled in accurately 
-                        to receive Suarte's monthly invoices.
+          Complete all bank account details accurately to receive Suarte's monthly payments and invoices.
           </Text>
     
           <BankAccountForm fetchData={fetchData} setFetchData={setFetchData}/>
