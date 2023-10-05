@@ -6,7 +6,8 @@ import ArtworkImage from './ArtworkImage';
 
 import './styles/ArtworkCard.css';
 
-export default function ArtworkCard({ artworkData, className="", onClick }) {
+export default function ArtworkCard({ artworkData, className="", onClick, profileCollection = false }) {
+  console.log("artworkData:", artworkData);
   return (
     <>
       <div className={`artwork-card__card ${className} ${onClick ? "pointer" : ""}`} onClick={onClick}>
@@ -36,13 +37,13 @@ export default function ArtworkCard({ artworkData, className="", onClick }) {
           }
         </Text>
 
-        <p className="artwork-card__text medium-year mt-s">
+        {!profileCollection && <p className="artwork-card__text medium-year mt-s">
           {artworkData.artwork_about.artwork_medium}, {artworkData.artwork_about.artwork_year}
-        </p>
+        </p>}
 
-        <Text className="artwork-card__text price" paragraph small>
+        {!profileCollection ? <Text className="artwork-card__text price" paragraph small>
           {Utils.getArtworkPrice(artworkData.artwork_about.artwork_price, artworkData.artwork_about.artwork_currency)}
-        </Text>
+        </Text>: <Text className="artwork-card__text price" paragraph small>{artworkData.artwork_about.artwork_size.height} x {artworkData.artwork_about.artwork_size.length}</Text>}
       </div>
     </>
   );

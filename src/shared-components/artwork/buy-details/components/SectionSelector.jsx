@@ -17,7 +17,7 @@ export default function SectionSelector({ currentBuySection, setCurrentBuySectio
 
           <div className={`purchase-section-selector__option ${isShippingLocked ? "disabled" : ""}`} onClick={()=>setCurrentBuySection("shipping")}>
             <Text className="purchase-section-selector__text" medium>
-                            Shipping details
+                            Shipment
             </Text>
           </div>
 
