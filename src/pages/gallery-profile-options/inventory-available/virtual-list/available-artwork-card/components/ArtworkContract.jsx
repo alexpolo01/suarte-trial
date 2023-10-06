@@ -6,21 +6,21 @@ import GalleryService from '@/services/gallery.service';
 import ContinueButton from '@/shared-components/buttons/components/ContinueButton';
 import ArtworkImage from '@/shared-components/cards/components/ArtworkImage';
 import XIcon from '@/shared-components/icons/components/public/XIcon';
-import SwitchInput from '@/shared-components/inputs/components/SwitchInput';
+/* import SwitchInput from '@/shared-components/inputs/components/SwitchInput';*/
 import GenericPopup from '@/shared-components/popups/components/GenericPopup';
 import Utils from '@/utils';
 
 import './styles/ArtworkContract.css';
 
-export default function ArtworkContract({ artworkData, open, close, onContractRenewalChange, onWithdrawArtwork }) {
+export default function ArtworkContract({ artworkData, open, close, /* onContractRenewalChange, */ onWithdrawArtwork }) {
   // const [formState, setFormState] = useState(false);
   const [formLoading, setFormLoading] = useState(false);
   const [openWithdrawArtwork, setOpenWithdrawArtwork] = useState(false);
 
-  function changeRenewal(isAutomatic) {
+  /* function changeRenewal(isAutomatic) {
     onContractRenewalChange(artworkData._id, isAutomatic);
     GalleryService.changeRenewalOfContract(artworkData._id, isAutomatic);
-  }
+  } */ 
 
   async function withdrawArtwork() {
     setFormLoading(true);
@@ -41,7 +41,7 @@ export default function ArtworkContract({ artworkData, open, close, onContractRe
       >
         <div className="generic-popup-header">
           <span className="generic-popup-header-text mt-m">
-                        Artwork contract
+                        Artwork Agreement
           </span>
 
           <XIcon className="generic-popup-close" onClick={close}/>
@@ -59,25 +59,12 @@ export default function ArtworkContract({ artworkData, open, close, onContractRe
           <span>
             {Utils.getDateInStringFromTimestamp(artworkData.createdAt)}
           </span>
+          <p></p><br></br>
         </p>
-
-        <p className="artwork-contract-popup__text mt-m">
-                    Expiration date:{" "}
-
-          <span>
-            {Utils.getDateInStringFromTimestamp(Utils.getTimestampOneYearLater(artworkData.createdAt))}
-          </span>
-        </p>
-
         <p className="artwork-contract-popup__text mt-s">
-          {
-            artworkData.automatic_renewal ?
-              "The automatic renewal is currently activated. This means that when the expiration date arrives, the agreement will automatically renew for the next 12 months. You can update these preferences at any time."
-              :
-              "The automatic renewal is currently deactivated. This means that when the expiration date arrives, the agreement will automatically be canceled. You can update these preferences at any time."
-          }
+        To mark the artwork as sold, click 'Buy Now' in your profile and enter the collector's email to transfer ownership. Withdrawing this artwork will permanently delete all its community interactions. Note that there is no in-store commission for artworks uploaded before 2024.
         </p>
-
+        <br></br>
         <p className="artwork-contract-popup__text mt-s">
                     Please visit the{" "} 
 
@@ -88,7 +75,7 @@ export default function ArtworkContract({ artworkData, open, close, onContractRe
           {" "}for more information.
         </p>
 
-        <div className="artwork-contract-popup__renewal-container">
+        {/* <div className="artwork-contract-popup__renewal-container">
           <span className="artwork-contract-popup__renewal-text mt-l">
                         Automatic renewal
           </span>
@@ -97,10 +84,10 @@ export default function ArtworkContract({ artworkData, open, close, onContractRe
             value={artworkData.artwork_flags.automatic_renewal !== false}
             onChange={isAutomatic=>changeRenewal(isAutomatic)}
           />
-        </div>
+  </div>*/}
 
         <span className="artwork-contract-popup__withdraw-button element-non-selectable mt-s" onClick={()=>setOpenWithdrawArtwork(true)}>
-                    Withdraw artwork
+                    Withdraw artwork &gt;
         </span>
       </GenericPopup>
 
@@ -118,10 +105,7 @@ export default function ArtworkContract({ artworkData, open, close, onContractRe
         </div>
 
         <p className="artwork-contract-popup__text mt-s">
-                    If this artwork has been sold, click on "Buy Now" from your 
-                    profile and enter the collector's email address to enable 
-                    them to claim it in their profile. If you choose to remove this artwork, 
-                    keep in mind that there is no withdrawal penalty for artworks uploaded before 2024. 
+        Are you sure you want to withdraw this artwork from Suarte? For any questions or concerns please refer to galleries@suarte.art, and we will be happy to assist you.
         </p>
 
         {/* <PublicFormInput 
