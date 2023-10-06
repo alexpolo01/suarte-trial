@@ -1,0 +1,52 @@
+.alertbox {
+  background: transparent;
+  padding: 20px 10px;
+  height: 67px;
+  width: 100%;
+}
+
+.alertbox:hover {
+  background: rgba(59, 0, 35, 0.3);
+}
+
+.alertbox:focus, .alertbox:active {
+  background: rgb(59, 0, 35);
+}
+
+.alertbox p {
+  color: white;
+}
+
+.alertbox b {
+  color: rgb(244, 0, 145);
+}
+
+.alertbox i {
+  font-style: italic;
+}
+
+.alertbox img {
+  width: 47px;
+  height: 47px;
+}
+
+.alertbox .avaimg {
+  border-radius: 50%;
+}
+
+.alertbox .instance {
+  margin: 0px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.alertbox .btn {
+  border: 2px solid rgb(255, 0, 151);
+  background: rgba(255, 0, 151, 0.5);
+  color: rgb(255, 0, 151);
+}
+
+.alertbox .btn.active {
+  background: rgb(255, 0, 151);
+  color: black;
+}

@@ -38,15 +38,5 @@ module.exports = {
         "maxBOF": 0
       }
     ],
-    "simple-import-sort/imports": ["error", {
-      groups: [
-        ["^\\u0000"], /* Side effect imports */
-        ["^@?\\w"], /* Packages. */
-        ["^(@)(/.*|$)"], /* Internal absolute imports */
-        ["^\\.\\.(?!/?$)", "^\\.\\./?$"], /* Parent imports. Put `..` last */
-        ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"], /* Other relative imports. Put same-folder imports and `.` last */
-        ["^.+\\.?s?css$"], /* Style imports. */
-      ]
-    }],
   }
 };

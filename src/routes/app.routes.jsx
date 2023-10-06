@@ -11,6 +11,7 @@ import Artlist from "@/pages/profile/artlist";
 import ArtworkRequest from "@/pages/profile/artwork-request";
 import EditArtwork from "@/pages/profile/edit-artwork";
 import EditPost from "@/pages/profile/edit-post";
+import Notifications from "@/pages/notifications";
 import PlayArtlist from "@/pages/profile/play-artlist";
 import Post from "@/pages/profile/post";
 // import HomeFollowing from "@/pages/home/following";
@@ -42,6 +43,7 @@ const AppRoutes = [
           ...HomeRoutes,
           ...SearchRoutes,
           { path: "/rankings", element: <Rankings/> },
+          { path: "/notifications", element: <Notifications/> },
           { path: "/payment-failed", element: <PaymentFailed/> },
           {
             element: <UserAccountRequired/>,
