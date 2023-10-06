@@ -49,7 +49,7 @@ export default function InventoryAvailable() {
           <OrdersSkeleton hideHeader/>
           : queryData.data.data.length === 0 ?
             <Text className="inventory-available__empty-text" paragraph small>
-                        No available artworks found for your search query.
+                        There are no available artworks for sale.
             </Text>
             :
             <VirtualList

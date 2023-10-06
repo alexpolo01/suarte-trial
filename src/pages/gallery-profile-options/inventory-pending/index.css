@@ -1,8 +1,8 @@
 .inventory-pending__empty-text {
     color: var(--app-generic-gray);
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
-    margin-top: 45px !important;
+    margin-top: 20px !important;
 }
 
 .inventory-pending__card-container {

@@ -23,8 +23,7 @@ export default function LikedPosts() {
             <LikedPostsLoader/>
             : fetchData.data.length === 0 ? 
               <Text className="activity-liked-posts__text" medium>
-                            Looks like you haven't given any likes to gallery posts yet. Take a moment to show your support 
-                            and appreciation by liking a post that captures your interest.
+                            Liked posts will be displayed here.
               </Text>
               :
               <VirtualList items={fetchData} onLoadMore={loadMoreData}/>

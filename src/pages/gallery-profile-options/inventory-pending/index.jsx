@@ -28,7 +28,7 @@ export default function InventoryPending() {
   } else if(fetchData.data.length === 0) {
     return (
       <Text className="inventory-pending__empty-text" paragraph small>
-                You currently don't have any pending approval artworks. Everything is up to date!
+                There are currently no artworks pending approval.
       </Text>
     );
   } else {

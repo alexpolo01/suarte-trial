@@ -24,12 +24,7 @@ export default function ArtworkAgreement() {
         </h1>
 
         <Text className="artwork-agreement__text" paragraph justify medium>
-                    Suarte's Launch Opportunity: All artworks uploaded before 2024 will benefit from Suarte's 0% commission for 
-                    in-store sales, and no exclusivity rules apply, only the 17% commission if sold through Suarte. 
-        </Text>
-
-        <Text className="artwork-agreement__text" paragraph justify medium>
-                    Sections 3 and 4 of the following agreement do not apply to artworks uploaded before 2024.
+        Section 3 of the following agreement does not apply to artworks uploaded before 2024. 
         </Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
@@ -39,88 +34,42 @@ export default function ArtworkAgreement() {
         <Text className="artwork-agreement__subheading" large>1. Ownership of Artwork</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    The Gallery warrants and represents that it is the 
-                    legal owner of the artwork and has the right to enter into this agreement, granting 
-                    Suarte the right to display and offer the artwork for sale.
+         The gallery warrants and represents that it is the legal owner of the artwork and has the right to enter into this agreement, granting Suarte the right to display and offer the artwork for sale. 
         </Text>
 
         <Text className="artwork-agreement__subheading" large>2. Intellectual Property Rights</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    The Gallery acknowledges that the 
-                    artist retains all intellectual property rights, even after the artwork is sold. 
-                    The Gallery pledges to only present artworks to Suarte for which it has secured rights 
-                    from the legitimate owners and shall bear responsibility for any claims or damages 
-                    resulting from any breach of this assurance. In such an event, the Gallery will defend, 
-                    indemnify, and hold harmless Suarte.
+        The gallery acknowledges that the artist retains all intellectual property rights, even after the artwork is sold. The gallery pledges to only present artworks to Suarte for which it has secured rights from the legitimate owners and shall bear responsibility for any claims or damages resulting from any breach of this assurance. In such an event, the gallery will defend, indemnify, and hold harmless Suarte.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>3. Artwork exclusivity</Text>
+        <Text className="artwork-agreement__subheading" large>3. Selling in-store</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    The Gallery agrees that the submitted 
-                    artwork will be exclusively available for sale on Suarte for a period 
-                    of one year from the date of submission. After this period, the agreement 
-                    will automatically renew for the same period unless the Gallery, 
-                    via the platform, cancels the renewal prior to the conclusion of 
-                    the current agreement.
+        Galleries are welcome to sell artworks both online and in their physical spaces. However, If an artwork is sold directly through the gallery, a reduced commission of 12% applies and is included in the next monthly invoice.
+        After the purchase, if the collector wants to claim their artwork on the platform, Galleries must immediately mark the artwork as sold on the platform and provide the collector's email address for proper recording of the transaction and proper management of artwork claims on the platform. 
+        In the event that the collector does not want to have the artwork in the platform, Galleries can withdraw the artwork.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>4. Selling in-store</Text>
+        <Text className="artwork-agreement__subheading" large>4. Limited Editions</Text>
 
         <Text className="artwork-agreement__text" paragraph justify medium>
-                    Galleries are welcome to sell artworks both online 
-                    and in their physical spaces. However, If an artwork is sold directly through the Gallery, 
-                    a reduced commission of 12% applies, and is included in the next monthly invoice. 
+        In the case of activating Limited Editions, the gallery agrees and acknowledges that it will not produce, manufacture, or distribute any further prints or Limited Editions of the artwork without the express written consent of Suarte. 
         </Text>
 
-        <Text className="artwork-agreement__text" paragraph justify medium>
-                    After the purchase, if the collector wants to claim their artwork on the platform, Galleries 
-                    must immediately mark the artwork as sold on the platform and provide the collector's email 
-                    address for proper recording of the transaction and proper management of artwork claims 
-                    on the platform. 
-        </Text>
+        <Text className="artwork-agreement__subheading" large>5. Pricing</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    In the event that the collector does not want to have the artwork on the platform, 
-                    Galleries can withdraw the artwork.
+        The gallery retains complete autonomy in setting the price of the artwork and it must offer the "Buy Now" feature for all artworks uploaded to the platform.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>5. Artwork withdrawal</Text>
+        <Text className="artwork-agreement__subheading" large>6. Price modifications</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    Galleries can withdraw artworks from the platform at any time. 
-                    However, by doing so, a reduced commission of 12% applies, and 
-                    is included in the next monthly invoice.
+        The gallery is allowed to modify the price of their artwork twice according to the terms of the artwork agreement. However, the new price cannot be lower than 30% of the original uploading price.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>6. Limited Editions</Text>
-
-        <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    In the case of activating limited editions, 
-                    the Gallery agrees and acknowledges that it will not produce, manufacture, 
-                    or distribute any further prints or limited editions of the artwork 
-                    without the express written consent of Suarte.
-        </Text>
-
-        <Text className="artwork-agreement__subheading" large>7. Pricing</Text>
-
-        <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    The Gallery retains complete autonomy in setting 
-                    the price of the artwork, and it must offer the "Buy Now" 
-                    feature for all artworks uploaded to the platform. 
-        </Text>
-
-        <Text className="artwork-agreement__subheading" large>8. Price modifications</Text>
-
-        <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    The Gallery is allowed to modify the 
-                    price of their artwork twice according to the terms of the artwork 
-                    agreement. However, the new price cannot be lower than 30% of the 
-                    original uploading price.
-        </Text>
-
-        <Text className="artwork-agreement__subheading" large>9. Payment and Invoices</Text>
+        <Text className="artwork-agreement__subheading" large>7. Payment and Invoices</Text>
 
         <Text className="artwork-agreement__text" paragraph justify medium>
                     Payments from Suarte to Galleries for 
@@ -141,7 +90,7 @@ export default function ArtworkAgreement() {
                     not responsible if a payment is made to an outdated account.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>10. Shipping</Text>
+        <Text className="artwork-agreement__subheading" large>8. Shipping</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     The Gallery is responsible for shipping the artwork to the buyer 
@@ -150,7 +99,7 @@ export default function ArtworkAgreement() {
                     or charge the customer for them.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>11. Returns and Refunds</Text>
+        <Text className="artwork-agreement__subheading" large>9. Returns and Refunds</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     Sellers are responsible for addressing and resolving issues 
@@ -159,40 +108,39 @@ export default function ArtworkAgreement() {
                     and provide refunds.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>12. Legal Compliance</Text>
+        <Text className="artwork-agreement__subheading" large>10. Legal Compliance</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     The gallery agrees to comply with all the rules and laws related to selling and shipping artwork. 
                     This includes things like export and import regulations, copyright laws, and tax laws.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>13. Authenticity</Text>
+        <Text className="artwork-agreement__subheading" large>11. Authenticity</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     The gallery guarantees the authenticity of the artwork and that it is an original creation by the artist.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>14. Artwork Condition</Text>
+        <Text className="artwork-agreement__subheading" large>12. Artwork Condition</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    The gallery is responsible for ensuring that the artwork is in the same condition as described on the 
-                    platform and free from any defects not mentioned in the description.
+        The gallery is responsible for ensuring that the artwork is in the same condition as described on the platform and free from any defects not mentioned in the description.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>15. Artist's rights protection</Text>
+        <Text className="artwork-agreement__subheading" large>13. Artist's rights protection</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
-                    The gallery agrees that artists' interests and rights are protected throughout the selling process and beyond.
+        The gallery agrees that artists' interests and rights are protected throughout the selling process and beyond.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>16. Confidentiality</Text>
+        <Text className="artwork-agreement__subheading" large>14. Confidentiality</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     Both parties agree to maintain the confidentiality of any sensitive information shared during 
                     the course of the agreement in compliance with GDPR regulations.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>17. Promotional Use of Artwork</Text>
+        <Text className="artwork-agreement__subheading" large>15. Promotional Use of Artwork</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     The gallery acknowledges and agrees that Suarte may promote and advertise the artwork and 
@@ -200,21 +148,21 @@ export default function ArtworkAgreement() {
                     consent or compensation.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>18. Responsibilities</Text>
+        <Text className="artwork-agreement__subheading" large>16. Responsibilities</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     Each party is responsible for fulfilling its obligations under this agreement. 
                     In the event of a breach, the offending party will be liable for any damages incurred.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>19. Early termination</Text>
+        <Text className="artwork-agreement__subheading" large>17. Early termination</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     The agreement may be prematurely terminated due to non-compliance, among other reasons, 
                     which will be determined on a case-by-case basis.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>20. Dispute Resolution</Text>
+        <Text className="artwork-agreement__subheading" large>18. Dispute Resolution</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     In the event of a dispute arising from or in connection with this agreement, the parties 
@@ -223,10 +171,14 @@ export default function ArtworkAgreement() {
                     exclusive jurisdiction of the courts of Spain.
         </Text>
 
-        <Text className="artwork-agreement__subheading" large>21. Termination</Text>
+        <Text className="artwork-agreement__subheading" large>19. Termination</Text>
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     Suarte reserves the right to terminate this agreement at any time.
+        </Text>
+        <br></br>
+        <Text className="artwork-agreement__text margin" paragraph justify medium>
+        By checking the box provided during the artwork uploading process, the gallery agrees to these terms and conditions and acknowledges that this commitment is binding and enforceable under applicable laws and regulations.
         </Text>
       </div>
     </>
