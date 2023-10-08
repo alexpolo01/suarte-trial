@@ -107,7 +107,7 @@ export default function ArtworkAgreement() {
 
         <Text className="artwork-agreement__text margin" paragraph justify medium>
                     The Gallery retains complete autonomy in setting 
-                    the price of the artwork, and it must offer the "Buy Now" 
+                    the price of the artwork, and it must offer the "Purchase Now" 
                     feature for all artworks uploaded to the platform. 
         </Text>
 

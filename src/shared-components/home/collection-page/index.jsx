@@ -53,8 +53,10 @@ export default function CollectionPage({
       deepCopiedQueryData.data.data = deepCopiedQueryData.data.data.map(
         (item) => {
           let newItem = { ...item };
+          
           newItem.artwork_about.artwork_price =
             config.variables.LIMITED_EDITION_SMALL_PRICE;
+          newItem.artwork_about.artwork_currency = "EUR";
           return newItem;
         }
       );
@@ -88,6 +90,7 @@ export default function CollectionPage({
                 items={limitedEditionData.data}
                 onLoadMore={loadMoreData}
                 navigateToArtwork={navigateToArtwork}
+                collectionName={collectionName}
               />
             )
           ) : (

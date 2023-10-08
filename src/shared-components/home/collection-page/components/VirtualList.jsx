@@ -8,7 +8,7 @@ import InfiniteScroll from '@/shared-components/lists/components/InfiniteScroll'
 
 import './styles/VirtualList.css';
 
-export default function VirtualList({ items, onLoadMore, navigateToArtwork }) {
+export default function VirtualList({ items, onLoadMore, navigateToArtwork, collectionName }) {
   const screenSize = useScreenSize();
   const columnSizesCache = useRef(initColumnSizesCache());
   const sizeAndPositionCache = useRef([]);
@@ -93,6 +93,7 @@ export default function VirtualList({ items, onLoadMore, navigateToArtwork }) {
                         <ArtworkCard 
                           artworkData={items.data[index]} 
                           onClick={()=>navigateToArtwork(items.data[index]._id)}
+                          collectionName={collectionName}
                         />
                       </div>
                     )}
