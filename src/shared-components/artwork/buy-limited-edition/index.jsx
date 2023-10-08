@@ -72,7 +72,7 @@ export default function BuyLimitedEditionButton({ artworkData }) {
             privateActionHandler(handleGetLimitedEdition);
           }}
         >
-          <Text className="buy-limited-edition-button__text" small>
+          <Text className="buy-limited-edition-button__text" extraSmall>
             Limited Edition from {config.variables.LIMITED_EDITION_SMALL_PRICE}€
           </Text>
 

@@ -118,7 +118,7 @@ export default function ArtworkContract({ artworkData, open, close, onContractRe
         </div>
 
         <p className="artwork-contract-popup__text mt-s">
-                    If this artwork has been sold, click on "Buy Now" from your 
+                    If this artwork has been sold, click on "Purchase Now" from your 
                     profile and enter the collector's email address to enable 
                     them to claim it in their profile. If you choose to remove this artwork, 
                     keep in mind that there is no withdrawal penalty for artworks uploaded before 2024. 

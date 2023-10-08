@@ -158,27 +158,31 @@ export default function ShippingDetails({
             <input type="hidden" id="purchase_error" />
             <FormError element="purchase_error" error={formError} />
 
-            <div
-              className="purchase-limited-editions-info__container element-non-selectable"
-              style={{ marginTop: "1rem" }}
-            >
-              <span
-                className="purchase-limited-editions-info__heading mt-l"
-                style={{ marginBottom: "0px" }}
-              >
-                Shipping details
-              </span>
-            </div>
+            {typeOfPurchase === "limited_edition" && (
+              <>
+                <div
+                  className="purchase-limited-editions-info__container element-non-selectable"
+                  style={{ marginTop: "1rem" }}
+                >
+                  <span
+                    className="purchase-limited-editions-info__heading mt-l"
+                    style={{ marginBottom: "0px" }}
+                  >
+                    Shipping details
+                  </span>
+                </div>
 
-            <ul className="purchase-limited-editions-info__ul">
-              <li className="purchase-limited-edition-info__li mt-s">
-                ● Ready to dispatch in <span>5 business days</span>
-              </li>
+                <ul className="purchase-limited-editions-info__ul">
+                  <li className="purchase-limited-edition-info__li mt-s">
+                    ● Ready to dispatch in <span>5 business days</span>
+                  </li>
 
-              <li className="purchase-limited-edition-info__li mt-s">
-                ● Delivered from <span>Spain</span>
-              </li>
-            </ul>
+                  <li className="purchase-limited-edition-info__li mt-s">
+                    ● Delivered from <span>Spain</span>
+                  </li>
+                </ul>
+              </>
+            )}
 
             <ContinueButton
               loading={formLoading}
