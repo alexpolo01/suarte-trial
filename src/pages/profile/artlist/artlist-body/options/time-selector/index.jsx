@@ -14,9 +14,9 @@ import './index.css';
 export default function TimeSelector({ open, close }) {
   const { artlistData } = useContext(ArtlistDataContext);
   const [formState, setFormState] = useState({
-    time_quantity: "15",
+    time_quantity: "",
     time_unit: "seconds",
-    time_selected: "15 seconds"
+    time_selected: "Personalized"
   });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
