@@ -34,7 +34,7 @@ export default function TimeSelector({ open, close }) {
   function onPlayArtlist() {
     const parsedValue = Number(formState.time_quantity);
 
-    if(!Number.isInteger(parsedValue) || (parsedValue < 3 && formState.time_unit === "seconds")) {
+    if(!Number.isInteger(parsedValue) || (parsedValue < 1 && formState.time_unit === "seconds")) {
       setError({ element: "time_quantity", error_code: "INVALID_ARTLIST_PERSONALIZED_TIME" });
     } else {
       navigate("/artlist/play", {
