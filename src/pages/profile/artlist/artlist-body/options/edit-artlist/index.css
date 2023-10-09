@@ -19,7 +19,7 @@
     background-color: var(--app-special_popup_background);
     border-radius: 6px;
     padding: 12px 15px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 
 .edit-artlist-content__header {
