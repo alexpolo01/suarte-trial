@@ -18,7 +18,7 @@ export default function EditArtlist({ open, close }) {
           <div className="edit-artlist-content__container">
             <div className="edit-artlist-content__header">
               <Text className="edit-artlist-content__header-text" medium>
-                                Edit artlist
+                                Save changes
               </Text>
 
               <XIcon className="edit-artlist-content__close" onClick={close}/>
