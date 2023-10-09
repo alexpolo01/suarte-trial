@@ -8,7 +8,7 @@ import UserProfileImage from '@/shared-components/cards/components/UserProfileIm
 import HomeIcon from '@/shared-components/icons/components/navigation/HomeIcon';
 import SearchNavbarIcon from '@/shared-components/icons/components/navigation/SearchNavbarIcon';
 import TrendingIcon from '@/shared-components/icons/components/navigation/TrendingIcon';
-import NotificationIcon from '@/shared-components/icons/components/navigation/NotificationIcon';
+// import NotificationIcon from '@/shared-components/icons/components/navigation/NotificationIcon';
 import SuarteName from '@/shared-components/icons/components/public/SuarteName';
 import UserProfileIcon from '@/shared-components/icons/components/user-profile/UserProfileIcon';
 
@@ -86,13 +86,13 @@ export default function AppNavigation() {
                 <TrendingIcon/>
               </NavLink>
 
-              <NavLink 
+              {/* <NavLink 
                 to="/notifications" 
                 className={({ isActive }) => `app-navigation__nav-option notification ${isActive ? "active" : ""}`} 
                 aria-label="Notifications"
               >
                 <NotificationIcon/>
-              </NavLink>
+              </NavLink> */}
 
               <AppNavigationProtectedOption/> {/** This way, we include useLocation in that component and we dont have to re-render the whole component, just the search icon */}
             </div>

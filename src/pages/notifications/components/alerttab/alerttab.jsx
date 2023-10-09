@@ -1,9 +1,11 @@
 import './alerttab.css';
 
-export default function AlertTab({children, className=""}) {
+export default function AlertTab( { children, className="" } ) {
   return (
     <>
-      <div className={"alerttab-container"}>
+      <div className={className}>
+        TabSpace
+        { children }
       </div>
     </>
   );
