@@ -18,7 +18,7 @@ export default function SizeOption({ data, isSelected, selectOption }) {
           </span>
 
           <span className="purchase-size-option__size-text mt-m">
-                        ${data.price}
+                        €{data.price}
           </span>
         </div>
       )}
