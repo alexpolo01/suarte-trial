@@ -53,7 +53,7 @@ export default function Referrals() {
                 {
                   fetchData.data.length === 0 ?
                     <Text className="referrals__empty-text" paragraph small>
-                                            You currently have 0 referrals. Don't miss out on the chance to earn rewards! 
+                                            New referrals will be displayed here. Share the link and start receiving passive income. 
                     </Text>
                     :
                     <>

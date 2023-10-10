@@ -46,7 +46,7 @@ function calculateLimitedEditionsPriceAndUnits(editions, originalPrice) {
     editions[i].unidades = UNITS[editions.length - 1][i + 1];
   }
 }
-
+// max benefit percentage 30%
 function calculateMaxBenefit(editions) {
   let maxBenefit = 0;
   for (let i = 0; i < editions.length; i++) {

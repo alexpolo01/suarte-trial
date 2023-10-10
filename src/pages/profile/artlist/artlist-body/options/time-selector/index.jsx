@@ -14,9 +14,9 @@ import './index.css';
 export default function TimeSelector({ open, close }) {
   const { artlistData } = useContext(ArtlistDataContext);
   const [formState, setFormState] = useState({
-    time_quantity: "15",
+    time_quantity: "",
     time_unit: "seconds",
-    time_selected: "15 seconds"
+    time_selected: "Personalized"
   });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ export default function TimeSelector({ open, close }) {
   function onPlayArtlist() {
     const parsedValue = Number(formState.time_quantity);
 
-    if(!Number.isInteger(parsedValue) || (parsedValue < 3 && formState.time_unit === "seconds")) {
+    if(!Number.isInteger(parsedValue) || (parsedValue < 1 && formState.time_unit === "seconds")) {
       setError({ element: "time_quantity", error_code: "INVALID_ARTLIST_PERSONALIZED_TIME" });
     } else {
       navigate("/artlist/play", {

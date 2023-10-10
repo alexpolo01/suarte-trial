@@ -100,7 +100,7 @@ export default function BankAccountForm({ fetchData, setFetchData }) {
           value={formState.one_stop_shop}
           onChange={value=>updateFormState("one_stop_shop", value)}
         >
-                    My gallery is registered in the EU's One Stop Shop (OSS)
+                    My gallery is registered in the EU's <a href="https://suarte.help/one-stop-shop/" style={{ fontWeight: 'bold', color: '#fff', textDecoration: 'none' }}> One Stop Shop (OSS)</a>
         </PublicFormInput>
 
         <ContinueButton
