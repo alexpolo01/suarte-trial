@@ -38,7 +38,7 @@ export default function Invoices() {
                 {
                   fetchData.data.length === 0 ?
                     <Text className="invoices__text" paragraph medium>
-                                            No invoices to display at the moment.
+                                            No invoices are available.
                     </Text>
                     :
                     <VirtualList items={fetchData} onLoadMore={loadMoreData}/>

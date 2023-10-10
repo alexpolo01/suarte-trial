@@ -36,7 +36,9 @@
 }
 
 .artwork-contract-popup__text a:hover {
-    color: rgb(59, 59, 240);
+    color: var(--app-theme-color);
+    text-decoration: underline; /* This removes the underline */
+    transition: text-decoration 0.3s ease; /* This ensures smooth transition */
 }
 
 .artwork-contract-popup__text.--less-margin {
@@ -67,6 +69,15 @@
     width: fit-content;
     font-weight: 600;
     color: var(--app-theme-color);
+}
+
+.artwork-contract-popup__withdraw-button:hover{
+    display: block;
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 600;
+    color: var(--app-theme-color);
+    text-decoration: underline;
 }
 
 .artwork-contract-popup__submit-withdraw-button {

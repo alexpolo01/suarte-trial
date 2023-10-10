@@ -24,8 +24,7 @@ export default function LikedArtlists() {
             <LikedArtlistsLoader/>
             : fetchData.data.length === 0 ? 
               <Text className="activity-liked-artlists__text" medium>
-                            Looks like you haven't given any likes to artlists yet. Take a moment to show your support 
-                            and appreciation by liking an artlist that captures your interest.
+                            Liked posts will be displayed here.
               </Text>
               :
               <VirtualList items={fetchData} onLoadMore={loadMoreData}/>

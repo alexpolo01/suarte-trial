@@ -8,13 +8,13 @@
 }
 
 .edit-artlist-content__scrollable-container .public-form-input__input.textarea {
-    height: 136px;
+    height: 80px;
     text-align: unset;
 }
 
 .edit-artlist-popup__submit-form-button {
     margin-top: 18px;
-    margin-bottom: 7px;
+    margin-bottom: 12px;
 }
 
 .edit-artlist-content__artlist-artworks-container {
@@ -36,6 +36,6 @@
 
 @media (max-width: 550px) {
     .edit-artlist-content__scrollable-container .public-form-input__input.textarea {
-        height: 112px;
+        height: 50px;
     }
 }

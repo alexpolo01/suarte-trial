@@ -48,7 +48,7 @@ export default function HomeArtists() {
               <SkeletonPage/>
               : queryData.data.data.length === 0 ?
                 <Text className="home-artists__empty-text" paragraph medium>
-                                No artists available for your search query.
+                                Represented artists will be added soon!
                 </Text>
                 :
                 <VirtualList 

@@ -13,7 +13,7 @@
     opacity: 0;
     visibility: hidden;
     background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0,3s ease, visibility 0,3s ease;
 }
 
 .play-artlist__container.controls-active .play-artlist__controls {

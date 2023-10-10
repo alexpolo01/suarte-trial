@@ -23,7 +23,7 @@ export default function OrdersPending() {
   } else if(fetchData.data.length === 0) {
     return (
       <Text className="orders-pending__empty-text" paragraph small>
-                You don't have any pending orders right now.
+                There are no pending orders at the moment.
       </Text>
     );
   } else {

@@ -23,7 +23,7 @@ export default function OrdersSent() {
   } else if(fetchData.data.length === 0) {
     return (
       <Text className="orders-sent__empty-text" paragraph small>
-                You don't have any sent orders at this moment.
+                There are no sent orders at this moment.
       </Text>
     );
   } else {
