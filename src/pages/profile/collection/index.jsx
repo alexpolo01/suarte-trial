@@ -43,6 +43,7 @@ export default function ProfileCollection() {
               items={fetchData} 
               onLoadMore={loadMoreData}
               navigateToArtwork={navigateToArtwork}
+              profileCollection={true}
             />
       }
     </>
