@@ -2,8 +2,7 @@
     width: 100%;
     max-width: 1800px;
     margin: 0 auto;
-    padding: 0px 40px;
-    display: flex;
+    padding: 40px 0px;
     /* align-items: flex-start; */
 }
 

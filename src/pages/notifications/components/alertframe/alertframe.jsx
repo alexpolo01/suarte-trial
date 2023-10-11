@@ -1,4 +1,4 @@
-import './alertframe.css';
+import './AlertFrame.css';
 
 export default function AlertFrame( { children, className="" } ) {
   return (

@@ -1,10 +1,17 @@
-.alerttab-container {
+.notification__tab__container {
   width: 100%;
-  display: flex;
+  padding: 10px 20px;
   align-items: center;
   justify-content: center;
+  display: flex;
 }
 
-.alerttab {
-  width: 30%;
+.notification__tab__title{
+  height: 32px;
+  text-align: center;
+  color: var(--app-theme-color);
+}
+
+.notification__tab .active {
+  border-bottom: 2px solid var(--app-theme-color);
 }

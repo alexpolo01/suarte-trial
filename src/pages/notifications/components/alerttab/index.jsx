@@ -1,3 +1,3 @@
-import AlertTab from "./alerttab";
+import AlertTab from "./AlertTab";
 
 export default AlertTab;

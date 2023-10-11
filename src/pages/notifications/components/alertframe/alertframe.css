@@ -1,52 +1,48 @@
-.alertbox {
+.notification__content {
   background: transparent;
-  padding: 20px 10px;
+  padding: 10px 20px;
   height: 67px;
   width: 100%;
 }
 
-.alertbox:hover {
-  background: rgba(59, 0, 35, 0.3);
+.notification__content.active {
+  background: var(--app-theme-background);
 }
 
-.alertbox:focus, .alertbox:active {
-  background: rgb(59, 0, 35);
-}
-
-.alertbox p {
+.notification__content p {
   color: white;
 }
 
-.alertbox b {
+.notification__content b {
   color: rgb(244, 0, 145);
 }
 
-.alertbox i {
+.notification__content i {
   font-style: italic;
 }
 
-.alertbox img {
+.notification__content img {
   width: 47px;
   height: 47px;
 }
 
-.alertbox .avaimg {
+.notification__content .avaimg {
   border-radius: 50%;
 }
 
-.alertbox .instance {
+.notification__content .instance {
   margin: 0px;
   margin-right: 20px;
   margin-left: 10px;
 }
 
-.alertbox .btn {
+.notification__content .btn {
   border: 2px solid rgb(255, 0, 151);
   background: rgba(255, 0, 151, 0.5);
   color: rgb(255, 0, 151);
 }
 
-.alertbox .btn.active {
+.notification__content .btn.active {
   background: rgb(255, 0, 151);
   color: black;
 }

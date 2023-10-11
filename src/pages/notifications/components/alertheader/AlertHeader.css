@@ -1,0 +1,15 @@
+.notification__header {
+  padding: 20px;
+}
+
+.notification__header__controller {
+  color: var(--app-theme-color);
+}
+
+.notification__header__title {
+  text-align: left;
+  width: auto;
+  padding: 0px 10px;
+  margin: 0px;
+  color: var(--app-normal_text);
+}
