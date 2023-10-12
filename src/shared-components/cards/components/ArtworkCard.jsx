@@ -13,7 +13,6 @@ export default function ArtworkCard({
   profileCollection = false,
   collectionName = "",
 }) {
-  console.log("artworkData:", artworkData);
   return (
     <>
       <div
