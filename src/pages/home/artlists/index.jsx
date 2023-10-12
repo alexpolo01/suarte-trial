@@ -1,4 +1,4 @@
-import { useEffect,useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 import config from "@/config";
@@ -8,8 +8,6 @@ import HomeHeader from '@/shared-components/home/components/HomeHeader';
 import ArtlistIcon from '@/shared-components/icons/components/user-profile/ArtlistIcon';
 import Text from "@/shared-components/text/components/Text";
 import AppNavigationPage from '@/shared-components/wrappers/components/AppNavigationPage';
-import ArrayUtils from "@/utils/array.utils";
-import ObjectUtils from "@/utils/object.utils";
 
 import SkeletonPage from "./components/SkeletonPage";
 import VirtualList from "./components/VirtualList";
@@ -23,46 +21,12 @@ export default function HomeArtlists() {
     invalidateWhen: ["NEW_ARTLIST", "EDIT_ARTLIST", "DELETE_ARTLIST"],
     injectToken: true,
   });
-  const [shuffledQueryData, setShuffledQueryData] = useState({});
 
   function onInput(value) {
     const newQuery = { q: value };
     setQuery(newQuery);
     setParams(newQuery, { replace: true });
   }
-
-  useEffect(() => {
-    if (queryData && !ObjectUtils.isEmpty(queryData)) {
-      // Copy QueryData
-      let copiedQueryData = JSON.parse(JSON.stringify(queryData));
-      // Slice new uploaded artworks from backend
-      let differentArray = copiedQueryData.data.data.slice(
-        !ObjectUtils.isEmpty(shuffledQueryData)
-          ? shuffledQueryData.data.data.length
-          : 0
-      );
-      // Shuffle new artworks
-      let shuffledArray = ArrayUtils.shuffleArray(differentArray);
-      // set the shuffledQueryData with shuffled artworks
-      setShuffledQueryData((prevData) => {
-        return !ObjectUtils.isEmpty(prevData)
-          ? {
-            ...copiedQueryData,
-            data: {
-              ...copiedQueryData.data,
-              data: [...prevData.data.data, ...shuffledArray],
-            },
-          }
-          : {
-            ...copiedQueryData,
-            data: {
-              ...copiedQueryData.data,
-              data: [...shuffledArray],
-            },
-          };
-      });
-    }
-  }, [queryData]);
 
   return (
     <>
@@ -88,19 +52,11 @@ export default function HomeArtlists() {
                                 No artlists available for your search query.
                 </Text>
                 :
-                !ObjectUtils.isEmpty(shuffledQueryData) ? (
-                  <VirtualList
-                    key={shuffledQueryData.queryString}
-                    items={shuffledQueryData.data}
-                    onLoadMore={loadMoreData}
-                  />
-                ) : (
-                  <VirtualList
-                    key={queryData.queryString}
-                    items={queryData.data}
-                    onLoadMore={loadMoreData}
-                  />
-                )
+                <VirtualList 
+                  key={queryData.queryString} 
+                  items={queryData.data} 
+                  onLoadMore={loadMoreData}
+                />
           }
         </div>
       </AppNavigationPage>
