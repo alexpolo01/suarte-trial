@@ -17,6 +17,6 @@
   height: 32px;
 }
 
-.notification__tab .active {
+.notification__tab.active {
   border-bottom: 2px solid var(--app-theme-color);
 }
