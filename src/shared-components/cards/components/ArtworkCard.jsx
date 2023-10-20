@@ -60,10 +60,15 @@ export default function ArtworkCard({
         </Text>
 
         {!profileCollection && (
-          <p className="artwork-card__text medium-year mt-s">
-            {artworkData.artwork_about.artwork_medium},{" "}
-            {artworkData.artwork_about.artwork_year}
-          </p>
+          <>
+            <p className="artwork-card__text medium-year mt-s">
+              {artworkData.artwork_about.artwork_medium}, {artworkData.artwork_about.artwork_year}
+            </p>
+            
+            <p className="artwork-card__text medium-year mt-s">
+              {Utils.getDateInStringFromTimestamp(artworkData.createdAt)}
+            </p>
+          </>
         )}
 
         {!profileCollection ? (

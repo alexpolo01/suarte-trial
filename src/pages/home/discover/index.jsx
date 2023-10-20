@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import config from '@/config';
@@ -16,6 +17,19 @@ import './index.css';
 
 function HomeContent({ fetchData }) {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 550);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -32,36 +46,72 @@ function HomeContent({ fetchData }) {
         desktopImage="6c2636e2-f5f5-4dfc-4158-299dca1a7f00"
         onClick={()=>navigate("/suarteworld", { state: { from: true } })}
       />
+      { !isMobile ? (
+        <>
+          <ArtworkOfTheDay collectionData={fetchData.artwork_of_the_day}/>
 
-      <ArtworkOfTheDay collectionData={fetchData.artwork_of_the_day}/>
+          <HomeBanner
+            mobileImage="4834abfe-6362-449b-cbd0-63a1c4548300" 
+            desktopImage="5166fcee-d4c7-48e8-0bfa-0ab589bcdd00"
+            onClick={()=>navigate("/limited-editions", { state: { from: true } })}
+          />
 
-      <HomeBanner
-        mobileImage="4834abfe-6362-449b-cbd0-63a1c4548300" 
-        desktopImage="5166fcee-d4c7-48e8-0bfa-0ab589bcdd00"
-        onClick={()=>navigate("/limited-editions", { state: { from: true } })}
-      />
+          <HomeSlider 
+            artworks={fetchData.slider2.collection_artworks} 
+            category={fetchData.slider2.collection_name} 
+            endpoint={`/category/${fetchData.slider2.collection_id}?`} 
+            total={fetchData.slider2.total}
+            link={fetchData.slider2.collection_url}
+          />
 
-      <HomeSlider 
-        artworks={fetchData.slider2.collection_artworks} 
-        category={fetchData.slider2.collection_name} 
-        endpoint={`/category/${fetchData.slider2.collection_id}?`} 
-        total={fetchData.slider2.total}
-        link={fetchData.slider2.collection_url}
-      />
+          <HomeBanner
+            mobileImage="3fbe9367-dffd-4854-51c5-a9ea44a36500" 
+            desktopImage="7dd32638-303b-4fb5-e50f-a0608be07a00"
+            onClick={()=>navigate("/rankings", { state: { from: true } })}
+          />
 
-      <HomeBanner
-        mobileImage="3fbe9367-dffd-4854-51c5-a9ea44a36500" 
-        desktopImage="7dd32638-303b-4fb5-e50f-a0608be07a00"
-        onClick={()=>navigate("/rankings", { state: { from: true } })}
-      />
+          <HomeSlider 
+            artworks={fetchData.slider3.collection_artworks} 
+            category={fetchData.slider3.collection_name} 
+            endpoint={`/category/${fetchData.slider3.collection_id}?`} 
+            total={fetchData.slider3.total}
+            link={fetchData.slider3.collection_url}
+          />
 
-      <HomeSlider 
-        artworks={fetchData.slider3.collection_artworks} 
-        category={fetchData.slider3.collection_name} 
-        endpoint={`/category/${fetchData.slider3.collection_id}?`} 
-        total={fetchData.slider3.total}
-        link={fetchData.slider3.collection_url}
-      />
+        </>
+      ) : (
+        <>
+          <HomeSlider 
+            artworks={fetchData.slider2.collection_artworks} 
+            category={fetchData.slider2.collection_name} 
+            endpoint={`/category/${fetchData.slider2.collection_id}?`} 
+            total={fetchData.slider2.total}
+            link={fetchData.slider2.collection_url}
+          />
+          <ArtworkOfTheDay collectionData={fetchData.artwork_of_the_day}/>
+
+          <HomeBanner
+            mobileImage="4834abfe-6362-449b-cbd0-63a1c4548300" 
+            desktopImage="5166fcee-d4c7-48e8-0bfa-0ab589bcdd00"
+            onClick={()=>navigate("/limited-editions", { state: { from: true } })}
+          />
+
+          <HomeSlider 
+            artworks={fetchData.slider3.collection_artworks} 
+            category={fetchData.slider3.collection_name} 
+            endpoint={`/category/${fetchData.slider3.collection_id}?`} 
+            total={fetchData.slider3.total}
+            link={fetchData.slider3.collection_url}
+          />
+
+          <HomeBanner
+            mobileImage="3fbe9367-dffd-4854-51c5-a9ea44a36500" 
+            desktopImage="7dd32638-303b-4fb5-e50f-a0608be07a00"
+            onClick={()=>navigate("/rankings", { state: { from: true } })}
+          />
+
+        </>
+      )}
 
       <HomeSlider 
         artworks={fetchData.slider4.collection_artworks} 
