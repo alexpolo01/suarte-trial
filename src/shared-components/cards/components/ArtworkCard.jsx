@@ -66,7 +66,7 @@ export default function ArtworkCard({
             </p>
             
             <p className="artwork-card__text medium-year mt-s">
-              {Utils.getDateInStringFromTimestamp(artworkData.createdAt)}
+              {Utils.getDateInStringFromTimestamp(artworkData.collection_artwork[0].metadata.day)}
             </p>
           </>
         )}
