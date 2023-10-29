@@ -7,8 +7,8 @@ const firebaseConfig = {
         projectId: "suarte",
         storageBucket: "suarte.appspot.com",
         messagingSenderId: "767194707735",
-        appId: "1:767194707735:web:78ac9e18d0f4f839c72952",
-        measurementId: "G-WND0DFNW2G",
+        appId: "1:767194707735:web:5d5402a0dbb927e1c72952",
+        measurementId: "G-62PCYC8WNF"
       }
       : {
         apiKey: "AIzaSyAos3aIItpB80DqQgyWUP-oKd2Bph2HhsI",
