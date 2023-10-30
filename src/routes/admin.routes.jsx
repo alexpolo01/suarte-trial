@@ -18,7 +18,11 @@ const AdminRoutes = [
           { path: "/admin/gallery-requests", element: <GalleryRequests/> },
           { path: "/admin/artwork-requests", element: <ArtworkRequests/> },
           { path: "/admin/limited-edition-requests", element: <LimitedEditionRequests/> },
-          { path: "/admin/artwork-request", element: <ArtworkRequest/> },
+          { path: "/admin/artwork-request", element: <ArtworkRequest/> }
+        ]
+      },
+      {
+        children: [
           { path: "/admin/customize-home", element: <HomeCustomization /> }
         ]
       }

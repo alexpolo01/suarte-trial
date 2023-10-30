@@ -4,6 +4,21 @@
     margin: 0 auto;
     padding-top: 50px;
 }
+.home-customization__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.home-customization__header-back {
+    width: 12px;
+    box-sizing: content-box;
+    cursor: pointer;
+    fill: var(--app-theme-color);
+}
+.home-customization__header-text {
+    color: white;
+    text-align: center;
+}
 
 .home-customization__text {
     color: var(--app-normal_text);
