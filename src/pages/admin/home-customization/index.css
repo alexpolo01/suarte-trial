@@ -10,10 +10,16 @@
     margin: 20px;
 }
 .home-customization__header-back {
-    width: 12px;
     box-sizing: content-box;
     cursor: pointer;
     fill: var(--app-theme-color);
+    width: 100px;
+}
+.home-customization__header-back>svg {
+    width: 12px;
+}
+.home-customization__header-logout {
+    width: 100px;
 }
 .home-customization__header-text {
     color: white;
@@ -54,12 +60,14 @@
     align-items: center;
     margin-top: 20px;
 }
-.home-customization__link:first-child{
+.home-customization__link:first-child {
     margin-top: 0;
 }
-
+.home-customization__title-input {
+    margin-bottom: 10px;
+}
 @media (max-width: 800px) {
     .home-customization__container {
-        max-width: calc(100% - 50px);
+        max-width: calc(100% - 100px);
     }
 }
