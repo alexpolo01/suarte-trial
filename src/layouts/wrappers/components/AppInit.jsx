@@ -6,6 +6,7 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 import useGetSearchParams from "@/hooks/useGetSearchParams";
 import useStateHandler from "@/hooks/useStateHandler";
 import { auth } from "@/services/firebase.service";
+import SocketService from "@/services/socket.service";
 import UserService from "@/services/user.service";
 import AuthPopup from "@/shared-components/popups/auth-popup";
 import CookiesPopup from "@/shared-components/popups/components/CookiesPopup";
@@ -26,6 +27,14 @@ export default function AppInit() {
 
           if(response.ok) {
             stateHandler.set("user_session", data);
+            const user_name = data.user_session.user_username;
+            const user_email = data.user_session.user_email;
+
+            const sendData = {
+              username: user_name,
+              usermail: user_email,
+            };
+            SocketService.setUserInfo(sendData);
           }  
         }
       } else {
@@ -37,6 +46,9 @@ export default function AppInit() {
     if(params?.invite) {
       stateHandler.set("invite", params.invite);
     }
+
+    SocketService.init();
+
   }, []);
 
   useEffect(()=>{

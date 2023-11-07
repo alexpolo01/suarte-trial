@@ -6,17 +6,18 @@
   display: flex;
 }
 
-.notification__tab__title{
-  text-align: center;
-  color: var(--app-theme-color);
-  margin: auto 0px;
-}
-
 .notification__tab {
   width: 33.33%;
   height: 32px;
+  cursor: pointer;
 }
 
 .notification__tab.active {
   border-bottom: 2px solid var(--app-theme-color);
+}
+
+.notification__tab__title{
+  text-align: center;
+  color: var(--app-theme-color);
+  margin: auto 0px;
 }

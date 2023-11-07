@@ -2,16 +2,27 @@ const apisConfig = {
   apis: {
     api: 
       process.env.NODE_ENV === 'production' ?
+        // {
+        //   protocol: 'https',
+        //   host: 'api.suarte.art',
+        //   port: '443'
+        // }
+        // :
+        // {
+        //   protocol: 'https',
+        //   host: 'dev.suarte.art',
+        //   port: '443'
+        // }
         {
-          protocol: 'https',
-          host: 'api.suarte.art',
-          port: '443'
+          protocol: 'http',
+          host: 'localhost',
+          port: '3000'
         }
         :
         {
-          protocol: 'https',
-          host: 'dev.suarte.art',
-          port: '443'
+          protocol: 'http',
+          host: 'localhost',
+          port: '3000'
         }
   }
 };

@@ -1,8 +1,8 @@
 .notification__content {
   background: transparent;
   padding: 10px 20px;
-  height: 67px;
   width: 100%;
+  display: flex;
 }
 
 .notification__content.active {
@@ -11,6 +11,7 @@
 
 .notification__content p {
   color: white;
+  margin: 0px;
 }
 
 .notification__content b {
@@ -26,20 +27,28 @@
   height: 47px;
 }
 
-.notification__content .avaimg {
+.subject {
   border-radius: 50%;
+  margin-right: 10px;
 }
 
-.notification__content .instance {
+.object {
+  float: right;
+  margin-left: 20px;
+}
+
+.instance {
   margin: 0px;
   margin-right: 20px;
   margin-left: 10px;
+  width: calc(100% - 124px);
 }
 
 .notification__content .btn {
   border: 2px solid rgb(255, 0, 151);
   background: rgba(255, 0, 151, 0.5);
   color: rgb(255, 0, 151);
+  float: right;
 }
 
 .notification__content .btn.active {
