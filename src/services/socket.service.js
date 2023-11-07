@@ -8,7 +8,7 @@ const io = require('socket.io-client');
 let socket;
 
 function init () {
-  socket = io("http://localhost:8000");
+  socket = io("http://dev.suarte.art:8000");
 
   socket.on('message', function(data) {
     console.log(data);
