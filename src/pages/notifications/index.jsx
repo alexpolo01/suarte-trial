@@ -5,7 +5,7 @@ import AppNavigationPage from '../../shared-components/wrappers/components/AppNa
 import AlertFrame from './components/alertframe';
 import AlertHeader from './components/alertheader';
 import AlertTab from './components/alerttab';
-import { artLover, artist, gallery } from './constant';
+import { artist, artLover, gallery } from './constant';
 
 import './index.css';
 

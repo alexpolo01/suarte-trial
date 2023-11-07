@@ -1,9 +1,8 @@
 import config from '@/config';
 import fetchWrapper from '@/services/fetchWrapper.service';
 import { loginWithCustomToken, logoutUser } from '@/services/firebase.service';
-import Utils from '@/utils';
-
 import SocketService from '@/services/socket.service';
+import Utils from '@/utils';
 
 function login(email, password) {
   return fetchWrapper.post(`${config.apis.api.url}/login/custom`, {
