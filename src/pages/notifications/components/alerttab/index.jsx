@@ -1,3 +1,3 @@
-import AlertTab from "./AlertTab.jsx";
+import AlertTab from "./alerttab";
 
 export default AlertTab;
