@@ -1,0 +1,23 @@
+.notification__tab__container {
+  width: 100%;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.notification__tab {
+  width: 33.33%;
+  height: 32px;
+  cursor: pointer;
+}
+
+.notification__tab.active {
+  border-bottom: 2px solid var(--app-theme-color);
+}
+
+.notification__tab__title{
+  text-align: center;
+  color: var(--app-theme-color);
+  margin: auto 0px;
+}
