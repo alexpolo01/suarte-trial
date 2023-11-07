@@ -1,3 +1,3 @@
-import AlertFrame from "./alertframe";
+import AlertFrame from "./Alertframe";
 
 export default AlertFrame;
