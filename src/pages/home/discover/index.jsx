@@ -121,10 +121,17 @@ function HomeContent({ fetchData }) {
         link={fetchData.slider4.collection_url}
       />
 
-      {/* <StoryTold 
-                storyToldArtwork={fetchData.story_told.collection_artworks[0]} 
-                artworks={fetchData.story_told.collection_artworks.slice(1)}
-            /> */}
+      { fetchData.collections.map(slider => 
+        <HomeSlider 
+          key={slider.collection_id}
+          artworks={slider.collection_artworks} 
+          category={slider.collection_name} 
+          endpoint={`/category/${slider.collection_id}?`} 
+          total={slider.total}
+          link={slider.collection_url}
+        />) 
+      }
+
     </>
   );
 }
