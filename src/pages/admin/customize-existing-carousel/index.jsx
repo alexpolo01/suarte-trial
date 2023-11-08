@@ -74,6 +74,11 @@ export default function CustomizeExistingCarousel() {
 
   const onSaveChangedOrder = async () => {
     setChangeMade(false);
+    if(id === 'masterpiece-of-the-day') {
+      alert('You cannot change order for Masterpiece');
+      fetchData();
+      return;
+    }
 
     let idx, i, changed = [];
     for(idx = changedOrder.length - 1; idx >= 0; idx --) {
@@ -88,6 +93,9 @@ export default function CustomizeExistingCarousel() {
   };
 
   const onDeleteCollection = async () => {
+    const res = confirm("Are you sure to delete this carousel?");
+    if(!res) return;
+
     await fetchWrapper.delete(`${config.apis.api.url}/internalcollection/${id}`, {
       injectToken: true
     });
@@ -138,7 +146,7 @@ export default function CustomizeExistingCarousel() {
         </div>
         <div className="customize-existing-carousel__logout-container">
           <button className="customize-existing-carousel__logout" onClick={onDeleteCollection}>
-            <Text className="customize-existing-carousel__logout-text" large>Delete Collection</Text>
+            <Text className="customize-existing-carousel__logout-text" large>Delete Carousel</Text>
           </button>
         </div>
       </div>

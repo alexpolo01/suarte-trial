@@ -7,6 +7,7 @@ import useCache from "@/hooks/useCache";
 import config from "@/config";
 import { useEffect } from "react";
 import useStateHandler from "@/hooks/useStateHandler";
+import AuthService from "@/services/auth.service";
 
 export default function HomeCustomization() {
   const { fetchData } = useCache(
@@ -45,7 +46,7 @@ export default function HomeCustomization() {
         </div>
         <h4 className="home-customization__header-text">Home</h4>
         <div className="home-customization__header-logout">
-          <ContinueButton>Log out</ContinueButton>
+          <ContinueButton onClick={() => AuthService.logout()}>Log out</ContinueButton>
         </div>
       </div>
       <div className="home-customization__box">
