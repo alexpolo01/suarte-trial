@@ -5,11 +5,11 @@ import AppNavigationPage from '../../shared-components/wrappers/components/AppNa
 import AlertFrame from './components/alertframe';
 import AlertHeader from './components/alertheader';
 import AlertTab from './components/alerttab';
-import { artist, artLover, gallery } from './constant';
+import { artLover, interaction } from './constant';
 
 import './index.css';
 
-const data = [...artLover, ...artist, ...gallery];
+const data = [...artLover, ...interaction];
 
 export default function Notifications() {
 

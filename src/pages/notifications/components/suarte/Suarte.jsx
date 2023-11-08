@@ -6,7 +6,7 @@ export default function Suarte({ value }) {
   return (
     <>
       {value?.status !== undefined && <span>{prefix[value.status]}</span>}
-      {value?.subject && <span className="">{value.subject}</span>}
+      {value?.subject && <b>{value.subject}</b>}
       {value?.status !== undefined && <span>{midfix[value.status]}</span>}
       {value?.object && <span>{value.object}</span>}
       {value?.status !== undefined && <span>{suffix[value.status]}</span>}

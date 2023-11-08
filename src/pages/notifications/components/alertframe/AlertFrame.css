@@ -3,6 +3,7 @@
   padding: 10px 20px;
   width: 100%;
   display: flex;
+  align-items: center;
 }
 
 .notification__content.active {

@@ -14,6 +14,7 @@
 
 .notification__tab.active {
   border-bottom: 2px solid var(--app-theme-color);
+  font-weight: bold;
 }
 
 .notification__tab__title{
