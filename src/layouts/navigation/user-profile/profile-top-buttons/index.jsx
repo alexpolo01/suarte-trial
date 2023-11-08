@@ -1,15 +1,15 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import useGoBack from '@/hooks/useGoBack';
-import ProfileNotificationsIcon from '@/shared-components/icons/components/user-profile/ProfileNotificationsIcon';
 import ShareProfileIcon from '@/shared-components/icons/components/actions/ShareProfileIcon';
 import BackArrowIcon from '@/shared-components/icons/components/public/BackArrowIcon';
 import ThreeDotsIcon from '@/shared-components/icons/components/public/ThreeDotsIcon';
+import ProfileNotificationsIcon from '@/shared-components/icons/components/user-profile/ProfileNotificationsIcon';
 
 import ProfileOptions from './components/ProfileOptions';
 
 import './index.css';
-import { useNavigate } from 'react-router-dom';
 
 export default function ProfileTopButtons({ fetchData, internal }) {
   const [open, setOpen] = useState(false);
