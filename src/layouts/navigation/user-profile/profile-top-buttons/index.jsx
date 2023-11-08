@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import useGoBack from '@/hooks/useGoBack';
-// import ProfileNotificationsIcon from '@/shared-components/icons/components/user-profile/ProfileNotificationsIcon';
+import ProfileNotificationsIcon from '@/shared-components/icons/components/user-profile/ProfileNotificationsIcon';
 import ShareProfileIcon from '@/shared-components/icons/components/actions/ShareProfileIcon';
 import BackArrowIcon from '@/shared-components/icons/components/public/BackArrowIcon';
 import ThreeDotsIcon from '@/shared-components/icons/components/public/ThreeDotsIcon';
@@ -9,10 +9,12 @@ import ThreeDotsIcon from '@/shared-components/icons/components/public/ThreeDots
 import ProfileOptions from './components/ProfileOptions';
 
 import './index.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function ProfileTopButtons({ fetchData, internal }) {
   const [open, setOpen] = useState(false);
   const goBackHandler = useGoBack("/");
+  const navigate = useNavigate();
 
   if(!internal) {
     return (
@@ -37,7 +39,7 @@ export default function ProfileTopButtons({ fetchData, internal }) {
     return (
       <>
         <div className="profile-top-buttons__group">
-          {/* <ProfileNotificationsIcon className="profile-top-buttons__notifications-icon"/> */}
+          <ProfileNotificationsIcon className="profile-top-buttons__notifications-icon" onClick={()=>navigate('/notifications')}/>
           <ThreeDotsIcon className={`profile-top-buttons__profile-options-icon${open ? " active" : ""}`} onClick={()=>setOpen(!open)}/>
         </div>
     
