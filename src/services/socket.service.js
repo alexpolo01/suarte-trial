@@ -1,5 +1,7 @@
 import Notifier from "react-desktop-notification";
 
+import config from "@/config";
+
 import { actions } from "./constantInteraction";
 import { midfix, prefix, suffix } from "./constantSuarte";
 
@@ -8,10 +10,7 @@ const io = require('socket.io-client');
 let socket;
 
 function init () {
-  const socketUrl = process.env.NODE_ENV === "production" && process.env.REACT_APP_HOST_ENV === "production" ? "http://api.suarte.dev" : "https://dev.suarte.art";
-  // console.log(socketUrl);
-  // socket = io(socketUrl);
-  socket = io(`${socketUrl}:8000`);
+  socket = io(config.apis.api.url);
   socket.on('message', function(data) {
     console.log(data);
     if (data.prefix == "NewLogin") {
