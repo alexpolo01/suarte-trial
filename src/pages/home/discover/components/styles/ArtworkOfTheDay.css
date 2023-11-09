@@ -130,10 +130,6 @@
     .artwork-of-the-day-card__info {
         width: 100%;
     }
-
-    .artwork-of-the-day-card__date {
-        display: none;
-    }
     
     .artwork-of-the-day-card__artist-verified {
         width: 12px;

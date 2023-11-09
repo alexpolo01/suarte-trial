@@ -38,7 +38,7 @@ export default function ArtworkOfTheDay({ collectionData }) {
             <div className="artwork-of-the-day-card__info">
               <div className="artwork-of-the-day-card__info-inner">
                 <Text className="artwork-of-the-day-card__date" medium>
-                  {Utils.getDateInStringFromTimestamp(mainArtwork.metadata.day)}
+                  {Utils.getDateInStringFromTimestamp(mainArtwork?.metadata?.day)}
                 </Text>
                                 
                 <Text className="artwork-of-the-day-card__artist-name dots-on-overflow" medium>
