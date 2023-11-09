@@ -1,11 +1,11 @@
 const apisConfig = {
   apis: {
-    api: 
-      process.env.NODE_ENV === "production" && process.env.REACT_APP_HOST_ENV === "production" ?
-        {
-          protocol: 'https',
-          host: 'api.suarte.art',
-          port: '443'
+    api:
+      process.env.NODE_ENV === "production" && process.env.REACT_APP_HOST_ENV === "production"
+        ? {
+          protocol: "https",
+          host: "api.suarte.art",
+          port: "443",
         }
         : {
           protocol: "https",
