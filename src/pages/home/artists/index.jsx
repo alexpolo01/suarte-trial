@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import config from "@/config";
 import useGetSearchParams from "@/hooks/useGetSearchParams";
@@ -28,6 +29,10 @@ export default function HomeArtists() {
 
   return (
     <>
+      <Helmet> 
+        <title>Artists - Suarte</title>
+        <meta name="description" content="Meet, interact and collect artworks from the top artists behind the masterpieces on Suarte." />
+      </Helmet>
       <AppNavigationPage>
         <div className="home-artists__page">
           <HomeHeader 
@@ -43,7 +48,7 @@ export default function HomeArtists() {
               <SkeletonPage/>
               : queryData.data.data.length === 0 ?
                 <Text className="home-artists__empty-text" paragraph medium>
-                                No artists available for your search query.
+                                Represented artists will be added soon!
                 </Text>
                 :
                 <VirtualList 

@@ -49,8 +49,8 @@ const errorCodesConfig = {
     INVALID_OOB_CODE: "This link has expired. Please request a new password reset link.",
     INVALID_IBAN: "The entered IBAN is not valid. IBANs should contain only alphanumeric characters and have a valid country code and checksum. Please review and correct the IBAN.",
     INVALID_BIC: "The entered SWIFT/BIC is not valid. SWIFT/BIC codes should consist of 8 or 11 alphanumeric characters. Please double-check and try again.",
-    MAX_ARTLISTS: "You are not allowed to create more then 3 artlists in your profile.",
-    INVALID_ARTLIST_PERSONALIZED_TIME: "Invalid personalized time. Time must be a non-decimal number greater then 3 seconds.",
+    MAX_ARTLISTS: "You are not allowed to create more then 3 artlisThe minimum time lapse between artworks is 3 seconds.ts in your profile.",
+    INVALID_ARTLIST_PERSONALIZED_TIME: "The minimum time lapse between artworks is 3 seconds.",
     RESERVED: "Another collector is currently trying to buy this artwork. Please try again later or choose a different item.",
     BUY_NOT_AVAILABLE: "The item that you are trying to buy is not available."
   }

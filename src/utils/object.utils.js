@@ -107,6 +107,10 @@ function removeAttributeFromObject(attributeToSearch, object) {
   return newObject;
 }
 
+function isEmpty(object) {
+  return _.isEmpty(object);
+}
+
 const ObjectUtils = { 
   objectContains,
   getAttributeValue,
@@ -116,6 +120,7 @@ const ObjectUtils = {
   getObjectDiff,
   areObjectsDifferent,
   flattenObject,
+  isEmpty
 };
 
 export default ObjectUtils;

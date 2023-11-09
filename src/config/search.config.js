@@ -115,102 +115,143 @@ let searchConfig = {
           {
             category_item_name: "Abstraction", 
             category_item_image: "9e1e080d-1c24-4c37-6d25-0d7251a69f00", 
-            category_item_link: "/search/abstraction"
+            category_item_link: "/search/abstraction",
+            title: "Abstraction Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of abstraction artworks from art galleries on Suarte."
+
           },
           {
             category_item_name: "Figures", 
             category_item_image: "336712f5-d59c-4cf7-3508-aa07aa99b000", 
-            category_item_link: "/search/figures"
+            category_item_link: "/search/figures",
+            title: "Figures Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of figures artworks from art galleries on Suarte."
           },
           {
             category_item_name: "Landscape", 
             category_item_image: "c54e18a2-6e67-47a6-772a-d03f525fcf00", 
-            category_item_link: "/search/landscape"
+            category_item_link: "/search/landscape",
+            title: "Landscape Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of landscape artworks from art galleries on Suarte."
           },
           {
             category_item_name: "Pop Culture", 
             category_item_image: "fbb263a0-33d1-44c7-d62e-390ddccdec00", 
-            category_item_link: "/search/pop-culture"
+            category_item_link: "/search/pop-culture",
+            title: "Pop Culture Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of pop culture artworks from art galleries on Suarte."
           },
         ],
         emotions: [
           {
             category_item_name: "Happiness", 
             category_item_image: "842a5927-6f6e-4b3c-73dd-f18c1cd78f00", 
-            category_item_link: "/search/happiness"
+            category_item_link: "/search/happiness",
+            title: "Happiness Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of artworks from art galleries expressing happiness emotions on Suarte."
           },
           {
             category_item_name: "Love", 
             category_item_image: "97586b81-c31b-45dc-11ae-70627f5a0f00", 
-            category_item_link: "/search/love"
+            category_item_link: "/search/love",
+            title: "Love Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of artworks from art galleries expressing love emotions on Suarte."
           },
           {
             category_item_name: "Freedom", 
             category_item_image: "37329b53-ee5c-41f7-3d04-e89af2275000", 
-            category_item_link: "/search/freedom"
+            category_item_link: "/search/freedom",
+            title: "Freedom Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of artworks from art galleries expressing freedom emotions on Suarte."
           },
           {
             category_item_name: "Curiosity", 
             category_item_image: "6cb5a994-cce4-4d8a-f5bc-e31389eb5e00", 
-            category_item_link: "/search/curiosity"
+            category_item_link: "/search/curiosity",
+            title: "Curiosity Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of artworks from art galleries expressing curiosity emotions on Suarte."
           }
         ],
         colors: [
           {
             category_item_name: "Blue", 
             category_item_image: "9c40db5c-560e-4ce9-da2d-99389e6c9d00", 
-            category_item_link: "/search/blue"
+            category_item_link: "/search/blue",
+            title: "Blue Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of blue artworks from art galleries on Suarte."
           },
           {
             category_item_name: "Green", 
             category_item_image: "55dad981-273e-493d-a088-f5388f91df00", 
-            category_item_link: "/search/green"
+            category_item_link: "/search/green",
+            title: "Green Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of green artworks from art galleries on Suarte."
           },
           {
             category_item_name: "Red", 
             category_item_image: "5aecd209-a90a-4514-2316-ccf4af540e00", 
-            category_item_link: "/search/red"
+            category_item_link: "/search/red",
+            title: "Red Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of red artworks from art galleries on Suarte."
           },
           {
             category_item_name: "Yellow", 
             category_item_image: "f8e7fd1e-082d-422c-4823-ae527df88000", 
-            category_item_link: "/search/yellow"
+            category_item_link: "/search/yellow",
+            title: "Yellow Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of yellow artworks from art galleries on Suarte."
           }
         ],
         size: [
           {
             category_item_name: "Under 45cm",  
-            category_item_link: "/search/under-45cm"
+            category_item_link: "/search/under-45cm",
+            title: "Small Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of small size artworks from art galleries on Suarte."
           },
           {
             category_item_name: "45 cm - 90 cm",  
-            category_item_link: "/search/45cm-90cm"
+            category_item_link: "/search/45cm-90cm",
+            title: "Medium Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of medium size artworks from art galleries on Suarte."
           },
           {
             category_item_name: "90 cm - 120 cm",  
-            category_item_link: "/search/90cm-120cm"
+            category_item_link: "/search/90cm-120cm",
+            title: "Large Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of large size artworks from art galleries on Suarte."
           },
           {
             category_item_name: "Over 120cm",  
-            category_item_link: "/search/over-120cm"
+            category_item_link: "/search/over-120cm",
+            title: "Huge Artworks - Suarte",
+            metaDescription: "Explore, interact, buy and collect a curated collection of huge size artworks from art galleries on Suarte."
           }
         ],
         price: [
           {
             category_item_name: "Under $1000",  
-            category_item_link: "/search/under-1000-dollars"
+            category_item_link: "/search/under-1000-dollars",
+            title: "Artworks under $1000 - Suarte",
+            metaDescription: "Buy and collect a curated collection of huge size artworks from art galleries around the world on Suarte."
           },
           {
             category_item_name: "$1,001 - $5,000",  
-            category_item_link: "/search/between-1001-and-5000-dollars"
+            category_item_link: "/search/between-1001-and-5000-dollars",
+            title: "Artworks between $1001 and $5000 - Suarte",
+            metaDescription: "Buy and collect a curated collection of artworks between $1001 and $5000 from art galleries around the world on Suarte."
           },
           {
             category_item_name: "$5,001 - $10,000",  
-            category_item_link: "/search/between-5001-and-10000-dollars"
+            category_item_link: "/search/between-5001-and-10000-dollars",
+            title: "Artworks under $1000 - Suarte",
+            metaDescription: "Buy and collect a curated collection of artworks between $5001 and $10000 from art galleries around the world on Suarte."
           },
           {
             category_item_name: "Over $10,000",  
-            category_item_link: "/search/over-10000-dollars"
+            category_item_link: "/search/over-10000-dollars",
+            title: "Artworks over $10000 - Suarte",
+            metaDescription: "Buy and collect a curated collection of artworks over $10000 from art galleries around the world on Suarte."
           }
         ]
       }

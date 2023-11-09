@@ -27,9 +27,10 @@ export default function PersonalizedTime({ formState, setFormState, error }) {
           element="time_unit"
           type="select" 
           selectOptions={{ options: ["seconds", "minutes", "hours"] }}
-          value={formState.time_selected === "Personalized" ? formState.time_unit: ""}
+          value={formState.time_selected === "Personalized" ? (formState.time_unit || "seconds") : ""}
           onChange={newValue => updateFormState("time_unit", newValue)}
         />
+
       </div>
 
       <FormError error={error} element="time_quantity"/>

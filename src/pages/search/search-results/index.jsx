@@ -19,7 +19,7 @@ export default function SearchResults({ query }) {
     }
   });
   const navigateToArtwork = useNavigateToArtwork(`main_search`, queryData?.data, `/search/artwork${queryData?.queryString}`);
-
+  
   if(loading) {
     return (
       <SearchSkeleton/>
