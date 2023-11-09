@@ -1,0 +1,101 @@
+.render-inspiring-result__outter {
+    width: 100%;
+
+}
+
+@media (hover: hover) {
+    .render-inspiring-result__outter:hover {
+        background-color: var(--app-option_hover);
+    }    
+}
+
+.render-inspiring__result {
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.render-inspiring-result__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.render-inspiring-result__image {
+    flex-shrink: 0;
+    width: 45px;
+    background-color: var(--app-page_background);
+}
+
+.render-inspiring-result__name-block {
+    margin: 0px 12px;
+    margin-left: 8px;
+    overflow: hidden;
+}
+
+.render-inspiring-result__name-username {
+    font-weight: 500;
+    color: var(--app-generic-gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.render-inspiring-result__name-username.as-name {
+    color: var(--app-normal_text);
+}
+
+.render-inspiring-result__name-name {
+    font-weight: 500;
+    color: var(--app-normal_text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.render-inspiring-result__user-verified-icon {
+    fill: var(--app-theme-color);
+    width: 13px;
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+
+.render-inspiring-result__follow-button {
+    margin-left: auto;
+}
+
+@media (max-width: 1004px) {
+    .search-bar-inspiring__search-bar {
+        font-size: 15px;
+    }
+
+    .render-inspiring-result__user-verified-icon {
+        width: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .render-inspiring-result__image {
+        background-color: var(--app-card_background_more_visible);
+        box-shadow: var(--app-card_box_shadow);
+    }
+
+    .render-inspiring__result {
+        width: 90%;
+    }
+}
+
+@media (max-width: 550px) {
+    .render-inspiring-result__image {
+        width: 43px;
+    }
+
+    .render-inspiring-result__user-verified-icon {
+        top: 0px;
+    }
+}

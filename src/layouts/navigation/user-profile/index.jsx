@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { Navigate,Outlet, useParams } from 'react-router-dom';
 
 import config from '@/config';
@@ -40,6 +41,10 @@ function UserProfileRenderView({ profileUsername, internal }) {
   } else {
     return (
       <>
+        <Helmet>
+          <title>{(fetchData.user_name || 'Art traveller') + ` - Suarte`}</title>
+          <meta name="description" content={`Visit the Profile of ${fetchData.user_name}: ${fetchData.user_profile_info.user_description}`} />
+        </Helmet>
         <ProfileDataContext.Provider value={{ profileData: fetchData, setProfileData: setFetchData, internal }}>
           <AppNavigationPage>
             <PullToRefresh 

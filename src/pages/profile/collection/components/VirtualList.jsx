@@ -6,7 +6,7 @@ import useScreenSize from '@/hooks/useScreenSize';
 import ArtworkCard from '@/shared-components/cards/components/ArtworkCard';
 import InfiniteScroll from '@/shared-components/lists/components/InfiniteScroll';
 
-export default function VirtualList({ items, onLoadMore, navigateToArtwork }) {
+export default function VirtualList({ items, onLoadMore, navigateToArtwork, profileCollection = false }) {
   const screenSize = useScreenSize();
   const columnSizesCache = useRef(initColumnSizesCache());
   const sizeAndPositionCache = useRef([]);
@@ -86,7 +86,7 @@ export default function VirtualList({ items, onLoadMore, navigateToArtwork }) {
                     className="remove-scrollbar"
                     cellRenderer={({ index, key, style }) => (
                       <div key={key} style={style} ref={infiniteScrollAssigner(index)}>
-                        <ArtworkCard artworkData={items.data[index]} onClick={()=>navigateToArtwork(items.data[index].product_id)}/>
+                        <ArtworkCard artworkData={items.data[index]} onClick={()=>navigateToArtwork(items.data[index].product_id)} profileCollection={profileCollection}/>
                       </div>
                     )}
                   />

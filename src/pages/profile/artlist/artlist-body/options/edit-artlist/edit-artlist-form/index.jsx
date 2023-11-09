@@ -102,7 +102,7 @@ export default function EditArtlistForm({ close }) {
           turnOff={!formState.artlist_title}
           className="edit-artlist-popup__submit-form-button mt-m"
         >
-                    Edit artlist
+                    Save changes
         </ContinueButton>
       </form>
     </>

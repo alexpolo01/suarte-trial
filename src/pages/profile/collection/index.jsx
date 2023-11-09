@@ -34,7 +34,8 @@ export default function ProfileCollection() {
                 internal ? 
                   "To begin your collection, purchase an Original Artwork or Limited Edition."
                   :
-                  "The collection is currently empty. Check back later for future additions."
+                  // "The collection is currently empty. Check back later for future additions."
+                  ""
               }                        
             </Text>
             :
@@ -42,6 +43,7 @@ export default function ProfileCollection() {
               items={fetchData} 
               onLoadMore={loadMoreData}
               navigateToArtwork={navigateToArtwork}
+              profileCollection={true}
             />
       }
     </>

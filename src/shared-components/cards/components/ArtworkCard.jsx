@@ -1,48 +1,95 @@
-import LimitedEditionIcon from '@/shared-components/icons/components/artwork/LimitedEditionIcon';
-import Text from '@/shared-components/text/components/Text';
-import Utils from '@/utils';
+import LimitedEditionIcon from "@/shared-components/icons/components/artwork/LimitedEditionIcon";
+import Text from "@/shared-components/text/components/Text";
+import Utils from "@/utils";
 
-import ArtworkImage from './ArtworkImage';
+import ArtworkImage from "./ArtworkImage";
 
-import './styles/ArtworkCard.css';
+import "./styles/ArtworkCard.css";
 
-export default function ArtworkCard({ artworkData, className="", onClick }) {
+export default function ArtworkCard({
+  artworkData,
+  className = "",
+  onClick,
+  profileCollection = false,
+  collectionName = "",
+}) {
   return (
     <>
-      <div className={`artwork-card__card ${className} ${onClick ? "pointer" : ""}`} onClick={onClick}>
-        <ArtworkImage 
-          image={artworkData.artwork_media.artwork_main_picture.image_id} 
-          imageClassName="artwork-card__artwork-image" 
-          imageTemplateClassName="artwork-card__image-template" 
-          style={{ aspectRatio: artworkData.artwork_media.artwork_main_picture.image_original_data.aspect_ratio }}
+      <div
+        className={`artwork-card__card ${className} ${
+          onClick ? "pointer" : ""
+        }`}
+        onClick={onClick}
+      >
+        <ArtworkImage
+          image={artworkData.artwork_media.artwork_main_picture.image_id}
+          imageClassName="artwork-card__artwork-image"
+          imageTemplateClassName="artwork-card__image-template"
+          style={{
+            aspectRatio:
+              artworkData.artwork_media.artwork_main_picture.image_original_data
+                .aspect_ratio,
+          }}
           forceSmaller={300}
-          forceSmallerDimension={artworkData.artwork_media.artwork_main_picture.image_original_data.aspect_ratio > 1 ? "height" : "width"}
+          forceSmallerDimension={
+            artworkData.artwork_media.artwork_main_picture.image_original_data
+              .aspect_ratio > 1
+              ? "height"
+              : "width"
+          }
         />
 
-        <div className={`artwork-card__title-section${artworkData.artwork_limited_edition ? " limited-edition" : ""}`}>
+        <div
+          className={`artwork-card__title-section${
+            artworkData.artwork_limited_edition ? " limited-edition" : ""
+          }`}
+        >
           <Text className="artwork-card__title" paragraph medium>
             {artworkData.artwork_about.artwork_title}
           </Text>
 
-          {Boolean(artworkData.artwork_limited_editions) && <LimitedEditionIcon className="artwork-card__limited-edition-icon"/>}
+          {Boolean(artworkData.artwork_limited_editions) && (
+            <LimitedEditionIcon className="artwork-card__limited-edition-icon" />
+          )}
         </div>
 
         <Text className="artwork-card__text artist" paragraph small>
-          {
-            artworkData.artwork_about.artwork_artist ?
-              artworkData.artwork_about.artwork_artist.user_name
-              :
-              artworkData.artwork_about.artwork_gallery_artist.artist_name
-          }
+          {artworkData.artwork_about.artwork_artist
+            ? artworkData.artwork_about.artwork_artist.user_name
+            : artworkData.artwork_about.artwork_gallery_artist.artist_name}
         </Text>
 
-        <p className="artwork-card__text medium-year mt-s">
-          {artworkData.artwork_about.artwork_medium}, {artworkData.artwork_about.artwork_year}
-        </p>
+        {!profileCollection && (
+          <>
+            <p className="artwork-card__text medium-year mt-s">
+              {artworkData.artwork_about.artwork_medium}, {artworkData.artwork_about.artwork_year}
+            </p>
+            
+            <p className="artwork-card__text medium-year mt-s">
+              {Utils.getDateInStringFromTimestamp(artworkData.collection_artwork[0].createdAt)}
+            </p>
+          </>
+        )}
 
-        <Text className="artwork-card__text price" paragraph small>
-          {Utils.getArtworkPrice(artworkData.artwork_about.artwork_price, artworkData.artwork_about.artwork_currency)}
-        </Text>
+        {!profileCollection ? (
+          <Text className="artwork-card__text price" paragraph small>
+            {collectionName === "Limited Editions"
+              ? "From " +
+                Utils.getArtworkPrice(
+                  artworkData.artwork_about.artwork_price,
+                  artworkData.artwork_about.artwork_currency
+                )
+              : Utils.getArtworkPrice(
+                artworkData.artwork_about.artwork_price,
+                artworkData.artwork_about.artwork_currency
+              )}
+          </Text>
+        ) : (
+          <Text className="artwork-card__text price" paragraph small>
+            {artworkData.artwork_about.artwork_size.height} cm x{" "}
+            {artworkData.artwork_about.artwork_size.length} cm
+          </Text>
+        )}
       </div>
     </>
   );

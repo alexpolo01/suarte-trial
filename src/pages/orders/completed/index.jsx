@@ -23,7 +23,7 @@ export default function OrdersCompleted() {
   } else if(fetchData.data.length === 0) {
     return (
       <Text className="orders-completed__empty-text" paragraph small>
-                You currently have no orders that have been completed.
+                There are currently no orders that have been completed.
       </Text>
     );
   } else {

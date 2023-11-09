@@ -114,7 +114,7 @@ export default function ArtworkTerms({ open, close }) {
 
               <Text className="artwork-terms__text" paragraph justify small>
                 <span>Pricing:</span> The Gallery retains complete autonomy in setting 
-                                the price of the artwork, and it must offer the "Buy Now" 
+                                the price of the artwork, and it must offer the "Purchase Now" 
                                 feature for all artworks uploaded to the platform. 
               </Text>
             </div>

@@ -90,6 +90,11 @@ export default function useQuery(queryId, url, query, options={}) {
     }
   }
 
+  async function fetchData() {
+    setLoading(true);
+    await _fetchData();
+  }
+
   function setQueryData(newData) {
     _updateUserInterfaceIfNecessary(newData);
   }
@@ -121,5 +126,5 @@ export default function useQuery(queryId, url, query, options={}) {
     }
   }, dependencyArray);
 
-  return { loading, queryData, setQueryData, loadMoreData };
+  return { loading, queryData, setQueryData, loadMoreData, fetchData };
 }

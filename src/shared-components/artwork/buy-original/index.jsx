@@ -56,8 +56,8 @@ export default function BuyOriginalButton({ artworkData }) {
             privateActionHandler(handleBuyNow);
           }}
         >
-          <Text className="buy-original-button__text" small>
-                        Buy now
+          <Text className="buy-original-button__text" extraSmall>
+                        Purchase Now
           </Text>
     
           <PriceTag 

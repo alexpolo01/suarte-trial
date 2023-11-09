@@ -13,15 +13,15 @@ const SIZES = [
 ];
 
 const PRICES = [
-  { 1: 110, 2: 210, 3: 300, minPrice: 1250, maxPrice: 3500 },
-  { 1: 150, 2: 230, 3: 330, minPrice: 3500, maxPrice: 7000 },
-  { 1: 170, 2: 250, 3: 350, minPrice: 7000, maxPrice: Number.MAX_VALUE }
+  { 1: 100, 2: 200, 3: 300, minPrice: 1250, maxPrice: 3500 },
+  { 1: 100, 2: 200, 3: 300, minPrice: 3500, maxPrice: 7000 },
+  { 1: 100, 2: 200, 3: 300, minPrice: 7000, maxPrice: Number.MAX_VALUE }
 ];
 
 const UNITS = [
   { 1: 250 },
   { 1: 150, 2: 100 },
-  { 1: 125, 2: 75, 3: 50 },
+  { 1: 100, 2: 88, 3: 62 },
 ];
 
 function getPrice(edition, originalPrice) {
@@ -46,7 +46,7 @@ function calculateLimitedEditionsPriceAndUnits(editions, originalPrice) {
     editions[i].unidades = UNITS[editions.length - 1][i + 1];
   }
 }
-
+// max benefit percentage 30%
 function calculateMaxBenefit(editions) {
   let maxBenefit = 0;
   for (let i = 0; i < editions.length; i++) {

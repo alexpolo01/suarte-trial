@@ -35,7 +35,7 @@ export default function BuyDetails({ open, close, artworkData, typeOfPurchase })
           <div className="buy-details__header-outter">
             <div className="buy-details__header">
               <Text className="buy-details__header-text" medium>
-                                Buy now
+                                Purchase Now
               </Text>
 
               <XIcon className="buy-details__close" onClick={close}/>

@@ -23,8 +23,7 @@ export default function LikedThoughts() {
             <LikedThoughtsLoader/>
             : fetchData.data.length === 0 ? 
               <Text className="activity-liked-thoughts__text" medium>
-                            Looks like you haven't given any likes to thoughts yet. Start engaging with the community 
-                            by liking the thoughts that stand out to you. 
+                            Liked thoughts will be displayed here.
               </Text>
               :
               <VirtualList

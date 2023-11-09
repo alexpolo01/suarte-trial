@@ -28,7 +28,7 @@ export default function InventorySold() {
   } else if(fetchData.data.length === 0) {
     return (
       <Text className="inventory-sold__empty-text" paragraph small>
-                Your sold artworks will build this view.
+                Sold artworks will build this view.
       </Text>
     );
   } else {
