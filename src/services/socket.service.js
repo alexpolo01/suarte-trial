@@ -8,8 +8,10 @@ const io = require('socket.io-client');
 let socket;
 
 function init () {
-  socket = io("http://dev.suarte.art:8000");
-
+  const socketUrl = process.env.NODE_ENV === "production" && process.env.REACT_APP_HOST_ENV === "production" ? "http://api.suarte.dev" : "https://dev.suarte.art";
+  // console.log(socketUrl);
+  // socket = io(socketUrl);
+  socket = io(`${socketUrl}:8000`);
   socket.on('message', function(data) {
     console.log(data);
     if (data.prefix == "NewLogin") {
