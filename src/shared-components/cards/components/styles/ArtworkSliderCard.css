@@ -54,5 +54,8 @@
     .artworks-slider-card__card-content-text {
         line-height: 15px;
     }
+    .artworks-slider-card__card-container {
+        display: none;
+    }
 }
 

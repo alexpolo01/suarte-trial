@@ -2,6 +2,9 @@
 const numberWithCommas =  (x) =>{ 
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
+const numberWithDots =  (x) =>{ 
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+};
 
 function numberParserMillionThousand(number) {
   const K_VALUE = 1000;
@@ -47,11 +50,13 @@ const timeParserMMSS = (secs) => {
 
 function getArtworkPrice(price, currency) {
   const currencySymbol = currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£';
+  if(currency === 'EUR') return `${numberWithDots(price)}${currencySymbol}`;
   return `${currencySymbol}${numberWithCommas(price)}`;
 }
 
 const NumberUtils = {
   numberWithCommas,
+  numberWithDots,
   numberParserMillionThousand,
   timeParserMMSS,
   getArtworkPrice

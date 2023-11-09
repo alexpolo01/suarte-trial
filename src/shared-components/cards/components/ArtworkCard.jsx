@@ -13,7 +13,6 @@ export default function ArtworkCard({
   profileCollection = false,
   collectionName = "",
 }) {
-  console.log("artworkData:", artworkData);
   return (
     <>
       <div
@@ -61,10 +60,15 @@ export default function ArtworkCard({
         </Text>
 
         {!profileCollection && (
-          <p className="artwork-card__text medium-year mt-s">
-            {artworkData.artwork_about.artwork_medium},{" "}
-            {artworkData.artwork_about.artwork_year}
-          </p>
+          <>
+            <p className="artwork-card__text medium-year mt-s">
+              {artworkData.artwork_about.artwork_medium}, {artworkData.artwork_about.artwork_year}
+            </p>
+            
+            <p className="artwork-card__text medium-year mt-s">
+              {Utils.getDateInStringFromTimestamp(artworkData.collection_artwork[0].createdAt)}
+            </p>
+          </>
         )}
 
         {!profileCollection ? (

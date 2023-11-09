@@ -39,7 +39,7 @@ export default function ArtworkSliderCard({
         />
 
         {!hideText && (
-          <>
+          <div className="artworks-slider-card__card-container">
             <div className="artworks-slider-card__card-content-no-layout">
               <Text
                 className="artworks-slider-card__card-content-title dots-on-overflow"
@@ -103,7 +103,7 @@ export default function ArtworkSliderCard({
                 .
               </Text>
             </div>
-          </>
+          </div>
         )}
       </div>
     </>
