@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
 
+import WebsocketProvider from './layouts/wrappers/components/SocketProvider';
 import router from './routes';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import store from './store';
@@ -18,7 +19,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 serviceWorkerRegistration.unregister();
 
 root.render(
-  <Provider store={store}>
-    <RouterProvider router={router}/>
-  </Provider>
+  <WebsocketProvider>
+    <Provider store={store}>
+      <RouterProvider router={router}/>
+    </Provider>
+  </WebsocketProvider>
 );

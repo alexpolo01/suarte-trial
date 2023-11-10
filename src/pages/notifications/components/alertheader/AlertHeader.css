@@ -12,4 +12,19 @@
   padding: 0px 10px;
   margin: 0px;
   color: var(--app-normal_text);
+  font-weight: 600;
+}
+
+.notification-header__back-section {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.notification-header__back-icon {
+  width: 12px;
+  box-sizing: content-box;
+  fill: var(--app-theme-color);
 }

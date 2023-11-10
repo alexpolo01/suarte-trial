@@ -1,21 +1,68 @@
 import { onIdTokenChanged } from "firebase/auth";
 import jwtDecode from "jwt-decode";
 import { useEffect } from "react";
+import Notifier from "react-desktop-notification";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 
 import useGetSearchParams from "@/hooks/useGetSearchParams";
 import useStateHandler from "@/hooks/useStateHandler";
+import { actions } from "@/pages/notifications/components/interaction/constant";
+import { midfix, prefix, suffix } from "@/pages/notifications/components/suarte/constant";
 import { auth } from "@/services/firebase.service";
-import SocketService from "@/services/socket.service";
 import UserService from "@/services/user.service";
 import AuthPopup from "@/shared-components/popups/auth-popup";
 import CookiesPopup from "@/shared-components/popups/components/CookiesPopup";
 import TemporalPopup from "@/shared-components/popups/components/TemporalPopup";
 import Utils from "@/utils";
 
+import { useWebsocket } from "./SocketProvider";
+
 export default function AppInit() {
   const { stateHandler, cacheHandler, state } = useStateHandler();
   const [params] = useGetSearchParams({ validParams: ["invite"] });
+  const socket = useWebsocket();
+
+  const newLogin = data => {
+    if (data.username !== undefined) {
+      console.log("newLogin", data);
+      gotNewNotification({
+        type: "NewLogin",
+        title: "Ally Signin",
+        content: "Ally " + data.username + " Joined!",
+      });
+    }
+  };
+
+  const newNotification = data => {
+    console.log("notificationData", data);
+    let message = "";
+    if (data.type) {
+      message +=
+        prefix[data.status] +
+        data.subject +
+        midfix[data.status] +
+        data.object +
+        suffix[data.status] +
+        data.result;
+    } else {
+      message +=
+        data.subject +
+        actions[data.status] +
+        data.object +
+        data.result +
+        data.period;
+    }
+    stateHandler.set("notifications", [ ...state.notifications, data]);
+    gotNewNotification({
+      type: "Notification",
+      title: "",
+      content: message,
+    });
+  };
+  
+  const gotNewNotification = data => {
+    Notifier.focus(data.title, data.content, "localhost:3001", "");
+  };
 
   useEffect(()=>{
     onIdTokenChanged(auth, async (user) => {
@@ -27,14 +74,16 @@ export default function AppInit() {
 
           if(response.ok) {
             stateHandler.set("user_session", data);
-            const user_name = data.user_session.user_username;
-            const user_email = data.user_session.user_email;
+            if(socket) {
+              socket.emit("setUserInfo", {
+                username: data.user_username,
+                usermail: data.user_email,
+              });
 
-            const sendData = {
-              username: user_name,
-              usermail: user_email,
-            };
-            SocketService.setUserInfo(sendData);
+              socket.on("newLogin", newLogin);
+              socket.on("notificationData", newNotification);
+
+            }
           }  
         }
       } else {
@@ -47,9 +96,7 @@ export default function AppInit() {
       stateHandler.set("invite", params.invite);
     }
 
-    SocketService.init();
-
-  }, []);
+  }, [socket]);
 
   useEffect(()=>{
     if(state.user_session) {

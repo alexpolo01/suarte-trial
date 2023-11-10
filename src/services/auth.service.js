@@ -1,7 +1,6 @@
 import config from '@/config';
 import fetchWrapper from '@/services/fetchWrapper.service';
 import { loginWithCustomToken, logoutUser } from '@/services/firebase.service';
-import SocketService from '@/services/socket.service';
 import Utils from '@/utils';
 
 function login(email, password) {
@@ -119,19 +118,6 @@ function registerArtist(oobCode, password, invite) {
 }
 
 async function initUserSession(stateHandler, setLoading, data) {
-  const user_name = data.user_session.user_username;
-  const user_email = data.user_session.user_email;
-
-  const sendData = {
-    username: user_name,
-    usermail: user_email,
-  };
-  SocketService.setUserInfo(sendData);
-
-  const message = {
-    prefix: "Login",
-  };
-  SocketService.sendMessage(message);
   await loginWithCustomToken(data.custom_token);
   stateHandler.set("user_session", data.user_session);
   if(setLoading) setLoading(false);

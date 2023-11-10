@@ -1,19 +1,19 @@
 import { useState } from 'react';
 
+import useStateHandler from '@/hooks/useStateHandler';
+
 import AppNavigationPage from '../../shared-components/wrappers/components/AppNavigationPage';
 
 import AlertFrame from './components/alertframe';
 import AlertHeader from './components/alertheader';
 import AlertTab from './components/alerttab';
-import { artLover, interaction } from './constant';
 
 import './index.css';
-
-const data = [...artLover, ...interaction];
 
 export default function Notifications() {
 
   const [index, setIndex] = useState(0);
+  const { state } = useStateHandler();
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function Notifications() {
           <AlertHeader />
           <AlertTab index={index} setIndex={setIndex}/>
           {
-            data.map((item, idx) => (
+            state.notifications && state.notifications.map((item, idx) => (
               (!index || index == item.type + 1) && <AlertFrame key={idx} value={item} />
             ))
           }
