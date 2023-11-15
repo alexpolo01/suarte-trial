@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-import config from "@/config";
+// import config from "@/config";
 
 export const WebsocketContext = createContext(null);
 
@@ -10,7 +10,8 @@ const WebsocketProvider = ({ children }) => {
 
   useEffect(() => {
     try {
-      const socketConnection = io(config.apis.api.url);
+      // const socketConnection = io(config.apis.api.url);
+      const socketConnection = io("localhost:8000");
       socketConnection.on('connect', () => {
         setConnection(socketConnection);
       });

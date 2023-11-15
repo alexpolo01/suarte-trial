@@ -91,7 +91,7 @@ const midfix = [
 ];
 
 const suffix = [
-  '”! Go to Suarteroad to see what’s next',
+  '” Go to Suarteroad to see what’s next',
   '',
   ' has been placed! We will keep you updated on its progress',
   ' is on its way. Get ready to welcome it home',
@@ -102,7 +102,7 @@ const suffix = [
   ' is on its way. Prepare to give it a warm welcome!',
   '',
   '? If so, please confirm its reception',
-  '”! Go to Suarteroad to see what’s next',
+  '” Go to Suarteroad to see what’s next',
   '',
   ' has been placed! We will keep you updated on its progress',
   ' is on its way. Get ready to welcome it home',

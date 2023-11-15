@@ -10,6 +10,7 @@
   width: 33.33%;
   height: 32px;
   cursor: pointer;
+  color: white;
 }
 
 .notification__tab.active {

@@ -34,16 +34,15 @@ export default function AppInit() {
   };
 
   const newNotification = data => {
-    console.log("notificationData", data);
     let message = "";
     if (data.type) {
       message +=
-        prefix[data.status] +
-        data.subject +
+        prefix[data.status-1] +
+        data.subject ?? "" +
         midfix[data.status] +
-        data.object +
+        data.object ?? "" +
         suffix[data.status] +
-        data.result;
+        data.result ?? "";
     } else {
       message +=
         data.subject +
@@ -52,15 +51,16 @@ export default function AppInit() {
         data.result +
         data.period;
     }
-    stateHandler.set("notifications", [ ...state.notifications, data]);
     gotNewNotification({
       type: "Notification",
-      title: "",
+      title: "Notification",
       content: message,
     });
+    stateHandler.set("notifications", [ ...state.notifications, data]);
   };
   
   const gotNewNotification = data => {
+    console.log("notificationData", data);
     Notifier.focus(data.title, data.content, "localhost:3001", "");
   };
 
