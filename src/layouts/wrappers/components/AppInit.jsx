@@ -15,7 +15,7 @@ import CookiesPopup from "@/shared-components/popups/components/CookiesPopup";
 import TemporalPopup from "@/shared-components/popups/components/TemporalPopup";
 import Utils from "@/utils";
 
-import { useWebsocket } from "./SocketProvider";
+import useWebsocket from "./WebSocket";
 
 export default function AppInit() {
   const { stateHandler, cacheHandler, state } = useStateHandler();
