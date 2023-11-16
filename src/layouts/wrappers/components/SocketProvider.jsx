@@ -15,6 +15,9 @@ const WebsocketProvider = ({ children }) => {
       socketConnection.on('connect', () => {
         setConnection(socketConnection);
       });
+      socketConnection.on('disconnect', () => {
+        setConnection(null);
+      });
     } catch (err) {
       console.log(err);
     }

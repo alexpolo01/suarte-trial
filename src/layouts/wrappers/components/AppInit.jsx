@@ -74,16 +74,6 @@ export default function AppInit() {
 
           if(response.ok) {
             stateHandler.set("user_session", data);
-            if(socket) {
-              socket.emit("setUserInfo", {
-                username: data.user_username,
-                usermail: data.user_email,
-              });
-
-              socket.on("newLogin", newLogin);
-              socket.on("notificationData", newNotification);
-
-            }
           }  
         }
       } else {
@@ -96,17 +86,28 @@ export default function AppInit() {
       stateHandler.set("invite", params.invite);
     }
 
-  }, [socket]);
+  }, []);
 
   useEffect(()=>{
     if(state.user_session) {
       document.body.setAttribute("data-theme", state.user_session.user_preferences.theme);
       document.body.setAttribute("data-mode", state.user_session.user_preferences.mode);
+      
+      if(socket) {
+        socket.emit("setUserInfo", {
+          username: state.user_session.user_username,
+          usermail: state.user_session.user_email,
+        });
+
+        socket.on("newLogin", newLogin);
+        socket.on("notificationData", newNotification);
+      }
+
     } else {
       document.body.setAttribute("data-theme", "starry_moon");
       document.body.setAttribute("data-mode", "dark");
     }
-  }, [state.user_session]);
+  }, [state.user_session, socket]);
 
   useEffect(()=>{
     Utils.preloadImages([
