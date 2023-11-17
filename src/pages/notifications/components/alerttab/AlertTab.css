@@ -20,6 +20,13 @@
 
 .notification__tab__title{
   text-align: center;
-  color: var(--app-theme-color);
   margin: auto 0px;
+}
+
+.notification__tab .notification__tab__title {
+  color: var(--app-normal-text);
+}
+
+.notification__tab.active .notification__tab__title {
+  color: var(--app-theme-color);
 }

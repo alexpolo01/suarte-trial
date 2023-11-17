@@ -11,6 +11,7 @@ const apisConfig = {
           protocol: "https",
           host: "dev.suarte.art",
           port: "443",
+          // protocol: "http",
           // host: "localhost",
           // port: "3000"
         },

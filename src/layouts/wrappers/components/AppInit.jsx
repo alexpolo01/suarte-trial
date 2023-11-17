@@ -1,6 +1,6 @@
 import { onIdTokenChanged } from "firebase/auth";
 import jwtDecode from "jwt-decode";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Notifier from "react-desktop-notification";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 
@@ -21,6 +21,7 @@ export default function AppInit() {
   const { stateHandler, cacheHandler, state } = useStateHandler();
   const [params] = useGetSearchParams({ validParams: ["invite"] });
   const socket = useWebsocket();
+  const [newData, setNewData] = useState(null);
 
   const newLogin = data => {
     if (data.username !== undefined) {
@@ -37,7 +38,7 @@ export default function AppInit() {
     let message = "";
     if (data.type) {
       message +=
-        prefix[data.status-1] +
+        prefix[data.status] +
         data.subject ?? "" +
         midfix[data.status] +
         data.object ?? "" +
@@ -45,24 +46,33 @@ export default function AppInit() {
         data.result ?? "";
     } else {
       message +=
-        data.subject +
+        data.subject ?? "" +
         actions[data.status] +
-        data.object +
-        data.result +
-        data.period;
+        data.object ?? "" +
+        data.result ?? "" +
+        data.period ?? "";
     }
+    console.log(message, data);
     gotNewNotification({
       type: "Notification",
       title: "Notification",
       content: message,
+      icon: data.sbj_image
     });
-    stateHandler.set("notifications", [ ...state.notifications, data]);
+    setNewData(data);
   };
   
   const gotNewNotification = data => {
-    console.log("notificationData", data);
-    Notifier.focus(data.title, data.content, "localhost:3001", "");
+    Notifier.focus(data.title, data.content, "localhost:3001", data.icon);
   };
+
+  useEffect(() => {
+    if(newData != null) {
+      console.log(newData);
+      stateHandler.set("notifications", [...state.notifications, newData]);
+      setNewData(null);
+    }
+  }, [newData]);
 
   useEffect(()=>{
     onIdTokenChanged(auth, async (user) => {
@@ -85,7 +95,7 @@ export default function AppInit() {
     if(params?.invite) {
       stateHandler.set("invite", params.invite);
     }
-
+    stateHandler.set("notifications", []);
   }, []);
 
   useEffect(()=>{
@@ -106,6 +116,14 @@ export default function AppInit() {
     } else {
       document.body.setAttribute("data-theme", "starry_moon");
       document.body.setAttribute("data-mode", "dark");
+      if(socket) {
+        socket.emit("setUserInfo", {
+          username: "",
+          usermail: "",
+        });
+        socket.off("newLogin");
+        socket.off("notificationData");
+      }
     }
   }, [state.user_session, socket]);
 
