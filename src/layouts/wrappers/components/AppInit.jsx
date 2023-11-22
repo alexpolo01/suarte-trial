@@ -5,6 +5,7 @@ import Notifier from "react-desktop-notification";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import io from 'socket.io-client';
 
+import apisConfig from "@/config/apis.config";
 import useGetSearchParams from "@/hooks/useGetSearchParams";
 import useStateHandler from "@/hooks/useStateHandler";
 import { actions } from "@/pages/notifications/components/interaction/constant";
@@ -69,45 +70,6 @@ export default function AppInit() {
     }
   }, [newData]);
 
-  useEffect(()=>{
-    onIdTokenChanged(auth, async (user) => {
-      if(user) {
-        const decodedToken = jwtDecode(user.accessToken);
-                
-        if(decodedToken._id) { /** We check if the token is from our custom token login */
-          const { response, data } = await UserService.getUserSession();
-
-          if(response.ok) {
-            stateHandler.set("user_session", data);
-          }  
-        }
-      } else {
-        stateHandler.set("user_session", null);
-        cacheHandler.clearCache();
-      }
-    });
-
-    if(params?.invite) {
-      stateHandler.set("invite", params.invite);
-    }
-    stateHandler.set("notifications", []);
-    
-    Utils.preloadImages([
-      "07e0bb36-e259-4df0-e382-4c78834aa700/w=300", 
-      "13a34fe1-4954-46e9-4a6a-f79af8985d00/public", 
-      "73d03466-3a94-4da0-5a38-163895a91200/w=1000,blur=20", 
-      "1dc634fd-ff91-4e23-0227-9e2e4437f700/w=500,blur=20", 
-      "287f3610-3513-446d-5779-91763bdbe000/w=2000"
-    ]);
-
-    const socketConnection = io("localhost:8000");
-    setSocket(socketConnection);
-    socketConnection.on('connect', () => { setSocketState(true); });
-    socketConnection.on('disconnect', () => { setSocketState(false); });
-    socketConnection.on("newLogin", newLogin);
-    socketConnection.on("notificationData", newNotification);
-  }, []);
-
   useEffect(() => {
     if(state.user_session) {
       if(socketState) {
@@ -142,6 +104,45 @@ export default function AppInit() {
       }
     }
   }, [state.user_session]);
+
+  useEffect(()=>{
+    onIdTokenChanged(auth, async (user) => {
+      if(user) {
+        const decodedToken = jwtDecode(user.accessToken);
+                
+        if(decodedToken._id) { /** We check if the token is from our custom token login */
+          const { response, data } = await UserService.getUserSession();
+
+          if(response.ok) {
+            stateHandler.set("user_session", data);
+          }  
+        }
+      } else {
+        stateHandler.set("user_session", null);
+        cacheHandler.clearCache();
+      }
+    });
+
+    if(params?.invite) {
+      stateHandler.set("invite", params.invite);
+    }
+    stateHandler.set("notifications", []);
+    
+    Utils.preloadImages([
+      "07e0bb36-e259-4df0-e382-4c78834aa700/w=300", 
+      "13a34fe1-4954-46e9-4a6a-f79af8985d00/public", 
+      "73d03466-3a94-4da0-5a38-163895a91200/w=1000,blur=20", 
+      "1dc634fd-ff91-4e23-0227-9e2e4437f700/w=500,blur=20", 
+      "287f3610-3513-446d-5779-91763bdbe000/w=2000"
+    ]);
+
+    const socketConnection = io(apisConfig.apis.api.url);
+    setSocket(socketConnection);
+    socketConnection.on('connect', () => { setSocketState(true); });
+    socketConnection.on('disconnect', () => { setSocketState(false); });
+    socketConnection.on("newLogin", newLogin);
+    socketConnection.on("notificationData", newNotification);
+  }, []);
 
   return (
     <>
