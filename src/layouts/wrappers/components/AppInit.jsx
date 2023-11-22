@@ -3,6 +3,7 @@ import jwtDecode from "jwt-decode";
 import { useEffect, useState } from "react";
 import Notifier from "react-desktop-notification";
 import { Outlet, ScrollRestoration } from "react-router-dom";
+import io from 'socket.io-client';
 
 import useGetSearchParams from "@/hooks/useGetSearchParams";
 import useStateHandler from "@/hooks/useStateHandler";
@@ -15,42 +16,36 @@ import CookiesPopup from "@/shared-components/popups/components/CookiesPopup";
 import TemporalPopup from "@/shared-components/popups/components/TemporalPopup";
 import Utils from "@/utils";
 
-import useWebsocket from "./WebSocket";
-
 export default function AppInit() {
   const { stateHandler, cacheHandler, state } = useStateHandler();
   const [params] = useGetSearchParams({ validParams: ["invite"] });
-  const socket = useWebsocket();
+  const [socket, setSocket] = useState(null);
   const [newData, setNewData] = useState(null);
+  const [socketState, setSocketState] = useState(false);
 
   const newLogin = data => {
     if (data.username !== undefined) {
       console.log("newLogin", data);
-      gotNewNotification({
-        type: "NewLogin",
-        title: "Ally Signin",
-        content: "Ally " + data.username + " Joined!",
-      });
     }
   };
 
   const newNotification = data => {
     let message = "";
     if (data.type) {
-      message +=
-        prefix[data.status] +
-        data.subject ?? "" +
-        midfix[data.status] +
-        data.object ?? "" +
-        suffix[data.status] +
-        data.result ?? "";
+      message =
+        ( prefix[data.status] ) +
+        ( data.subject ?? "" ) +
+        ( midfix[data.status] ) +
+        ( data.object ?? "" ) +
+        ( suffix[data.status] ) +
+        ( data.result ?? "" ) ;
     } else {
-      message +=
-        data.subject ?? "" +
-        actions[data.status] +
-        data.object ?? "" +
-        data.result ?? "" +
-        data.period ?? "";
+      message =
+        ( data.subject ?? "" ) +
+        ( actions[data.status] ) +
+        ( data.object ?? "" ) +
+        ( data.result ?? "" ) +
+        ( data.period ?? "" ) ;
     }
     console.log(message, data);
     gotNewNotification({
@@ -96,38 +91,7 @@ export default function AppInit() {
       stateHandler.set("invite", params.invite);
     }
     stateHandler.set("notifications", []);
-  }, []);
-
-  useEffect(()=>{
-    if(state.user_session) {
-      document.body.setAttribute("data-theme", state.user_session.user_preferences.theme);
-      document.body.setAttribute("data-mode", state.user_session.user_preferences.mode);
-      
-      if(socket) {
-        socket.emit("setUserInfo", {
-          username: state.user_session.user_username,
-          usermail: state.user_session.user_email,
-        });
-
-        socket.on("newLogin", newLogin);
-        socket.on("notificationData", newNotification);
-      }
-
-    } else {
-      document.body.setAttribute("data-theme", "starry_moon");
-      document.body.setAttribute("data-mode", "dark");
-      if(socket) {
-        socket.emit("setUserInfo", {
-          username: "",
-          usermail: "",
-        });
-        socket.off("newLogin");
-        socket.off("notificationData");
-      }
-    }
-  }, [state.user_session, socket]);
-
-  useEffect(()=>{
+    
     Utils.preloadImages([
       "07e0bb36-e259-4df0-e382-4c78834aa700/w=300", 
       "13a34fe1-4954-46e9-4a6a-f79af8985d00/public", 
@@ -135,7 +99,49 @@ export default function AppInit() {
       "1dc634fd-ff91-4e23-0227-9e2e4437f700/w=500,blur=20", 
       "287f3610-3513-446d-5779-91763bdbe000/w=2000"
     ]);
+
+    const socketConnection = io("localhost:8000");
+    setSocket(socketConnection);
+    socketConnection.on('connect', () => { setSocketState(true); });
+    socketConnection.on('disconnect', () => { setSocketState(false); });
+    socketConnection.on("newLogin", newLogin);
+    socketConnection.on("notificationData", newNotification);
   }, []);
+
+  useEffect(() => {
+    if(state.user_session) {
+      if(socketState) {
+        socket.emit("setUserInfo", {
+          username: state.user_session.user_username,
+          usermail: state.user_session.user_email,
+        });
+      }
+    }
+  }, [socketState]);
+
+  useEffect(()=>{
+    if(state.user_session) {
+      document.body.setAttribute("data-theme", state.user_session.user_preferences.theme);
+      document.body.setAttribute("data-mode", state.user_session.user_preferences.mode);
+      
+      if(socketState) {
+        socket.emit("setUserInfo", {
+          username: state.user_session.user_username,
+          usermail: state.user_session.user_email,
+        });
+      }
+    } else {
+      document.body.setAttribute("data-theme", "starry_moon");
+      document.body.setAttribute("data-mode", "dark");
+
+      if(socketState) {
+        socket.emit("setUserInfo", {
+          username: "",
+          usermail: "",
+        });
+      }
+    }
+  }, [state.user_session]);
 
   return (
     <>

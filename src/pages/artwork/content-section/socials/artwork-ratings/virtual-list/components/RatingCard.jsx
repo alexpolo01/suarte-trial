@@ -8,25 +8,26 @@ import './styles/RatingCard.css';
 
 export default function RatingCard({ myRatingData, ratingData }) {
   const navigate = useNavigate();
+  console.log(myRatingData, ratingData);
 
   return (
     <>
       <div className="artwork-user-rating-card__container" onClick={()=>navigate(`/user/${ratingData.rating_creator.user_username}`, { state: { from: true } })}>
-        <UserProfileImage 
-          typeOfProfile={ratingData.rating_creator.user_type} 
-          image={ratingData.rating_creator.user_image?.image_id} 
+        <UserProfileImage
+          typeOfProfile={ratingData.rating_creator?.user_type ?? ""}
+          image={ratingData.rating_creator?.user_image?.image_id ?? ""}
           className="artwork-user-rating-card__user-image"
         />
 
         <Text className="artwork-user-rating-card__username dots-on-overflow" paragraph extraSmall>
-          {ratingData.rating_creator.user_username}
+          {ratingData.rating_creator?.user_username ?? ""}
         </Text>
 
         <div className="artwork-user-rating-card__rating-categories">
           <ArtworkRatingDisplayer 
             className="artwork-user-rating-card__rating-displayer" 
             category="Emotions" 
-            username={ratingData.rating_creator.user_username} 
+            username={ratingData.rating_creator?.user_username ?? ""} 
             userRating={ratingData.rating_values.emotions} 
             myRating={myRatingData.rating_values.emotions}
           />
@@ -34,7 +35,7 @@ export default function RatingCard({ myRatingData, ratingData }) {
           <ArtworkRatingDisplayer 
             className="artwork-user-rating-card__rating-displayer" 
             category="Style" 
-            username={ratingData.rating_creator.user_username} 
+            username={ratingData.rating_creator?.user_username ?? ""} 
             userRating={ratingData.rating_values.style} 
             myRating={myRatingData.rating_values.style}
           />
@@ -42,7 +43,7 @@ export default function RatingCard({ myRatingData, ratingData }) {
           <ArtworkRatingDisplayer 
             className="artwork-user-rating-card__rating-displayer" 
             category="Time travel" 
-            username={ratingData.rating_creator.user_username} 
+            username={ratingData.rating_creator?.user_username ?? ""} 
             userRating={ratingData.rating_values.time_travel} 
             myRating={myRatingData.rating_values.time_travel}
           />
