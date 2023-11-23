@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^1.8.5",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "firebase": "^9.14.0",
@@ -61,9 +62,14 @@
     "workbox-strategies": "^6.6.0",
     "workbox-streams": "^6.6.0"
   },
+  "workspaces": ["server"],
   "scripts": {
-    "start": "craco start",
+    "postinstall": "npm install --prefix ./server --ignore-scripts",
+    "start": "concurrently \"yarn start:frontend\" \"yarn start:backend\"",
+    "start:frontend": "craco start",
+    "start:backend": "cd server && npm start",
     "build": "craco build",
+    "build:server": "cd server && npm install --production",
     "test": "craco test",
     "eject": "craco eject",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",

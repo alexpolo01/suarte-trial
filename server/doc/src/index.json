@@ -1,0 +1,18 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Suarte Backend API",
+        "description": "API Documentation provided by Kainda"
+    },
+    "servers": [
+        {
+            "url": "https://dev.suarte.art",
+            "description": "Development server"
+        },
+        {
+            "url": "http://localhost:3000",
+            "description": "Local server"
+        }
+    ]
+}

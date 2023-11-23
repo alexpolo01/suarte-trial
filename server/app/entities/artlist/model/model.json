@@ -1,0 +1,92 @@
+{
+    "components": {
+        "schemas": {
+            "Artlist": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "format": "ObjectId",
+                        "description": "MongoDB ObjectId",
+                        "example": "507f1f77bcf86cd799439011",
+                        "readOnly": true
+                    },
+                    "artlist_creator": { 
+                        "type": "string",
+                        "format": "ObjectId",
+                        "description": "Id of the user who created the artlist, but can be an object containing more information about the user",
+                        "example": "2354cbf7bcf86cd799439011",
+                        "readOnly": true,
+                        "required": true
+                    },
+                    "artlist_title": {
+                        "type": "string",
+                        "description": "Title of the artlist",
+                        "example": "My artlist",
+                        "required": true
+                    },
+                    "artlist_description": {
+                        "type": "string",
+                        "description": "Description of the artlist",
+                        "example": "This is my artlist",
+                        "required": false
+                    },
+                    "artlist_image": {
+                        "type": "string",
+                        "description": "Id of the Image representing the artlist",
+                        "example": "64199afbaa70838bccbad996",
+                        "required": false
+                    },
+                    "artlist_artworks": {
+                        "type": "array",
+                        "description": "Array of ids of artworks in the artlist, sometimes it can be an array of objects containing more information about the artworks",
+                        "example": [
+                            "507f1f77bcf86cd799439011",
+                            "507f1f77bcf86cd799439012",
+                            "507f1f77bcf86cd799439013"
+                        ],
+                        "required": false
+                    },
+                    "artlist_artwork_count": {
+                        "type": "integer",
+                        "description": "Number of artworks in the artlist",
+                        "example": 3,
+                        "required": false
+                    }
+                },
+                "required": [
+                ]
+            }
+        },
+        "parameters" : {
+            "ArtlistIdParam" : {
+                "name" : "artlist_id",
+                "in" : "path",
+                "description": "Id of the artlist",
+                "required": true,
+                "schema": {
+                    "type": "string",
+                    "format": "ObjectId",
+                    "example": "5e9b9b9b9b9b9b9b9b9b9b9b"
+                }
+            }
+        },
+        "examples" : {
+            "Artlist": {
+                "value": {
+                    "_id": "507f1f77bcf86cd799439011",
+                    "artlist_creator": "2354cbf7bcf86cd799439011",
+                    "artlist_title": "My artlist",
+                    "artlist_description": "This is my artlist",
+                    "artlist_image": "https://www.example.com/image.jpg",
+                    "artlist_artworks": [
+                        "507f1f77bcf86cd799439011",
+                        "507f1f77bcf86cd799439012",
+                        "507f1f77bcf86cd799439013"
+                    ],
+                    "artlist_artwork_count": 3
+                }
+            }
+        }
+    }
+}

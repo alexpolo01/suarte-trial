@@ -1,0 +1,61 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": 5000
+    },
+    "cloudflare": {
+        "images": {
+            "api_email": "pablo17gil@gmail.com",
+            "account_id": "8bfcce95eaec9d6a338faee1d5307cfe",
+            "account_hash": "hAeIC__6Aj746x0RFU1joA",
+            "api_key": "5f3392e12519bed6e279202063f708b1f8ff5"
+        },
+        "bucket": {
+            "name": "audio",
+            "zone": "eu",
+            "access_url": "https://audio.files.suarte.art",
+            "public_url": "https://pub-e82958cc2cb64183b107c6ade6f93062.r2.dev",
+            "s3_api_url": "https://8bfcce95eaec9d6a338faee1d5307cfe.r2.cloudflarestorage.com",
+            "secret_key": "b65e0bcb37a5bdefa921b32e1c81f8317a089f76dfabb765acb01b3e6a218922",
+            "access_key": "36717d43293e1e3f3b593c26a3c9b743"
+        }
+    },
+    "email": {
+        "send" : true,
+        "override_to" : null,
+        "host": "smtp.suarte.art",
+        "port": 587,
+        "secure": false,
+        "requireTLS": true,
+        "pool": true,
+        "maxConnections": 1,
+        "auth": {
+            "user": "no-reply@suarte.art",
+            "pass": "YGt!*eH6vVC@"
+        },
+        "tls": {
+            "rejectUnauthorized": false,
+            "minVersion": "TLSv1"
+        },
+        "retry": {
+            "times": 3,
+            "interval": 10000
+        }
+    },
+    "cors": {
+        "origin": "*",
+        "methods": "GET,HEAD,PUT,PATCH,POST,DELETE"
+    },
+    "jwt": {
+        "secret": "",
+        "expiresIn": "1h"
+    },
+    "password": {
+        "minLength": 8,
+        "maxLength": 64
+    },
+    "rate_limit" : {
+        "windowMs": 1000,
+        "max": 30
+    }
+}

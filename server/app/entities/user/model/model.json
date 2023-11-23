@@ -1,0 +1,26 @@
+{
+    "components": {
+        "schemas": {
+            "User": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "description": "MongoDB ObjectId",
+                        "example": "n2zqKGqUAOPp4pek9T5VyT3QVRi1",
+                        "readOnly": true
+                    }
+                },
+                "required": [
+                ]
+            }
+        },
+        "examples" : {
+            "User": {
+                "value": {
+                    "_id": "n2zqKGqUAOPp4pek9T5VyT3QVRi1"
+                }
+            }
+        }
+    }
+}

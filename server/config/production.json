@@ -1,0 +1,50 @@
+{
+    "databases": [
+        {
+            "description": "critical",
+            "uri" : "mongodb+srv://api_prod:Z3snE6gY2GGMUo4j@production.obfvn.mongodb.net/Production",
+            "database_name": "Production",
+            "dialect": "mongodb",
+            "pool": {
+                "max": 100,
+                "min": 10,
+                "acquire": 10000,
+                "idle": 30000
+            }
+        }
+    ],
+    "logs": {
+        "console": true,
+        "file": true,
+        "stopOnUncaughtException" : true
+    },
+    "stripe" : {
+        "public_key": "pk_live_51NBR5rDoIEIdFDhRQndZedyaq3MUZJ10EtL9eSfO3sKEleAFSWi0k18ECh0hq9mrTntGGl4munycQJlusoILu85d001agxPZbs",
+        "secret_key": "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",
+        "webhook_secret": "whsec_ELJwuTZuhHHw96aH9ikaCAyYUsavF25n",
+        "success_url": "https://suarte.art/orders/pending",
+        "cancel_url": "https://suarte.art/payment-failed"
+    },
+    "firebase": {
+        "apiKey": "AIzaSyDsBOgwkPAp9voyXz7tt6ra-c8P6902Fug",
+        "authDomain": "suarte.firebaseapp.com",
+        "projectId": "suarte",
+        "storageBucket": "suarte.appspot.com",
+        "messagingSenderId": "767194707735",
+        "appId": "1:767194707735:web:5d5402a0dbb927e1c72952",
+        "measurementId": "G-62PCYC8WNF"
+    },
+    "firebase-admin": {
+        "type": "service_account",
+        "project_id": "suarte",
+        "private_key_id": "147a22ba3dfba717afe641b13d6314db82565b6c",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC6SBINVm93my2q\nEwpBdMlsmkgRSaGlYVrKU7pVgPPXwvmQIvF8tAMi3gjsmGN0qvDKOHoDiC8wqUKL\n7St6uO0WT9xKGn/d94h6f/Mt+8b4b/KNlvwyNL8H4Nw+S9SzNOjvV8SNxRM0J8yJ\n6dNimW0PFbwb5bCwd3XH5qjMCHv+bo/GkBQyNs/GRDUAwgLUP8z1E8FHaFMWo2y0\nbFUeW4zwhv73GZVjqfULSOr/vDx+/8UWRya833hh1bkRA7ra4vbCwtNwrpAto+5I\nN0G/9bDWxGfCY8DhXXgmhWVSaW0wECqq63zYVhl5Ctgo+g0mmFMD3+BzSvh33+7/\npbL+R62hAgMBAAECggEACo0KeLbsmVmwvHFXo116Cyyx6EjDXxqkidE0PKORLCde\n+0r/YpDPnKn212/KMlF8Uffg8VJFWfw8SLCmRc0zoI/lak0V8PyUPlwA6hnYqzms\nA1kJ784NA+U4lE63PW9Bwky2VVFURR/79dPIpU0LYE9a2DmqSFR711a5ONVCMKb5\nwDVjQYFo/Xtc7rLOqVP3QOc91mlIw39sX9yrxyVfeRcKgjaFt0tur4Jin+S28xOa\nH1tZGRt1AnOUxVEu2c2NpawnFf5GCVU/0LsAApj2QFNSn4afVB/RlYgVHMv2UGSs\nqb51rk5QzGhL6NA49D2auoe4ZUuynHDfia5KgjngAQKBgQDdjJxGmHdY8Kxz/k8x\nJDrQWm0xC2jrg1HeaPJ/+2BFIvN7ilnfgZIrzwQ2E2DfxGdo3oYn3cJ6dCtthX1n\naeCiROzBhFcPypd7bdMuFAWzV9icsx0wAKrTm5JCnNF9Exr2IJ7rNxHGEV2E9RGE\nLT4UJHX6b1tpgGZcXC3M/SqdaQKBgQDXP4dtIAv7UxXuqRZPv0lcRK96U8hKARlJ\n7imU35eDfsg7D/z07ibSaW+YE5MqiVDUSiKekHRLUGISp83DPEqk0iA5f9WRhHop\nnPST1lpqGL5ZNUI7K8qGYXSbwI3K2OPAyYgx2l7ezaul4oUaUkeO3QmyW+3o419e\nDHIXn7UveQKBgQCdwkGJt4nMqFx0oFMtz/mdYba9JL3KbpE+iYacgZiUwoWUo/jJ\nQc+fKGN8SiJCVO257DKlcrDIV66Q52xb1jXh9qiMSDtigEWL27Fz70f75ALX2mdf\nRipeUjo8+sPlh1Q8jQ/8uBMM8lKgmY2mjDzXRPtJoD/8iTTacb0faesNeQKBgQCT\niZcRBGtSDEQ3Pyzs4oetN+MzrOPXXeNwmk9kHNIkrq0eVrojRG3VwbFdAuXXvSFr\nMZmDKC6eRO3ELcLK9LORP/oYj3fa83wss8ms37s/h9BJI0lPd5es/nXIIHbQOFP8\nG+c/jJeEjmL+JELppMYptXZlC8AJ5nfC5jL54F13uQKBgQDQFcGJ9IGVURGw2l0v\ndQtG6gQDY1yCvn0Zu63PBjyPEBKZBd7Rs+0feuYR7vbIndifD7tWeUxMA66n9k7+\n4IUfUiZcY9FD77OBrFOZGvtoR7isvHHJzuFbIiM5dunYP7qj6wUQj1FGeFBSZMQS\nQ8vQGamzyv3vqvVaRZUNKz5yMw==\n-----END PRIVATE KEY-----\n",
+        "client_email": "firebase-adminsdk-o82sd@suarte.iam.gserviceaccount.com",
+        "client_id": "102103513823759294519",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-o82sd%40suarte.iam.gserviceaccount.com",
+        "universe_domain": "googleapis.com"
+    }
+}

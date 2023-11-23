@@ -1,0 +1,78 @@
+{
+    "name": "suarte_backend",
+    "version": "1.0.0",
+    "description": "Main monolithic (:c) backend for Suarte",
+    "main": "index.js",
+    "scripts": {
+        "start": "cross-env NODE_ENV=production node --trace-warnings index.js",
+        "dev": "cross-env NODE_ENV=development nodemon --trace-warnings index.js",
+        "deploy": "cross-env NODE_ENV=production node index.js",
+        "start:seed": "cross-env NODE_ENV=development node --trace-warnings index.js --seed",
+        "test": "cross-env NODE_ENV=test mocha --seed",
+        "coverage": "cross-env NODE_ENV=test nyc --include 'app/**/*controller.js' mocha",
+        "documentation": "cross-env NODE_ENV=documentation node doc/generate-docs.js",
+        "pm2:dev": "cross-env NODE_ENV=development pm2 start index.js --name suarte-backend -i 0",
+        "pm2:prod": "cross-env NODE_ENV=production pm2 start index.js --name suarte-backend -i 0",
+        "eslint": "eslint **/*.js",
+        "eslint:fix": "eslint --fix **/*.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.295.0",
+        "@aws-sdk/s3-request-presigner": "^3.295.0",
+        "@mongodb-js/zstd": "^1.1.0",
+        "axios": "^1.4.0",
+        "bson-objectid": "^2.0.4",
+        "config": "^3.3.9",
+        "cors": "^2.8.5",
+        "cross-env": "^7.0.0",
+        "express": "^4.18.2",
+        "express-rate-limit": "^6.7.0",
+        "firebase": "^9.18.0",
+        "firebase-admin": "^11.5.0",
+        "form-data": "^4.0.0",
+        "helmet": "^6.0.1",
+        "ibantools": "^4.3.3",
+        "jsonwebtoken": "^9.0.0",
+        "kainda": "^7.2.1",
+        "module-alias": "^2.2.2",
+        "mongodb": "^6.1.0",
+        "mongoose": "^7.0.2",
+        "mongoose-aggregate-paginate-v2": "^1.0.6",
+        "mongoose-autopopulate": "^1.0.1",
+        "mongoose-paginate-v2": "^1.7.1",
+        "nodemailer": "^6.9.2",
+        "response-time": "^2.3.2",
+        "socket.io": "^4.7.2",
+        "stripe": "^12.8.0",
+        "suarte": "file:..",
+        "ua-parser-js": "^1.0.35",
+        "winston": "^3.8.2"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "eslint": "^8.42.0",
+        "mocha": "^10.2.0",
+        "nodemon": "^3.0.1",
+        "nyc": "^15.1.0",
+        "supertest": "^6.3.0",
+        "swagger-ui-express": "^4.6.2"
+    },
+    "mocha": {
+        "require": [
+            "./app/test/mocha.setup.js"
+        ],
+        "spec": "./app/**/*.test.js",
+        "recursive": true,
+        "timeout": 1000000,
+        "exit": true
+    },
+    "_moduleAliases": {
+        "@": "./",
+        "@app": "./app",
+        "@entities": "./app/entities",
+        "@services": "./app/services",
+        "@test": "./app/test"
+    }
+}

@@ -1,0 +1,450 @@
+{
+    "paths": {
+        "/artlist/": {
+            "post": {
+                "summary": "Create a new artlist",
+                "operationId": "createArtlist",
+                "tags": [
+                    "Artlists"
+                ],
+                "requestBody": {
+                    "description": "Artlist object to be created. It must contain an artlist_name but the rest of the fields are optional",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Artlist"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Artlist created successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Artlist"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/ValidationError"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/UnauthorizedError"
+                    },
+
+                    "429": {
+                        "$ref": "#/components/responses/TooManyRequestsError"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "get": {
+                "deactivated": true,
+                "summary": "Get all artlists",
+                "operationId": "getAllArtlists",
+                "tags": [
+                    "Artlists"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/Offset"
+                    },
+                    {
+                        "$ref": "#/components/parameters/Limit"
+                    },
+                    {
+                        "$ref": "#/components/parameters/Sort"
+                    },
+                    {
+                        "description": "TODO: Define filter parameters for Artlist"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of artlists",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Artlist"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/UnauthorizedError"
+                    },
+
+                    "429": {
+                        "$ref": "#/components/responses/TooManyRequestsError"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/artlist/username/{user_username}": {
+            "get": {
+                "summary": "Get all artlists by username",
+                "operationId": "getAllArtlistsByUsername",
+                "tags": [
+                    "Artlists"
+                ],
+                "parameters": [
+                    {
+                        "name": "user_username",
+                        "in": "path",
+                        "description": "Username of the user whose artlists are to be retrieved",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "collector"
+                        }
+                    },
+                    {
+                        "$ref": "#/components/parameters/Offset"
+                    },
+                    {
+                        "$ref": "#/components/parameters/Limit"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of artlists",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Artlist"
+                                    }
+                                }
+                            }
+                        }
+                    },
+
+                    "429": {
+                        "$ref": "#/components/responses/TooManyRequestsError"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                }
+            }
+        },
+        "/artlist/{artlist_id}/": {
+            "get": {
+                "summary": "Get a artlist by id",
+                "operationId": "getArtlistById",
+                "tags": [
+                    "Artlists"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/ArtlistIdParam"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Artlist found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Artlist"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFoundError"
+                    },
+
+                    "429": {
+                        "$ref": "#/components/responses/TooManyRequestsError"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a artlist by id",
+                "operationId": "updateArtlist",
+                "tags": [
+                    "Artlists"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/ArtlistIdParam"
+                    }
+                ],
+                "requestBody": {
+                    "description": "Artlist object to be updated, it consists of the same properties as the Artlist model, but also adds or removes artworks from the artlist if the corresponding arrays are present. Non-updatable properties will be ignored and repeated artworks will be ignored.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/Artlist"
+                                    },
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "artworks_add": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "description": "MongoId of the artwork to be added to the artlist",
+                                                    "example": "5f8d0b2c8b0d8f0017a0b0b0"
+                                                }
+                                            },
+                                            "artworks_remove": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "description": "MongoId of the artwork to be removed from the artlist",
+                                                    "example": "5f8d0b2c8b0d8f0017a0b0b0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Artlist updated successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Artlist"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/ValidationError"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/UnauthorizedError"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFoundError"
+                    },
+
+                    "429": {
+                        "$ref": "#/components/responses/TooManyRequestsError"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete a artlist by id",
+                "operationId": "deleteArtlist",
+                "tags": [
+                    "Artlists"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/ArtlistIdParam"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Artlist deleted successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Artlist"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/UnauthorizedError"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFoundError"
+                    },
+
+                    "429": {
+                        "$ref": "#/components/responses/TooManyRequestsError"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/artlist/like": {
+            "post": {
+                "summary": "Like a Artlist",
+                "operationId": "likeArtlist",
+                "tags": [
+                    "Artlists",
+                    "Likes"
+                ],
+                "requestBody": {
+                    "description": "Id of the artlist to be liked",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "artlist_id": {
+                                        "type": "string",
+                                        "description": "Id of the artlist to be unliked",
+                                        "example": "5f7f5c3b9b3f2b1b7c6d4b1a"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Artlist liked successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "artlist": {
+                                            "$ref": "#/components/schemas/MongoId"
+                                        },
+                                        "user": {
+                                            "type": "string",
+                                            "description": "Id of the user that liked the artlist",
+                                            "example": "5f7f5c3b9b3f2b1b7c6d4b1a"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/UnauthorizedError"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFoundError"
+                    },
+
+                    "429": {
+                        "$ref": "#/components/responses/TooManyRequestsError"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/artlist/unlike": {
+            "post": {
+                "summary": "Unlike a Artlist",
+                "operationId": "unlikeArtlist",
+                "tags": [
+                    "Artlists",
+                    "Likes"
+                ],
+                "requestBody": {
+                    "description": "Id of the artlist to be unliked",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "artlist_id": {
+                                        "type": "string",
+                                        "description": "Id of the artlist to be unliked",
+                                        "example": "5f7f5c3b9b3f2b1b7c6d4b1a"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Artlist unliked successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "artlist": {
+                                            "$ref": "#/components/schemas/MongoId"
+                                        },
+                                        "user": {
+                                            "type": "string",
+                                            "description": "Id of the user that liked the artlist",
+                                            "example": "5f7f5c3b9b3f2b1b7c6d4b1a"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/UnauthorizedError"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFoundError"
+                    },
+
+                    "429": {
+                        "$ref": "#/components/responses/TooManyRequestsError"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    }
+}

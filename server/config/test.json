@@ -1,0 +1,44 @@
+{
+    "databases": [
+        {
+            "description": "critical",
+            "uri" : "mongodb+srv://api_test:A25wo0mi5CpMuOsV@production.obfvn.mongodb.net/Test",
+            "database_name": "Test",
+            "dialect": "mongodb",
+            "pool": {
+                "max": 5,
+                "min": 0,
+                "acquire": 10000,
+                "idle": 30000
+            }
+        }
+    ],
+    "email" : {
+        "send" : false
+    }, 
+    "logs" : {
+        "console" : false,
+        "file" : true
+    },
+    "firebase": {
+        "apiKey": "AIzaSyDc_nhaIZ5grASKbNLsNmnRIO7fxpZEamo",
+        "authDomain": "suarte-pruebas.firebaseapp.com",
+        "projectId": "suarte-pruebas",
+        "storageBucket": "suarte-pruebas.appspot.com",
+        "messagingSenderId": "695116734938",
+        "appId": "1:695116734938:web:6aeb3eff8877b9a296a0e3",
+        "measurementId": "G-HN8D6QXX3P"
+    },
+    "firebase-admin": {
+        "type": "service_account",
+        "project_id": "suarte-pruebas",
+        "private_key_id": "dc103d91b3b64bbd9fc96f171d0a102456252ae8",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCsmG+I/T5a9VLg\nss2gfjmVWG6gCRuTWqrQU1Kvy5A3lU+FTYOdOtksB+DdOOugEU/YuBSWqIBnQvGB\ni/HmlcdjiWYGnMYSz/ud4/d7IcIhxxLdkBEQR2bc18XPTpjeCOIcnizjSNeEOMuk\ne6Cv2/SVIEOaXjNSY6GXuHfz+nCtKE0odoNxFqgbO2jcPLUz0QyfZEaXUlJ6PyX9\nuwIy/9IEyB+Oao91eTTBhhmBmpJN5BsJRqLwHU9WrWys+F4+zP/YUlk3oeVluzNn\nSNjl6r4XOqMfYm9xTXqJPfY0Alot28Yc9Wc+mDReMinv1DXb6ilh4/stiL8n5i78\nfotUlLA9AgMBAAECggEAHqLcQXO6Ssj7EhmK+G8PZ5wP3uZe97QDWAFCTyQSEFu3\nhtDwiMs2W2N2na4J3RrVkoFyXh/A0xOF7NnbcXOqtddgvdG8MwCqCCe7+SZP4FEG\n3z9AWCRkdNT0Ls0jw13OTQgiraFzZ+vw8dxj9HNVodbdSRxpfbljqJu85xjQQVv4\nVKlCiI8LSOVDuDT9bhYZwWY63hVp1gLsLUujQKK334ZPwim5ZVAR8GcLnRO/0s6u\n4cscBYyuETJSpKL9SYkBhVKdJRzSEDo3T+UafN602wDnim5xqysRNXWG+ILyD6YR\nltn2mPTQg1gfVkSPEFolsuj8yibt8fqGnmrKXooZYQKBgQDZEsGjUHBY3WMxSVBQ\nQijnQqwnTarpj/TvuwqwKAxToGceJYprpC1yb2O1/7OL5vNCRbyco0/2mNDg4Nm/\n/QVB3qRBIzk13aL6WZUnckMmmfPu76bbwjE+oOt/uMIZ9d50ax7h9RJIg1RrpVan\namh+sVOKdB/+v9nktJ3QzFwd2QKBgQDLi9LdqrRw6aLcMXEOgFWag1c46xB98aU0\nQMzfZ9c0UDePsT5sxJDlwz9To126wQYRVOnShsujelwCrTVwwh1pYCkksgTtTWtl\nITwDn8XsLRy/bJ/ppj9esB+ppTgNSGzoe+kEo8i+ilS3e4A74KJNEskXYBdvmeHO\nAxlVbXkTBQKBgC7HTvlNvVg5JUYawXb6OuxTPtwdbaZ1glgjG5OInddrqq0hc+ns\ncGrHvFodJ2kPtP5kHtg2jWXb2q+LZQFtmjNuskDjQVHtWFDQ+0aL5hKsfJfSB0g2\nWfxgGz/j5dhIVs8Jwpb5BB6iRpAIClt7n9cliZY9niN83ozdq2CymWtJAoGAfToJ\nAVeEq/MRv2arp8BM6kLj5qC4BMQmX39+i/PW8thnVoA1Z7WHb9QvocVgZQVcNk2H\njX5gyrL86KinuDe04J/IsErVvSlkaVOJGLGzkxouFZc+ywD8+8Rftn9vfLySRHX3\nZmNdndx9QmU4/520PLbSAQ+dW4vQ4G4HqAcx9gECgYBChNQPDYn/rlhgiyVaMVAq\n4nFK/cDMU+5hGLzX9rHOXpHZJK/NLh7c7C1la/wqRTA77i4wBNhs4FHIyB+sXBpu\nbxoXPLFzWSsX7sr7scKYnp+jJy0PjbiKnLE9yWjToBn1VjvUiVDyIdwTOlLWGmz2\nXsN1BY0eRgbjCMTgD9aUvw==\n-----END PRIVATE KEY-----\n",
+        "client_email": "firebase-adminsdk-6oo2n@suarte-pruebas.iam.gserviceaccount.com",
+        "client_id": "108455104224077391975",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-6oo2n%40suarte-pruebas.iam.gserviceaccount.com"
+    }
+}

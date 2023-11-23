@@ -1,6 +1,6 @@
 const firebaseConfig = {
   firebase:
-    process.env.NODE_ENV === "production" && process.env.REACT_APP_HOST_ENV === "production"
+    process.env.NODE_ENV === "production" || process.env.REACT_APP_HOST_ENV === "production"
       ? {
         apiKey: "AIzaSyDsBOgwkPAp9voyXz7tt6ra-c8P6902Fug",
         authDomain: "suarte.firebaseapp.com",
@@ -20,5 +20,8 @@ const firebaseConfig = {
         measurementId: "G-NKF8W1KNL9",
       },
 };
+
+console.log("NODE_ENV", process.env.NODE_ENV);
+console.log("REACT_APP_HOST_ENV", process.env.REACT_APP_HOST_ENV);
 
 export default firebaseConfig;

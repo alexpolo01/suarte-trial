@@ -1,0 +1,55 @@
+{
+    "databases": [
+        {
+            "description": "critical",
+            "uri" : "mongodb+srv://api_dev:sq82PBN4sm8zFmzG@production.obfvn.mongodb.net/Development",
+            "database_name": "Development",
+            "dialect": "mongodb",
+            "pool": {
+                "max": 100,
+                "min": 10,
+                "acquire": 1000000,
+                "idle": 3000000
+            }
+        }
+    ],
+    "email" : {
+        "override_to" : "servicio-informatico@suarte.art",
+        "send" : true
+    }, 
+    "stripe" : {
+        "public_key": "pk_test_51NBR5rDoIEIdFDhRiIZyPCb5Tkf0phIw8Jq4zhVyGgjKgTD6ZvPJIGWOgtqPazOWY7g7F5LmmfIgPCGWC6zWmDFz00s3tedAsd",
+        "secret_key": "sk_test_51NBR5rDoIEIdFDhRXKx810d8V0uOre17w1b3wM77p7Phkcgu6rmtkEePcQLAKibQPsigHe8EXVrtbHnblTeEHfDW00olqF7tBZ",
+        "webhook_secret": "whsec_du2USIL2FX1nAzwWSceku6ECb4qnmObh",
+        "success_url": "http://localhost:3000/orders/pending",
+        "cancel_url": "http://localhost:3000/payment-failed"
+    },
+    "logs": {
+        "console": true,
+        "file": true,
+        "stopOnUncaughtException" : true
+    },
+    "firebase": {
+        "apiKey": "AIzaSyAos3aIItpB80DqQgyWUP-oKd2Bph2HhsI",
+        "authDomain": "suarte-pruebas-6cc24.firebaseapp.com",
+        "projectId": "suarte-pruebas-6cc24",
+        "storageBucket": "suarte-pruebas-6cc24.appspot.com",
+        "messagingSenderId": "518594067204",
+        "appId": "1:518594067204:web:1e928aacdd68497c6eee51",
+        "measurementId": "G-NKF8W1KNL9"
+    },
+    "firebase-admin": {
+        "type": "service_account",
+        "project_id": "suarte-pruebas-6cc24",
+        "private_key_id": "1fde31ff1d92801e0652ea20a1434652289b0bec",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCudyjDF/BOoHVC\nanYl48mSmcD/U9Un671O8E0w8r+9+31P0/Rmd7talASSRiCOjvRZTutdsAecOToc\nHtypU5TmwVAlX+vMivNWTd1RSkW6nOjlthVMbjlxxnfyhVOLkEst630RVTRF/Gzw\nXb/eLL20Wsxv2X0k43CA0qhVzpVMV3S9a3xbzIKYtit7m5zxLHD/pyj6wzaAPlJh\nr208OpF9jfpuAssR0dcKSnjXt1ekDN+1M5Qo/BO21wM3IAZFA7pmQnYGmHTSvGml\nPTnFaMfLIsN6u1Pznhd+0LGnKNBZOtBxT4w0+NsyriC+qNj35y9EylNCAYmmanre\n6CXOYvKpAgMBAAECggEAEgL/VFTuXE+4i2jOVc8UimwRPsr64Ko32yR386u8G/MQ\n1uL9Am8uCoXpiuhuiAk+NNIu/ncj8f7+ftS410pnvwMKMTGb+HwH70sOpEvUsxVr\n/fs0a7WdfJ+O1pzpKSl2eYEsYlO3l9odrRsgqeFYnHwbSxjbEKnifYpCEsnHJCBf\nq+ZXGPxhFhHVC1YHwoRPLP779/I6h9EI6+7Nbl26h1+sbCunuFPKvwLozARr4/jW\nDhvuKce4dFXdcYqoaB7B2WnW4hIyouhhT7UeV1mDtEOtHL77BRbpUjmq30J4bjzX\nHt1udG3ahCW1L7S+LHa/r+ES2H6j0lLRR2/Vin+VuQKBgQDTi8MZ8bq302SMymVw\nSMDNH8nYZI8/jXm6UFbxn5qxUfcKHDsky/X33sR3Z0LcO5ukjjt82QFedNkF0SOX\noZDjG9+UM4JCUhB0WizGcg3ThmhAsO2IAk+UeGTDm/UUGXteX0ncIMTnRBPNEz3l\nSAClzv6XplimTeboLVhHTgxHWwKBgQDTIKGJQoM47tQJf2DjT4CwT6BwCAHGl4X8\nJVVng680DKHEgtANpGRrgxbs+P9rk9nPNR7TN9gd6SP8XIXuWBxF13OYMtjgNG5a\nPKuTxXmPyKYtt2l2u5TyhffOh2fPSqwZA9m/chnPYdfzDtqmJyAeNV6pT8eZYJY0\nF+ecurcRSwKBgFIOW25b2o5lfBI0i+ZjAg5O7091qi7/pKEFesQcobd4ULfmPXbH\nerBcA59BOakNohDRbve9gQ9viaL8/a5aaEX/0Ni+ph8tj95iAA41vXE4KIY3Wtuv\n8chobsWFYCocvELd+VtehqIiQQACH7cpF785LH4Mc0SG4TNcK2r1NkQTAoGAHDho\nXyh80cdaoEpecQPXd7mtAEyRsDHgvutelw+LA7IMjW/Oz4QByD0le1dtDLweiQvY\nqvLz+EuJe9oCLPGqFcvOr7FcO9vGRFmHtaDXtthjHgk+F5jLN/+gOALxZUvd5RoW\nqPhfatDxRJPftgXUzTTlCkyXqXC3ow7u7owmnDECgYB4YyvPgJsjaDIxQRDQPk2F\nK7FvXZB+obEzrbOQnr/Ta46szTcKk5do5BXfV3Jjln7N/M1fJ4RsCLs97q504+mt\nhmLF7VY/i0rHwYdpIq5VOLo/O125OY8NvZwAucXrZ2MiP0jx2c8mXVMihjX3GVLe\nVU+gbIZyJIIkv8+Ia8sPmw==\n-----END PRIVATE KEY-----\n",
+        "client_email": "firebase-adminsdk-ivsqz@suarte-pruebas-6cc24.iam.gserviceaccount.com",
+        "client_id": "116831344884363439547",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ivsqz%40suarte-pruebas-6cc24.iam.gserviceaccount.com",
+        "universe_domain": "googleapis.com"
+      }
+      
+}

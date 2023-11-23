@@ -1,0 +1,71 @@
+{
+    "paths": {
+        "/login/idtoken": {
+            "post": {
+                "summary": "This operation lets you obtain a token from a user registered with email and with the only purpose of using it on endpoints in the documentation.",
+                "operationId": "loginIdToken",
+                "tags": [
+                    "Login" 
+                ],
+                "requestBody": {
+                    "description": "The user email (or username) and password to login",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "user_email": {
+                                        "type": "string",
+                                        "description": "User email",
+                                        "example": "collector@dev.suarte.art"
+                                    },
+                                    "user_password": {
+                                        "type": "string",
+                                        "description": "User password",
+                                        "example": "123456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "auth": {
+                                            "type": "boolean",
+                                            "description": "Authentication result. Might be removed in the future, so don't rely on it",
+                                            "example": true
+                                        },
+                                        "token": {
+                                            "type": "string",
+                                            "description": "The token to be used in the Authorize button in the top right corner of this page",
+                                            "example": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJTdWFydGUgQXBwIiwiaWF0IjoxNTkxNjQwNjYyLCJleHAiOjE1OTE2NDQyNjIsImF1ZCI6Imh0dHBzOi8vZGV2LnN1YXJ0ZS5hcnQiLCJzdWIiOiJjb2xsZWN0b3JAZGV2LnN1YXJ0ZS5hcnQiLCJ1c2VyX2lkIjoiY29sbGVjdG9yQG"
+                                        },
+                                        "user_session" : {
+                                            "type": "object",
+                                            "description": "All the necessary information about the user to fasten the app experience. Note that this example is not complete, it only shows the user id",
+                                            "properties": {
+                                                "_id" : {
+                                                    "type": "string",
+                                                    "description": "User id",
+                                                    "example": "5e9f1a0a1c9d440000d1f1a0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
