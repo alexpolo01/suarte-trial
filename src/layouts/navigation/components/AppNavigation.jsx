@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet, useLocation,useNavigate } from 'react-router-dom
 import useProtectAction from '@/hooks/useProtectAction';
 import useScreenSize from '@/hooks/useScreenSize';
 import useStateHandler from '@/hooks/useStateHandler';
+import NowPaymentsService from '@/services/nowpayments.service';
 import UserProfileImage from '@/shared-components/cards/components/UserProfileImage';
 // import NavbarHomeNavigation from './NavbarHomeNavigation';
 import HomeIcon from '@/shared-components/icons/components/navigation/HomeIcon';
@@ -47,6 +48,33 @@ function AppNavigationProtectedOption() {
 export default function AppNavigation() {
   const screenSize = useScreenSize();
   const location = useLocation();
+  
+  async function handlePayWithCrypto() {
+    try {
+      const orderId = `demo-${Date.now()}`;
+      const origin = window.location.origin;
+      const successUrl = `${origin}/`;
+      const cancelUrl = `${origin}/payment-failed`;
+      const invoice = await NowPaymentsService.createInvoice({
+        price_amount: 10, // demo amount
+        price_currency: 'USD',
+        order_id: orderId,
+        order_description: 'Suarte demo payment',
+        success_url: successUrl,
+        cancel_url: cancelUrl,
+      });
+      if (invoice?.invoice_url) {
+        window.location.assign(invoice.invoice_url);
+      } else {
+        // Fallback if API shape changes
+        console.error('NOWPayments invoice missing invoice_url', invoice);
+        alert('Unable to open crypto payment right now.');
+      }
+    } catch (err) {
+      console.error('NOWPayments error:', err);
+      alert(err?.message || 'Unable to start crypto payment.');
+    }
+  }
 
   return (
     <>
@@ -95,6 +123,16 @@ export default function AppNavigation() {
               </NavLink> */}
 
               <AppNavigationProtectedOption/> {/** This way, we include useLocation in that component and we dont have to re-render the whole component, just the search icon */}
+
+              {/* Pay With Crypto button (desktop/tablet only) - placed at far right */}
+              <button
+                type="button"
+                className="app-navigation__crypto-button element-non-selectable"
+                aria-label="Pay With Crypto"
+                onClick={handlePayWithCrypto}
+              >
+                Pay With Crypto
+              </button>
             </div>
           </div>
         </nav>

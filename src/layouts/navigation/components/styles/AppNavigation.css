@@ -36,6 +36,25 @@
     margin-right: 20px;
 }
 
+/* Pay With Crypto button */
+.app-navigation__crypto-button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background-color: var(--app-theme-color);
+    color: black;
+    font-family: var(--app-font);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 14px; /* space from profile icon/image */
+    margin-right: 0;   /* flush with container right margin */
+}
+
+.app-navigation__crypto-button:active {
+    opacity: 0.85;
+}
+
 .app-navigation__nav-option {
     fill: var(--app-generic-gray);
     margin: 0px 19px;
@@ -130,6 +149,11 @@
     
     .app-navigation__container {
         padding: 12px 0px 30px 0px;
+    }
+
+    /* Hide crypto button on mobile to keep bottom nav clean */
+    .app-navigation__crypto-button {
+        display: none;
     }
 
     .app-navigation__suarte-options {
